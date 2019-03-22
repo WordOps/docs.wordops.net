@@ -1,0 +1,8 @@
+site_name: Docs WordOps
+repo_url: https://github.com/WordOps/WordOps/
+edit_uri: ""
+
+theme:
+  name: 'material'
+  favicon: 'images/favicon.png'
+  language: 'en'
