@@ -1,42 +1,27 @@
-# Site
+# WordOps commands
 
-```bash
-wo site <command> <args>
-```
+## Top level commands
 
-## Overview
-
-| | command | feature |
-|-|---|-------|
-| `wo site`| [create](#create) | Create new site |
-| | update | Update site settings |
-| | cd | Go into site folder |
-| | show | Show site config |
-| | log | Show site logs |
-| | enable | Enable site |
-| | disable | Disable site |
-| | info | Show site info |
-| | delete | Delete site |
-| | list | list all sites |
-
-
-
-
-
-
-
-
-
-
-
+| command | feature | example |
+|-|---------|-|
+| [site](#site) | create, delete, edit sites | `wo site create site.tld --wp` |
+| [stack](#stack) | install/remove WordOps server stacks | `wo stack install --nginx` |
+| [debug](#debug) | commands to do server level debugging | `wo debug site.tld --php` |
+| [clean](#clean) | clean Wordops cache backend | `wo clean --fastcgi` |
+| [info](#info) | display server stack informations | `wo info --nginx` |
+| [log](#log) | perform operation on logs | `wo log show --nginx` |
+| [secure](#secure) | manage WordOps backend authentification | `wo secure --auth` |
+| [maintenance](#maintenance) | perform server package updates | `wo maintenance`
+| [update](#update) | update WordOps | `wo update` |
 
 ## Commands
 
-### Create
+### site
 
-#### Standard sites
+#### create
 
-##### HTML Website
+
+###### HTML Website
 
 To create simple html website use this command.
 
@@ -44,7 +29,7 @@ To create simple html website use this command.
 wo site create example.com --html
 ```
 
-##### PHP Website
+###### PHP Website
 
 To create simple php website with no database use this command.
 
@@ -52,7 +37,7 @@ To create simple php website with no database use this command.
 wo site create example.com --php
 ```
 
-##### PHP+MySQL Website
+###### PHP+MySQL Website
 
 To create simple php website with database use this command.
 
@@ -62,7 +47,7 @@ wo site create example.com --mysql
 
 NOTE: You can find MySQL database details in ee-config.php file.
 
-##### Proxy site
+###### Proxy site
 
 To create site with Proxy configuration you can use --proxy during site creation
 
@@ -80,13 +65,13 @@ wo site create example.com --proxy=1.2.3.4
 
 This will create proxy site example.com with proxy destination as 1.2.3.4
 
-#### WordPress Site
+##### WordPress Site
 
 Following are the WordPress website types you can create website based on Cache Mechanism
 
 WordPress type (Single/Multisite)
 
-##### Standard WordPress Sites
+###### Standard WordPress Sites
 
 To create Standard/Single WordPress site use following command.
 
@@ -98,7 +83,7 @@ wo site create example.com --wpfc # install wordpress + nginx fastcgi_cache
 wo site create example.com --wpredis # install wordpress + nginx redis_cache
 ```
 
-##### WordPress Multisite with subdirectory
+###### WordPress Multisite with subdirectory
 
 To create WordPress Multisite with subdirectory setup use from following command.
 
@@ -136,7 +121,7 @@ Define WordPress administrator password To define wordpress administrator passwo
 wo site create example.com --pass=password
 ```
 
-This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this â€"
+This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this Ã¢â‚¬"
 
 --pass='my$secret&' Define WordPress administrator email To define wordpress administrator email during site creation use
 
@@ -146,7 +131,7 @@ wo site create example.com --email=ee@example.com
 
 This will set defined email as administrator email. If not defined it will set git email as administrator email.
 
-#### Additional features
+##### Additional features
 
 WordOps supports Let's Encrypt out of the box.
 
@@ -156,7 +141,7 @@ wo site create example.com --letsencrypt
 
 You can add --letsencrypt to any other flag.
 
-##### PHP 7.3
+###### PHP 7.3
 
 To create site with PHP 7.3 you can use --php73 during site creation
 
@@ -172,7 +157,7 @@ To create simple php(with v7.0) website with no database use this command.
 wo site create example.com --php73
 ```
 
-##### Let's Encrypt
+###### Let's Encrypt
 
 WordOps supports Let's Encrypt out of the box.
 
@@ -181,3 +166,100 @@ wo site create example.com --letsencrypt
 ```
 
 You can add --letsencrypt to any other flag.
+
+--------------------------------------------------------------------------------
+
+#### delete
+
+To delete site created with EasyEngine (ee) use
+
+```bash
+ee site delete example.com</code>
+```
+
+###### Delete website without prompt
+
+```bash
+ee site delete example.com --no-prompt</code>
+```
+
+###### Delete website webroot only
+
+```bash
+ee site delete example.com --files</code>
+```
+
+###### Delete website database only
+
+```bash
+ee site delete example.com --db</code>
+```
+### stack
+
+#### Sets of packages
+
+##### Web
+
+This will install Nginx, PHP 7.2, MariaDB & additional tools available on port 22222
+
+```bash
+wo stack install
+```
+
+or
+
+```bash
+wo stack install web
+```
+
+##### Admin tools
+
+```bash
+wo stack install --admin
+```
+
+#### Individual packages
+
+##### Nginx
+
+```bash
+wo stack install --nginx
+```
+
+##### PHP 7.2
+
+```bash
+wo stack install --php
+```
+
+##### MariaDB (MySQL)
+
+```bash
+wo stack install --mysql
+```
+
+##### Adminer
+
+```bash
+wo stack install --adminer
+```
+
+##### PHPMyAdmin
+
+```bash
+wo stack install --phpmyadmin
+```
+
+### debug
+
+### clean
+
+### info
+
+### log
+
+### secure
+
+### maintenance
+
+### update

@@ -6,3 +6,9 @@ theme:
   name: 'material'
   favicon: 'images/favicon.png'
   language: 'en'
+
+nav:
+  - Home: 'README.md'
+  - Getting Started: 'getting-started.md'
+  - WordOps commands: 'commands.md'
+  - F.A.Q: 'faq.md'
