@@ -11,3 +11,7 @@
 ## Important
 
 WordOps documentation publication is in progress
+
+## Credits
+
+- [EasyEngine](https://easyengine.io)
