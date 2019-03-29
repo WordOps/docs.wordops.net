@@ -1,10 +1,10 @@
 # WordOps commands
 
-## Top level commands
+## Overview
 
 | command | feature | example |
 |-|---------|-|
-| [site](#site) | create, delete, edit sites | `wo site create site.tld --wp` |
+| [site](#site) |  [create](#create), [update](#update), [delete](#delete), list sites | `wo site create site.tld --wp` |
 | [stack](#stack) | install/remove WordOps server stacks | `wo stack install --nginx` |
 | [debug](#debug) | commands to do server level debugging | `wo debug site.tld --php` |
 | [clean](#clean) | clean Wordops cache backend | `wo clean --fastcgi` |
@@ -14,14 +14,13 @@
 | [maintenance](#maintenance) | perform server package updates | `wo maintenance`
 | [update](#update) | update WordOps | `wo update` |
 
-## Commands
+## site
 
-### site
+### create
 
-#### create
+#### Basic sites
 
-
-###### HTML Website
+##### HTML site
 
 To create simple html website use this command.
 
@@ -29,7 +28,7 @@ To create simple html website use this command.
 wo site create example.com --html
 ```
 
-###### PHP Website
+##### PHP site
 
 To create simple php website with no database use this command.
 
@@ -37,7 +36,7 @@ To create simple php website with no database use this command.
 wo site create example.com --php
 ```
 
-###### PHP+MySQL Website
+##### PHP+MySQL site
 
 To create simple php website with database use this command.
 
@@ -45,9 +44,9 @@ To create simple php website with database use this command.
 wo site create example.com --mysql
 ```
 
-NOTE: You can find MySQL database details in ee-config.php file.
+NOTE: You can find MySQL database details in wo-config.php file.
 
-###### Proxy site
+##### Proxy site
 
 To create site with Proxy configuration you can use --proxy during site creation
 
@@ -65,47 +64,52 @@ wo site create example.com --proxy=1.2.3.4
 
 This will create proxy site example.com with proxy destination as 1.2.3.4
 
-##### WordPress Site
+#### WordPress
 
 Following are the WordPress website types you can create website based on Cache Mechanism
 
-WordPress type (Single/Multisite)
+##### Standard sites
 
-###### Standard WordPress Sites
 
-To create Standard/Single WordPress site use following command.
+ cache          | PHP     | example
+-------- -------------- | ------- | -------------------------------------------
+ no cache       | PHP 7.2 | `wo site create site.tld --wp`
+          no cache       | PHP 7.3 | `wo site create site.tld --wp --php73`
+          fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpfc`
+          fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpfc --php73`
+          wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc`
+          wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73`
+          redis-cache    | PHP 7.2 | `wo site create site.tld --wpredis`
+          redis-cache    | PHP 7.3 | `wo site create site.tld --wpredis --php73`
 
-```bash
-wo site create example.com --wp # install wordpress without any page caching
-wo site create example.com --w3tc # install wordpress with w3-total-cache plugin
-wo site create example.com --wpsc # install wordpress with whisp-super-cache plugin
-wo site create example.com --wpfc # install wordpress + nginx fastcgi_cache
-wo site create example.com --wpredis # install wordpress + nginx redis_cache
-```
 
-###### WordPress Multisite with subdirectory
+##### Multisite subdirectory
 
-To create WordPress Multisite with subdirectory setup use from following command.
+ cache          | PHP     | example
+ -------------- | ------- | -------------------------------------------
+ no cache       | PHP 7.2 | `wo site create site.tld --wpsubdir`
+          no cache       | PHP 7.3 | `wo site create site.tld --wpsubdir --php73`
+          fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`
+          fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpfc --php73`
+          wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdir --wpsc`
+          wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdir --wpsc --php73`
+          redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdir --wpredis`
+          redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdir --wpredis --php73`
 
-```bash
-wo site create example.com --wpsubdir # install wpmu-subdirectory without any page caching
-wo site create example.com --wpsubdir --w3tc # install wpmu-subdirectory with w3-total-cache plugin
-wo site create example.com --wpsubdir --wpsc # install wpmu-subdirectory with wp-super-cache plugin
-wo site create example.com --wpsubdir --wpfc # install wpmu-subdirectory + nginx fastcgi_cache
-wo site create example.com --wpsubdir --wpredis # install wpmu-subdirectory + nginx redis_cache
-```
+##### Multisite subdomain
 
-WordPress Multisite with subdomain To create WordPress Multisite with subdomain setup use from following command.
+ cache          | PHP     | example
+-------------- | ------- | -------------------------------------------------
+ no cache       | PHP 7.2 | `wo site create site.tld --wpsubdom`
+          no cache       | PHP 7.3 | `wo site create site.tld --wpsubdom --php73`
+          fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`
+          fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdom --wpfc --php73`
+          wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdom --wpsc`
+          wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdom --wpsc --php73`
+          redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdom --wpredis`
+          redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdom --wpredis --php73`
 
-```bash
-wo site create example.com --wpsubdom # install wpmu-subdomain without any page caching
-wo site create example.com --wpsubdom --w3tc # install wpmu-subdomain with w3-total-cache plugin
-wo site create example.com --wpsubdom --wpsc # install wpmu-subdomain with wp-super-cache plugin
-wo site create example.com --wpsubdom --wpfc # install wpmu-subdomain + nginx fastcgi_cache
-wo site create example.com --wpsubdom --wpredis # install wpmu-subdomain + nginx redis_cache
-```
-
-##### WordPress Additional settings
+##### Extra settings
 
 Define WordPress administrator user To define wordpress administrator user during site creation use
 
@@ -121,27 +125,35 @@ Define WordPress administrator password To define wordpress administrator passwo
 wo site create example.com --pass=password
 ```
 
-This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this Ã¢â‚¬"
+This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this :
 
 --pass='my$secret&' Define WordPress administrator email To define wordpress administrator email during site creation use
 
 ```bash
-wo site create example.com --email=ee@example.com
+wo site create example.com --email=wo@site.tld
 ```
 
 This will set defined email as administrator email. If not defined it will set git email as administrator email.
 
-##### Additional features
+#### Let's Encrypt
 
 WordOps supports Let's Encrypt out of the box.
 
 ```bash
-wo site create example.com --letsencrypt
+wo site create site.tld --letsencrypt
+```
+
+This command will issue a certificate for site.tld + www.site.tld.
+
+But WordOps also supports issuing Let's Encrypt certificates with subdomains.
+
+```bash
+wo site create example.com --letsencrypt=subdomain
 ```
 
 You can add --letsencrypt to any other flag.
 
-###### PHP 7.3
+#### PHP 7.3
 
 To create site with PHP 7.3 you can use --php73 during site creation
 
@@ -151,54 +163,49 @@ For example, you can create WordPress site running on PHP 7.3 using following co
 wo site create example.com --wp --php73
 ```
 
-To create simple php(with v7.0) website with no database use this command.
+To create simple php(with v7.3) website with no database use this command.
 
 ```bash
 wo site create example.com --php73
 ```
 
-###### Let's Encrypt
+### update
 
-WordOps supports Let's Encrypt out of the box.
 
-```bash
-wo site create example.com --letsencrypt
-```
-
-You can add --letsencrypt to any other flag.
 
 --------------------------------------------------------------------------------
 
-#### delete
+### delete
 
-To delete site created with EasyEngine (ee) use
-
-```bash
-ee site delete example.com</code>
-```
-
-###### Delete website without prompt
+To delete site created with EasyEngine (wo) use
 
 ```bash
-ee site delete example.com --no-prompt</code>
+wo site delete example.com</code>
 ```
 
-###### Delete website webroot only
+#### Delete website without prompt
 
 ```bash
-ee site delete example.com --files</code>
+wo site delete example.com --no-prompt</code>
 ```
 
-###### Delete website database only
+#### Delete website webroot only
 
 ```bash
-ee site delete example.com --db</code>
+wo site delete example.com --files</code>
 ```
-### stack
 
-#### Sets of packages
+#### Delete website database only
 
-##### Web
+```bash
+wo site delete example.com --db</code>
+```
+
+## stack
+
+### install
+
+#### Web
 
 This will install Nginx, PHP 7.2, MariaDB & additional tools available on port 22222
 
@@ -212,7 +219,7 @@ or
 wo stack install web
 ```
 
-##### Admin tools
+#### Admin tools
 
 ```bash
 wo stack install --admin
@@ -256,10 +263,36 @@ wo stack install --phpmyadmin
 
 ### info
 
+```bash
+
+
 ### log
 
 ### secure
 
 ### maintenance
 
+Update servers packages :
+
+```bash
+wo maintenance
+```
+
+This command is equivalent to :
+
+```bash
+apt update
+apt dist-upgrade
+apt autoremove --purge
+apt autoclean
+```
+
+Package update is performed in a non-interactive way, with the policy of never overwriting packages configuration with new configuration.
+
 ### update
+
+Update WordOps to the latest release with the command :
+
+```bash
+wo update
+```
