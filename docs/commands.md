@@ -199,25 +199,25 @@ Usage :
 wo site delete <domain> <options>
 ```
 
-#### Delete website
+#### delete website
 
 ```bash
 wo site delete example.com
 ```
 
-##### Without prompt
+##### without prompt
 
 ```bash
 wo site delete example.com --no-prompt
 ```
 
-#####  webroot only
+##### webroot only
 
 ```bash
 wo site delete example.com --files
 ```
 
-#####  database only
+##### database only
 
 ```bash
 wo site delete example.com --db
@@ -227,11 +227,19 @@ wo site delete example.com --db
 
 ## stack
 
+Usage :
+
 ```bash
 wo stack <command> <options>
 ```
 
 ### stack install
+
+Usage :
+
+```bash
+wo stack install <options>
+```
 
 #### Web
 
@@ -248,6 +256,8 @@ wo stack install web
 ```
 
 #### Admin tools
+
+WordOps backend with PHPmyAdmin, Adminer, MemcachedAdmin etc..
 
 ```bash
 wo stack install --admin
@@ -287,20 +297,41 @@ wo stack install --phpmyadmin
 
 ### debug
 
+Usage :
+
+```bash
+wo debug <options>
+```
+
 ### clean
+
+Usage :
+
+```bash
+wo clean <options>
+```
 
 ### info
 
-```bash
+Usage :
 
+```bash
+wo info <options>
+```
 
 ### log
+
+Usage :
+
+```bash
+wo log <options>
+```
 
 ### secure
 
 ### maintenance
 
-Update servers packages :
+Usage :
 
 ```bash
 wo maintenance
@@ -319,7 +350,7 @@ Package update is performed in a non-interactive way, with the policy of never o
 
 ### update
 
-Update WordOps to the latest release with the command :
+Usage :
 
 ```bash
 wo update
