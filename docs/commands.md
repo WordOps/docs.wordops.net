@@ -14,9 +14,23 @@
 | [maintenance](#maintenance) | perform server package updates | `wo maintenance`
 | [update](#update) | update WordOps | `wo update` |
 
+---
+
 ## site
 
-### create
+Usage :
+
+```bash
+wo site <command> <options>
+```
+
+### site create
+
+Usage :
+
+```bash
+wo site create <domain> <options>
+```
 
 #### Basic sites
 
@@ -169,41 +183,55 @@ To create simple php(with v7.3) website with no database use this command.
 wo site create example.com --php73
 ```
 
-### update
+### site update
 
-
-
---------------------------------------------------------------------------------
-
-### delete
-
-To delete site created with EasyEngine (wo) use
+Usage :
 
 ```bash
-wo site delete example.com</code>
+wo site update <domain> <options>
 ```
 
-#### Delete website without prompt
+### site delete
+
+Usage :
 
 ```bash
-wo site delete example.com --no-prompt</code>
+wo site delete <domain> <options>
 ```
 
-#### Delete website webroot only
+#### Delete website
 
 ```bash
-wo site delete example.com --files</code>
+wo site delete example.com
 ```
 
-#### Delete website database only
+##### Without prompt
 
 ```bash
-wo site delete example.com --db</code>
+wo site delete example.com --no-prompt
 ```
+
+#####  webroot only
+
+```bash
+wo site delete example.com --files
+```
+
+#####  database only
+
+```bash
+wo site delete example.com --db
+```
+
+---
 
 ## stack
 
-### install
+```bash
+wo stack <command> <options>
+```
+
+### stack install
 
 #### Web
 

@@ -1,7 +1,7 @@
 site_name: Docs WordOps
 site_description: Wordops documentation and user guides
 repo_url: https://github.com/WordOps/WordOps/
-edit_uri: "https://github.com/WordOps/docs.wordops.io/edit/master/docs/"
+edit_uri: "https://github.com/WordOps/docs.wordops.net/edit/master/docs/"
 
 theme:
   name: 'material'
@@ -13,8 +13,14 @@ nav:
 - Getting Started: 'getting-started.md'
 - Installation Guide: 'installation-guide.md'
 - Commands:
-    - Overview: 'commands/#overview'
-    - site: 'commands/#site'
-    - stack: 'commands/#stack'
-    - update: 'commands/#update'
+  - Overview: 'commands.md'
+  - site: '/commands/#site'
+  - stack: '/commands/#stack'
+  - debug: '/commands/#debug'
+  - clean: '/commands/#clean'
+  - info: '/commands/#info'
+  - log: '/commands/#log'
+  - secure: '/commands/#secure'
+  - maintenance: '/commands/#maintenance'
+  - update: '/commands/#update'
 - F.A.Q: 'faq.md'
