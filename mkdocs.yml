@@ -11,6 +11,7 @@ theme:
 nav:
 - Home: 'README.md'
 - Getting Started: 'getting-started.md'
+- Installation Guide: 'installation-guide.md'
 - Commands:
     - Overview: 'commands/#overview'
     - site: 'commands/#site'
