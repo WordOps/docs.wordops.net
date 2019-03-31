@@ -69,15 +69,3 @@ wo stack install --adminer
 ```bash
 wo stack install --phpmyadmin
 ```
-
---------------------------------------------------------------------------------
-
-## debug
-
-Used for server level debugging
-
-Usage :
-
-```bash
-wo debug [options]
-```
