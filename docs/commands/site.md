@@ -60,7 +60,16 @@ Following are the WordPress website types you can create website based on Cache 
 
 #### Standard sites
 
-cache | PHP | example -------- -------------- | ------- | ------------------------------------------- no cache | PHP 7.2 | `wo site create site.tld --wp` no cache | PHP 7.3 | `wo site create site.tld --wp --php73` fastcgi_cache | PHP 7.2 | `wo site create site.tld --wpfc` fastcgi_cache | PHP 7.3 | `wo site create site.tld --wpfc --php73` wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc` wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73` redis-cache | PHP 7.2 | `wo site create site.tld --wpredis` redis-cache | PHP 7.3 | `wo site create site.tld --wpredis --php73`
+cache | PHP | example
+-------- | -------------- | -------
+no cache | PHP 7.2 | `wo site create site.tld --wp`
+no cache | PHP 7.3 | `wo site create site.tld --wp --php73`
+fastcgi_cache | PHP 7.2 | `wo site create site.tld --wpfc`
+fastcgi_cache | PHP 7.3 | `wo site create site.tld --wpfc --php73`
+wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc`
+wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73`
+redis-cache | PHP 7.2 | `wo site create site.tld --wpredis`
+redis-cache | PHP 7.3 | `wo site create site.tld --wpredis --php73`
 
 #### Multisite subdirectory
 
