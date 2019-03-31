@@ -4,7 +4,7 @@
 
 | command | feature | example |
 |-|---------|-|
-| [site](#site) |  [create](#create), [update](#update), [delete](#delete), list sites | `wo site create site.tld --wp` |
+| [site](#site) |  [create](#site-create), [update](#site-update), [delete](#site-delete), [list](#site-list) sites | `wo site create site.tld --wp` |
 | [stack](#stack) | install/remove WordOps server stacks | `wo stack install --nginx` |
 | [debug](#debug) | commands to do server level debugging | `wo debug site.tld --php` |
 | [clean](#clean) | clean Wordops cache backend | `wo clean --fastcgi` |
@@ -18,10 +18,12 @@
 
 ## site
 
+Performs website specific operations
+
 Usage :
 
 ```bash
-wo site <command> <options>
+wo site (command) [options]
 ```
 
 ### site create
@@ -29,7 +31,7 @@ wo site <command> <options>
 Usage :
 
 ```bash
-wo site create <domain> <options>
+wo site create  [<site_name>] [options]
 ```
 
 #### Basic sites
@@ -39,7 +41,7 @@ wo site create <domain> <options>
 To create simple html website use this command.
 
 ```bash
-wo site create example.com --html
+wo site create site.tld --html
 ```
 
 ##### PHP site
@@ -47,7 +49,7 @@ wo site create example.com --html
 To create simple php website with no database use this command.
 
 ```bash
-wo site create example.com --php
+wo site create site.tld --php
 ```
 
 ##### PHP+MySQL site
@@ -55,28 +57,21 @@ wo site create example.com --php
 To create simple php website with database use this command.
 
 ```bash
-wo site create example.com --mysql
+wo site create site.tld --mysql
 ```
 
-NOTE: You can find MySQL database details in wo-config.php file.
+NOTE: You can find MySQL database details in `/var/www/site.tld/wo-config.php`.
 
 ##### Proxy site
 
 To create site with Proxy configuration you can use --proxy during site creation
 
 ```bash
-wo site create example.com --proxy=host[:port]
+wo site create site.tld --proxy=127.0.0.1:3000
 ```
 
-Here port is optional and default value is 80.
-
-For example,
-
-```bash
-wo site create example.com --proxy=1.2.3.4
-```
-
-This will create proxy site example.com with proxy destination as 1.2.3.4
+This will create proxy site site.tld with proxy destination as 127.0.0.1:3000.
+Port is optional. Default port : 80.
 
 #### WordPress
 
@@ -128,7 +123,7 @@ Following are the WordPress website types you can create website based on Cache 
 Define WordPress administrator user To define wordpress administrator user during site creation use
 
 ```bash
-wo site create example.com --user=admin
+wo site create site.tld --user=admin
 ```
 
 This will create admin as administrator user in wordpress during installation. If not defined it will take git user name.
@@ -136,7 +131,7 @@ This will create admin as administrator user in wordpress during installation. I
 Define WordPress administrator password To define wordpress administrator password during site creation use
 
 ```bash
-wo site create example.com --pass=password
+wo site create site.tld --pass=password
 ```
 
 This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this :
@@ -144,7 +139,7 @@ This will set defined password as administrator password. If not defined it will
 --pass='my$secret&' Define WordPress administrator email To define wordpress administrator email during site creation use
 
 ```bash
-wo site create example.com --email=wo@site.tld
+wo site create site.tld --email=wo@site.tld
 ```
 
 This will set defined email as administrator email. If not defined it will set git email as administrator email.
@@ -162,7 +157,7 @@ This command will issue a certificate for site.tld + www.site.tld.
 But WordOps also supports issuing Let's Encrypt certificates with subdomains.
 
 ```bash
-wo site create example.com --letsencrypt=subdomain
+wo site create site.tld --letsencrypt=subdomain
 ```
 
 You can add --letsencrypt to any other flag.
@@ -174,13 +169,13 @@ To create site with PHP 7.3 you can use --php73 during site creation
 For example, you can create WordPress site running on PHP 7.3 using following command:
 
 ```bash
-wo site create example.com --wp --php73
+wo site create site.tld --wp --php73
 ```
 
 To create simple php(with v7.3) website with no database use this command.
 
 ```bash
-wo site create example.com --php73
+wo site create site.tld --php73
 ```
 
 ### site update
@@ -188,7 +183,7 @@ wo site create example.com --php73
 Usage :
 
 ```bash
-wo site update <domain> <options>
+wo site update  [<site_name>] [options]
 ```
 
 ### site delete
@@ -196,41 +191,43 @@ wo site update <domain> <options>
 Usage :
 
 ```bash
-wo site delete <domain> <options>
+wo site delete  [<site_name>] [options]
 ```
 
 #### delete website
 
 ```bash
-wo site delete example.com
+wo site delete site.tld
 ```
 
 ##### without prompt
 
 ```bash
-wo site delete example.com --no-prompt
+wo site delete site.tld --no-prompt
 ```
 
 ##### webroot only
 
 ```bash
-wo site delete example.com --files
+wo site delete site.tld --files
 ```
 
 ##### database only
 
 ```bash
-wo site delete example.com --db
+wo site delete site.tld --db
 ```
 
 ---
 
 ## stack
 
+Manage server stack operations
+
 Usage :
 
 ```bash
-wo stack <command> <options>
+wo stack (command) [options]
 ```
 
 ### stack install
@@ -238,7 +235,7 @@ wo stack <command> <options>
 Usage :
 
 ```bash
-wo stack install <options>
+wo stack install [options]
 ```
 
 #### Web
@@ -295,41 +292,109 @@ wo stack install --adminer
 wo stack install --phpmyadmin
 ```
 
+---
+
 ### debug
+
+Used for server level debugging
 
 Usage :
 
 ```bash
-wo debug <options>
+wo debug [options]
 ```
+
+---
 
 ### clean
 
+Clean NGINX FastCGI cache, Opcache, Memcached, Redis Cache
+
 Usage :
 
 ```bash
-wo clean <options>
+wo clean [options]
 ```
+
+If options are empty, default is `--all`.
+
+ optional arguments | description |
+ -------|-------------|
+ --fastcgi | clean Nginx fastcgi_cache |
+ --redis | clean redis cache |
+ --memcache | clean memcached cache |
+ --opcache | clean opcache |
+ --all | clean all cache |
+
+---
 
 ### info
 
+Display configuration information related to Nginx, PHP and MySQL
+
 Usage :
 
 ```bash
-wo info <options>
+wo info [options]
 ```
+
+optional arguments | description
+---------- | -------------------------
+--nginx  | Get Nginx configuration information |
+--php    | Get PHP 7.2 configuration information |
+--php73 | Get PHP 7.3 configuration information  |
+--mysql  | Get MySQL configuration information |
+
+
+---
 
 ### log
 
+Perform operations on Nginx, PHP and MySQL log files
+
 Usage :
 
 ```bash
-wo log <options>
+wo log [<site_name>] [options]</site_name>
+
 ```
+
+#### log show
+
+Show Nginx, PHP, MySQL log file
+
+Usage :
+
+```bash
+wo log show [<site_name>] [options]</site_name>
+```
+
+optional arguments | description
+------------------ | -------------------------------------
+--nginx            | Show Nginx Error logs file   |
+--php              | Show PHP Error logs file |
+--mysql            | Show MySQL logs file   |
+--wp | Show Site specific WordPress logs file |
+
+
+
+---
 
 ### secure
 
+Secure backend authentification, ip and port
+
+Usage :
+
+```bash
+wo secure [options]
+```
+
+---
+
 ### maintenance
+
+Update apt-cache and upgrade packages.
 
 Usage :
 
@@ -346,9 +411,13 @@ apt autoremove --purge
 apt autoclean
 ```
 
-Package update is performed in a non-interactive way, with the policy of never overwriting packages configuration with new configuration.
+Package update is performed in a non-interactive way, with the "--force-confold" policy, to never overwrite packages configurations.
+
+---
 
 ### update
+
+Update WordOps if a new version is available
 
 Usage :
 
