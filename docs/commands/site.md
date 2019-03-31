@@ -159,11 +159,25 @@ wo site create site.tld --php73
 
 ## site update
 
+Update site configuration
+
 Usage :
 
 ```bash
 wo site update  [<site_name>] [options]
 ```
+
+options | description
+------- | ------------
+`--html` | update to html site
+`--php` | update to php site
+`--mysql` | update to MySQL + PHP site
+`--php73` | update site to PHP 7.3
+`--php73=off` | disable PHP 7.3
+`--wp` | update site to WordPress without cache
+`--wpfc` | update site to WordPress with fastcgi_cache
+`--wpsc` | update site to WordPress with wp-super-cache
+`--wpredis` | update site to WordPress with redis-cache
 
 ## site delete
 
@@ -173,26 +187,8 @@ Usage :
 wo site delete  [<site_name>] [options]
 ```
 
-### delete website
-
-```bash
-wo site delete site.tld
-```
-
-#### without prompt
-
-```bash
-wo site delete site.tld --no-prompt
-```
-
-#### webroot only
-
-```bash
-wo site delete site.tld --files
-```
-
-#### database only
-
-```bash
-wo site delete site.tld --db
-```
+options       | description
+------------- | --------------------------------------------
+`--no-prompt`      | delete website without confirmation prompt
+`--files`       | delete only website files
+`--db`     | delete only database
