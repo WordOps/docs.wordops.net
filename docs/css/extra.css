@@ -1,0 +1,15 @@
+li.toctree-l2 > a:link,
+li.toctree-l2 > a:visited {
+  font-weight: bold;
+  color: #404040;
+  margin-left: -6px;
+}
+
+pre {
+  background-color: transparent;
+  border: none;
+}
+
+code {
+  background-color: transparent;
+}

@@ -2,6 +2,8 @@
 
 Manage server stack operations
 
+<video align="center" src="/images/wo-stack.webm" width="720" autoplay ></video>
+
 Usage :
 
 ```bash

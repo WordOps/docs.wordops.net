@@ -2,6 +2,9 @@
 
 Update apt-cache and upgrade packages.
 
+<video align="center" src="/images/wo-maintenance.webm" width="720" autoplay="">
+</video>
+
 Usage :
 
 ```bash

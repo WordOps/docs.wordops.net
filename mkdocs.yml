@@ -8,6 +8,9 @@ theme:
   favicon: 'images/favicon.png'
   language: 'en'
 
+extra_css:
+  - css/extra.css
+
 nav:
 - Home: 'README.md'
 - Getting Started: 'getting-started.md'
