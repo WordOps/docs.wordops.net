@@ -2,7 +2,7 @@
 
 Performs website specific operations
 
-<video align="center" src="/images/wo-site.webm" width="720" autoplay="">
+<video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
 </video>
 
 

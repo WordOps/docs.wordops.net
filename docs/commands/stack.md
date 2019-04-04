@@ -2,7 +2,7 @@
 
 Manage server stack operations
 
-<video align="center" src="/images/wo-stack.webm" width="720" autoplay ></video>
+<video align="center" src="/images/wo-stack.webm" width="720" autoplay loop></video>
 
 Usage :
 
