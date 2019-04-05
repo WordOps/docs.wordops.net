@@ -2,15 +2,26 @@
 
 Manage server stack operations
 
-<video align="center" src="/images/wo-stack.webm" width="720" autoplay loop></video>
-
 Usage :
 
 ```bash
 wo stack (command) [options]
 ```
 
+options                   | description
+------------------------- | -----------------------------------------------------
+[install](#stack-install)       | Install packages
+[reload](#stack-reload)         | Reload WordOps stack
+[remove](#stack-remove)         | Uninstall packages
+[purge](#stack-purge)           | Uninstall & purge packages
+[restart](#stack-restart)       | Restart WordOps stack
+[stop](#stack-stop)             | Stop WordOps stack
+[upgrade](#stack-upgrade)       | Upgrade WordOps stack
+[start](#stack-start)           | Start WordOps stack
+
 ## stack install
+
+<video align="center" src="/images/wo-stack.webm" width="720" autoplay loop></video>
 
 Usage :
 
