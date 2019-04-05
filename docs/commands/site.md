@@ -182,6 +182,12 @@ options | description
 `--wpfc` | update site to WordPress with fastcgi_cache
 `--wpsc` | update site to WordPress with wp-super-cache
 `--wpredis` | update site to WordPress with redis-cache
+`--wpsubdir` | update site to WordPress multisite on subdirectories
+`--wpsubdomain` | update site to WordPress multisite on subdomains
+`--password` | update admin password for a WordPress site
+`--letsencrypt`,`--le` | secure site with Let's Encrypt SSL certificate
+`--letsencrypt=subdomain` | secure site running on a subdomain with Let's Encrypt
+`--letsencrypt=off` | disable Let's Encrypt SSL certificate
 
 ## site delete
 
