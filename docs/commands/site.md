@@ -2,17 +2,32 @@
 
 Performs website specific operations
 
-<video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
-</video>
-
-
 Usage :
 
 ```bash
 wo site (command) [options]
 ```
 
+subcommand                   | description
+------------------------- | --------------------------
+[create](#site-create) | Create site with WordOps
+[update](#site-update) | Update site type or configuration
+[show](#site-show) | Show site Nginx configuration
+[start](#site-edit) | Edit site Nginx configuration
+[delete](#site-delete)   | Delete site
+[list](#site-list)     | list all sites
+[enable](#site-enable) | Enable site in Nginx
+[disable](#site-disable) | Disable site in Nginx
+
+
+
 ## site create
+
+
+<video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
+</video>
+
+
 
 Usage :
 

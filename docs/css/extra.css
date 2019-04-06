@@ -13,3 +13,12 @@ pre {
 code {
   background-color: transparent;
 }
+
+.md-nav {
+    font-size: 16px;
+    line-height: 1.4;
+}
+.md-typeset {
+    font-size: 16px;
+    line-height: 1.4;
+}

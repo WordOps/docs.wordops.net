@@ -8,7 +8,7 @@ Usage :
 wo stack (command) [options]
 ```
 
-options                   | description
+subcommand                   | description
 ------------------------- | -----------------------------------------------------
 [install](#stack-install)       | Install packages
 [reload](#stack-reload)         | Reload WordOps stack
