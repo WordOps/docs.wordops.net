@@ -21,8 +21,8 @@ extra_css:
 nav:
 - Home: 'README.md'
 - Getting Started:
+  - Installation: 'installation-guide.md'
   - Quick start: 'getting-started.md'
-  - Installation Guide: 'installation-guide.md'
   - Migration from EasyEngine: 'migration-from-EasyEngine-V3.md'
 - Commands:
   - Overview: 'commands.md'

@@ -1,16 +1,5 @@
 # Getting Started
 
-## Install WordOps
-
-You can use our automated installer to setup WordOps. Additional installation method are available in our [installation guide](installation-guide.md)
-
-```bash
-wget -qO wo wordops.se/tup && sudo bash wo
-```
-
-During the installation, you will be prompt for an username and an email address. WordOps need those informations to configure Git version control and to use it for saving server configurations.
-Your informations will only be stored in the file .gitconfig.
-
 ## Installing server stacks
 
 ### Method 1 : WordOps Full stack setup (recommended)
@@ -48,7 +37,7 @@ Site access/error logs | `/var/www/site.tld/logs`         |
 
 ## Creating site
 
-<video align="center" src="/images/wo-site.webm" width="720" autoplay="" loop="">
+<video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
 </video>
 
 You can create site with WordOps by using the command `wo site create`.

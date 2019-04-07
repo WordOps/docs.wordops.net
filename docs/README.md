@@ -1,7 +1,7 @@
 #
 
 <p align="center">
-<img src="images/logo.png" width="400" /><br><br>
+<img src="images/logo.png" width="400" alt="WordOps" /><br><br>
 <a href="https://travis-ci.org/WordOps/WordOps"><img src="https://travis-ci.org/WordOps/WordOps.svg?branch=master" alt="build"></a>
 <img src="https://img.shields.io/github/license/wordops/wordops.svg" alt="MIT">
 <img src="https://img.shields.io/github/last-commit/wordops/wordops.svg" alt="Commits">
