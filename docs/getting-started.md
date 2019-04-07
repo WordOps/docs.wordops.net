@@ -43,7 +43,7 @@ Component              | Path                             |
 -----------------------|----------------------------------|
 Site files             | `/var/www/site.tld/htdocs`       |
 wp-config.php          | `/var/www/site.tld/wp-config.php`|
-Additional Nginx conf  | `/var/www/site.ltd/conf/nginx/`  |
+Additional Nginx conf  | `/var/www/site.tld/conf/nginx/`  |
 Site access/error logs | `/var/www/site.tld/logs`         |
 
 ## Creating site
