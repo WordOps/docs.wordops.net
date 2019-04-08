@@ -35,8 +35,12 @@
 
 ## Contributing
 
-Like other open-source project, WordOps needs your contributions to live. There is no need to be a developer or a system administrator to contribute to WordOps project. Suggestions, bug reports and pull requests are warmly welcome.
-This documentation was built with mkdocs to provide the ability to edit content and propose changes easily on Github. A short guide about how to edit WordOps documentation is available on the [github repository](https://github.com/WordOps/docs.wordops.net)
+Like other open-source project, WordOps needs your contributions to live. There is no need to be a developer or a system administrator to contribute to WordOps project.
+
+Suggestions, bug reports and pull requests are warmly welcome.
+This documentation was built with mkdocs to provide the ability to edit content and propose changes easily on Github.
+
+A short guide about how to edit WordOps documentation is available on the [github repository](https://github.com/WordOps/docs.wordops.net)
 
 ## Credits
 

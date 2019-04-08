@@ -12,6 +12,10 @@ theme:
   highlightjs: true
 
 markdown_extensions:
+  # Code highlighting in ``` ``` blocks
+  - codehilite:
+      guess_lang: true
+# Table of Contents
   - toc:
       permalink: true
 
@@ -21,6 +25,7 @@ extra_css:
 nav:
 - Home: 'README.md'
 - Getting Started:
+  - Prerequisites: 'prerequesites.md'
   - Installation: 'installation-guide.md'
   - Quick start: 'getting-started.md'
   - Migration from EasyEngine: 'migration-from-EasyEngine-V3.md'

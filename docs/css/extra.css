@@ -1,8 +1,11 @@
-li.toctree-l2 > a:link,
-li.toctree-l2 > a:visited {
-  font-weight: bold;
-  color: #404040;
-  margin-left: -6px;
+@import 'https://fonts.googleapis.com/css?family=Roboto';.md-logo img {
+      background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px
+}
+body, input {
+    color: black;
 }
 
 pre {
@@ -21,4 +24,25 @@ code {
 .md-typeset {
     font-size: 16px;
     line-height: 1.4;
+}
+
+.md-typeset__table td code {
+    word-break: unset
+}
+
+.md-typeset__table tr :nth-child(1) {
+    word-wrap: break-word;
+    max-width: 30em
+}
+
+h1 {
+    font-weight: 700!important;
+}
+
+h2 {
+    font-weight: 500!important
+}
+
+h3 {
+    font-weight: 500!important
 }
