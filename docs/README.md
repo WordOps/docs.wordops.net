@@ -1,4 +1,3 @@
-#
 
 <p align="center">
 <img src="images/logo.png" width="400" alt="WordOps" /><br><br>
@@ -17,7 +16,7 @@
 
 ---
 
-# Key Features
+## Key Features
 
 - **Easy to install** : One step automated installer with migration from EasyEngine v3 support
 - **Fast deployment** : Fast and automated WordPress, Nginx, PHP, MySQL & Redis installation
