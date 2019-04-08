@@ -5,8 +5,15 @@ Perform operations on Nginx, PHP and MySQL log files
 Usage :
 
 ```bash
-wo log [<site_name>] [options]</site_name>
+wo log [<site_name>] [options]
 ```
+
+options | description
+------------------ | --------------------------------------
+gzip            | GZip Nginx, PHP, MySQL log file            |
+mail              | Mail Nginx, PHP, MySQL log file               |
+reset           | Reset Nginx, PHP, MySQL log file                   |
+show               | Show Nginx, PHP, MySQL log file |
 
 ## log show
 

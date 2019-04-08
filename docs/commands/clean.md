@@ -8,7 +8,7 @@ Usage :
 wo clean [options]
 ```
 
-If options are empty, default is `--all`.
+If options are empty, default is `--fastcgi`.
 
 optional arguments | description
 ------------------ | -------------------------

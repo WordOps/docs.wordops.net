@@ -5,7 +5,7 @@
 We provide an installer script which install the required dependencies, before setting-up WordOps. It can be installed with the following command :
 
 ```bash
-wget -qO wo wordops.se/tup && sudo bash wo
+wget -qO wo wops.cc && sudo bash wo
 ```
 
 During the installation, you will be prompt for an username and an email address. WordOps need those informations to configure Git version control and to use it for saving server configurations. Your informations will **only be stored** in the file .gitconfig.

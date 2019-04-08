@@ -26,18 +26,9 @@ And this command will only install Nginx and PHP 7.2 :
 wo site create site.tld --php
 ```
 
-### Additional informations
-
-Component              | Path                             |
------------------------|----------------------------------|
-Site files             | `/var/www/site.tld/htdocs`       |
-wp-config.php          | `/var/www/site.tld/wp-config.php`|
-Additional Nginx conf  | `/var/www/site.tld/conf/nginx/`  |
-Site access/error logs | `/var/www/site.tld/logs`         |
-
 ## Creating site
 
-<video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
+<video align="center" src="/images/wo-site.webm" width="720" autoplay="" loop="">
 </video>
 
 You can create site with WordOps by using the command `wo site create`.
@@ -56,54 +47,93 @@ WordOps can also :
 
 You can see all the options available to create site in the command list [site create](commands/site.md#site-create)
 
-### PHP 7.3 support
+### Additional informations
 
-To create site running with PHP 7.3, you can add the argument `--php73` with the command `wo site create` and `wo site update`.
+Component              | Path
+---------------------- | ---------------------------------
+Site files             | `/var/www/site.tld/htdocs`        |
+wp-config.php          | `/var/www/site.tld/wp-config.php` |
+Additional Nginx conf  | `/var/www/site.tld/conf/nginx/`   |
+Site access/error logs | `/var/www/site.tld/logs`          |
 
-Here few examples :
+### Examples
+
+#### Basic site
+
+Basic html site
+
+```bash
+wo site create site.tld --html
+```
+
+Simple PHP site
+
+```bash
+wo site create site.tld --php
+```
+
+Simple PHP + MySQL site
+
+```bash
+wo site create site.tld --mysql
+```
 
 #### WordPress site
 
+Simple WordPress site
+
 ```bash
-wo site create site.tld --wp --php73
+wo site create site.tld --wp
 ```
 
-This command will create site.tld running with PHP 7.3 and install WordPress.
+WordPress site with Nginx fastcgi_cache
 
-#### MySQL + PHP site
+```bash
+wo site create site.tld --wpfc
+```
+
+WordPress site with Redis cache
+
+```bash
+wo site create site.tld --wpredis
+```
+
+#### PHP 7.3
+
+Simple PHP 7.3 + MySQL site
 
 ```bash
 wo site create site.tld --mysql --php73
 ```
 
-### Let's Encrypt SSL certificates
+Simple PHP 7.3 site
 
-To secure your site with Let's Encrypt SSL certificate, you can use the argument `--letsencrypt` or `--le` with the command `wo site create` or with the command `wo site update` when it's an existing site.
+```bash
+wo site create site.tld --php73
+```
 
-WordOps always check if a site is already secured with Let's Encrypt before issuing a certificate, and it also configure the certificate with Nginx and add the proper redirection from http to https.
+Simple WordPress site with PHP 7.3
 
-Here few examples :
+```bash
+wo site create site.tld --wp ---php73
+```
 
-#### Create SSL site
+#### Let's Encrypt
+
+WordPress site secured with Let's Encrypt
 
 ```bash
 wo site create site.tld --wp --letsencrypt
 ```
 
-This command will create site.tld and issue a certificate for site.tld and www.site.tld
-
-#### Create subdomain SSL site
+WordPress site on subdomain secure with Let's Encrypt
 
 ```bash
-wo site create sub.site.tld --wp --letsencrypt=subdomain
+wo site create site.tld --wp --letsencrypt=subdomain
 ```
 
-This command will create sub.site.tld and issue a certificate only for sub.site.tld
-
-#### Secure existant site
+WordPress site with PHP 7.3 and secured by Let's Encrypt
 
 ```bash
-wo site update site.tld --letsencrypt
+wo site create site.tld --wp --php73 --letsencrypt
 ```
-
-This command will issue a certificate for site.tld and www.site.tld.
