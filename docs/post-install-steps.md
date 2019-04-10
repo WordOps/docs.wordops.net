@@ -9,6 +9,7 @@ To enable WordOps commands auto-completion, run the following command after Word
 ```bash
 source /etc/bash_completion.d/wo_auto.rc
 ```
+
 ## Installing WordOps stacks (optional)
 
 Before creating your first site with WordOps, you can install WordOps main stacks with the command
