@@ -35,32 +35,3 @@ Here some informations :
 ### Why gzip compression is disabled by default ?
 
 We disabled gzip compression by default due to gzip related security issues when using TLS connection. More informations here [BREACH CVE](https://en.wikipedia.org/wiki/BREACH). We replaced gzip by brotli, which provide better performance and compression than gzip.
-
-
-## WordOps usage questions
-
-### How to get a list of WordOps commands ?
-
-To get the list of WordOps commands, you can use the command :
-
-```bash
-wo
-```
-
-Then for any subcommand, you just have to add the arugment -h or --help to display command informations with examples.
-
-```bash
-wo site --help
-```
-
-### What is the MySQL root password ?
-
-MySQL root password is stored in the file `/etc/mysql/conf.d/my.cnf`
-
-### How to change WordOps backend on port 22222 username and password ?
-
-You can use the command :
-
-```bash
-wo secure --auth
-```

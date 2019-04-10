@@ -1,32 +1,4 @@
-# Getting Started
-
-## Installing server stacks
-
-### Method 1 : WordOps Full stack setup (recommended)
-
-```bash
-wo stack install
-```
-
-This will setup the LEMP Stack (Nginx, PHP 7.2 and MariaDB) and the admin tools (phpMyAdmin, Netdata, Composer, WP-CLI, MySQLTuner, OpcacheGUI )
-
-### Method 2 : Only install required stack
-
-If you prefer to only install required stack to run your sites, you can directly use the command `wo site create`.
-
-For example, the following command will only install Nginx :
-
-```bash
-wo site create site.tld --html
-```
-
-And this command will only install Nginx and PHP 7.2 :
-
-```bash
-wo site create site.tld --php
-```
-
-## Creating site
+# Creating site
 
 <video align="center" src="/images/wo-site.webm" width="720" autoplay="" loop="">
 </video>
@@ -47,7 +19,7 @@ WordOps can also :
 
 You can see all the options available to create site in the command list [site create](commands/site.md#site-create)
 
-### Additional informations
+## Additional informations
 
 Component              | Path
 ---------------------- | ---------------------------------
@@ -56,9 +28,9 @@ wp-config.php          | `/var/www/site.tld/wp-config.php` |
 Additional Nginx conf  | `/var/www/site.tld/conf/nginx/`   |
 Site access/error logs | `/var/www/site.tld/logs`          |
 
-### Examples
+## Examples
 
-#### Basic site
+### Basic site
 
 Basic html site
 
@@ -78,7 +50,7 @@ Simple PHP + MySQL site
 wo site create site.tld --mysql
 ```
 
-#### WordPress site
+### WordPress site
 
 Simple WordPress site
 
@@ -98,7 +70,7 @@ WordPress site with Redis cache
 wo site create site.tld --wpredis
 ```
 
-#### PHP 7.3
+### PHP 7.3
 
 Simple PHP 7.3 + MySQL site
 
@@ -118,7 +90,7 @@ Simple WordPress site with PHP 7.3
 wo site create site.tld --wp ---php73
 ```
 
-#### Let's Encrypt
+### Let's Encrypt
 
 WordPress site secured with Let's Encrypt
 

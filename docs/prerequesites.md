@@ -1,13 +1,13 @@
 ### Hardware
 
-WordOps is very lightweight, and does not require much processing power
+WordOps is very lightweight, so hardware requirements should not be a problem :
 
 - ~30MB of free space
 - 512MB RAM
 
 ### Operating Systems
 
-The following operating systems are **officially** supported:
+The following operating systems are supported:
 
 Distribution | Release            | Architecture
 ------------ | ------------------ | ------------

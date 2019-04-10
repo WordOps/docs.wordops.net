@@ -176,6 +176,60 @@ To create simple php(with v7.3) website with no database use this command.
 wo site create site.tld --php73
 ```
 
+
+# Usage
+
+## Standard WordPress sites
+
+```bash
+wo site create example.com --wp       # install wordpress without any page caching
+wo site create example.com --wpsc     # install wordpress with wp-super-cache plugin
+wo site create example.com --wpfc     # install wordpress + nginx fastcgi_cache
+wo site create example.com --wpredis  # install wordpress + nginx redis_cache
+```
+
+## WordPress multisite with subdirectory
+
+```bash
+wo site create example.com --wpsubdir            # install wpmu-subdirectory without any page caching
+wo site create example.com --wpsubdir --wpsc     # install wpmu-subdirectory with wp-super-cache plugin
+wo site create example.com --wpsubdir --wpfc     # install wpmu-subdirectory + nginx fastcgi_cache
+wo site create example.com --wpsubdir --wpredis  # install wpmu-subdirectory + nginx redis_cache
+```
+
+## WordPress multisite with subdomain
+
+```bash
+wo site create example.com --wpsubdomain            # install wpmu-subdomain without any page caching
+wo site create example.com --wpsubdomain --wpsc     # install wpmu-subdomain with wp-super-cache plugin
+wo site create example.com --wpsubdomain --wpfc     # install wpmu-subdomain + nginx fastcgi_cache
+wo site create example.com --wpsubdomain --wpredis  # install wpmu-subdomain + nginx redis_cache
+```
+
+## Non-WordPress sites
+
+```bash
+wo site create example.com --html     # create example.com for static/html sites
+wo site create example.com --php      # create example.com with php support
+wo site create example.com --mysql    # create example.com with php & mysql support
+wo site create example.com --proxy=127.0.0.1:3000 #  create example.com with nginx as reverse-proxy
+```
+
+## PHP 7.3 sites
+
+```bash
+wo site create site.tld --wp --php73 # install wordpress with PHP 7.3
+wo site create site.tld --wpredis --php73 # create site.tld with PHP 7.3 & MySQL support
+```
+
+## Sites secured with Let's Encrypt
+
+```bash
+wo site create example.com --wp --letsencrypt # install wordpress & secure site with letsencrypt
+wo site create sub.example.com --wp --letsencrypt=subdomain # install wordpress and secure subdomain with letsencrypt
+```
+
+
 ## site update
 
 Update site configuration

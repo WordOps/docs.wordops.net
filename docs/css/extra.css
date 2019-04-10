@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';.md-logo img {
-      background-color: #fff;
+    background-color: #fff;
     border-radius: 50%;
     width: 30px;
     height: 30px
@@ -8,13 +8,8 @@ body, input {
     color: black;
 }
 
-pre {
-  background-color: transparent;
-  border: none;
-}
-
-code {
-  background-color: transparent;
+.codehilite > pre {
+  color:#5e72e4;
 }
 
 .md-nav {
@@ -45,4 +40,8 @@ h2 {
 
 h3 {
     font-weight: 500!important
+}
+
+.md-nav__link {
+    white-space: nowrap;
 }

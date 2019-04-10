@@ -28,9 +28,18 @@
 
 ---
 
-<p align="center"><span style="color: red">Documentation writing is in progress, we will add missing informations as soon as possible</span></p>
+Welcome on WordOps documentation.
 
----
+!!! warning
+    Documentation writing is in progress, we will add missing informations as soon as possible
+
+!!! info
+    If you were using EasyEngine v3 previously, you will probably be interested by our [EasyEngine migration guide](migration-from-easyengine.md)
+
+## Getting Support
+
+If you do not find the informations you were looking for in our documentation, you can still ask your question on our [Community Forum](https://community.wordops.net).
+If you think you have found an issue directly related to WordOps, please open an issue on the [Github repository](https://github.com/WordOps/WordOps/issues)
 
 ## Contributing
 

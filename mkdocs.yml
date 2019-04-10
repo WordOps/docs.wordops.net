@@ -18,6 +18,9 @@ markdown_extensions:
 # Table of Contents
   - toc:
       permalink: true
+# block div
+  - admonition
+  - meta
 
 extra_css:
   - css/extra.css
@@ -27,8 +30,9 @@ nav:
 - Getting Started:
   - Prerequisites: 'prerequesites.md'
   - Installation: 'installation-guide.md'
-  - Quick start: 'getting-started.md'
-  - Migration from EasyEngine: 'migration-from-EasyEngine-V3.md'
+  - Post-install steps: 'post-install-steps.md'
+  - Creating sites: 'creating-sites.md'
+
 - Commands:
   - Overview: 'commands.md'
   - site: 'commands/site.md'
@@ -41,6 +45,9 @@ nav:
   - maintenance: 'commands/maintenance.md'
   - update: 'commands/update.md'
 - F.A.Q: 'faq.md'
+- How to : 'how-to.md'
+- Guides:
+  - EasyEngine Migration: 'migration-from-easyengine.md'
 
 extra:
   social:
