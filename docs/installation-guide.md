@@ -13,7 +13,7 @@ curl -sL wops.cc | sudo -E bash -
 ```bash
 git clone https://github.com/WordOps/WordOps.git $HOME/WordOps
 cd $HOME/WordOps
-sudo bash install
+./wo.sh
 ```
 
 !!! info "Information"

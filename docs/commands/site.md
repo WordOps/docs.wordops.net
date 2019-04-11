@@ -229,6 +229,15 @@ wo site create example.com --wp --letsencrypt # install wordpress & secure site 
 wo site create sub.example.com --wp --letsencrypt=subdomain # install wordpress and secure subdomain with letsencrypt
 ```
 
+# Cheatsheet
+
+                        | single site | multisite w/ subdir  | multisite w/ subdom
+----------------------- | ----------- | -------------------- | -----------------------
+**NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain
+**WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc
+**Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc
+**Redis cache**         | --wpredis   | --wpsubdir --wpredis | --wpsubdomain --wpredis
+
 
 ## site update
 
