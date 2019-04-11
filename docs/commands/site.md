@@ -8,26 +8,21 @@ Usage :
 wo site (command) [options]
 ```
 
-subcommand                   | description
-------------------------- | --------------------------
-[create](#site-create) | Create site with WordOps
-[update](#site-update) | Update site type or configuration
-[show](#site-show) | Show site Nginx configuration
-[start](#site-edit) | Edit site Nginx configuration
-[delete](#site-delete)   | Delete site
-[list](#site-list)     | list all sites
-[enable](#site-enable) | Enable site in Nginx
-[disable](#site-disable) | Disable site in Nginx
-
-
+| subcommand               | description                       |
+| ------------------------ | --------------------------------- |
+| [create](#site-create)   | Create site with WordOps          |
+| [update](#site-update)   | Update site type or configuration |
+| [show](#site-show)       | Show site Nginx configuration     |
+| [start](#site-edit)      | Edit site Nginx configuration     |
+| [delete](#site-delete)   | Delete site                       |
+| [list](#site-list)       | list all sites                    |
+| [enable](#site-enable)   | Enable site in Nginx              |
+| [disable](#site-disable) | Disable site in Nginx             |
 
 ## site create
 
-
 <video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
 </video>
-
-
 
 Usage :
 
@@ -79,44 +74,44 @@ Following are the WordPress website types you can create website based on Cache 
 
 #### Standard sites
 
-cache | PHP | example
--------- | -------------- | -------
-no cache | PHP 7.2 | `wo site create site.tld --wp`
-no cache | PHP 7.3 | `wo site create site.tld --wp --php73`
-fastcgi_cache | PHP 7.2 | `wo site create site.tld --wpfc`
-fastcgi_cache | PHP 7.3 | `wo site create site.tld --wpfc --php73`
-wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc`
-wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73`
-redis-cache | PHP 7.2 | `wo site create site.tld --wpredis`
-redis-cache | PHP 7.3 | `wo site create site.tld --wpredis --php73`
+| cache          | PHP     | example                                     |
+| -------------- | ------- | ------------------------------------------- |
+| no cache       | PHP 7.2 | `wo site create site.tld --wp`              |
+| no cache       | PHP 7.3 | `wo site create site.tld --wp --php73`      |
+| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpfc`            |
+| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpfc --php73`    |
+| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc`            |
+| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73`    |
+| redis-cache    | PHP 7.2 | `wo site create site.tld --wpredis`         |
+| redis-cache    | PHP 7.3 | `wo site create site.tld --wpredis --php73` |
 
 #### Multisite subdirectory
 
-cache          | PHP     | example
--------------- | ------- | ------------------------------------------------------
-no cache       | PHP 7.2 | `wo site create site.tld --wpsubdir`
-no cache       | PHP 7.3 | `wo site create site.tld --wpsubdir --php73`
-fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`
-fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpfc --php73`
-wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdir --wpsc`
-wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdir --wpsc --php73`
-redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdir --wpredis`
-redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdir --wpredis --php73`
+| cache          | PHP     | example                                                |
+| -------------- | ------- | ------------------------------------------------------ |
+| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdir`                   |
+| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdir --php73`           |
+| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`            |
+| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpfc --php73`    |
+| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdir --wpsc`            |
+| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdir --wpsc --php73`    |
+| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdir --wpredis`         |
+| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdir --wpredis --php73` |
 
 #### Multisite subdomain
 
-cache          | PHP     | example
--------------- | ------- | ------------------------------------------------------
-no cache       | PHP 7.2 | `wo site create site.tld --wpsubdom`
-no cache       | PHP 7.3 | `wo site create site.tld --wpsubdom --php73`
-fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`
-fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdom --wpfc --php73`
-wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdom --wpsc`
-wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdom --wpsc --php73`
-redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdom --wpredis`
-redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdom --wpredis --php73`
+| cache          | PHP     | example                                                |
+| -------------- | ------- | ------------------------------------------------------ |
+| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdom`                   |
+| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdom --php73`           |
+| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`            |
+| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdom --wpfc --php73`    |
+| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdom --wpsc`            |
+| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdom --wpsc --php73`    |
+| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdom --wpredis`         |
+| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdom --wpredis --php73` |
 
-#### Extra settings
+### Extra settings
 
 Define WordPress administrator user To define wordpress administrator user during site creation use
 
@@ -142,7 +137,7 @@ wo site create site.tld --email=wo@site.tld
 
 This will set defined email as administrator email. If not defined it will set git email as administrator email.
 
-### Let's Encrypt
+#### Let's Encrypt
 
 WordOps supports Let's Encrypt out of the box.
 
@@ -160,7 +155,7 @@ wo site create site.tld --letsencrypt=subdomain
 
 You can add --letsencrypt to any other flag.
 
-### PHP 7.3
+#### PHP 7.3
 
 To create site with PHP 7.3 you can use --php73 during site creation
 
@@ -176,68 +171,14 @@ To create simple php(with v7.3) website with no database use this command.
 wo site create site.tld --php73
 ```
 
+### Cheatsheet
 
-# Usage
-
-## Standard WordPress sites
-
-```bash
-wo site create example.com --wp       # install wordpress without any page caching
-wo site create example.com --wpsc     # install wordpress with wp-super-cache plugin
-wo site create example.com --wpfc     # install wordpress + nginx fastcgi_cache
-wo site create example.com --wpredis  # install wordpress + nginx redis_cache
-```
-
-## WordPress multisite with subdirectory
-
-```bash
-wo site create example.com --wpsubdir            # install wpmu-subdirectory without any page caching
-wo site create example.com --wpsubdir --wpsc     # install wpmu-subdirectory with wp-super-cache plugin
-wo site create example.com --wpsubdir --wpfc     # install wpmu-subdirectory + nginx fastcgi_cache
-wo site create example.com --wpsubdir --wpredis  # install wpmu-subdirectory + nginx redis_cache
-```
-
-## WordPress multisite with subdomain
-
-```bash
-wo site create example.com --wpsubdomain            # install wpmu-subdomain without any page caching
-wo site create example.com --wpsubdomain --wpsc     # install wpmu-subdomain with wp-super-cache plugin
-wo site create example.com --wpsubdomain --wpfc     # install wpmu-subdomain + nginx fastcgi_cache
-wo site create example.com --wpsubdomain --wpredis  # install wpmu-subdomain + nginx redis_cache
-```
-
-## Non-WordPress sites
-
-```bash
-wo site create example.com --html     # create example.com for static/html sites
-wo site create example.com --php      # create example.com with php support
-wo site create example.com --mysql    # create example.com with php & mysql support
-wo site create example.com --proxy=127.0.0.1:3000 #  create example.com with nginx as reverse-proxy
-```
-
-## PHP 7.3 sites
-
-```bash
-wo site create site.tld --wp --php73 # install wordpress with PHP 7.3
-wo site create site.tld --wpredis --php73 # create site.tld with PHP 7.3 & MySQL support
-```
-
-## Sites secured with Let's Encrypt
-
-```bash
-wo site create example.com --wp --letsencrypt # install wordpress & secure site with letsencrypt
-wo site create sub.example.com --wp --letsencrypt=subdomain # install wordpress and secure subdomain with letsencrypt
-```
-
-# Cheatsheet
-
-                        | single site | multisite w/ subdir  | multisite w/ subdom
+Cache                   | single site | multisite w/ subdir  | multisite w/ subdom
 ----------------------- | ----------- | -------------------- | -----------------------
 **NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain
 **WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc
 **Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc
 **Redis cache**         | --wpredis   | --wpsubdir --wpredis | --wpsubdomain --wpredis
-
 
 ## site update
 
@@ -249,23 +190,23 @@ Usage :
 wo site update  [<site_name>] [options]
 ```
 
-options | description
-------- | ------------
-`--html` | update to html site
-`--php` | update to php site
-`--mysql` | update to MySQL + PHP site
-`--php73` | update site to PHP 7.3
-`--php73=off` | disable PHP 7.3
-`--wp` | update site to WordPress without cache
-`--wpfc` | update site to WordPress with fastcgi_cache
-`--wpsc` | update site to WordPress with wp-super-cache
-`--wpredis` | update site to WordPress with redis-cache
-`--wpsubdir` | update site to WordPress multisite on subdirectories
-`--wpsubdomain` | update site to WordPress multisite on subdomains
-`--password` | update admin password for a WordPress site
-`--letsencrypt`,`--le` | secure site with Let's Encrypt SSL certificate
-`--letsencrypt=subdomain` | secure site running on a subdomain with Let's Encrypt
-`--letsencrypt=off` | disable Let's Encrypt SSL certificate
+| options                   | description                                           |
+| ------------------------- | ----------------------------------------------------- |
+| `--html`                  | update to html site                                   |
+| `--php`                   | update to php site                                    |
+| `--mysql`                 | update to MySQL + PHP site                            |
+| `--php73`                 | update site to PHP 7.3                                |
+| `--php73=off`             | disable PHP 7.3                                       |
+| `--wp`                    | update site to WordPress without cache                |
+| `--wpfc`                  | update site to WordPress with fastcgi_cache           |
+| `--wpsc`                  | update site to WordPress with wp-super-cache          |
+| `--wpredis`               | update site to WordPress with redis-cache             |
+| `--wpsubdir`              | update site to WordPress multisite on subdirectories  |
+| `--wpsubdomain`           | update site to WordPress multisite on subdomains      |
+| `--password`              | update admin password for a WordPress site            |
+| `--letsencrypt`,`--le`    | secure site with Let's Encrypt SSL certificate        |
+| `--letsencrypt=subdomain` | secure site running on a subdomain with Let's Encrypt |
+| `--letsencrypt=off`       | disable Let's Encrypt SSL certificate                 |
 
 ## site delete
 
@@ -275,8 +216,8 @@ Usage :
 wo site delete  [<site_name>] [options]
 ```
 
-options       | description
-------------- | --------------------------------------------
-`--no-prompt`      | delete website without confirmation prompt
-`--files`       | delete only website files
-`--db`     | delete only database
+| options       | description                                |
+| ------------- | ------------------------------------------ |
+| `--no-prompt` | delete website without confirmation prompt |
+| `--files`     | delete only website files                  |
+| `--db`        | delete only database                       |
