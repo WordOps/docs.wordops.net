@@ -5,7 +5,7 @@
 We provide an installer script which install the required dependencies, before setting-up WordOps. It can be installed with the following command :
 
 ```bash
-curl -sL wops.cc | sudo -E bash -
+wget -qO wo wops.cc && sudo bash wo
 ```
 
 ### Alternative : Clone Github repository and run

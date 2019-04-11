@@ -19,11 +19,6 @@ body, input {
 .md-typeset {
     font-size: 16px;
     line-height: 1.4;
-    margin-top: 0;
-}
-
-.md-typeset blockquote,.md-typeset ol,.md-typeset p,.md-typeset ul {
-    margin-top: 0;
 }
 
 .md-typeset h3 {
