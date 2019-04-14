@@ -19,7 +19,7 @@ After installing WordOps, if all your sites are still working properly, you can 
 
 !!! warning
 
-    If some sites are still using php5.6 or php7.0 and are not compatible with newer PHP versions, do not change their vhost configuration. WordOps minimum and default PHP version is PHP 7.2. Additionally sites previously created with `--w3tc`  will have to use another cache option as we deprecated this stack.
+    If some sites are still using php5.6 or php7.0 and are not compatible with newer PHP versions, do not change their vhost configuration. WordOps minimum and default PHP version is PHP 7.2. Additionally, sites previously created with `--w3tc`  will have to use another cache option as we deprecated this stack.
 
 ### Updating site configuration
 
@@ -37,32 +37,10 @@ The easiest way to update your site with the new WordOps configurations is to us
 wo site update site.tld <options>
 ```
 
-##### WordPress sites
+To update your sites configuration, you can enable PHP 7.3 on your site with the argument `--php73` and then disable it with the argument `--php73=off` to use PHP 7.2.
+This will regenerate your site Nginx vhost and apply the new configuration.
 
-To update a WordPress site, you just have to switch to another cache backend before switching back the previous cache backend used. For example, for a site created with the argument `--wp`, you just have to use another option like `--wpfc` and to switch back to `--wp`.
-
-
-
-**Example** : for a site created with `--wpsc`.
-
-```bash
-# switch to another cache backend to update nginx configuration
-wo site update site.tld --wp
-# switch back to the cache option previously used
-wo site update site.tld --wpsc
-```
-
-!!! info
-
-    It's not possible to update a site created with the argument `--wp` just by running `wo site update site.tld --wp` because like EasyEngine, WordOps verify previous type and the new one to make sure it's not the same.
-
-##### Non WordPress sites
-
-For non WordPress sites, the method is pretty similar to the one used for WordPress sites. You can enable PHP 7.3 on your site with the argument `--php73` before disabling it with the argument `--php73=off`.
-
-This will regenerate your site configuration with the new WordOps configurations.
-
-***Example** : for a basic site  created with `--mysql`
+**Example** :
 
 ```bash
 # enable PHP 7.3 to regenerate site configuration
@@ -101,3 +79,59 @@ There are some exceptions, list here :
 | common/locations-php7.conf | common/locations-wo.conf |
 | common/php.conf            | common/php72.conf        |
 | common/php7.conf           | common/php72.conf        |
+
+### Removing previous PHP version
+
+If you do not need php5.6 and php7.0 anymore, you can safely remove them with the following commands :
+
+```bash
+# php5.6
+apt-get -y autoremove php5.6-fpm php5.6-common --purge
+
+# php7.0
+apt-get -y autoremove php7.0-fpm php7.0-common --purge
+```
+
+### Upgrading MariaDB to 10.3
+
+!!! Warning
+    Before upgrading MariaDB, we strongly recommend you to perform a backup of your MySQL databases.
+
+#### Backup your databases
+
+You can backup your MySQL databases with this simple bash script :
+
+```bash
+wget https://raw.githubusercontent.com/VirtuBox/bash-scripts/master/backup/mysqldump/mysqldump.sh -O mysqldump.sh
+chmod +x mysqldump.sh
+```
+
+Then perform a full backup :
+
+```bash
+./mysqldump.sh --full
+```
+
+This will backup the whole MySQL server and store the gzipped dump in /var/www/mysqldump
+
+Additionally you can make a copy of the `/var/lib/mysql` directory :
+
+```bash
+sudo service mysql stop
+sudo cp -rf /var/lib/mysql /var/lib/mysql-bak
+sudo service mysql start
+```
+
+#### Upgrading MariaDB
+
+At first, you need to remove the current MariaDB-server installed. To do so, use the command :
+
+```bash
+sudo apt-get autoremove mariadb-server -y
+```
+
+Then you can reinstall the latest MariaDB-server version with WordOps :
+
+```bash
+wo stack install --mysql
+```
