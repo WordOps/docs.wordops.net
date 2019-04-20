@@ -32,7 +32,6 @@ nav:
   - Installation: 'installation-guide.md'
   - Post-install steps: 'post-install-steps.md'
   - Creating sites: 'creating-sites.md'
-
 - Commands:
   - Overview: 'commands.md'
   - site: 'commands/site.md'
@@ -48,6 +47,7 @@ nav:
 - How to : 'how-to.md'
 - Guides:
   - EasyEngine Migration: 'migration-from-easyengine.md'
+
 
 extra:
   social:
