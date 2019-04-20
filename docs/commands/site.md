@@ -142,18 +142,26 @@ This will set defined email as administrator email. If not defined it will set g
 WordOps supports Let's Encrypt out of the box.
 
 ```bash
-wo site create site.tld --letsencrypt
+wo site create site.tld --wp --letsencrypt
 ```
 
 This command will issue a certificate for site.tld + www.site.tld.
 
-But WordOps also supports issuing Let's Encrypt certificates with subdomains.
+But you can also issue Let's Encrypt certificates with subdomains.
 
 ```bash
-wo site create site.tld --letsencrypt=subdomain
+wo site create sub.site.tld --wp --letsencrypt=subdomain
 ```
 
 You can add --letsencrypt to any other flag.
+
+#### HSTS
+
+Additionally you can enable HSTS on your site by adding the flag `--hsts` with `--letsencrypt`
+
+```bash
+wo site create site.tld --wp --letsencrypt --hsts
+```
 
 #### PHP 7.3
 
