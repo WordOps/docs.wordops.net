@@ -24,7 +24,7 @@ wo site (command) [options]
 <video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
 </video>
 
-Usage :
+### Usage
 
 ```bash
 wo site create  [<site_name>] [options]
@@ -111,7 +111,16 @@ Following are the WordPress website types you can create website based on Cache 
 | redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdom --wpredis`         |
 | redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdom --wpredis --php73` |
 
-### Extra settings
+#### Cheatsheet
+
+Cache                   | single site | multisite w/ subdir  | multisite w/ subdom
+----------------------- | ----------- | -------------------- | -----------------------
+**NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain
+**WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc
+**Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc
+**Redis cache**         | --wpredis   | --wpsubdir --wpredis | --wpsubdomain --wpredis
+
+#### Extra settings
 
 Define WordPress administrator user To define wordpress administrator user during site creation use
 
@@ -136,6 +145,8 @@ wo site create site.tld --email=wo@site.tld
 ```
 
 This will set defined email as administrator email. If not defined it will set git email as administrator email.
+
+### Additional features
 
 #### Let's Encrypt
 
@@ -179,18 +190,23 @@ To create simple php(with v7.3) website with no database use this command.
 wo site create site.tld --php73
 ```
 
-### Cheatsheet
-
-Cache                   | single site | multisite w/ subdir  | multisite w/ subdom
------------------------ | ----------- | -------------------- | -----------------------
-**NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain
-**WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc
-**Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc
-**Redis cache**         | --wpredis   | --wpsubdir --wpredis | --wpsubdomain --wpredis
-
 ## site update
 
 Update site configuration
+
+### Pre-update policy
+
+`wo site update` command follows following procedure while updating current site.
+
+Before Updating any site :
+
+- Creates nginx configuration backup for site.
+- Moves htdocs to backup while updating html/php/mysql site.
+- Creates database dump in backup.
+- While updating current mysql site WordOps uses same database for installing wordpress tables.
+- All these backup are stored outside htdocs, in backup directory.
+
+### Usage
 
 Usage :
 
