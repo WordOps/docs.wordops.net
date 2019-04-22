@@ -1,11 +1,24 @@
-### Hardware
+# Prerequesites
 
-WordOps is very lightweight, so hardware requirements should not be a problem :
+## Hardware requirements
+
+### Minimum
+
+WordOps is very lightweight, so it do not require a lot of resources
 
 - ~30MB of free space
 - 512MB RAM
 
-### Operating Systems
+### Recommended
+
+However, some services like MySQL or Redis may need more resources, and running WordOps stacks without enough resources could impact your sites performance. Resources usage also highly depend on your site traffic.
+Here our recommended hardware configuration :
+
+- Multi-core CPU
+- 20GB SSD storage
+- 2GB RAM
+
+## Operating Systems
 
 The following operating systems are supported:
 
@@ -16,7 +29,7 @@ Distribution | Release            | Architecture
 **Debian**   | 8 (jessie)         | x86_64
              | 9 (stretch)        | x86_64
 
-### Ports
+## Ports
 
 Service         | Port  | Inbound | Outbound | Notes
 --------------- | ----- | ------- | -------- | --------------------------------------------------------------------

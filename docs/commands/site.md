@@ -113,12 +113,12 @@ Following are the WordPress website types you can create website based on Cache 
 
 #### Cheatsheet
 
-Cache                   | single site | multisite w/ subdir  | multisite w/ subdom
------------------------ | ----------- | -------------------- | -----------------------
-**NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain
-**WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc
-**Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc
-**Redis cache**         | --wpredis   | --wpsubdir --wpredis | --wpsubdomain --wpredis
+| Cache                   | single site | multisite w/ subdir  | multisite w/ subdom     |
+| ----------------------- | ----------- | -------------------- | ----------------------- |
+| **NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain           |
+| **WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc    |
+| **Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc    |
+| **Redis cache**         | --wpredis   | --wpsubdir --wpredis | --wpsubdomain --wpredis |
 
 #### Extra settings
 
@@ -231,6 +231,8 @@ wo site update  [<site_name>] [options]
 | `--letsencrypt`,`--le`    | secure site with Let's Encrypt SSL certificate        |
 | `--letsencrypt=subdomain` | secure site running on a subdomain with Let's Encrypt |
 | `--letsencrypt=off`       | disable Let's Encrypt SSL certificate                 |
+| `--hsts`                  | Enable HSTS on site secured with Let's Encrypt        |
+| `--hsts=off`              | Disable HSTS                                          |
 
 ## site delete
 
