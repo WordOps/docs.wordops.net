@@ -1,4 +1,3 @@
-
 <p align="center">
 <img src="images/logo.png" width="400" alt="WordOps" /><br><br>
 <a href="https://travis-ci.org/WordOps/WordOps"><img src="https://travis-ci.org/WordOps/WordOps.svg?branch=master" alt="build"></a>
@@ -8,9 +7,9 @@
 </p>
 
 <p align="center">
-<a href="https://wordops.net" target="_blank" rel="noopener"> WordOps site</a> •
-<a href="https://community.wordops.net" target="_blank" rel="noopener">Community forum</a> •
-<a href="https://community.wordops.io/slack" target="_blank" rel="noopener">Slack</a> •
+<a href="https://wordops.net" target="_blank" rel="noopener"> WordOps site</a> -
+<a href="https://community.wordops.net" target="_blank" rel="noopener">Community forum</a> -
+<a href="https://community.wordops.io/slack" target="_blank" rel="noopener">Slack</a> -
 <a href="https://twitter.com/WordOps_" target="_blank" rel="noopener">Twitter</a>
 </p>
 
