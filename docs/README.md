@@ -8,10 +8,10 @@
 </p>
 
 <p align="center">
-<a href="https://wordops.net"> WordOps site</a> â€¢
-<a href="https://community.wordops.net">Community forum</a> â€¢
-<a href="https://community.wordops.io/slack">Slack</a> â€¢
-<a href="https://twitter.com/WordOps_">Twitter</a>
+<a href="https://wordops.net" target="_blank" rel="noopener"> WordOps site</a> •
+<a href="https://community.wordops.net" target="_blank" rel="noopener">Community forum</a> •
+<a href="https://community.wordops.io/slack" target="_blank" rel="noopener">Slack</a> •
+<a href="https://twitter.com/WordOps_" target="_blank" rel="noopener">Twitter</a>
 </p>
 
 ---
@@ -23,8 +23,9 @@
 - **Up-to-date** : Nginx 1.14.2 with Brotli support, PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
 - **Secured** : Hardened WordPress security with strict Nginx location directives
 - **Powerful** : Optimized Nginx configurations with multiple cache backends support
-- **SSL** : Let's Encrypt SSL certificates handled by Acme.sh
-- **Modern** : Secured SSL/TLS encryption with strong ciphers_suite and modern TLS protocols
+- **SSL** : Let's Encrypt SSL certificates handled by acme.sh
+- **Modern** : Secured SSL/TLS with strong ciphers_suite, modern TLS protocols and HSTS support
+- **Monitoring** : Live Nginx vhost traffic with ngx_vts_module and server monitoring with Netdata
 
 ---
 

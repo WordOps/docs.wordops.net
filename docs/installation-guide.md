@@ -11,9 +11,9 @@ wget -qO wo wops.cc && sudo bash wo
 ### Alternative : Clone Github repository and run
 
 ```bash
-git clone https://github.com/WordOps/WordOps.git $HOME/WordOps
-cd $HOME/WordOps
-./wo.sh
+git clone https://github.com/WordOps/WordOps.git
+cd WordOps/
+sudo bash install
 ```
 
 !!! info "Information"
