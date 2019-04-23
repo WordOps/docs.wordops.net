@@ -1,6 +1,10 @@
 # How to ... ?
 
-## General WordOps usage
+## Questions overview
+
+- [How to set default language for WordPress install](how-to/wp-language.md)
+
+## Other questions
 
 #### Get a list of WordOps commands
 
@@ -49,26 +53,4 @@ You can use the command :
 
 ```bash
 wo secure --auth
-```
-
-#### Customize WordPress installation locale
-
-You can customize WordPress installation locale by creating the configuration file `~/.wp-cli/config.yml`
-
-```bash
-nano ~/.wp-cli/config.yml
-```
-
-And by adding the following content inside (just replace en_US by your locale) :
-
-```yaml
-core download:
-  locale: en_US
-```
-
-For example, to install WordPress in French, the file `~/.wp-cli/config.yml` should look like :
-
-```yaml
-core download:
-  locale: fr_FR
 ```

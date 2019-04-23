@@ -1,6 +1,7 @@
 <p align="center">
 <img src="images/logo.png" width="400" alt="WordOps" /><br><br>
-<a href="https://travis-ci.org/WordOps/WordOps"><img src="https://travis-ci.org/WordOps/WordOps.svg?branch=master" alt="build"></a>
+<a href="https://travis-ci.org/WordOps/WordOps" target="_blank" rel="noopener"
+><img src="https://travis-ci.org/WordOps/WordOps.svg?branch=master" alt="build"></a>
 <img src="https://img.shields.io/github/license/wordops/wordops.svg" alt="MIT">
 <img src="https://img.shields.io/github/last-commit/wordops/wordops.svg" alt="Commits">
 <img alt="GitHub release" src="https://img.shields.io/github/release-pre/wordops/wordops.svg">
@@ -17,7 +18,7 @@
 
 ## Key Features
 
-- **Easy to install** : One step automated installer with migration from EasyEngine v3 support
+- **Easy to install** : One step automated installer and easy migration from EasyEngine v3
 - **Fast deployment** : Fast and automated WordPress, Nginx, PHP, MySQL & Redis installation
 - **Up-to-date** : Nginx 1.14.2 with Brotli support, PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
 - **Secured** : Hardened WordPress security with strict Nginx location directives
@@ -48,7 +49,7 @@ Like other open-source project, WordOps needs your contributions to live. There 
 Suggestions, bug reports and pull requests are warmly welcome.
 This documentation was built with mkdocs to provide the ability to edit content and propose changes easily on Github.
 
-A short guide about how to edit WordOps documentation is available on the [github repository](https://github.com/WordOps/docs.wordops.net)
+A guide about how to edit WordOps documentation is available on the [github repository](https://github.com/WordOps/docs.wordops.net)
 
 ## Credits
 

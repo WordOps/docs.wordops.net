@@ -35,6 +35,45 @@ If you want to work on WordOps documentation on your computer, you just have to 
 5. push your modification `git push`
 6. open a pull request
 
+### Documentation structure
+
+Documentation source files are stored inside `docs` directory.
+Here the current structure :
+
+```bash
+├── commands # commands folder
+│   ├── clean.md
+│   ├── debug.md
+│   ├── info.md
+│   ├── log.md
+│   ├── maintenance.md
+│   ├── secure.md
+│   ├── site.md
+│   ├── stack.md
+│   └── update.md
+├── commands.md # Page -> commands Overview
+├── getting-started
+│   ├── creating-sites.md
+│   ├── installation-guide.md
+│   ├── post-install-steps.md
+│   └── prerequesites.md
+├── guides # guides folder ( add your extented guides & tutorials inside)
+│   └── migration-from-easyengine.md
+├── guides.md # Page -> Guides Overview
+├── how-to # how to folder (add your short tutorial inside)
+│   └── wp-language.md
+├── how-to.md # Page -> How to Overview
+```
+
+Each part of the documentation is stored in a separated folder. `how-to` is the folder used for any short tutorial or explanation about WordOps usage. `guides` is the folder used for any extended guide or tutorial about WordOps.
+
+Example :
+
+> I want to write a tutorial to explain how to use WordOps with a remote MySQL server.
+
+Create the file remote-mysql-server.md in the folder `how-to`.
+
+
 ### Working with mkdocs
 
 WordOps documentation is built with [mkdocs](https://github.com/mkdocs/mkdocs) and [mkdocs-material](https://github.com/squidfunk/mkdocs-material).

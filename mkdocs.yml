@@ -44,11 +44,18 @@ nav:
   - maintenance: 'commands/maintenance.md'
   - update: 'commands/update.md'
 - How to :
-  - General usage: 'how-to.md'
+  - Overview: 'how-to.md'
+  - Set WordPress language: 'how-to/wp-language.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
 - F.A.Q: 'faq.md'
+- Community:
+  - WordOps.net: https://wordops.net
+  - Community forum: https://community.wordops.net
+  - Slack: https://community.wordops.io/slack
+  - Twitter: https://twitter.com/WordOps_
+  - Mastodon: https://mastodon.top/@WordOps
 
 
 
