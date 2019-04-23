@@ -34,7 +34,7 @@ Welcome on WordOps documentation.
     Documentation writing is in progress, we will add missing informations as soon as possible
 
 !!! info
-    If you were using EasyEngine v3 previously, you will probably be interested by our [EasyEngine migration guide](migration-from-easyengine.md)
+    If you were using EasyEngine v3 previously, you will probably be interested by our [EasyEngine migration guide](guides/migration-from-easyengine.md)
 
 ## Getting Support
 

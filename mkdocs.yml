@@ -28,10 +28,10 @@ extra_css:
 nav:
 - Home: 'README.md'
 - Getting Started:
-  - Prerequisites: 'prerequesites.md'
-  - Installation: 'installation-guide.md'
-  - Post-install steps: 'post-install-steps.md'
-  - Creating sites: 'creating-sites.md'
+  - Prerequisites: 'getting-started/prerequesites.md'
+  - Installation: 'getting-started/installation-guide.md'
+  - Post-install steps: 'getting-started/post-install-steps.md'
+  - Creating sites: 'getting-started/creating-sites.md'
 - Commands:
   - Overview: 'commands.md'
   - site: 'commands/site.md'
@@ -43,10 +43,13 @@ nav:
   - secure: 'commands/secure.md'
   - maintenance: 'commands/maintenance.md'
   - update: 'commands/update.md'
-- F.A.Q: 'faq.md'
-- How to : 'how-to.md'
+- How to :
+  - General usage: 'how-to.md'
 - Guides:
-  - EasyEngine Migration: 'migration-from-easyengine.md'
+  - Overview: 'guides.md'
+  - EasyEngine Migration: 'guides/migration-from-easyengine.md'
+- F.A.Q: 'faq.md'
+
 
 
 extra:
