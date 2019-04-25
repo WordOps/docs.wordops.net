@@ -20,7 +20,7 @@
 
 - **Easy to install** : One step automated installer and easy migration from EasyEngine v3
 - **Fast deployment** : Fast and automated WordPress, Nginx, PHP, MySQL & Redis installation
-- **Up-to-date** : Nginx 1.14.2 with Brotli support, PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
+- **Up-to-date** : Nginx 1.16.0 with Brotli support, PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
 - **Secured** : Hardened WordPress security with strict Nginx location directives
 - **Powerful** : Optimized Nginx configurations with multiple cache backends support
 - **SSL** : Let's Encrypt SSL certificates handled by acme.sh

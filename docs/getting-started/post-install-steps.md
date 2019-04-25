@@ -18,6 +18,8 @@ Before creating your first site with WordOps, you can install WordOps main stack
 wo stack install
 ```
 
+<video align="center" src="/images/wo-stack.webm" width="760" autoplay loop></video>
+
 Here the list of WordOps components installed with the above
 
 Component | Description |
@@ -33,3 +35,5 @@ Adminer | lightweight phpMyAdmin alternative |
 OpcacheGUI | web interface for Opcache monitoring |
 Netdata | Monitoring suite |
 Anemometer | MySQL Slow Query Monitor |
+WordOps dashboard | Bootstrap template for WordOps backend |
+eXtplorer | Web File manager |

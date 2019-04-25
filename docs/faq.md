@@ -51,3 +51,7 @@ No, currently our custom Nginx package isn't built with OpenSSL 1.1+ and Nginx-w
 #### Why gzip compression is disabled by default ?
 
 We disabled gzip compression by default due to gzip related security issues when using TLS connection. More informations here [BREACH CVE](https://en.wikipedia.org/wiki/BREACH). We replaced gzip by brotli, which provide better performance and compression than gzip.
+
+#### Is WordOps Let's Encrypt stack compatible with Cloudflare CDN ?
+
+WordOps Let's Encrypt stack is compatible with Cloudflare CDN, but we still have an higher failure rate when issuing SSL certificates on domains under Cloudflare CDN. We are working on it and we will keep you update as soon as we find a workaround to this issue.

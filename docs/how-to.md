@@ -2,7 +2,8 @@
 
 ## Questions overview
 
-- [How to set default language for WordPress install](how-to/wp-language.md)
+- [How to set default language for WordPress install ?](how-to/wp-language.md)
+- [How to secure WordOps backend with Let's Encrypt SSL certificate ?](how-to/secure-22222.md)
 
 ## Other questions
 
