@@ -206,6 +206,10 @@ Before Updating any site :
 - While updating current mysql site WordOps uses same database for installing wordpress tables.
 - All these backup are stored outside htdocs, in backup directory.
 
+Example : updating site from basic wp to wp + fastcgi_cache :
+
+<video align="center" src="/images/wo-site-update.webm" width="720" autoplay loop></video>
+
 ### Usage
 
 Usage :
@@ -233,6 +237,17 @@ wo site update  [<site_name>] [options]
 | `--letsencrypt=off`       | disable Let's Encrypt SSL certificate                 |
 | `--hsts`                  | Enable HSTS on site secured with Let's Encrypt        |
 | `--hsts=off`              | Disable HSTS                                          |
+
+## site info
+
+Get site information including cache backend, PHP version or user database credentials
+
+Usage :
+
+```bash
+wo site info [<site_name>]
+```
+
 
 ## site delete
 
