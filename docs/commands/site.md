@@ -248,7 +248,6 @@ Usage :
 wo site info [<site_name>]
 ```
 
-
 ## site delete
 
 Usage :

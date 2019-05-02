@@ -22,18 +22,19 @@ wo stack install
 
 Here the list of WordOps components installed with the above
 
-Component | Description |
-----------|-------------|
-Nginx     | WordOps web server |
-PHP 7.2   | PHP7.2-FPM |
-MariaDB 10.3 | Open-source version of MySQL |
-WP-CLI    | The WordPress command-line tool
-Composer  | PHP packages manager |
-MySQLTuner | Command-line tool to tune MySQL |
-phpMyAdmin | MySQL server web interface |
-Adminer | lightweight phpMyAdmin alternative |
-OpcacheGUI | web interface for Opcache monitoring |
-Netdata | Monitoring suite |
-Anemometer | MySQL Slow Query Monitor |
+Component         | Description
+----------------- | --------------------------------------
+Nginx             | WordOps web server                     |
+PHP 7.2           | PHP7.2-FPM                             |
+MariaDB 10.3      | Open-source version of MySQL           |
+WP-CLI            | The WordPress command-line tool
+Composer          | PHP packages manager                   |
+MySQLTuner        | Command-line tool to tune MySQL        |
+phpMyAdmin        | MySQL server web interface             |
+Adminer           | lightweight phpMyAdmin alternative     |
+OpcacheGUI        | web interface for Opcache monitoring   |
+Netdata           | Monitoring suite                       |
+Anemometer        | MySQL Slow Query Monitor               |
 WordOps dashboard | Bootstrap template for WordOps backend |
-eXtplorer | Web File manager |
+eXtplorer         | Web File manager                       |
+Fail2ban          | Authentication bruteforce protection   |

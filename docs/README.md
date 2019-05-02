@@ -28,6 +28,10 @@
 
 ---
 
+**WordOps Dashboard public demo is available on [demo.wordop.eu](https://demo.wordops.eu)**
+
+---
+
 Welcome on WordOps documentation.
 
 !!! warning

@@ -2,6 +2,8 @@
 
 Display configuration information related to Nginx, PHP and MySQL
 
+<video align="center" src="/images/wo-info.webm" width="720" autoplay loop></video>
+
 Usage :
 
 ```bash
