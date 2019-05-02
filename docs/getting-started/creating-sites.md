@@ -17,7 +17,7 @@ WordOps can also :
 - install WordPress (with or without caching)
 - secure site with Let's Encrypt SSL certificate
 
-You can see all the options available to create site in the command list [site create](commands/site.md#site-create)
+You can see all the options available to create site in the command list [site create](/commands/site/#site-create)
 
 ## Additional informations
 

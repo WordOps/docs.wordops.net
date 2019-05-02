@@ -12,11 +12,8 @@ WordOps not only installs and configures the packages needed to deploy a site (N
 
 #### Which operating systems are supported by WordOps ?
 
-WordOps can be installed on Ubuntu LTS (Long Term Service) releases (16.04 & 18.04) as well as on Debian 8 (Jessie) or Debian 9 (stretch) Support for other linux distribution isn't planned.
-
-#### Are you planning to add support for other operating systems ?
-
-We will probably try to add support for Raspbian (Debian on raspberry pi) as our Nginx package already support this platform. Otherwise, adding support for other operating systems isn't planned.
+WordOps can be installed on Ubuntu LTS (Long Term Service) releases (16.04 & 18.04) as well as on Ubuntu 19.04, Debian 8 (Jessie) or Debian 9 (stretch) and Raspbian 9 (stretch).
+Support for other linux distribution isn't planned.
 
 ## Technical
 
