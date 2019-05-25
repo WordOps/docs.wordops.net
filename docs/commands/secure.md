@@ -1,6 +1,6 @@
 # Secure
 
-WordOps uses Basic Auth to protect the backend from unauthorize people. To change the authorization method, backend's port,... You can use `wo secure` command.
+WordOps uses [Basic Auth](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) to protect the backend from unauthorize people. To change the authorization method, backend's port,... You can use `wo secure` command.
 
 Usage :
 
