@@ -101,7 +101,7 @@ wo site create site.tld --wp --letsencrypt
 WordPress site on subdomain secure with Let's Encrypt
 
 ```bash
-wo site create site.tld --wp --letsencrypt=subdomain
+wo site create sub.site.tld --wp --letsencrypt=subdomain
 ```
 
 WordPress site with PHP 7.3 and secured by Let's Encrypt

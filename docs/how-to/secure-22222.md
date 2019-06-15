@@ -50,7 +50,7 @@ acme.sh --install-cert -d $DOMAIN_NAME --ecc \
 --key-file /etc/letsencrypt/live/$DOMAIN_NAME/key.pem \
 --fullchain-file /etc/letsencrypt/live/$DOMAIN_NAME/fullchain.pem \
 --ca-file /etc/letsencrypt/live/$DOMAIN_NAME/ca.pem \
---reloadcmd "systemctl restart nginx.service"
+--reloadcmd "nginx -t && systemctl restart nginx.service"
 ```
 
 Create the Nginx configuration
