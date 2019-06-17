@@ -1,9 +1,15 @@
 # update
 
-Update WordOps if a new version is available
+Update WordOps to the latest release available
 
 Usage :
 
 ```bash
-wo update
+wo update [options]
 ```
+
+Without argument, the command `wo update` will update WordOps only if a newer version is available.
+
+optional arguments | description
+------------------ | --------------------------------------
+--force            | Force WordOps update to the last release            |

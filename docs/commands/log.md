@@ -8,12 +8,12 @@ Usage :
 wo log [<site_name>] [options]
 ```
 
-options | description
------------------- | --------------------------------------
-gzip            | GZip Nginx, PHP, MySQL log file            |
-mail              | Mail Nginx, PHP, MySQL log file               |
-reset           | Reset Nginx, PHP, MySQL log file                   |
-show               | Show Nginx, PHP, MySQL log file |
+subcommand      | description
+--------------- | --------------------------------
+[gzip](#gzip)   | GZip Nginx, PHP, MySQL log file
+[mail](#mail)   | Mail Nginx, PHP, MySQL log file
+[show](#log-show)   | Show Nginx, PHP, MySQL log file
+[reset](#reset) | Reset Nginx, PHP, MySQL log file
 
 ## log show
 

@@ -1,12 +1,22 @@
 # Secure
 
-WordOps uses [Basic Auth](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) to protect the backend from unauthorize people. To change the authorization method, backend's port,... You can use `wo secure` command.
+Secure command secure WordOps backend auth, ip and port
 
 Usage :
 
 ```bash
 wo secure [options]
 ```
+
+Options :
+
+argument | description
+------------------ | -----------
+--auth             | Set backend user credentials (user and)
+--port             | Set backend port (default : 22222)
+--ip               | Set the list of IP(s) allowed to access without authentification
+
+WordOps uses [Basic Auth](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) to protect the backend from unauthorize people. To change the authorization method, backend's port,... You can use `wo secure` command.
 
 ## Change backend credential
 
@@ -19,6 +29,7 @@ Provide HTTP authentication password [5zVFELjHjShPPFr7qkoMzavP] :
 ```
 
 Short hand:
+
 ```bash
 wo secure --auth YourUsername aSecurePassword
 ```
@@ -43,3 +54,5 @@ wo secure --ip
 Enter the comma separated IP addresses to white list [127.0.0.1]:1.1.1.1
 Successfully added IP address in acl.conf file
 ```
+
+You can also edit directly the file `/etc/nginx/common/acl.conf`
