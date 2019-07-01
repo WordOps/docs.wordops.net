@@ -68,3 +68,9 @@ wo secure --auth
 Previously with EasyEngine v3, Let's Encrypt certificates were renewed by running the command `ee site update --le=renew --all` with a cronjob.
 
 You may have noticed the command `site update --le=renew` still exist in WordOps, but you shouln't need it because WordOps use the awesome acme client acme.sh to issue and handle Let's Encrypt SSL certificates. All certificates are **automatically renewed every 60 days** by acme.sh using a cronjob.
+
+However, if you really need to renew your certificates, you can directly use acme.sh to renew all certificates with the following command :
+
+```bash
+acme.sh --renew-all --ecc
+```
