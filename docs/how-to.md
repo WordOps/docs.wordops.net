@@ -4,6 +4,7 @@
 
 - [How to set default language for WordPress install ?](how-to/wp-language.md)
 - [How to secure WordOps backend with Let's Encrypt SSL certificate ?](how-to/secure-22222.md)
+- [How to renew Let's Encrypt Certificates ?](#renew-a-lets-encrypt-ssl-certificates-with-wordops)
 
 ## Other questions
 
@@ -21,6 +22,8 @@ Then for any subcommand, you just have to add the arugment -h or --help to displ
 wo site --help
 ```
 
+---
+
 #### Get the MySQL root password
 
 MySQL root password is stored in the file `/etc/mysql/conf.d/my.cnf`
@@ -32,6 +35,8 @@ You can use the command :
 ```bash
 wo site info site.tld
 ```
+
+---
 
 #### Access WordOps backend
 
@@ -55,3 +60,11 @@ You can use the command :
 ```bash
 wo secure --auth
 ```
+
+---
+
+#### Renew a Let's Encrypt SSL Certificates with WordOps
+
+Previously with EasyEngine v3, Let's Encrypt certificates were renewed by running the command `ee site update --le=renew --all` with a cronjob.
+
+You may have noticed the command `site update --le=renew` still exist in WordOps, but you shouln't need it because WordOps use the awesome acme client acme.sh to issue and handle Let's Encrypt SSL certificates. All certificates are **automatically renewed every 60 days** by acme.sh using a cronjob.
