@@ -31,7 +31,7 @@ wo stack install [options]
 
 ### Web
 
-This will install Nginx, PHP 7.2, MariaDB & additional tools available on port 22222
+This will install Nginx, PHP 7.2, MariaDB
 
 ```bash
 wo stack install
@@ -45,7 +45,7 @@ wo stack install web
 
 ### Admin tools
 
-WordOps backend with PHPmyAdmin, Adminer, MemcachedAdmin etc..
+WordOps backend with WordOps-Dashboard, PHPmyAdmin, Adminer, MemcachedAdmin etc..
 
 ```bash
 wo stack install --admin
@@ -81,4 +81,10 @@ wo stack install --adminer
 
 ```bash
 wo stack install --phpmyadmin
+```
+
+#### Netdata
+
+```bash
+wo stack install --netdata
 ```

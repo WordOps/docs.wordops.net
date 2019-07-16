@@ -11,9 +11,7 @@ WordOps is very lightweight, it doesn't require a lot of resources and can be in
 
 ### Recommended
 
-However, if you are going to use WordOps in production, some services like MySQL or Redis may need more resources, and running WordOps stacks without
-enough resources could impact your sites performance. Resources usage also highly depend on your site traffic.
-Here our recommended hardware configuration for production :
+However, if you are going to use WordOps in production, some services like MySQL or Redis may need more resources, and running WordOps stacks without enough resources could impact your sites performance. Resources usage also highly depend on your site traffic. Here our recommended hardware configuration for production :
 
 - Multi-core CPU
 - 20GB SSD storage
@@ -30,6 +28,7 @@ Distribution | Release            | Architecture
              | 19.04 (disco)      | x86_64
 **Debian**   | 8 (jessie)         | x86_64
              | 9 (stretch)        | x86_64
+             | 10 (buster)        | x86_64
 **Raspbian** | 9 (stretch)        | armv7l
 
 ## Ports

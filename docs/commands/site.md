@@ -234,9 +234,13 @@ wo site update  [<site_name>] [options]
 | `--password`              | update admin password for a WordPress site            |
 | `--letsencrypt`,`--le`    | secure site with Let's Encrypt SSL certificate        |
 | `--letsencrypt=subdomain` | secure site running on a subdomain with Let's Encrypt |
+| `--letsencrypt=wildcard`  | secure site/multisite with a wildcard SSL certificates|
 | `--letsencrypt=off`       | disable Let's Encrypt SSL certificate                 |
+| `--dns=<dns api provider>`| issue Let's Encrypt certificate with DNS validation   |
 | `--hsts`                  | Enable HSTS on site secured with Let's Encrypt        |
 | `--hsts=off`              | Disable HSTS                                          |
+
+
 
 ## site info
 

@@ -2,6 +2,9 @@
 
 Secure command secure WordOps backend auth, ip and port
 
+<video align="center" src="/images/wo-secure.webm" width="720" autoplay loop>
+</video>
+
 Usage :
 
 ```bash

@@ -17,13 +17,14 @@
 
 ## Key Features
 
-- **Easy to install** : One step automated installer and easy migration from EasyEngine v3
+- **Easy to install** : One step automated installer with migration from EasyEngine v3 support
 - **Fast deployment** : Fast and automated WordPress, Nginx, PHP, MySQL & Redis installation
-- **Up-to-date** : Nginx 1.16.0 with Brotli support, PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
+- **Custom Nginx build** : Nginx 1.16.0 - TLS v1.3 Cloudflare HTTP/2 HPACK & Brotli support
+- **Up-to-date** : PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
 - **Secured** : Hardened WordPress security with strict Nginx location directives
 - **Powerful** : Optimized Nginx configurations with multiple cache backends support
-- **SSL** : Let's Encrypt SSL certificates handled by acme.sh
-- **Modern** : Secured SSL/TLS with strong ciphers_suite, modern TLS protocols and HSTS support
+- **SSL** : Domain, Subdomain & Wildcard Let's Encrypt SSL certificates handled by acme.sh
+- **Modern** : Strong ciphers_suite, modern TLS protocols and HSTS support (Grade A+ on ssllabs)
 - **Monitoring** : Live Nginx vhost traffic with ngx_vts_module and server monitoring with Netdata
 
 ---
@@ -61,4 +62,4 @@ A guide about how to edit WordOps documentation is available on the [github repo
 ---
 
 <p align="center">
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br>This documentation is licensed under a <br><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://docs.wordops.net/images/80x31.png" /></a><br>This documentation is licensed under a <br><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
