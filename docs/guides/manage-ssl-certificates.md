@@ -55,53 +55,47 @@ wo site update sub.site.tld --letsencrypt=subdomain
 ### DNS API mode
 
 !!! warning
-    This feature is available with WordOps v3.9.6 and onward
+    Read first our guide about [DNS API configuration](how-to/configure-letsencrypt-dns-api-validation.md)
 
-WordOps also support domain validation using DNS API. This is optional to issue domain and subdomain certificates, but it's required to issue wildcard certificates.
 
-#### DNS API configuration
+#### domain + www.domain.tld
 
-WordOps use the Acme client [acme.sh](https://github.com/Neilpang/acme.sh) to handle Let's Encrypt SSL certificates. It support DNS API with the most part of popular DNS providers, including Cloudflare, DigitalOcean, OVH, Amazon Route53, Linode, Gandi and many others.
-
-In this example, we will configure Cloudflare DNS API, but configuration will be pretty similar with other DNS providers.
-
-!!! info
-    DNS providers list and configurations are available in [acme.sh wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
-
-#### Step 1 : get your API credentials
-
-Requirements :
-
-- your Cloudflare account email address
-- your Global API Key available in your [Cloudflare profile](https://dash.cloudflare.com/profile)
-
-#### Step 2 : set your credentials with acme.sh variables
-
-Before issuing your first SSL certificate with DNS API, you have to define your API credentials with the command `export`  :
+To create a new site with Cloudflare DNS API :
 
 ```bash
-export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
-export CF_Email="xxxx@sss.com"
+wo site create site.tld --wp -le --dns=dns_cf
 ```
 
-Where **CF_Key** is your Cloudflare API Key, and **CF_Email** your Cloudflare account email address.
+To secure an existant site with DigitalOcean DNS API:
 
-#### Step 3 : issue your certificate with WordOps
+```bash
+wo site update site.tld -le --dns=dns_do
+```
 
-To create a new site :
+#### sub-domain
+
+To create a new site with Cloudflare DNS API :
+
+```bash
+wo site create sub.site.tld --wp --letsencrypt=subdomain --dns=dns_cf
+```
+
+To secure an existant site with DigitalOcean DNS API:
+
+```bash
+wo site update sub.site.tld --letsencrypt=subdomain --dns=dns_do
+```
+
+#### wildcard
+
+To create a new site with Cloudflare DNS API :
 
 ```bash
 wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 ```
 
-To secure an existant site :
+To secure an existant site with DigitalOcean DNS API:
 
 ```bash
-wo site update site.tld --letsencrypt=wildcard --dns=dns_cf
+wo site update site.tld --letsencrypt=wildcard --dns=dns_do
 ```
-
-Informations :
-
-- You can also use DNS API to issue domain and subdomain certificates.
-- `--dns=dns_cf` define the DNS provider to use. With DigitalOcean, it would be `--dns=dns_do`
-- After issuing a first certificate using DNS API, your API credentials will be saved in `/etc/letsencrypt/config/account.conf`. You do not need to define them anymore.

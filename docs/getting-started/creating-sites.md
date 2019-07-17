@@ -109,3 +109,12 @@ WordPress site with PHP 7.3 and secured by Let's Encrypt
 ```bash
 wo site create site.tld --wp --php73 --letsencrypt
 ```
+
+Create WordPress subdomain multisite secured with a Let's Encrypt Wildcard SSL certificate
+
+!!! info
+    More informations about wildcard SSL certificates our guide about [DNS API configuration](how-to/configure-letsencrypt-dns-api-validation.md)
+
+```bash
+wo site create site.tld --wpsubdomain --letsencrypt=wildcard --dns=dns_cf
+```

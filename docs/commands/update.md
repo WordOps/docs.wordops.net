@@ -13,3 +13,4 @@ Without argument, the command `wo update` will update WordOps only if a newer ve
 optional arguments | description
 ------------------ | --------------------------------------
 --force            | Force WordOps update to the last release            |
+--preserve         | Do not overwrite Nginx configurations during update

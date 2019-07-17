@@ -21,31 +21,35 @@ subcommand                   | description
 
 ## stack install
 
-<video align="center" src="/images/wo-stack.webm" width="720" autoplay loop></video>
-
 Usage :
 
 ```bash
 wo stack install [options]
 ```
 
-### Web
-
-This will install Nginx, PHP 7.2, MariaDB
+### Recommended install
 
 ```bash
 wo stack install
 ```
 
-or
+<video align="center" src="/images/wo-stack.webm" width="720" autoplay loop></video>
+
+This will install the `--web` stack and `--admin` stack.
+
+Nginx, PHP 7.2, MariaDB, Netdata, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
+
+### Web
 
 ```bash
-wo stack install web
+wo stack install --web
 ```
+
+This will install Nginx, PHP 7.2, MariaDB
 
 ### Admin tools
 
-WordOps backend with WordOps-Dashboard, PHPmyAdmin, Adminer, MemcachedAdmin etc..
+WordOps backend with WordOps-Dashboard, PHPmyAdmin, Adminer, OpcacheGUI etc..
 
 ```bash
 wo stack install --admin
@@ -87,4 +91,33 @@ wo stack install --phpmyadmin
 
 ```bash
 wo stack install --netdata
+```
+
+#### WordOps dashboard
+
+!!! warning
+    It's highly recommended to use `wo stack install` to install WordOps dashboard and all related tools
+
+```bash
+wo stack install --dashboard
+```
+
+## stack upgrade
+
+Upgrade stack safely
+
+Usage :
+
+```bash
+wo stack upgrade [options]
+```
+
+### Options
+
+#### Nginx
+
+Upgrade Nginx
+
+```bash
+wo stack upgrade --nginx
 ```

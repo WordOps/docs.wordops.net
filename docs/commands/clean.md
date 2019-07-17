@@ -1,6 +1,6 @@
 # clean
 
-Clean NGINX FastCGI cache, Opcache, Memcached, Redis Cache
+Clean NGINX FastCGI cache, Opcache, Redis Cache
 
 Usage :
 
@@ -14,6 +14,5 @@ optional arguments | description
 ------------------ | -------------------------
 --fastcgi          | clean Nginx fastcgi_cache |
 --redis            | clean redis cache         |
---memcache         | clean memcached cache     |
 --opcache          | clean opcache             |
 --all              | clean all cache           |

@@ -9,15 +9,16 @@ wo site (command) [options]
 ```
 
 | subcommand               | description                       |
-| ------------------------ | --------------------------------- |
+|--------------------------|-----------------------------------|
 | [create](#site-create)   | Create site with WordOps          |
 | [update](#site-update)   | Update site type or configuration |
 | [show](#site-show)       | Show site Nginx configuration     |
-| [start](#site-edit)      | Edit site Nginx configuration     |
+| [edit](#site-edit)       | Edit site Nginx configuration     |
 | [delete](#site-delete)   | Delete site                       |
 | [list](#site-list)       | list all sites                    |
 | [enable](#site-enable)   | Enable site in Nginx              |
 | [disable](#site-disable) | Disable site in Nginx             |
+| [cd](#site-cd)           | Move into site webroot directory  |
 
 ## site create
 
@@ -75,7 +76,7 @@ Following are the WordPress website types you can create website based on Cache 
 #### Standard sites
 
 | cache          | PHP     | example                                     |
-| -------------- | ------- | ------------------------------------------- |
+|----------------|---------|---------------------------------------------|
 | no cache       | PHP 7.2 | `wo site create site.tld --wp`              |
 | no cache       | PHP 7.3 | `wo site create site.tld --wp --php73`      |
 | fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpfc`            |
@@ -88,7 +89,7 @@ Following are the WordPress website types you can create website based on Cache 
 #### Multisite subdirectory
 
 | cache          | PHP     | example                                                |
-| -------------- | ------- | ------------------------------------------------------ |
+|----------------|---------|--------------------------------------------------------|
 | no cache       | PHP 7.2 | `wo site create site.tld --wpsubdir`                   |
 | no cache       | PHP 7.3 | `wo site create site.tld --wpsubdir --php73`           |
 | fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`            |
@@ -101,7 +102,7 @@ Following are the WordPress website types you can create website based on Cache 
 #### Multisite subdomain
 
 | cache          | PHP     | example                                                |
-| -------------- | ------- | ------------------------------------------------------ |
+|----------------|---------|--------------------------------------------------------|
 | no cache       | PHP 7.2 | `wo site create site.tld --wpsubdom`                   |
 | no cache       | PHP 7.3 | `wo site create site.tld --wpsubdom --php73`           |
 | fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`            |
@@ -114,7 +115,7 @@ Following are the WordPress website types you can create website based on Cache 
 #### Cheatsheet
 
 | Cache                   | single site | multisite w/ subdir  | multisite w/ subdom     |
-| ----------------------- | ----------- | -------------------- | ----------------------- |
+|-------------------------|-------------|----------------------|-------------------------|
 | **NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain           |
 | **WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc    |
 | **Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc    |
@@ -170,7 +171,7 @@ wo site create sub.site.tld --wp --letsencrypt=subdomain
 
 ##### Wildcard
 
-Since the release v3.9.6, WordOps supports Let's Encrypt Wildcard SSL certificates with DNS API validation. Before issuing a wildcard certificate, it require to define the DNS API crendentials for acme.sh.
+**Since the release v3.9.6**, WordOps supports Let's Encrypt Wildcard SSL certificates with DNS API validation. Before issuing a wildcard certificate, it require to define the DNS API crendentials for acme.sh.
 
 Example with Cloudflare DNS :
 
@@ -179,25 +180,8 @@ export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
 export CF_Email="xxxx@sss.com"
 ```
 
-* CF_key : Cloudflare Global API key available in your [Cloudflare profile](https://dash.cloudflare.com/profile)
-* CF_Email : Your Cloudflare account email address
-
-Example with DigitalOcean :
-
-```bash
-export DO_API_KEY="75310dc4ca779ac39a19f6355db573b49ce92ae126553ebd61ac3a3ae34834cc"
-```
-
-Example with GoDaddy :
-
-```bash
-export GD_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
-export GD_Secret="asdfsdafdsfdsfdsfdsfdsafd"
-```
-
 !!! info
-    DNS providers list and configurations are available in [Acme.sh Wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
-
+    More example in our guide about [DNS API configuration](how-to/configure-letsencrypt-dns-api-validation.md)
 
 After you define those variables with the command `export`, you can issue your certificate with
 
@@ -205,7 +189,7 @@ After you define those variables with the command `export`, you can issue your c
 wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 ```
 
-You can add --letsencrypt to any other flag.
+* `--dns=dns_cf` can be replaced with another DNS provider supported by acme.sh. For DigitalOcean, it would be `--dns=dns_do`
 
 #### HSTS
 
@@ -225,7 +209,7 @@ For example, you can create WordPress site running on PHP 7.3 using following co
 wo site create site.tld --wp --php73
 ```
 
-To create simple php(with v7.3) website with no database use this command.
+To create simple php site running with PHP 7.3 with no database, you can use this command :
 
 ```bash
 wo site create site.tld --php73
@@ -241,11 +225,11 @@ Update site configuration
 
 Before Updating any site :
 
-- Creates nginx configuration backup for site.
-- Moves htdocs to backup while updating html/php/mysql site.
-- Creates database dump in backup.
-- While updating current mysql site WordOps uses same database for installing wordpress tables.
-- All these backup are stored outside htdocs, in backup directory.
+* Creates nginx configuration backup for site.
+* Moves htdocs to backup while updating html/php/mysql site.
+* Creates database dump in backup.
+* While updating current mysql site WordOps uses same database for installing wordpress tables.
+* All these backup are stored outside htdocs, in backup directory.
 
 Example : updating site from basic wp to wp + fastcgi_cache :
 
@@ -259,29 +243,53 @@ Usage :
 wo site update  [<site_name>] [options]
 ```
 
-| options                   | description                                           |
-| ------------------------- | ----------------------------------------------------- |
-| `--html`                  | update to html site                                   |
-| `--php`                   | update to php site                                    |
-| `--mysql`                 | update to MySQL + PHP site                            |
-| `--php73`                 | update site to PHP 7.3                                |
-| `--php73=off`             | disable PHP 7.3                                       |
-| `--wp`                    | update site to WordPress without cache                |
-| `--wpfc`                  | update site to WordPress with fastcgi_cache           |
-| `--wpsc`                  | update site to WordPress with wp-super-cache          |
-| `--wpredis`               | update site to WordPress with redis-cache             |
-| `--wpsubdir`              | update site to WordPress multisite on subdirectories  |
-| `--wpsubdomain`           | update site to WordPress multisite on subdomains      |
-| `--password`              | update admin password for a WordPress site            |
-| `--letsencrypt`,`--le`    | secure site with Let's Encrypt SSL certificate        |
-| `--letsencrypt=subdomain` | secure site running on a subdomain with Let's Encrypt |
-| `--letsencrypt=wildcard`  | secure site/multisite with a wildcard SSL certificates|
-| `--letsencrypt=off`       | disable Let's Encrypt SSL certificate                 |
-| `--dns=<dns api provider>`| issue Let's Encrypt certificate with DNS validation   |
-| `--hsts`                  | Enable HSTS on site secured with Let's Encrypt        |
-| `--hsts=off`              | Disable HSTS                                          |
+| options                    | description                                            |
+|----------------------------|--------------------------------------------------------|
+| `--html`                   | update to html site                                    |
+| `--php`                    | update to php site                                     |
+| `--mysql`                  | update to MySQL + PHP site                             |
+| `--php73`                  | update site to PHP 7.3                                 |
+| `--php73=off`              | disable PHP 7.3                                        |
+| `--wp`                     | update site to WordPress without cache                 |
+| `--wpfc`                   | update site to WordPress with fastcgi_cache            |
+| `--wpsc`                   | update site to WordPress with wp-super-cache           |
+| `--wpredis`                | update site to WordPress with redis-cache              |
+| `--wpsubdir`               | update site to WordPress multisite on subdirectories   |
+| `--wpsubdomain`            | update site to WordPress multisite on subdomains       |
+| `--password`               | update admin password for a WordPress site             |
+| `--letsencrypt`,`-le`      | secure site with Let's Encrypt SSL certificate         |
+| `--letsencrypt=subdomain`  | secure site running on a subdomain with Let's Encrypt  |
+| `--letsencrypt=wildcard`   | secure site/multisite with a wildcard SSL certificates |
+| `--letsencrypt=off`        | disable Let's Encrypt SSL certificate                  |
+| `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation    |
+| `--hsts`                   | Enable HSTS on site secured with Let's Encrypt         |
+| `--hsts=off`               | Disable HSTS                                           |
 
+### Examples
 
+Update a WordPress site without cache (`--wp`), to WordPress with Nginx fastcgi_cache
+
+```bash
+wo site update site.tld --wpfc
+```
+
+Update a WordPress site running with PHP 7.2 to PHP 7.3
+
+```bash
+wo site update site.tld --php73
+```
+
+Disable PHP 7.3 and use PHP 7.2 :
+
+```bash
+wo site update site.tld --php73=off
+```
+
+Update a WordPress site wiht Nginx fastcgi_cache to WordPress with redis-cache
+
+```bash
+wo site update site.tld --wpredis
+```
 
 ## site info
 
@@ -295,6 +303,8 @@ wo site info [<site_name>]
 
 ## site delete
 
+Delete site including webroot and database :
+
 Usage :
 
 ```bash
@@ -302,7 +312,69 @@ wo site delete  [<site_name>] [options]
 ```
 
 | options       | description                                |
-| ------------- | ------------------------------------------ |
+|---------------|--------------------------------------------|
 | `--no-prompt` | delete website without confirmation prompt |
 | `--files`     | delete only website files                  |
 | `--db`        | delete only database                       |
+
+## site edit
+
+Edit site Nginx configuration
+
+Usage :
+
+```bash
+wo site edit [<site_name>]
+```
+
+You will be prompted to choose the text editor you prefer. Nano is highly recommended for beginners.
+
+## site cd
+
+Move into a site webroot directory
+
+Usage :
+
+```bash
+wo site cd  [<site_name>]
+```
+
+## site list
+
+List all sites managed with WordOps
+
+Usage :
+
+```bash
+wo site list
+```
+
+## site show
+
+Display site Nginx configuration
+
+Usage :
+
+```bash
+wo site show  [<site_name>]
+```
+
+## site disable
+
+Disable site Nginx vhost
+
+Usage :
+
+```bash
+wo site disable  [<site_name>]
+```
+
+## site enable
+
+Enable site Nginx vhost
+
+Usage :
+
+```bash
+wo site enable  [<site_name>]
+```
