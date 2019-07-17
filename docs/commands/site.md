@@ -152,16 +152,57 @@ This will set defined email as administrator email. If not defined it will set g
 
 WordOps supports Let's Encrypt out of the box.
 
+##### Domain
+
 ```bash
 wo site create site.tld --wp --letsencrypt
 ```
 
 This command will issue a certificate for site.tld + www.site.tld.
 
-But you can also issue Let's Encrypt certificates with subdomains.
+##### Subdomain
+
+You can also issue Let's Encrypt certificates with subdomains.
 
 ```bash
 wo site create sub.site.tld --wp --letsencrypt=subdomain
+```
+
+##### Wildcard
+
+Since the release v3.9.6, WordOps supports Let's Encrypt Wildcard SSL certificates with DNS API validation. Before issuing a wildcard certificate, it require to define the DNS API crendentials for acme.sh.
+
+Example with Cloudflare DNS :
+
+```bash
+export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
+export CF_Email="xxxx@sss.com"
+```
+
+* CF_key : Cloudflare Global API key available in your [Cloudflare profile](https://dash.cloudflare.com/profile)
+* CF_Email : Your Cloudflare account email address
+
+Example with DigitalOcean :
+
+```bash
+export DO_API_KEY="75310dc4ca779ac39a19f6355db573b49ce92ae126553ebd61ac3a3ae34834cc"
+```
+
+Example with GoDaddy :
+
+```bash
+export GD_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
+export GD_Secret="asdfsdafdsfdsfdsfdsfdsafd"
+```
+
+!!! info
+    DNS providers list and configurations are available in [Acme.sh Wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
+
+
+After you define those variables with the command `export`, you can issue your certificate with
+
+```bash
+wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 ```
 
 You can add --letsencrypt to any other flag.

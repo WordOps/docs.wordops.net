@@ -62,6 +62,7 @@ nav:
   - Overview: 'how-to.md'
   - Set WordPress language: 'how-to/wp-language.md'
   - Secure WordOps backend: 'how-to/secure-22222.md'
+  - Configure LetsEncrypt DNS API : 'how-to/configure-letsencrypt-dns-api-validation.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
