@@ -173,6 +173,10 @@ wo site create sub.site.tld --wp --letsencrypt=subdomain
 
 **Since the release v3.9.6**, WordOps supports Let's Encrypt Wildcard SSL certificates with DNS API validation. Before issuing a wildcard certificate, it require to define the DNS API crendentials for acme.sh.
 
+<video align="center" src="/images/wo-wildcard.webm" width="720" autoplay loop>
+</video>
+
+
 Example with Cloudflare DNS :
 
 ```bash
@@ -261,7 +265,7 @@ wo site update  [<site_name>] [options]
 | `--letsencrypt=subdomain`  | secure site running on a subdomain with Let's Encrypt  |
 | `--letsencrypt=wildcard`   | secure site/multisite with a wildcard SSL certificates |
 | `--letsencrypt=off`        | disable Let's Encrypt SSL certificate                  |
-| `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation    |
+| `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default : `dns_cf`    |
 | `--hsts`                   | Enable HSTS on site secured with Let's Encrypt         |
 | `--hsts=off`               | Disable HSTS                                           |
 

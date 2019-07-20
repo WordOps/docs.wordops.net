@@ -10,6 +10,9 @@ theme:
   favicon: 'images/favicon.png'
   language: 'en'
   highlightjs: true
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
 
 
 markdown_extensions:
@@ -42,6 +45,10 @@ extra_css:
 
 nav:
 - Home: 'README.md'
+- About:
+  - From EasyEngine to WordOps: 'about/from-easyengine-to-wordops.md'
+  - Changelog: 'about/changelog.md'
+  - Give WordOps a Github star: 'about/give-wordops-github-star.md'
 - Getting Started:
   - Prerequisites: 'getting-started/prerequesites.md'
   - Installation: 'getting-started/installation-guide.md'
@@ -68,6 +75,7 @@ nav:
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
   - LetsEncrypt SSL certificates: 'guides/manage-ssl-certificates.md'
 - F.A.Q: 'faq.md'
+- Troubleshooting: 'troubleshooting.md'
 - Community:
   - WordOps.net: https://wordops.net
   - Forum: https://community.wordops.net

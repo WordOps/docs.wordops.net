@@ -28,7 +28,7 @@ Distribution | Release            | Architecture
              | 19.04 (disco)      | x86_64
 **Debian**   | 8 (jessie)         | x86_64
              | 9 (stretch)        | x86_64
-             | 10 (buster)        | x86_64
+             | 10 (buster) - not ready for production    | x86_64
 **Raspbian** | 9 (stretch)        | armv7l
 
 ## Ports

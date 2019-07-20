@@ -36,9 +36,6 @@ export CF_Email="xxxx@sss.com"
 - CF_Key : Cloudflare Global API key available in your [Cloudflare profile](https://dash.cloudflare.com/profile)
 - CF_Email : Your Cloudflare account email address
 
-!!! info
-    DNS providers list and configurations are available in [Acme.sh Wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
-
 Example with DigitalOcean :
 
 ```bash
@@ -52,6 +49,9 @@ export GD_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
 export GD_Secret="asdfsdafdsfdsfdsfdsfdsafd"
 ```
 
+!!! info
+    DNS providers list and configurations are available in [Acme.sh Wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
+
 ### Step 3 : issue your certificate
 
 For a new site secured with a wildcard SSL certificates with Cloudflare DNS API
@@ -60,11 +60,17 @@ For a new site secured with a wildcard SSL certificates with Cloudflare DNS API
 wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 ```
 
+- `--letsencrypt=wildcard` : issue a wildcard certificate `domain.tld` + `*.domain.tld`
+- `--dns=dns_cf` : enable DNS API mode with Cloudflare.
+
 For an existant secured with a simple SSL certificate (site + www.site.tld) with DigitalOcean DNS API
 
 ```bash
 wo site update site.tld -le --dns=dns_do
 ```
+
+- `-le` : issue a certificate for `domain.tld` + `www.domain.tld`
+- `--dns=dns_do` : enable DNS API mode with DigitalOcean
 
 ## Informations
 

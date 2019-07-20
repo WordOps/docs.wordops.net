@@ -1,5 +1,27 @@
 # Changelog
 
+### v3.9.6 - 2019-07-20
+
+#### Added
+
+- New Nginx package on Ubuntu with Cloudflare HTTP/2 HPACK and Dynamic TLS records
+- phpMyAdmin upgrade with `wo stack upgrade --phpmyadmin`
+- Wildcard SSL Certificates support with DNS validation
+- Let's Encrypt DNS API support (Cloudflare, DigitalOcean, etc ..) on domain, subdomain, and wildcard
+- Flag `--letsencrypt=clean` to purge a previous SSL configuration
+- Support for Debian 10 buster (testing - not ready for production)
+- Fail2ban with custom jails to secure WordPress & SSH
+- Variable `keylength` in /etc/wo/wo.conf to define letsencrypt certificate keylenght
+- ProFTPd stack with UFW & Fail2ban configurationz
+- Beta branch and command `wo update --beta` for beta releases
+- Extra directives in wp-config.php (limit posts revisions, set max_memory, enable auto-update for minor-releases)
+
+#### Fixed
+
+- Nginx was not reloaded after enabling HSTS
+- Netdata, Composer & Fail2Ban stack remove and purge
+- WordPress not installed by `wo site update` with basic php73 sites
+
 ### v3.9.5.4 - 2019-07-13
 
 #### Added
@@ -10,18 +32,16 @@
 
 #### Changed
 
-- phpRedisAdmin is now installed with the stack "--admin"
+- phpRedisAdmin is now installed with the stack `--admin`
 - Remove memcached - not required anymore
 
 #### Fixed
 
 - phpRedisAdmin installation
 - Duplicated locations /robots.txt after upgrade to v3.9.5.3
-- Let's Encrypt stack "wo site update --letsencrypt/--letsencrypt=off"
+- Let's Encrypt stack `wo site update --letsencrypt/--letsencrypt=off`
 - pt-query-advisor dead link
 - Netdata persistant configuration
-
----
 
 ### v3.9.5.3 - 2019-06-18
 
@@ -32,8 +52,6 @@
 #### Fixed
 
 - Nginx upgrade failure when running wo update
-
----
 
 ### v3.9.5.2 - 2019-06-17
 
@@ -54,15 +72,11 @@
 - robots.txt file download if not created
 - PHP-FPM socket path in stub_status.conf : PR [#82](https://github.com/WordOps/WordOps/pull/82)
 
----
-
 ### v3.9.5.1 - 2019-05-10
 
 #### Fixed
 
 - Adminer download link
-
----
 
 ### v3.9.5 - 2019-05-02
 
@@ -74,7 +88,7 @@
 - Install script handle migration from EEv3
 - load-balancing on unix socket for php-fpm
 - stub_status vhost for metrics
-- "--letsencrypt=subdomain" option
+- `--letsencrypt=subdomain` option
 - opcache optimization for php-fpm
 - EasyEngine configuration backup before migration
 - EasyEngine configuration cleanup after migration
@@ -136,8 +150,6 @@
 - fix import of previous acme.sh certificate
 - fix proxy webroot folder creation
 
----
-
 ### v3.9.4 - 2019-03-15
 
 #### Added
@@ -161,8 +173,6 @@
 
 - Outdated Nginx ssl_ciphers suite
 - Debian 9 nginx build
-
----
 
 ### v3.9.3 - 2019-03-07
 
@@ -191,8 +201,6 @@
 - wo update command ([#7](https://github.com/WordOps/WordOps/issues/7))
 - Fix php services management ([#12](https://github.com/WordOps/WordOps/issues/12))
 - Fix WP-CLI install
-
----
 
 ### v3.9.2 - 2018-11-30
 
