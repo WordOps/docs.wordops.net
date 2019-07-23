@@ -55,7 +55,7 @@ wo site update sub.site.tld --letsencrypt=subdomain
 ### DNS API mode
 
 !!! warning
-    Read first our guide about [DNS API configuration](how-to/configure-letsencrypt-dns-api-validation.md)
+    Read first our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation.md)
 
 
 #### domain + www.domain.tld

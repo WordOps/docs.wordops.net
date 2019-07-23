@@ -1,5 +1,13 @@
 # Changelog
 
+### v3.9.6.1 - 2019-07-23
+
+#### Fixed
+
+- Typo in  `--letsencrypt=subdomain`
+- phpMyAdmin upgrade archive extraction
+- Error in the command `wo update`. Please `wo update --beta` as workaround
+
 ### v3.9.6 - 2019-07-20
 
 #### Added
