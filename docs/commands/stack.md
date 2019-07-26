@@ -8,16 +8,16 @@ Usage :
 wo stack (command) [options]
 ```
 
-subcommand                   | description
-------------------------- | -----------------------------------------------------
-[install](#stack-install)       | Install packages
-[reload](#stack-reload)         | Reload WordOps stack
-[remove](#stack-remove)         | Uninstall packages
-[purge](#stack-purge)           | Uninstall & purge packages
-[restart](#stack-restart)       | Restart WordOps stack
-[stop](#stack-stop)             | Stop WordOps stack
-[upgrade](#stack-upgrade)       | Upgrade WordOps stack
-[start](#stack-start)           | Start WordOps stack
+subcommand                | description
+--------------------------|---------------------------
+[install](#stack-install) | Install packages
+[reload](#stack-reload)   | Reload WordOps stack
+[remove](#stack-remove)   | Uninstall packages
+[purge](#stack-purge)     | Uninstall & purge packages
+[restart](#stack-restart) | Restart WordOps stack
+[stop](#stack-stop)       | Stop WordOps stack
+[upgrade](#stack-upgrade) | Upgrade WordOps stack
+[start](#stack-start)     | Start WordOps stack
 
 ## stack install
 
@@ -26,6 +26,27 @@ Usage :
 ```bash
 wo stack install [options]
 ```
+
+| options           | description                                                                   |
+|-------------------|-------------------------------------------------------------------------------|
+| `--web`           | install web  stack (Nginx, PHP, MySQL)                                        |
+| `--admin`         | install admin stack (phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ...) |
+| `--nginx`         | install nginx stack                                                           |
+| `--php`           | install PHP7.2-FPM stack                                                      |
+| `--php73`         | install PHP7.3-FPM stack                                                      |
+| `--mysql`         | install MariaDB stack                                                         |
+| `--redis`         | install Redis stack                                                           |
+| `--wpcli`         | install WP-CLI                                                                |
+| `--phpmyadmin`    | install phpMyAdmin                                                            |
+| `--composer`      | install Composer                                                              |
+| `--netdata`       | install Netdata                                                               |
+| `--dashboard`     | install WordOps dashboard                                                     |
+| `--adminer`       | install adminer                                                               |
+| `--fail2ban`      | install fail2ban                                                              |
+| `--utils`         | install several admin tools                                                   |
+| `--phpredisadmin` | install phpredisadmin                                                         |
+| `--proftpd`       | install proftpd stack                                                         |
+
 
 ### Recommended install
 
@@ -53,53 +74,6 @@ WordOps backend with WordOps-Dashboard, PHPmyAdmin, Adminer, OpcacheGUI etc..
 
 ```bash
 wo stack install --admin
-```
-
-### Individual packages
-
-#### Nginx
-
-```bash
-wo stack install --nginx
-```
-
-#### PHP 7.2
-
-```bash
-wo stack install --php
-```
-
-#### MariaDB (MySQL)
-
-```bash
-wo stack install --mysql
-```
-
-#### Adminer
-
-```bash
-wo stack install --adminer
-```
-
-#### PHPMyAdmin
-
-```bash
-wo stack install --phpmyadmin
-```
-
-#### Netdata
-
-```bash
-wo stack install --netdata
-```
-
-#### WordOps dashboard
-
-!!! warning
-    It's highly recommended to use `wo stack install` to install WordOps dashboard and all related tools
-
-```bash
-wo stack install --dashboard
 ```
 
 ## stack upgrade
