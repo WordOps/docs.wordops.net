@@ -5,26 +5,26 @@
                 width: 30px;
                 height: 30px
             }
-            
+
             body,
             input {
                 color: black;
             }
-            
+
             .codehilite>pre {
                 color: #5e72e4;
             }
-            
+
             .md-nav {
                 font-size: 14px;
                 line-height: 1.4;
             }
-            
+
             .md-typeset {
                 font-size: .75rem;
-                line-height: 1.4;
+                line-height: 1.2;
             }
-            
+
             .md-typeset h3 {
                 margin-top: 0.6em;
                 margin-bottom: 0.6em;
@@ -32,43 +32,44 @@
                 margin-block-start: 0;
                 margin-block-end: 0;
             }
-            
+
             .md-typeset__table td code {
                 word-break: unset
             }
-            
+
             .md-typeset__table tr :nth-child(1) {
                 word-wrap: break-word;
                 max-width: 30em
             }
-            
+
             h1 {
                 font-weight: 700!important;
             }
-            
+
             .md-typeset h2 {
                 font-weight: 500!important;
+                font-size:1.7em;
                 margin-top: 1em;
             }
-            
-            .md-typeset h3 {
-                font-weight: 500!important;
+
+            .md-typeset h3, h4 {
+                font-weight: 300!important;
                 margin-block-start: 0;
                 margin-block-end: 0;
             }
-            
+
             .md-nav__link {
                 white-space: nowrap;
             }
-            
+
             .md-typeset__table {
                 min-width: 75%;
             }
-            
+
             .md-nav__title {
                 display: none;
             }
-            
+
             .codehilite .c1 {
                 color: #222
             }

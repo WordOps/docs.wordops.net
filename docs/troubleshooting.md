@@ -35,5 +35,20 @@ You can disable brotli compression by running the following command :
 ```bash
 sudo sed -i 's/brotli on;/brotli off;/' /etc/nginx/nginx.conf
 sudo sed -i 's/brotli_static on;/brotli_static off;/' /etc/nginx/nginx.conf
-sudo nginx -t && sudo service nginx reload
+sudo nginx -t && sudo service nginx restart
 ```
+
+### When I update a page, changes are not applied on the site
+
+If you are using Nginx fastcgi_cache, please make sure :
+
+- Nginx-helper plugin is enabled
+- the option "purge cache" is enabled in Settings > Nginx-Helper
+- the caching method is defined on Nginx Fastcgi cache
+
+If you are using Redis-cache, please make sure :
+
+- Nginx-helper plugin is enabled
+- the option "purge cache" is enabled in Settings > Nginx-Helper
+- the caching method is defined on Redis Cache
+- the prefix defined is `nginx-cache:`

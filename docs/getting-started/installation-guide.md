@@ -2,6 +2,8 @@
 
 ## One-Step Automated Install
 
+![wordops-install](https://netdata.wordops.eu/netdata/api/v1/badge.svg?chart=web_log_wops.cc.requests_per_url&options=unaligned&dimensions=download&group=sum&after=-86400&label=today&units=installations&precision=0)
+
 We provide an installer script which install the required dependencies, before setting-up WordOps. It can be installed with the following command :
 
 ```bash
@@ -16,7 +18,10 @@ cd WordOps/
 sudo bash install
 ```
 
-!!! info "Information" During the installation, you will be prompt for an username and an email address. WordOps need those informations to configure Git version control and to use it for saving server configurations. Your informations will **only be stored** in the file .gitconfig.
+!!! info
+    During the installation, you will be prompt for an username and an email address. WordOps need those informations to configure Git version control and to use it for saving server configurations. Your informations will **only be stored** in the file .gitconfig.
+
+---
 
 ## Manual Installation
 
