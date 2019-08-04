@@ -1,5 +1,9 @@
 <p align="center">
 <img src="images/logo.png" width="400" alt="WordOps" /><br><br>
+
+<video id="intro" align="center" src="/images/wordops-intro.webm" autoplay="" loop="">
+</video><br><br>
+
 <a href="https://travis-ci.org/WordOps/WordOps" target="_blank"><img src="https://travis-ci.org/WordOps/WordOps.svg?branch=master" alt="build"></a>
 <img src="https://img.shields.io/github/license/wordops/wordops.svg" alt="MIT">
 <img alt="GitHub release" src="https://img.shields.io/github/release-pre/WordOps/WordOps.svg">
@@ -24,9 +28,10 @@
 - **Up-to-date** : PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
 - **Secured** : Hardened WordPress security with strict Nginx location directives
 - **Powerful** : Optimized Nginx configurations with multiple cache backends support
-- **SSL** : Domain, Subdomain & Wildcard Let's Encrypt SSL certificates handled by acme.sh
-- **Modern** : Strong ciphers_suite, modern TLS protocols and HSTS support (Grade A+ on ssllabs)
+- **SSL** : Domain, Subdomain & Wildcard Let's Encrypt SSL certificates with DNS API
+- **Modern** : Strong ciphers_suite, modern TLS protocols and HSTS support (Grade A+ on [ssllabs](https://www.ssllabs.com/ssltest/analyze.html?d=demo.wordops.eu&latest))
 - **Monitoring** : Live Nginx vhost traffic with ngx_vts_module and server monitoring with Netdata
+- **User Friendly** : WordOps dashboard with server status/monitoring and tools ([demo](https://demo.wordops.eu))
 
 ---
 

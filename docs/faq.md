@@ -30,7 +30,7 @@ Here some informations :
 Cache backend  | command argument | description
 -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 fastcgi_cache  | `--wpfc`         | the simplest solution, because it do not rely on any plugin excepted nginx_helper used to purge cache after content updates                                                  |
-redis-cache    | `--wpredis`      | powerful solution which support multi-server setup and it provide full-page cache in redis via Nginx + object-cache via Redis-Object-Cache plugin (also used to purge cache)
+redis-cache    | `--wpredis`      | powerful solution which support multi-server setup and it provide full-page cache in redis via Nginx + object-cache via Redis-Object-Cache plugin (optional)
 wp-super-cache | `--wpsc`         | basic solution based on a plugin which create and serve static html files.                                                                                                   |
 
 ### Does WordOps support WP-Rocket ?

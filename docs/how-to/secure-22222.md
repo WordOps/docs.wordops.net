@@ -9,7 +9,7 @@ Those new features are planned for the next WordOps release (v4.0). But we have 
 If you already have a site secured with Let's Encrypt, you just have to copy the `ssl.conf` file stored in `/var/www/site.tld/conf/nginx`.
 
 ```bash
-sudo cp -f /var/www/site.tld/conf/nginx/ssl.conf /var/www/22222/conf/nginx/ssl.conf
+sudo grep "ssl_" /var/www/site.tld/conf/nginx/ssl.conf > /var/www/22222/conf/nginx/ssl.conf
 ```
 
 Then reload Nginx :

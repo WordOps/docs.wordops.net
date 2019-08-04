@@ -9,6 +9,7 @@ theme:
   name: 'material'
   favicon: 'images/favicon.png'
   language: 'en'
+  font: false
   highlightjs: true
   palette:
     primary: 'indigo'
@@ -43,12 +44,15 @@ markdown_extensions:
 extra_css:
   - css/extra.css
 
+
 nav:
 - Home: 'README.md'
 - About:
   - From EasyEngine to WordOps: 'about/from-easyengine-to-wordops.md'
   - Changelog: 'about/changelog.md'
   - Give WordOps a Github star: 'about/give-wordops-github-star.md'
+  - Contributing: 'about/contributing.md'
+  - Code of conduct: 'about/code-of-conduct.md'
 - Getting Started:
   - Prerequisites: 'getting-started/prerequesites.md'
   - Installation: 'getting-started/installation-guide.md'
