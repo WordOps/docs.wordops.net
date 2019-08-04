@@ -27,9 +27,12 @@ Usage :
 wo stack install [options]
 ```
 
+Without options, the stack `--web`, `--admin`, `--utils` will be installed
+
+
 | options           | description                                                                   |
 |-------------------|-------------------------------------------------------------------------------|
-| `--web`           | install web  stack (Nginx, PHP, MySQL)                                        |
+| `--web`           | install web  stack (Nginx, PHP, MySQL, WP-CLI)                                |
 | `--admin`         | install admin stack (phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ...) |
 | `--nginx`         | install nginx stack                                                           |
 | `--php`           | install PHP7.2-FPM stack                                                      |
@@ -75,6 +78,8 @@ WordOps backend with WordOps-Dashboard, PHPmyAdmin, Adminer, OpcacheGUI etc..
 ```bash
 wo stack install --admin
 ```
+
+After installing the Admin stack, WordOps dashboard will be available on https://YOUR.SERVER.IP:22222 with the credentials displayed during the stack installation.
 
 ## stack upgrade
 
