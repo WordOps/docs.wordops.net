@@ -12,7 +12,7 @@ WordOps not only installs and configures the packages needed to deploy a site (N
 
 ### Which operating systems are supported by WordOps ?
 
-WordOps can be installed on Ubuntu LTS (Long Term Service) releases (16.04 & 18.04) as well as on Ubuntu 19.04, Debian 8 (Jessie), Debian 9 (stretch), Debian 10 (buster) and Raspbian 9 (stretch).
+WordOps can be installed on Ubuntu LTS (Long Term Service) releases (16.04 & 18.04) as well as on Ubuntu 19.04, Debian 9 (stretch), Debian 10 (buster) and Raspbian 9 (stretch).
 Support for other linux distribution isn't planned.
 
 ## Technical
@@ -37,6 +37,14 @@ wp-super-cache | `--wpsc`         | basic solution based on a plugin which creat
 
 At the moment, WP-Rocket works properly on WordOps but do not receive any performance boost from our Nginx configuration. We are going to work on it and to provide additional Nginx configurations for WP-Rocket.
 
+### How to access to WordOps Dashboard ?
+
+WordOps dashboard is available on `https://YOUR.SERVER.IP:22222` or `https://YOUR.SERVER.HOSTNAME:22222`
+
+### What is the user/password of the web filemanager ?
+
+By default, user is admin and password too. After you logged in for the first time, you will have to change this password
+
 ### Why do I get warning from my web browser when opening WordOps backend ?
 
 At the moment, WordOps backend is secured with a self-signed SSL certificate, which provide the same level of encryption than any other certificate but do not come from a certificate authority. Your Web browser only warn you about the fact that the certificate wasn't issued by a trusted certificate authority. We are already working on adding the ability to secure WordOps backend with a letsencrypt SSL certificate.
@@ -51,4 +59,19 @@ We disabled gzip compression by default due to gzip related security issues when
 
 ### Is WordOps Let's Encrypt stack compatible with Cloudflare CDN ?
 
-WordOps Let's Encrypt stack is compatible with Cloudflare CDN, but we still have an higher failure rate when issuing SSL certificates on domains under Cloudflare CDN. We are working on it and we will keep you update as soon as we find a workaround to this issue.
+WordOps Let's Encrypt stack is fully compatible with Cloudflare CDN, and you can use Cloudflare DNS API to issue your certificates even if the domain is not pointed to your server IP.
+
+### How to uninstall WordOps ?
+
+If you need/want to uninstall WordOps, you can use the following commands :
+
+!!! warning
+    Make a backup of your databases before purging wordops packages
+
+```bash
+# purge wordops packages (nginx, mysql, php etc..)
+wo stack purge --all
+
+# uninstall wordops
+wget -qO wo wops.cc && sudo bash wo --purge
+```

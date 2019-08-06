@@ -22,12 +22,12 @@ However, if you are going to use WordOps in production, some services like MySQL
 The following operating systems are supported:
 
 Distribution | Release            | Architecture |
------------- | ------------------ | ------------ |
-**Ubuntu**   | 16.04 LTS (xenial) | x86_64       |
-             | 18.04 LTS (bionic) | x86_64       |
-             | 19.04 (disco)      | x86_64       |
-**Debian**   | 9 (stretch)        | x86_64 |
-             | 10 (buster) - not ready for production | x86_64 |
+------------ |--------------------| -------------|
+**Ubuntu**   | 18.04 LTS (bionic)  | x86_64       |
+  |           | 16.04 LTS (xenial) | x86_64       |
+   |          | 19.04 (disco)      | x86_64       |
+**Debian**   | 9 (stretch)        | x86_64       |
+           |  | 10 (buster) - not ready for production | x86_64 |
 **Raspbian** | 9 (stretch)        | armv7l |
 
 ## Virtualization

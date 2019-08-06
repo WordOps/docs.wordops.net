@@ -1,3 +1,4 @@
+<h1></h1>
 <p align="center">
 <img src="images/logo.png" width="400" alt="WordOps" /><br><br>
 
@@ -20,6 +21,23 @@
 
 ---
 
+<div class="homepage-nav">
+
+  <div class="nav-install">
+    <a class="button nav-button" href="/guides/migration-from-easyengine/">Migration from EasyEngine v3</a>
+  </div>
+  <div class="nav-getting-started">
+    <a class="button nav-button" href="/getting-started/prerequesites/">Getting started</a>
+
+  </div>
+  <div class="nav-configuration">
+    <a class="button nav-button" href="/commands/">Commands</a>
+
+  </div>
+</div>
+
+---
+
 ## Key Features
 
 - **Easy to install** : One step automated installer with migration from EasyEngine v3 support
@@ -35,31 +53,10 @@
 
 ---
 
-**WordOps Dashboard public demo is available on [demo.wordop.eu](https://demo.wordops.eu)**
-
----
-
-Welcome on WordOps documentation.
-
-!!! warning
-    Documentation writing is in progress, we will add missing informations as soon as possible
-
-!!! info
-    If you were using EasyEngine v3 previously, you will probably be interested by our [EasyEngine migration guide](guides/migration-from-easyengine.md)
-
 ## Getting Support
 
 If you do not find the informations you were looking for in our documentation, you can still ask your question on our [Community Forum](https://community.wordops.net).
 If you think you have found an issue directly related to WordOps, please open an issue on the [Github repository](https://github.com/WordOps/WordOps/issues)
-
-## Contributing
-
-Like other open-source project, WordOps needs your contributions to live. There is no need to be a developer or a system administrator to contribute to WordOps project.
-
-Suggestions, bug reports and pull requests are warmly welcome.
-This documentation was built with mkdocs to provide the ability to edit content and propose changes easily on Github.
-
-A guide about how to edit WordOps documentation is available on the [github repository](https://github.com/WordOps/docs.wordops.net)
 
 ## Credits
 

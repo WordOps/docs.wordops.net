@@ -2,9 +2,11 @@
 
 ## Questions overview
 
-- [How to set default language for WordPress install ?](how-to/wp-language.md)
-- [How to secure WordOps backend with Let's Encrypt SSL certificate ?](how-to/secure-22222.md)
+- [How to set default language for WordPress install ?](/how-to/wp-language/)
+- [How to secure WordOps backend with Let's Encrypt SSL certificate ?](/how-to/secure-22222/)
 - [How to renew Let's Encrypt Certificates ?](#renew-a-lets-encrypt-ssl-certificates-with-wordops)
+- [How to configure Let's Encrypt DNS API validation](/how-to/configure-letsencrypt-dns-api-validation/)
+- [How to configure UFW Firewall](how-to/configure-ufw-firewall.md)
 
 ## Other questions
 
