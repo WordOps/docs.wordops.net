@@ -185,7 +185,7 @@ export CF_Email="xxxx@sss.com"
 ```
 
 !!! info
-    More example in our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation.md)
+    More example in our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation)
 
 After you define those variables with the command `export`, you can issue your certificate with
 
