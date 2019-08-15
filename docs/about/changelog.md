@@ -1,5 +1,29 @@
 # Changelog
 
+## v3.9.7.2 - 2019-08-12
+
+### Fixed
+
+- redis.conf permissions additional fix
+
+## v3.9.7.1 - 2019-08-09
+
+- APT Packages configuration step with `wo stack upgrade` to apply new configurations
+- Cloudflare restore real_ip configuration
+
+### Changed
+
+- Moving package configuration in a new plugin stack_pref.py
+- Set WordOps backend password length from 16 to 24
+- Upgrade framework cement to 2.6.0
+- Upgrade PyMySQL to 0.9.3
+- Upgrade Psutil to 5.6.3
+
+### Fixed
+
+- Missing import in `wo sync`
+- redis.conf incorrect permissions
+
 ## v3.9.7 - 2019-08-02
 
 ### Added
