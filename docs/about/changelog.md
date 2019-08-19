@@ -1,5 +1,34 @@
 # Changelog
 
+## v3.9.8 - 2019-08-16
+
+### Added
+
+- Allow web browser caching for json and webmanifest files
+- nginx-core.mustache template used to render nginx.conf during stack setup
+- APT Packages configuration step with `wo stack upgrade` to apply new configurations
+- Cloudflare restore real_ip configuration
+- WP-Rocket plugin support with the flag `--wprocket`
+- Cache-Enabler plugin support with the flag `--wpce`
+- Install unattended-upgrade and enable automated security updates
+- Enable time synchronization with ntp
+- Additional cache exception for woocommerce
+
+### Changed
+
+- Do not force Nginx upgrade if a custom Nginx package compiled with nginx-ee is detected
+- Gzip enabled again by default with configuration in /etc/nginx/conf.d/gzip.conf
+- Brotli configuration moved in /etc/nginx/conf.d/brotli.conf.disabled (disabled by default)
+- Moving package configuration in a new plugin stack_pref.py
+- Cleanup templates by removing all doublons (with/without php7) and replacing them with variables
+- Updated Nginx to v1.16.1 in response to HTTP/2 vulnerabilites discovered
+- Disable temporary adding swap feature (not working)
+- `wo stack upgrade --nginx` is now able to apply new configurations during `wo update`, it highly reduce upgrade duration
+
+### Fixed
+
+- Error in HSTS header syntax
+
 ## v3.9.7.2 - 2019-08-12
 
 ### Fixed

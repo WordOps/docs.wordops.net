@@ -20,21 +20,27 @@ wo stack install
 
 <video align="center" src="/images/wo-stack.webm" width="760" autoplay loop></video>
 
-Here the list of WordOps components installed with the above
+Here the list of WordOps components installed with the above command
 
-Component         | Description
------------------ | --------------------------------------
-Nginx             | WordOps web server                     |
-PHP 7.2           | PHP7.2-FPM                             |
-MariaDB 10.3      | Open-source version of MySQL           |
-WP-CLI            | The WordPress command-line tool
-Composer          | PHP packages manager                   |
-MySQLTuner        | Command-line tool to tune MySQL        |
-phpMyAdmin        | MySQL server web interface             |
-Adminer           | lightweight phpMyAdmin alternative     |
-OpcacheGUI        | web interface for Opcache monitoring   |
-Netdata           | Monitoring suite                       |
-Anemometer        | MySQL Slow Query Monitor               |
-WordOps dashboard | Bootstrap template for WordOps backend |
-eXtplorer         | Web File manager                       |
-Fail2ban          | Authentication bruteforce protection   |
+| Packages          | type        | Description                            |
+| ----------------- | ----------- | -------------------------------------- |
+| Nginx             | APT package | WordOps web server                     |
+| PHP 7.2           | APT package | PHP7.2-FPM                             |
+| MariaDB 10.3      | APT package | Open-source version of MySQL           |
+| WP-CLI            | Binary      | The WordPress command-line tool        |
+| Composer          | Binary      | PHP packages manager                   |
+| MySQLTuner        | Binary      | Command-line tool to tune MySQL        |
+| Fail2ban          | APT package | Authentication bruteforce protection   |
+| phpMyAdmin        | Web App     | MySQL server web interface             |
+| Adminer           | Web App     | lightweight phpMyAdmin alternative     |
+| OpcacheGUI        | Web App     | web interface for Opcache monitoring   |
+| Netdata           | Binary      | Monitoring suite                       |
+| Anemometer        | Web App     | MySQL Slow Query Monitor               |
+| WordOps dashboard | Web App     | Bootstrap template for WordOps backend |
+| eXtplorer         | Web App     | Web File manager                       |
+
+### Packages types
+
+- APT package are debian packages installed from APT repositories
+- Binaries are simple executables
+- Web App are php based applications

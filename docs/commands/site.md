@@ -75,51 +75,66 @@ Following are the WordPress website types you can create website based on Cache 
 
 #### Standard sites
 
-| cache          | PHP     | example                                     |
-|----------------|---------|---------------------------------------------|
-| no cache       | PHP 7.2 | `wo site create site.tld --wp`              |
-| no cache       | PHP 7.3 | `wo site create site.tld --wp --php73`      |
-| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpfc`            |
-| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpfc --php73`    |
-| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc`            |
-| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73`    |
-| redis-cache    | PHP 7.2 | `wo site create site.tld --wpredis`         |
-| redis-cache    | PHP 7.3 | `wo site create site.tld --wpredis --php73` |
+| cache          | PHP     | example                                      |
+| -------------- | ------- | -------------------------------------------- |
+| no cache       | PHP 7.2 | `wo site create site.tld --wp`               |
+| no cache       | PHP 7.3 | `wo site create site.tld --wp --php73`       |
+| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpfc`             |
+| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpfc --php73`     |
+| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc`             |
+| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73`     |
+| redis-cache    | PHP 7.2 | `wo site create site.tld --wpredis`          |
+| redis-cache    | PHP 7.3 | `wo site create site.tld --wpredis --php73`  |
+| WP-Rocket      | PHP 7.2 | `wo site create site.tld --wprocket`         |
+| WP-Rocket      | PHP 7.3 | `wo site create site.tld --wprocket --php73` |
+| Cache-Enabler  | PHP 7.2 | `wo site create site.tld --wpce`             |
+| Cache-Enabler  | PHP 7.3 | `wo site create site.tld --wpce --php73`     |
 
 #### Multisite subdirectory
 
-| cache          | PHP     | example                                                |
-|----------------|---------|--------------------------------------------------------|
-| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdir`                   |
-| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdir --php73`           |
-| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`            |
-| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpfc --php73`    |
-| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdir --wpsc`            |
-| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdir --wpsc --php73`    |
-| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdir --wpredis`         |
-| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdir --wpredis --php73` |
+| cache          | PHP     | example                                                 |
+| -------------- | ------- | ------------------------------------------------------- |
+| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdir`                    |
+| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdir --php73`            |
+| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`             |
+| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpfc --php73`     |
+| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdir --wpsc`             |
+| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdir --wpsc --php73`     |
+| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdir --wpredis`          |
+| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdir --wpredis --php73`  |
+| WP-Rocket      | PHP 7.2 | `wo site create site.tld --wpsubdir --wprocket`         |
+| WP-Rocket      | PHP 7.3 | `wo site create site.tld --wpsubdir --wprocket --php73` |
+| Cache-Enabler  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpce`             |
+| Cache-Enabler  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpce --php73`     |
+
 
 #### Multisite subdomain
 
-| cache          | PHP     | example                                                |
-|----------------|---------|--------------------------------------------------------|
-| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdom`                   |
-| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdom --php73`           |
-| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`            |
-| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdom --wpfc --php73`    |
-| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdom --wpsc`            |
-| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdom --wpsc --php73`    |
-| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdom --wpredis`         |
-| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdom --wpredis --php73` |
+| cache          | PHP     | example                                                  |
+| -------------- | ------- | -------------------------------------------------------- |
+| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdom`                     |
+| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdom --php73`             |
+| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdom --wpfc`              |
+| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdom --wpfc --php73`      |
+| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdom --wpsc`              |
+| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdom --wpsc --php73`      |
+| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdom --wpredis`           |
+| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdom --wpredis --php73`   |
+| WP-Rocket      | PHP 7.2 | `wo site create site.tld --wpsubdom  --wprocket`         |
+| WP-Rocket      | PHP 7.3 | `wo site create site.tld --wpsubdom  --wprocket --php73` |
+| Cache-Enabler  | PHP 7.2 | `wo site create site.tld --wpsubdom  --wpce`             |
+| Cache-Enabler  | PHP 7.3 | `wo site create site.tld --wpsubdom  --wpce --php73`     |
 
 #### Cheatsheet
 
-| Cache                   | single site | multisite w/ subdir  | multisite w/ subdom     |
-|-------------------------|-------------|----------------------|-------------------------|
-| **NO Cache**            | --wp        | --wpsubdir           | --wpsubdomain           |
-| **WP Super Cache**      | --wpsc      | -wpsubdir --wpsc     | --wpsubdomain --wpsc    |
-| **Nginx fastcgi_cache** | --wpfc      | --wpsubdir --wpfc    | --wpsubdomain --wpfc    |
-| **Redis cache**         | --wpredis   | --wpsubdir --wpredis | --wpsubdomain --wpredis |
+| Cache                     | single site | multisite w/ subdir   | multisite w/ subdom      |
+| ------------------------- | ----------- | --------------------- | ------------------------ |
+| **NO Cache**              | --wp        | --wpsubdir            | --wpsubdomain            |
+| **WP Super Cache plugin** | --wpsc      | --wpsubdir --wpsc     | --wpsubdomain --wpsc    |
+| **Nginx fastcgi_cache**   | --wpfc      | --wpsubdir --wpfc     | --wpsubdomain --wpfc     |
+| **Redis cache**           | --wpredis   | --wpsubdir --wpredis  | --wpsubdomain --wpredis  |
+| **WP-Rocket plugin**      | --wprocket  | --wpsubdir --wprocket | --wpsubdomain --wprocket |
+| **Cache-Enabler plugin**  | --wpce      | --wpsubdir --wpce     | --wpsubdomain --wpce     |
 
 #### Extra settings
 
@@ -291,27 +306,29 @@ Usage :
 wo site update  [<site_name>] [options]
 ```
 
-| options                    | description                                            |
-|----------------------------|--------------------------------------------------------|
-| `--html`                   | update to html site                                    |
-| `--php`                    | update to php site                                     |
-| `--mysql`                  | update to MySQL + PHP site                             |
-| `--php73`                  | update site to PHP 7.3                                 |
-| `--php73=off`              | disable PHP 7.3                                        |
-| `--wp`                     | update site to WordPress without cache                 |
-| `--wpfc`                   | update site to WordPress with fastcgi_cache            |
-| `--wpsc`                   | update site to WordPress with wp-super-cache           |
-| `--wpredis`                | update site to WordPress with redis-cache              |
-| `--wpsubdir`               | update site to WordPress multisite on subdirectories   |
-| `--wpsubdomain`            | update site to WordPress multisite on subdomains       |
-| `--password`               | update admin password for a WordPress site             |
-| `--letsencrypt`,`-le`      | secure site with Let's Encrypt SSL certificate         |
-| `--letsencrypt=subdomain`  | secure site running on a subdomain with Let's Encrypt  |
-| `--letsencrypt=wildcard`   | secure site/multisite with a wildcard SSL certificates |
-| `--letsencrypt=off`        | disable Let's Encrypt SSL certificate                  |
-| `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default : `dns_cf`    |
-| `--hsts`                   | Enable HSTS on site secured with Let's Encrypt         |
-| `--hsts=off`               | Disable HSTS                                           |
+| options                             | description                                                             |
+| ----------------------------------- | ----------------------------------------------------------------------- |
+| `--html`                            | update to html site                                                     |
+| `--php`                             | update to php site                                                      |
+| `--mysql`                           | update to MySQL + PHP site                                              |
+| `--php73`                           | update site to PHP 7.3                                                  |
+| `--php73=off`                       | disable PHP 7.3                                                         |
+| `--wp`                              | update site to WordPress without cache                                  |
+| `--wpfc`                            | update site to WordPress with fastcgi_cache                             |
+| `--wpsc`                            | update site to WordPress with wp-super-cache plugin                     |
+| `--wpredis`                         | update site to WordPress with redis-cache                               |
+| `--wprocket`                        | update site to WordPress with WP-Rocket plugin                          |
+| `--wpce`                            | update site to WordPress with Cache-Enabler plugin                      |
+| `--wpsubdir`                        | update site to WordPress multisite on subdirectories                    |
+| `--wpsubdomain`                     | update site to WordPress multisite on subdomains                        |
+| `--password`                        | update admin password for a WordPress site                              |
+| `--letsencrypt`,`-le`               | secure site with Let's Encrypt SSL certificate                          |
+| `--letsencrypt=subdomain`           | secure site running on a subdomain with Let's Encrypt                   |
+| `--letsencrypt=wildcard`            | secure site/multisite with a wildcard SSL certificates                  |
+| `--letsencrypt=off`                 | disable Let's Encrypt SSL certificate                                   |
+| `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default : `dns_cf` |
+| `--hsts`                            | Enable HSTS on site secured with Let's Encrypt                          |
+| `--hsts=off`                        | Disable HSTS                                                            |
 
 ### Examples
 

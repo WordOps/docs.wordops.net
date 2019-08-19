@@ -1,26 +1,27 @@
 # How to secure WordOps backend with Let's Encrypt SSL certificate
 
-We are currently working on refactoring the Let's Encrypt stack from scratch, to add support for DNS validation, wildcard SSL certificates and to secure WordOps backend automatically.
+WordOps will automatically secure the backend on port 22222 with the first SSL certificate issued on the server. So you just have to create basic site with the arguments `--letsencrypt` or `--letsencrypt=subdomain` to secure the backend.
 
-Those new features are planned for the next WordOps release (v4.0). But we have already make some changes on WordOps backend configuration, and it's already easier to secure the backend available on the port 22222 with Let's Encrypt SSL certificate.
+## Using another certificate
 
-## Secure WordOps backend with the same certificate than another site
+### Secure WordOps backend with the same certificate than another site
 
 If you already have a site secured with Let's Encrypt, you just have to copy the `ssl.conf` file stored in `/var/www/site.tld/conf/nginx`.
 
 ```bash
-sudo grep "ssl_" /var/www/site.tld/conf/nginx/ssl.conf > /var/www/22222/conf/nginx/ssl.conf
+DOMAIN_NAME=site.ltd
+sudo grep "ssl_" /var/www/${DOMAIN_NAME}/conf/nginx/ssl.conf > /var/www/22222/conf/nginx/ssl.conf
 ```
 
 Then reload Nginx :
 
 ```bash
-sudo service nginx reload
+wo stack restart --nginx
 ```
 
 You should now be able to access to WordOps backend on `https://site.tld:22222`
 
-## Issue a new certificate to secure WordOps backend
+### Issue a new certificate to secure WordOps backend
 
 If you prefer to issue manually a new Let's Encrypt SSL certificate, here the steps to follow :
 
@@ -66,5 +67,5 @@ EOF
 Then reload nginx
 
 ```bash
-sudo service nginx reload
+wo stack restart --nginx
 ```

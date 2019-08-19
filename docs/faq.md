@@ -27,15 +27,13 @@ There is no "best solution", because there are benefits/disadvantage for each ca
 
 Here some informations :
 
-Cache backend  | command argument | description
--------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-fastcgi_cache  | `--wpfc`         | the simplest solution, because it do not rely on any plugin excepted nginx_helper used to purge cache after content updates                                                  |
-redis-cache    | `--wpredis`      | powerful solution which support multi-server setup and it provide full-page cache in redis via Nginx + object-cache via Redis-Object-Cache plugin (optional)
-wp-super-cache | `--wpsc`         | basic solution based on a plugin which create and serve static html files.                                                                                                   |
-
-### Does WordOps support WP-Rocket ?
-
-At the moment, WP-Rocket works properly on WordOps but do not receive any performance boost from our Nginx configuration. We are going to work on it and to provide additional Nginx configurations for WP-Rocket.
+| Cache backend  | command argument | description                                                                                                                                                  |
+| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| fastcgi_cache  | `--wpfc`         | the simplest solution, because it do not rely on any plugin excepted nginx_helper used to purge cache after content updates                                  |
+| redis-cache    | `--wpredis`      | powerful solution which support multi-server setup and it provide full-page cache in redis via Nginx + object-cache via Redis-Object-Cache plugin (optional) |
+| wp-super-cache | `--wpsc`         | basic solution based on a plugin which create and serve static html files.                                                                                   |
+| wp-rocket      | `--wprocket`     | solution based on a popular premium plugin with several additional features, compatible with Woocommerce and the most part of plugins                        |
+| cache-enabler  | `--wpce`         | solution based on an open-source plugin from keycdn                                                                                                          |
 
 ### How to access to WordOps Dashboard ?
 
@@ -52,10 +50,6 @@ At the moment, WordOps backend is secured with a self-signed SSL certificate, wh
 ### Does Nginx-wo support TLSv1.3 ?
 
 Yes, since the release v3.9.5.4, our Nginx package for Ubuntu 16.04/18.04/19.04 and for Debian 10 (buster) is compiled with OpenSSL 1.1.1c and support TLSv1.3.
-
-### Why gzip compression is disabled by default ?
-
-We disabled gzip compression by default due to gzip related security issues when using TLS connection. More informations here [BREACH CVE](https://en.wikipedia.org/wiki/BREACH). We replaced gzip by brotli, which provide better performance and compression than gzip.
 
 ### Is WordOps Let's Encrypt stack compatible with Cloudflare CDN ?
 

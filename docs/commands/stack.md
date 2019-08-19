@@ -30,26 +30,31 @@ wo stack install [options]
 Without options, the stack `--web`, `--admin`, `--utils` will be installed
 
 
-| options           | description                                                                   |
-|-------------------|-------------------------------------------------------------------------------|
-| `--web`           | install web  stack (Nginx, PHP, MySQL, WP-CLI)                                |
-| `--admin`         | install admin stack (phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ...) |
-| `--nginx`         | install nginx stack                                                           |
-| `--php`           | install PHP7.2-FPM stack                                                      |
-| `--php73`         | install PHP7.3-FPM stack                                                      |
-| `--mysql`         | install MariaDB stack                                                         |
-| `--redis`         | install Redis stack                                                           |
-| `--wpcli`         | install WP-CLI                                                                |
-| `--phpmyadmin`    | install phpMyAdmin                                                            |
-| `--composer`      | install Composer                                                              |
-| `--netdata`       | install Netdata                                                               |
-| `--dashboard`     | install WordOps dashboard                                                     |
-| `--adminer`       | install adminer                                                               |
-| `--fail2ban`      | install fail2ban                                                              |
-| `--utils`         | install several admin tools                                                   |
-| `--phpredisadmin` | install phpredisadmin                                                         |
-| `--proftpd`       | install proftpd stack                                                         |
+| options           | type        | description                                             |
+| ----------------- | ----------- | ------------------------------------------------------- |
+| `--web`           | Group       | Nginx, PHP, MySQL, WP-CLI                               |
+| `--admin`         | Group       | phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ... |
+| `--nginx`         | APT package | install nginx stack                                     |
+| `--php`           | APT package | install PHP7.2-FPM stack                                |
+| `--php73`         | APT package | install PHP7.3-FPM stack                                |
+| `--mysql`         | APT package | install MariaDB stack                                   |
+| `--redis`         | APT package | install Redis stack                                     |
+| `--wpcli`         | Binary      | install WP-CLI                                          |
+| `--phpmyadmin`    | Web App     | install phpMyAdmin                                      |
+| `--composer`      | Binary      | install Composer                                        |
+| `--netdata`       | Binary      | install Netdata                                         |
+| `--dashboard`     | Web App     | install WordOps dashboard                               |
+| `--adminer`       | Web App     | install adminer                                         |
+| `--fail2ban`      | APT package | install fail2ban                                        |
+| `--utils`         | Group       | OpcacheGUI, Webgrind, Anemometer                        |
+| `--phpredisadmin` | Webp App    | install phpredisadmin                                   |
+| `--proftpd`       | APT package | install proftpd stack                                   |
 
+### Packages types
+
+- APT package are debian packages installed from APT repositories
+- Binaries are simple executables
+- Web App are php based applications
 
 ### Recommended install
 
@@ -61,7 +66,7 @@ wo stack install
 
 This will install the `--web` stack and `--admin` stack.
 
-Nginx, PHP 7.2, MariaDB, Netdata, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
+Nginx, PHP 7.2, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
 
 ### Web
 

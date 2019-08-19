@@ -79,7 +79,7 @@ nav:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
   - LetsEncrypt SSL certificates: 'guides/manage-ssl-certificates.md'
-- F.A.Q: 'faq.md'
+- F.A.Q: 'https://wordops.net/f-a-q/'
 - Troubleshooting: 'troubleshooting.md'
 - Community:
   - WordOps.net: https://wordops.net
