@@ -32,7 +32,51 @@ All of our documentation is in markdown (.md) files inside the WordOps GitHub pr
 
 ## Developers
 
-(available soon)
+### Languages and Libraries
+
+WordOps is built with the CLI Framework Cement, with the release v2.8.0 currently.
+
+#### Python Version
+
+WordOps source code is fully developed in python 3.x version.
+
+#### Coding Format
+
+We are following [PEP8](https://www.python.org/dev/peps/pep-0008/) style guide for coding WordOps.
+
+#### Libraries
+
+Here is the List of Libraries we used for WordOps
+
+- [pystache](https://pypi.org/project/pystache/)
+- [python-apt](http://apt.alioth.debian.org/python-apt-doc/library/index.html)
+- [pynginxconfig](https://pypi.org/project/pynginxconfig/)
+- [PyMySQL](https://pypi.org/project/PyMySQL/)
+- [psutil](https://pypi.org/project/psutil/)
+- [sh](https://amoffat.github.io/sh/)
+- [SQLAlchemy](http://www.sqlalchemy.org/)
+- [requests](https://pypi.org/project/requests/)
+- [distro](https://pypi.org/project/distro/)
+
+### Structure
+
+WordOps application can be found in the `wo` directory of the github repository
+Here the structure of WordOps with additional comments
+
+```tree
+wo
+├── cli # the main directory of the application
+│   ├── __init__.py
+│   ├── bootstrap.py
+│   ├── controllers
+│   ├── ext
+│   ├── main.py
+│   ├── plugins # WordOps commands (stack, site, update .. etc)
+│   └── templates # WordOps configuration template
+├── core # functions used in WordOps
+└── utils # testing helper
+
+```
 
 ### Contributions Ground Rules
 

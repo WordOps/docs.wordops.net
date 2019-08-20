@@ -73,64 +73,48 @@ This will create proxy site site.tld with proxy destination as 127.0.0.1:3000. P
 
 Following are the WordPress website types you can create website based on Cache Mechanism
 
-#### Standard sites
+Standard WordPress site
 
-| cache          | PHP     | example                                      |
-| -------------- | ------- | -------------------------------------------- |
-| no cache       | PHP 7.2 | `wo site create site.tld --wp`               |
-| no cache       | PHP 7.3 | `wo site create site.tld --wp --php73`       |
-| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpfc`             |
-| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpfc --php73`     |
-| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsc`             |
-| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsc --php73`     |
-| redis-cache    | PHP 7.2 | `wo site create site.tld --wpredis`          |
-| redis-cache    | PHP 7.3 | `wo site create site.tld --wpredis --php73`  |
-| WP-Rocket      | PHP 7.2 | `wo site create site.tld --wprocket`         |
-| WP-Rocket      | PHP 7.3 | `wo site create site.tld --wprocket --php73` |
-| Cache-Enabler  | PHP 7.2 | `wo site create site.tld --wpce`             |
-| Cache-Enabler  | PHP 7.3 | `wo site create site.tld --wpce --php73`     |
+```bash
+wo site create site.tld --wp
+```
 
-#### Multisite subdirectory
+WordPress site + Nginx fastcgi_cache
 
-| cache          | PHP     | example                                                 |
-| -------------- | ------- | ------------------------------------------------------- |
-| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdir`                    |
-| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdir --php73`            |
-| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpfc`             |
-| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpfc --php73`     |
-| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdir --wpsc`             |
-| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdir --wpsc --php73`     |
-| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdir --wpredis`          |
-| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdir --wpredis --php73`  |
-| WP-Rocket      | PHP 7.2 | `wo site create site.tld --wpsubdir --wprocket`         |
-| WP-Rocket      | PHP 7.3 | `wo site create site.tld --wpsubdir --wprocket --php73` |
-| Cache-Enabler  | PHP 7.2 | `wo site create site.tld --wpsubdir --wpce`             |
-| Cache-Enabler  | PHP 7.3 | `wo site create site.tld --wpsubdir --wpce --php73`     |
+```bash
+wo site create site.tld --wpfc
+```
 
+WordPress site + Redis cache
 
-#### Multisite subdomain
+```bash
+wo site create site.tld --wpredis
+```
 
-| cache          | PHP     | example                                                  |
-| -------------- | ------- | -------------------------------------------------------- |
-| no cache       | PHP 7.2 | `wo site create site.tld --wpsubdom`                     |
-| no cache       | PHP 7.3 | `wo site create site.tld --wpsubdom --php73`             |
-| fastcgi_cache  | PHP 7.2 | `wo site create site.tld --wpsubdom --wpfc`              |
-| fastcgi_cache  | PHP 7.3 | `wo site create site.tld --wpsubdom --wpfc --php73`      |
-| wp-super-cache | PHP 7.2 | `wo site create site.tld --wpsubdom --wpsc`              |
-| wp-super-cache | PHP 7.3 | `wo site create site.tld --wpsubdom --wpsc --php73`      |
-| redis-cache    | PHP 7.2 | `wo site create site.tld --wpsubdom --wpredis`           |
-| redis-cache    | PHP 7.3 | `wo site create site.tld --wpsubdom --wpredis --php73`   |
-| WP-Rocket      | PHP 7.2 | `wo site create site.tld --wpsubdom  --wprocket`         |
-| WP-Rocket      | PHP 7.3 | `wo site create site.tld --wpsubdom  --wprocket --php73` |
-| Cache-Enabler  | PHP 7.2 | `wo site create site.tld --wpsubdom  --wpce`             |
-| Cache-Enabler  | PHP 7.3 | `wo site create site.tld --wpsubdom  --wpce --php73`     |
+WordPress site + WP-Super-cache
+
+```bash
+wo site create site.tld --wpsc
+```
+
+WordPress site + WP-Rocket cache
+
+```bash
+wo site create site.tld --wprocket
+```
+
+WordPress site + Cache enabler
+
+```bash
+wo site create site.tld --wpce
+```
 
 #### Cheatsheet
 
 | Cache                     | single site | multisite w/ subdir   | multisite w/ subdom      |
 | ------------------------- | ----------- | --------------------- | ------------------------ |
 | **NO Cache**              | --wp        | --wpsubdir            | --wpsubdomain            |
-| **WP Super Cache plugin** | --wpsc      | --wpsubdir --wpsc     | --wpsubdomain --wpsc    |
+| **WP Super Cache plugin** | --wpsc      | --wpsubdir --wpsc     | --wpsubdomain --wpsc     |
 | **Nginx fastcgi_cache**   | --wpfc      | --wpsubdir --wpfc     | --wpsubdomain --wpfc     |
 | **Redis cache**           | --wpredis   | --wpsubdir --wpredis  | --wpsubdomain --wpredis  |
 | **WP-Rocket plugin**      | --wprocket  | --wpsubdir --wprocket | --wpsubdomain --wprocket |
