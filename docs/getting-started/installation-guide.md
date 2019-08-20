@@ -61,37 +61,6 @@ cd WordOps/
 python3 setup.py install
 ```
 
-### Create WordOps db
-
-```bash
-mkdir -p /var/lib/wo
-
-# Create an empty database for WordOps
-        echo "CREATE TABLE sites (
-       id INTEGER PRIMARY KEY     AUTOINCREMENT,
-       sitename UNIQUE,
-       site_type CHAR,
-       cache_type CHAR,
-       site_path  CHAR,
-       created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-       is_enabled INT,
-       is_ssl INT,
-       storage_fs CHAR,
-       storage_db CHAR,
-       db_name VARCHAR,
-       db_user VARCHAR,
-       db_password VARCHAR,
-       db_host VARCHAR,
-       is_hhvm INT INT DEFAULT '0',
-       php_version VARCHAR
-        );" | sqlite3 /var/lib/wo/dbase.db
-
-# secure the db
-chown -R root:root /var/lib/wo
-# Only allow access by root, block others
-chmod -R 600 /var/lib/wo
-```
-
 ### Install acme.sh
 
 ```bash

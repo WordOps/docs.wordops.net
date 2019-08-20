@@ -53,6 +53,7 @@ nav:
   - Give WordOps a Github star: 'about/give-wordops-github-star.md'
   - Contributing: 'about/contributing.md'
   - Code of conduct: 'about/code-of-conduct.md'
+  - Contributors: 'https://github.com/WordOps/WordOps/graphs/contributors'
 - Getting Started:
   - Prerequisites: 'getting-started/prerequesites.md'
   - Installation: 'getting-started/installation-guide.md'
