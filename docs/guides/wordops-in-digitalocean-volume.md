@@ -23,6 +23,7 @@ $ mv /var/www/ /var/NOTwww/
 $ mkdir -p /var/www/
 ```
 *Steps 8 and 9 are according to DigitalOcean -> Volumes -> 'More' tab of `YOUR-VOLUME` -> Config instructions*
+
 8. Mount Digital Ocean's volume in `/var/www/`
 ```sh
 $ mount -o discard,defaults,noatime /dev/disk/by-id/scsi-0DO_Volume_YOUR-VOLUME /var/www/
