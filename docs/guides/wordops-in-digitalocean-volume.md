@@ -33,7 +33,7 @@ $ mount -o discard,defaults,noatime /dev/disk/by-id/scsi-0DO_Volume_YOUR-VOLUME 
 ```sh
 $ echo '/dev/disk/by-id/scsi-0DO_Volume_YOUR-VOLUME /var/www/ ext4 defaults,nofail,discard 0 0' | sudo tee -a /etc/fstab
 ```
-10. Merge folders `/var/NOTwww/` (where WordOps was installed) fué instalado WordOps) with `/var/www/` (mounted volume).
+10. Merge folders `/var/NOTwww/` (where WordOps was installed) with `/var/www/` (mounted volume).
 ```sh
 $ rsync -av /var/NOTwww/ /var/www/
 ```
