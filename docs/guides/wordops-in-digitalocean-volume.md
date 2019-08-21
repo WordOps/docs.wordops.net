@@ -44,4 +44,4 @@ $ rm -rf /var/NOTwww/
 **And that's it!**
 ### Notes
 * You should def check if `/var/www/` is shown in netdata witht the correct size.
-* Only kinda problem I had is that I wasn't able to login to the WordOps dashboard after rebooting the droplet (to test if volume would mount correctly), I thought WordOps wasn't working or that there was something wrong with the volume but after a couple of minutes evrything was working great.
+* Only kinda problem I had is that I wasn't able to login to the WordOps dashboard after rebooting the droplet (to test if volume would mount correctly), I thought WordOps wasn't working or that there was something wrong with the volume but after a couple of minutes everything was working great.
