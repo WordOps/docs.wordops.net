@@ -2,6 +2,8 @@
 
 ## Install UFW
 
+
+
 ```bash
 sudo apt update && sudo apt install ufw -y
 ```
@@ -24,7 +26,6 @@ sudo ufw default deny incoming
 
 ## allow SSH - DNS - HTTP and HTTPS  - NTP
 sudo ufw limit 22 # can be replaced with a custom port
-sudo ufw allow 53
 sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 123
