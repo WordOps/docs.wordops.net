@@ -18,7 +18,6 @@ It will also create all new Nginx configurations before syncing the old nginx di
 After installing WordOps, if all your sites are still working properly, you can start using WordOps the same way than EasyEngine. For sites previously created with EasyEngine, you will have to changes some settings in their configuration to use WordOps new configurations. This can be done with the command `wo site update` or by editing manually their configuration with the command `wo site edit`.
 
 !!! warning
-
     If some sites are still using php5.6 or php7.0 and are not compatible with newer PHP versions, do not change their vhost configuration. WordOps minimum and default PHP version is PHP 7.2. Additionally, sites previously created with `--w3tc`  will have to use another cache option as we deprecated this stack.
 
 ### Updating site configuration

@@ -22,6 +22,30 @@
 }
 
 
+/* roboto-regular - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('/css/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* roboto-500 - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('/css/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
 /* roboto-italic - latin */
 
 @font-face {
@@ -84,14 +108,6 @@ input {
     line-height: 1.4;
 }
 
-.md-typeset h3 {
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
-    line-height: 1.5;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
 .md-typeset__table td code {
     word-break: unset;
     font-family: 'Roboto Mono';
@@ -109,20 +125,31 @@ pre {
 }
 
 h1 {
-    font-weight: 700!important;
+    line-height: 1.7em;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+strong {
+    font-weight: 500;
 }
 
 .md-typeset h2 {
-    font-weight: 500!important;
-    font-size: 1.7em;
+    font-weight: 500;
+    font-size: 26px;
     margin-top: 1em;
 }
 
-.md-typeset h3,
-h4 {
-    font-weight: 300!important;
-    margin-block-start: 0;
-    margin-block-end: 0;
+.md-typeset h3 {
+    line-height: 1.5em;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.md-typeset h4 {
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .md-nav__link {
