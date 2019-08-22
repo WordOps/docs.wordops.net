@@ -9,10 +9,10 @@ To issue a SSL certificate with WordOps, you can use the following arguments wit
 
 options        | description
 --------------------------|----------------------------------------------------------------------------------
-`-letsencrypt` / `-le`    | issue a SSL certificate : **domain.tld + www.domain.tld**
+`--letsencrypt` / `-le`    | issue a SSL certificate : **domain.tld + www.domain.tld**
 `--letsencrypt=subdomain` | issue a SSL certificate for a subdomain : **sub.domain.tld**
 `--letsencrypt=wildcard`  | issue a wildcard SSL certificate : **domain.tld + \*.domain.tld**
-`--dns=<dns_api>`         | use DNS API validation for Acme challenge. **required for wildcard certificates**
+`--dns` / `--dns=<dns_api>`         | use DNS API validation for Acme challenge. **required for wildcard certificates**
 
 `-le` is an alias for `--letsencrypt`. You can use this alias with all letsencrypt commands.
 
