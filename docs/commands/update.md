@@ -2,6 +2,8 @@
 
 Update WordOps to the latest release available
 
+<img id="intro" align="center" src="/images/wo-update.gif">
+
 Usage :
 
 ```bash
@@ -13,4 +15,3 @@ Without argument, the command `wo update` will update WordOps only if a newer ve
 | optional arguments | description                                         |
 | ------------------ | --------------------------------------------------- |
 | --force            | Force WordOps update to the last release            |
-| --preserve         | Do not overwrite Nginx configurations during update |

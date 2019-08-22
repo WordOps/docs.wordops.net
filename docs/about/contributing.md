@@ -14,7 +14,7 @@ This is the minimum open-source users should contribute back to the projects the
 
 ### Spread the word
 
-Community growth allows the project to attract new talent willing to contribute. This talent is then developing new features and improves the project. These new features and improvements attract more users and so on. It is a loop. So, post about WordOps, present it to local meetups you attend, let your online social network or twitter, facebook, reddit, etc. know you are using it. **The more people involved, the faster the project evolves**.
+Community growth allows the project to attract new talent willing to contribute. This talent is then developing new features and improves the project. These new features and improvements attract more users and so on. It is a loop. So, post about WordOps, add a review or suggest it as an alternative to another app on [alternativeto.net](https://alternativeto.net/software/wordops/), present it to local meetups you attend, let your online social network or twitter, facebook, reddit, etc. know you are using it. **The more people involved, the faster the project evolves**.
 
 ### Provide feedback
 
@@ -67,16 +67,44 @@ Here the structure of WordOps with additional comments
 wo
 ├── cli # the main directory of the application
 │   ├── __init__.py
-│   ├── bootstrap.py
-│   ├── controllers
-│   ├── ext
-│   ├── main.py
+│   ├── bootstrap.py # Cement framework
+│   ├── controllers # Cement framework
+│   ├── ext # Cement framework
+│   ├── main.py # Cement framework
 │   ├── plugins # WordOps commands (stack, site, update .. etc)
 │   └── templates # WordOps configuration template
-├── core # functions used in WordOps
+├── core # main functions used in WordOps plugins
 └── utils # testing helper
 
 ```
+
+Plugins Directory :
+Here the list of plugins with the related command or a short description
+
+```tree
+├── plugins
+│   ├── __init__.py
+│   ├── clean.py # wo clean
+│   ├── debug.py # wo debug
+│   ├── import_slow_log.py # wo import-slow-log (from EE v3)
+│   ├── info.py # wo info
+│   ├── log.py # wo log
+│   ├── maintenance.py # wo maintenance
+│   ├── models.py # site information structure for WO internal DB
+│   ├── secure.py # wo secure
+│   ├── site.py # wo site
+│   ├── site_functions.py # functions used by site.py
+│   ├── sitedb.py # WO internal SQlite3 database functions
+│   ├── stack.py # wo stack install/remove/purge
+│   ├── stack_migrate.py # wo stack migrate
+│   ├── stack_pref.py # stack configuration used by stack.py & stack_upgrade.py
+│   ├── stack_services.py # wo stack start/stop/restart/reload
+│   ├── stack_upgrade.py # wo stack upgrade
+│   ├── sync.py # wo sync
+│   └── update.py # wo update
+```
+
+### Developement Environnment
 
 ### Contributions Ground Rules
 

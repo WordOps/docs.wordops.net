@@ -2,8 +2,8 @@
 <p align="center">
 <img src="images/logo.png" width="400" alt="WordOps" /><br><br>
 
-<video id="intro" align="center" src="/images/wordops-intro.webm" autoplay="" loop="">
-</video><br><br>
+<img id="intro" align="center" src="/images/wordops-short-intro.gif">
+<br><br>
 
 <a href="https://travis-ci.org/WordOps/WordOps" target="_blank"><img src="https://travis-ci.org/WordOps/WordOps.svg?branch=master" alt="build"></a>
 <img src="https://img.shields.io/github/license/wordops/wordops.svg" alt="MIT">

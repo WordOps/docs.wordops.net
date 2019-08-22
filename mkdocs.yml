@@ -8,11 +8,12 @@ remote_branch: gh-pages
 theme:
   name: 'material'
   favicon: 'images/favicon.png'
+  logo: 'images/logo-icon.png'
   language: 'en'
   font: false
   highlightjs: true
   palette:
-    primary: 'indigo'
+    primary: 'light-blue'
     accent: 'indigo'
 
 

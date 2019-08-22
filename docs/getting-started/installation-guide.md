@@ -10,6 +10,23 @@ We provide an installer script which install the required dependencies, before s
 wget -qO wo wops.cc && sudo bash wo
 ```
 
+Options :
+
+- `-w` | `--wufw` | `--without-ufw` : do not configure UFW during setup
+
+??? Info "What are the tasks performed by the install script ?"
+    - Installing WordOps dependencies
+    - Enabling automated security updates with unattended-upgrades
+    - Enabling NTP World Time Synchronization
+    - Detecting a previous EasyEngine or WordOps installation
+    - Importing existant sites into WordOps
+    - Installing WP-CLI
+    - Installing Acme.sh
+    - Installing Wordops
+    - Applying Linux Kernel tweaks
+    - Adding systemd service to apply kernel settings on boot (for Netdata & Redis)
+    - Configuring UFW with minimal rules for WordOps
+
 ### Alternative : Clone Github repository and run
 
 ```bash
@@ -33,13 +50,13 @@ If you prefer to perform yourself the same steps than our installer script, here
 # On Ubuntu
 apt-get install build-essential bash-completion curl gzip python3 \
 python3-apt python3-setuptools python3-dev sqlite3 git tar \
-software-properties-common pigz gnupg2 cron ccze rsync -y
+software-properties-common pigz gnupg2 cron ufw ccze rsync -y
 
 # On Debian
 apt-get install build-essential bash-completion curl gzip dirmngr \
 sudo python3 python3-apt python3-setuptools python3-dev  \
 ca-certificates sqlite3 git tar software-properties-common \
-pigz apt-transport-https gnupg2 cron ccze rsync -y
+pigz apt-transport-https gnupg2 cron ccze ufw rsync -y
 ```
 
 ### Clone the github repository
