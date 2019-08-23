@@ -6,6 +6,7 @@
 - [How to secure WordOps backend with Let's Encrypt SSL certificate ?](/how-to/secure-22222/)
 - [How to renew Let's Encrypt Certificates ?](#renew-a-lets-encrypt-ssl-certificates-with-wordops)
 - [How to configure Let's Encrypt DNS API validation](/how-to/configure-letsencrypt-dns-api-validation/)
+- [How to get an A+ grade on ssllabs with Wordops ?](how-to/get-a-plus-grade-ssllabs.md)
 
 ## Other questions
 
