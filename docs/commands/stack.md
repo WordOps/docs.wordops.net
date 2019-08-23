@@ -10,14 +10,47 @@ wo stack (command) [options]
 
 subcommand                | description
 --------------------------|---------------------------
-[install](#stack-install) | Install packages
-[reload](#stack-reload)   | Reload WordOps stack
+[install](#stack-install) | Install WordOps stacks
+[upgrade](#stack-upgrade) | Upgrade WordOps stack
 [remove](#stack-remove)   | Uninstall packages
 [purge](#stack-purge)     | Uninstall & purge packages
+[reload](#stack-reload)   | Reload WordOps stack
 [restart](#stack-restart) | Restart WordOps stack
 [stop](#stack-stop)       | Stop WordOps stack
-[upgrade](#stack-upgrade) | Upgrade WordOps stack
 [start](#stack-start)     | Start WordOps stack
+
+
+!!! info
+    Options are the same for `wo stack install`, `wo stack remove` and `wo stack purge`
+
+Stack available are :
+
+| options           | type        | description                                             |
+| ----------------- | ----------- | ------------------------------------------------------- |
+| `--web`           | Group       | Nginx, PHP, MySQL, WP-CLI                               |
+| `--admin`         | Group       | phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ... |
+| `--utils`         | Group       | OpcacheGUI, Webgrind, Anemometer                        |
+| `--nginx`         | APT package | nginx stack                                             |
+| `--php`           | APT package | PHP7.2-FPM stack                                        |
+| `--php73`         | APT package | PHP7.3-FPM stack                                        |
+| `--mysql`         | APT package | MariaDB stack                                           |
+| `--redis`         | APT package | Redis stack                                             |
+| `--wpcli`         | Binary      | WP-CLI                                                  |
+| `--phpmyadmin`    | Web App     | phpMyAdmin                                              |
+| `--composer`      | Binary      | Composer                                                |
+| `--netdata`       | Binary      | Netdata                                                 |
+| `--dashboard`     | Web App     | WordOps dashboard                                       |
+| `--adminer`       | Web App     | adminer                                                 |
+| `--fail2ban`      | APT package | fail2ban                                                |
+| `--phpredisadmin` | Webp App    | phpredisadmin                                           |
+| `--proftpd`       | APT package | proftpd stack                                           |
+| `--mysqltuner`    | Binary      | MySQLTuner stack                                        |
+
+### Packages types
+
+- APT package are debian packages installed from APT repositories
+- Binaries are simple executables
+- Web App are php based applications
 
 ## stack install
 
@@ -28,33 +61,6 @@ wo stack install [options]
 ```
 
 Without options, the stack `--web`, `--admin`, `--utils` will be installed
-
-
-| options           | type        | description                                             |
-| ----------------- | ----------- | ------------------------------------------------------- |
-| `--web`           | Group       | Nginx, PHP, MySQL, WP-CLI                               |
-| `--admin`         | Group       | phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ... |
-| `--nginx`         | APT package | install nginx stack                                     |
-| `--php`           | APT package | install PHP7.2-FPM stack                                |
-| `--php73`         | APT package | install PHP7.3-FPM stack                                |
-| `--mysql`         | APT package | install MariaDB stack                                   |
-| `--redis`         | APT package | install Redis stack                                     |
-| `--wpcli`         | Binary      | install WP-CLI                                          |
-| `--phpmyadmin`    | Web App     | install phpMyAdmin                                      |
-| `--composer`      | Binary      | install Composer                                        |
-| `--netdata`       | Binary      | install Netdata                                         |
-| `--dashboard`     | Web App     | install WordOps dashboard                               |
-| `--adminer`       | Web App     | install adminer                                         |
-| `--fail2ban`      | APT package | install fail2ban                                        |
-| `--utils`         | Group       | OpcacheGUI, Webgrind, Anemometer                        |
-| `--phpredisadmin` | Webp App    | install phpredisadmin                                   |
-| `--proftpd`       | APT package | install proftpd stack                                   |
-
-### Packages types
-
-- APT package are debian packages installed from APT repositories
-- Binaries are simple executables
-- Web App are php based applications
 
 ### Recommended install
 
@@ -88,7 +94,7 @@ After installing the Admin stack, WordOps dashboard will be available on https:/
 
 ## stack upgrade
 
-Upgrade stack safely
+Upgrade stack safely and apply new configurations and optimizations
 
 Usage :
 
@@ -96,12 +102,109 @@ Usage :
 wo stack upgrade [options]
 ```
 
-### Options
+| options      | description                               |
+| ------------ | ----------------------------------------- |
+| --all        | Upgrade all stack                         |
+| --web        | Upgrade web stack                         |
+| --admin      | Upgrade admin tools stack                 |
+| --nginx      | Upgrade Nginx stack                       |
+| --php        | Upgrade PHP 7.2 stack                     |
+| --php73      | Upgrade PHP 7.3 stack                     |
+| --mysql      | Upgrade MySQL stack                       |
+| --wpcli      | Upgrade WPCLI                             |
+| --redis      | Upgrade Redis                             |
+| --netdata    | Upgrade Netdata                           |
+| --dashboard  | Upgrade WordOps Dashboard                 |
+| --composer   | Upgrade Composer                          |
+| --phpmyadmin | Upgrade phpMyAdmin                        |
+| --no-prompt  | Upgrade Packages without any prompt       |
+| --force      | Force Packages upgrade without any prompt |
 
-#### Nginx
+`wo stack upgrade` make sure packages repositories are properly added, then it upgrade packages and for main stacks (Nginx, PHP-FPM & MySQL, Redis), it also update configurations from the templates included in the current WordOps release and apply optimizations (especially for MySQL & Redis)
 
-Upgrade Nginx
+Currently `wo stack upgrade --mysql` will only update the package from the current MariaDB repository, but will not perform upgrades between major releases (10.1 -> 10.3), mostly because there is a risk of failures when upgrading MariaDB, and we will have to run more tests to make sure our upgrading process is stable and will not impact your sites availability.
+
+## stack remove
+
+Remove stacks (without removing configurations or data for APT packages)
+
+Usage :
 
 ```bash
-wo stack upgrade --nginx
+wo stack remove <stack> [options]
+```
+
+| options         | description                                 |
+| --------------- | ------------------------------------------- |
+| --all           | Remove all stacks at once                   |
+| --force         | Force install/remove/purge without prompt   |
+
+For APT packages, `wo stack remove` will just uninstall package without deleting their configurations or data. For binaries or web app, it will do the same than `wo stack purge`
+
+## stack purge
+
+Remove and purge stacks (including configurations and data)
+
+!!! Warning
+    Please be careful when using `wo stack purge` because it will remove APT packages but also purge all configurations or data, including MySQL databases, Redis databases or Nginx vhosts.
+
+Usage :
+
+```bash
+wo stack purge <stack> [options]
+```
+
+| options         | description                                 |
+| --------------- | ------------------------------------------- |
+| --all           | Remove all stacks at once                   |
+| --force         | Force install/remove/purge without prompt   |
+
+## stack restart
+
+Restart Stack service
+
+Usage :
+
+```bash
+wo stack restart [options]
+```
+
+## stack reload
+
+Reload Stack service
+
+Usage :
+
+```bash
+wo stack reload [options]
+```
+
+## stack start
+
+Start Stack service
+
+Usage :
+
+```bash
+wo stack start [options]
+```
+
+## stack stop
+
+Stop Stack service
+
+Usage :
+
+```bash
+wo stack stop [options]
+```
+
+## stop status
+
+Display Stack service status
+
+Usage :
+
+```bash
+wo stack status [options]
 ```
