@@ -80,10 +80,12 @@ nav:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
   - LetsEncrypt SSL certificates: 'guides/manage-ssl-certificates.md'
+  - WordOps With DigitalOcean volumes: 'guides/wordops-with-digitalocean-volume.md'
 - F.A.Q: 'https://wordops.net/f-a-q/'
 - Troubleshooting: 'troubleshooting.md'
 - Community:
   - WordOps.net: https://wordops.net
+  - Blog: https://wordops.net/blog/
   - Forum: https://community.wordops.net
   - Slack: https://community.wordops.io/slack
   - Twitter: https://twitter.com/WordOps_
