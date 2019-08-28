@@ -95,19 +95,21 @@ wo site create site.tld --wp --php73
 WordPress site secured with Let's Encrypt
 
 ```bash
-wo site create site.tld --wp --letsencrypt
+wo site create site.tld --wp -le
 ```
 
 WordPress site on subdomain secure with Let's Encrypt
 
 ```bash
-wo site create sub.site.tld --wp --letsencrypt=subdomain
+wo site create sub.site.tld --wp -le
 ```
+
+**Since the release v3.9.8.4**, WordOps will automatically detect if the site is a domain or a subdomain, and will not issue a certificate for www alias with subdomains
 
 WordPress site with PHP 7.3 and secured by Let's Encrypt
 
 ```bash
-wo site create site.tld --wp --php73 --letsencrypt
+wo site create site.tld --wp --php73 -le
 ```
 
 Create WordPress subdomain multisite secured with a Let's Encrypt Wildcard SSL certificate

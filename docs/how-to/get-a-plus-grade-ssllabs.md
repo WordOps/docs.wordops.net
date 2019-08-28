@@ -1,5 +1,7 @@
 # How to get an A+ Grade on ssllabs with WordOps
 
+<img id="intro" align="center" src="/images/ssllabs.png">
+
 This tutorial describe how to get the best SSL grade on ssllabs.com. To get an A+, it require to enable HSTS (HTTP Strict Transport Security). HSTS allows web servers to declare that web browsers should only interact with it using HTTPS connections and never via the insecure HTTP protocol.
 
 !!! Warning
@@ -9,16 +11,10 @@ This tutorial describe how to get the best SSL grade on ssllabs.com. To get an A
 
 ### For a new site
 
-For a domain
+For a domain or a subdomain
 
 ```bash
 wo site create site.tld --wp -le --hsts
-```
-
-For a subdomain
-
-```bash
-wo site create sub.site.ltd --wp -le=subdomain --hsts
 ```
 
 For a multisite
@@ -29,16 +25,10 @@ wo site create site.tld --wpsubdom -le=wildcard --hsts
 
 ### For an existant site without SSL
 
-For a domain
+For a domain or a subdomain
 
 ```bash
 wo site update site.tld -le --hsts
-```
-
-For a subdomain
-
-```bash
-wo site update sub.site.ltd -le=subdomain --hsts
 ```
 
 For a multisite
@@ -49,16 +39,10 @@ wo site update site.tld -le=wildcard --hsts
 
 ### For an existant site already secured with Let's Encrypt
 
-For a domain
+For a domain or a subdomain
 
 ```bash
 wo site update site.tld --hsts
-```
-
-For a subdomain
-
-```bash
-wo site update sub.site.ltd --hsts
 ```
 
 For a multisite

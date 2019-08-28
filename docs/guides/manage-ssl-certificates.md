@@ -7,12 +7,11 @@ To issue a SSL certificate with WordOps, you can use the following arguments wit
 - `wo site create`
 - `wo site update`
 
-options        | description
---------------------------|----------------------------------------------------------------------------------
-`--letsencrypt` / `-le`    | issue a SSL certificate : **domain.tld + www.domain.tld**
-`--letsencrypt=subdomain` | issue a SSL certificate for a subdomain : **sub.domain.tld**
-`--letsencrypt=wildcard`  | issue a wildcard SSL certificate : **domain.tld + \*.domain.tld**
-`--dns` / `--dns=<dns_api>`         | use DNS API validation for Acme challenge. **required for wildcard certificates**
+| options                     | description                                                                       |
+| --------------------------- | --------------------------------------------------------------------------------- |
+| `--letsencrypt` / `-le`     | issue a SSL certificate for domain or subdomain                                   |
+| `--letsencrypt=wildcard`    | issue a wildcard SSL certificate : **domain.tld + \*.domain.tld**                 |
+| `--dns` / `--dns=<dns_api>` | use DNS API validation for Acme challenge. **required for wildcard certificates** |
 
 `-le` is an alias for `--letsencrypt`. You can use this alias with all letsencrypt commands.
 
@@ -43,13 +42,13 @@ wo site update site.tld -le
 To create a new site :
 
 ```bash
-wo site create sub.site.tld --wp --letsencrypt=subdomain
+wo site create sub.site.tld --wp -le
 ```
 
 To secure an existant site :
 
 ```bash
-wo site update sub.site.tld --letsencrypt=subdomain
+wo site update sub.site.tld -le
 ```
 
 ### DNS API mode
@@ -57,8 +56,7 @@ wo site update sub.site.tld --letsencrypt=subdomain
 !!! warning
     Read first our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation/)
 
-
-#### domain + www.domain.tld
+#### domain or subdomain
 
 To create a new site with Cloudflare DNS API :
 
@@ -69,21 +67,7 @@ wo site create site.tld --wp -le --dns=dns_cf
 To secure an existant site with DigitalOcean DNS API:
 
 ```bash
-wo site update site.tld -le --dns=dns_do
-```
-
-#### sub-domain
-
-To create a new site with Cloudflare DNS API :
-
-```bash
-wo site create sub.site.tld --wp --letsencrypt=subdomain --dns=dns_cf
-```
-
-To secure an existant site with DigitalOcean DNS API:
-
-```bash
-wo site update sub.site.tld --letsencrypt=subdomain --dns=dns_do
+wo site update sub.site.tld -le --dns=dns_do
 ```
 
 #### wildcard
@@ -97,5 +81,5 @@ wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 To secure an existant site with DigitalOcean DNS API:
 
 ```bash
-wo site update site.tld --letsencrypt=wildcard --dns=dns_do
+wo site update site.tld -le=wildcard --dns=dns_do
 ```

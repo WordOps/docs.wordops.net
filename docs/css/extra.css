@@ -130,6 +130,10 @@ h1 {
     font-size: 34px;
 }
 
+.md-main__inner {
+    padding-top: 0;
+}
+
 strong {
     font-weight: 500;
 }

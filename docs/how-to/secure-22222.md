@@ -1,6 +1,6 @@
 # How to secure WordOps backend with Let's Encrypt SSL certificate
 
-From the release v3.9.8.1 and onward, WordOps will automatically secure the backend on port 22222 with the first SSL certificate issued on the server. So you just have to create basic site with the arguments `--letsencrypt` or `--letsencrypt=subdomain` to secure the backend.
+From the release v3.9.8.1 and onward, WordOps will automatically secure the backend on port 22222 with the first SSL certificate issued on the server. So you just have to create basic site with the arguments `--letsencrypt` or `-le` to secure the backend.
 
 ## Using another certificate
 

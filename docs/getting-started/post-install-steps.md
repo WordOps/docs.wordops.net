@@ -38,6 +38,7 @@ Here the list of WordOps components installed with the above command
 | Anemometer        | Web App     | MySQL Slow Query Monitor               |
 | WordOps dashboard | Web App     | Bootstrap template for WordOps backend |
 | eXtplorer         | Web App     | Web File manager                       |
+| Cheat.sh          | Binary      | Command-line Linux cheatsheet          |
 
 ### Packages types
 

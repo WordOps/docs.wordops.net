@@ -52,3 +52,32 @@ If you are using Redis-cache, please make sure :
 - the option "purge cache" is enabled in Settings > Nginx-Helper
 - the caching method is defined on Redis Cache
 - the prefix defined is `nginx-cache:`
+
+### WordOps commands are not working
+
+If the error output looks like :
+
+```bash
+Traceback (most recent call last):
+  File "/usr/local/bin/wo", line 6, in <module>
+    from pkg_resources import load_entry_point
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3088, in <module>
+    @_call_aside
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3072, in _call_aside
+    f(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3101, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 574, in _build_master
+    ws.require(__requires__)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 892, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 778, in resolve
+    raise DistributionNotFound(req, requirers)
+pkg_resources.DistributionNotFound: The 'wo==3.9.8.2' distribution was not found and is required by the application
+```
+
+Just remove the executable `/usr/local/bin/wo` and reinstall WordOps :
+
+```bash
+sudo rm /usr/local/bin/wo && wget -qO wo wops.cc && sudo bash wo
+```

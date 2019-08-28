@@ -8,8 +8,7 @@ This is assuming you start with a brand new droplet and a brand new volume.
 
 2) Add volume –> Automatically format and mount
 
-
-	*This guide is based as if your volume would be named: `YOUR-VOLUME`*
+*This guide is based as if your volume would be named: `YOUR-VOLUME`*
 
 3)  Login to the droplet from the console, will ask for root password change.
 

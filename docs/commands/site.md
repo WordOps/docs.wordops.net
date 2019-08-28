@@ -165,8 +165,10 @@ This command will issue a certificate for site.tld + www.site.tld.
 You can also issue Let's Encrypt certificates with subdomains.
 
 ```bash
-wo site create sub.site.tld --wp --letsencrypt=subdomain
+wo site create sub.site.tld --wp --letsencrypt
 ```
+
+**Since the release v3.9.8.4**, WordOps will automatically detect if the site is a domain or a subdomain, and will not issue a certificate for www alias with subdomains
 
 ##### Wildcard
 
@@ -307,7 +309,6 @@ wo site update  [<site_name>] [options]
 | `--wpsubdomain`                     | update site to WordPress multisite on subdomains                        |
 | `--password`                        | update admin password for a WordPress site                              |
 | `--letsencrypt`,`-le`               | secure site with Let's Encrypt SSL certificate                          |
-| `--letsencrypt=subdomain`           | secure site running on a subdomain with Let's Encrypt                   |
 | `--letsencrypt=wildcard`            | secure site/multisite with a wildcard SSL certificates                  |
 | `--letsencrypt=off`                 | disable Let's Encrypt SSL certificate                                   |
 | `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default : `dns_cf` |
