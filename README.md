@@ -10,7 +10,7 @@ You can either edit page content from Github or fork the repository before cloni
 
 If you have any question about this documentation, feel free to join us on [Slack](https://community.wordops.io/slack) or to ask your question on [WordOps Community forum](https://community.wordops.net/)
 
-### Method 1 : Edit page content directly from Github
+### Method 1: Edit page content directly from Github
 
 ![edit](https://img.virtubox.net/images/2019/03/29/image.png)
 
@@ -20,14 +20,14 @@ If you have any question about this documentation, feel free to join us on [Slac
 4. After you finished making changes, you will be able to commit changes (saving changes with a message which describe what was added/changed/removed).
 5. The last step to apply changes on this repository is to open a PR(pull request). We will review the commits you made and if everything is okay, we will merge the PR.
 
-### Method 2 : Work on the documentation locally
+### Method 2: Work on the documentation locally
 
-If you want to work on WordOps documentation on your computer, you just have to :
+If you want to work on WordOps documentation on your computer, you just have to:
 
 1. Fork the repository using the button "Fork" available on the top right of this page
-2. clone the forked repository :
+2. clone the forked repository:
 
-    - with the CLI : `git clone https://github.com/YourUsername/docs.wordops.net.git`
+    - with the CLI: `git clone https://github.com/YourUsername/docs.wordops.net.git`
     - or using [Github Desktop App](https://desktop.github.com/)
 
 3. create/edit markdown files
@@ -38,7 +38,7 @@ If you want to work on WordOps documentation on your computer, you just have to 
 ### Documentation structure
 
 Documentation source files are stored inside `docs` directory.
-Here the current structure :
+Here the current structure:
 
 ```bash
 ├── commands # commands folder
@@ -67,7 +67,7 @@ Here the current structure :
 
 Each part of the documentation is stored in a separated folder. `how-to` is the folder used for any short tutorial or explanation about WordOps usage. `guides` is the folder used for any extended guide or tutorial about WordOps.
 
-Example :
+Example:
 
 > I want to write a tutorial to explain how to use WordOps with a remote MySQL server.
 
@@ -83,7 +83,7 @@ MkDocs builds completely static HTML sites that you can host on GitHub page or a
 
 You can install Mkdocs locally to use the site live preview feature.
 
-- install mkdocs :
+- install mkdocs:
   - [guide for windows](https://gist.github.com/VirtuBox/2f149ce45e2449c36f18cb634243fe90)
   - `apt install mkdocs -y` on debian/ubuntu
 - start mkdocs built-in web-server  `mkdocs serve` or `mkdocs.exe serve` inside the repository folder

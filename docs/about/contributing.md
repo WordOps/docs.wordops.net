@@ -78,7 +78,7 @@ wo
 
 ```
 
-Plugins Directory :
+Plugins Directory:
 Here the list of plugins with the related command or a short description
 
 ```tree

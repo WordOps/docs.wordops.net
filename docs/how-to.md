@@ -12,7 +12,7 @@
 
 #### Get a list of WordOps commands
 
-To get the list of WordOps commands, you can use the command :
+To get the list of WordOps commands, you can use the command:
 
 ```bash
 wo
@@ -32,7 +32,7 @@ MySQL root password is stored in the file `/etc/mysql/conf.d/my.cnf`
 
 #### Display MySQL user and password of a site
 
-You can use the command :
+You can use the command:
 
 ```bash
 wo site info site.tld
@@ -42,7 +42,7 @@ wo site info site.tld
 
 #### Access WordOps backend
 
-WordOps backend is available on port 22222, you can access it with the server IP, hostname or with a domain pointed to the server IP :
+WordOps backend is available on port 22222, you can access it with the server IP, hostname or with a domain pointed to the server IP:
 
 ```bash
 # with server IP
@@ -57,7 +57,7 @@ https://site.tld:22222
 
 #### Change WordOps backend username and password
 
-You can use the command :
+You can use the command:
 
 ```bash
 wo secure --auth
@@ -71,7 +71,7 @@ Previously with EasyEngine v3, Let's Encrypt certificates were renewed by runnin
 
 You may have noticed the command `site update --le=renew` still exist in WordOps, but you shouln't need it because WordOps use the awesome acme client acme.sh to issue and handle Let's Encrypt SSL certificates. All certificates are **automatically renewed every 60 days** by acme.sh using a cronjob.
 
-However, if you really need to renew your certificates, you can directly use acme.sh to renew all certificates with the following command :
+However, if you really need to renew your certificates, you can directly use acme.sh to renew all certificates with the following command:
 
 ```bash
 acme.sh --renew-all --ecc

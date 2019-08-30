@@ -4,14 +4,14 @@
 
 ### Minimum
 
-WordOps is very lightweight, it doesn't require a lot of resources and can be installed on low end devices like Raspberry PI. Minimum requirements are :
+WordOps is very lightweight, it doesn't require a lot of resources and can be installed on low end devices like Raspberry PI. Minimum requirements are:
 
 - ~100MB of storage
 - 512MB RAM
 
 ### Recommended
 
-However, if you are going to use WordOps in production, some services like MySQL or Redis may need more resources, and running WordOps stacks without enough resources could impact your sites performance. Resources usage also highly depend on your site traffic. Here our recommended hardware configuration for production :
+However, if you are going to use WordOps in production, some services like MySQL or Redis may need more resources, and running WordOps stacks without enough resources could impact your sites performance. Resources usage also highly depend on your site traffic. Here our recommended hardware configuration for production:
 
 - Multi-core CPU
 - 20GB SSD storage

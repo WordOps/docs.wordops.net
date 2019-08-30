@@ -40,16 +40,16 @@
 
 ## Key Features
 
-- **Easy to install** : One step automated installer with migration from EasyEngine v3 support
-- **Fast deployment** : Fast and automated WordPress, Nginx, PHP, MySQL & Redis installation
-- **Custom Nginx build** : Nginx 1.16.1 - TLS v1.3 Cloudflare HTTP/2 HPACK & Brotli support
-- **Up-to-date** : PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
-- **Secured** : Hardened WordPress security with strict Nginx location directives
-- **Powerful** : Optimized Nginx configurations with multiple cache backends support
-- **SSL** : Domain, Subdomain & Wildcard Let's Encrypt SSL certificates with DNS API
-- **Modern** : Strong ciphers_suite, modern TLS protocols and HSTS support (Grade A+ on [ssllabs](https://www.ssllabs.com/ssltest/analyze.html?d=demo.wordops.eu&latest))
-- **Monitoring** : Live Nginx vhost traffic with ngx_vts_module and server monitoring with Netdata
-- **User Friendly** : WordOps dashboard with server status/monitoring and tools ([demo](https://demo.wordops.eu))
+- **Easy to install**: One step automated installer with migration from EasyEngine v3 support
+- **Fast deployment**: Fast and automated WordPress, Nginx, PHP, MySQL & Redis installation
+- **Custom Nginx build**: Nginx 1.16.1 - TLS v1.3 Cloudflare HTTP/2 HPACK & Brotli support
+- **Up-to-date**: PHP 7.2 & 7.3, MariaDB 10.3 & Redis 5.0
+- **Secured**: Hardened WordPress security with strict Nginx location directives
+- **Powerful**: Optimized Nginx configurations with multiple cache backends support
+- **SSL**: Domain, Subdomain & Wildcard Let's Encrypt SSL certificates with DNS API
+- **Modern**: Strong ciphers_suite, modern TLS protocols and HSTS support (Grade A+ on [ssllabs](https://www.ssllabs.com/ssltest/analyze.html?d=demo.wordops.eu&latest))
+- **Monitoring**: Live Nginx vhost traffic with ngx_vts_module and server monitoring with Netdata
+- **User Friendly**: WordOps dashboard with server status/monitoring and tools ([demo](https://demo.wordops.eu))
 
 ---
 

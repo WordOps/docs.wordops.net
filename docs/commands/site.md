@@ -2,7 +2,7 @@
 
 Performs website specific operations
 
-Usage :
+Usage:
 
 ```bash
 wo site (command) [options]
@@ -67,7 +67,7 @@ To create site with Proxy configuration you can use --proxy during site creation
 wo site create site.tld --proxy=127.0.0.1:3000
 ```
 
-This will create proxy site site.tld with proxy destination as 127.0.0.1:3000. Port is optional. Default port : 80.
+This will create proxy site site.tld with proxy destination as 127.0.0.1:3000. Port is optional. Default port: 80.
 
 ### WordPress
 
@@ -111,40 +111,60 @@ wo site create site.tld --wpce
 
 #### Cheatsheet
 
-| Cache                     | single site | multisite w/ subdir   | multisite w/ subdom      |
-| ------------------------- | ----------- | --------------------- | ------------------------ |
-| **NO Cache**              | --wp        | --wpsubdir            | --wpsubdomain            |
-| **WP Super Cache plugin** | --wpsc      | --wpsubdir --wpsc     | --wpsubdomain --wpsc     |
-| **Nginx fastcgi_cache**   | --wpfc      | --wpsubdir --wpfc     | --wpsubdomain --wpfc     |
-| **Redis cache**           | --wpredis   | --wpsubdir --wpredis  | --wpsubdomain --wpredis  |
-| **WP-Rocket plugin**      | --wprocket  | --wpsubdir --wprocket | --wpsubdomain --wprocket |
-| **Cache-Enabler plugin**  | --wpce      | --wpsubdir --wpce     | --wpsubdomain --wpce     |
+| Cache                     | single site   | multisite w/ subdir     | multisite w/ subdom        |
+| ------------------------- | ------------- | ----------------------- | -------------------------- |
+| **NO Cache**              | `--wp`        | `--wpsubdir`            | `--wpsubdomain`            |
+| **WP Super Cache plugin** | `--wpsc`      | `--wpsubdir --wpsc`     | `--wpsubdomain --wpsc`     |
+| **Nginx fastcgi_cache**   | `--wpfc`      | `--wpsubdir --wpfc`     | `--wpsubdomain --wpfc`     |
+| **Redis cache**           | `--wpredis`   | `--wpsubdir --wpredis`  | `--wpsubdomain --wpredis`  |
+| **WP-Rocket plugin**      | `--wprocket`  | `--wpsubdir --wprocket` | `--wpsubdomain --wprocket` |
+| **Cache-Enabler plugin**  | `--wpce`      | `--wpsubdir --wpce`     | `--wpsubdomain --wpce`     |
 
 #### Extra settings
 
-Define WordPress administrator user To define wordpress administrator user during site creation use
+##### Define WordPress administrator user
+
+To define WordPress administrator user during site creation use
 
 ```bash
 wo site create site.tld --user=admin
 ```
 
-This will create admin as administrator user in wordpress during installation. If not defined it will take git user name.
+This will create admin as administrator user in WordPress during installation. If not defined it will take git user name.
 
-Define WordPress administrator password To define wordpress administrator password during site creation use
+##### Define WordPress administrator password
+
+To define WordPress administrator password during site creation use
 
 ```bash
 wo site create site.tld --pass=password
 ```
 
-This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this :
+This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this:
 
---pass='my$secret&' Define WordPress administrator email To define wordpress administrator email during site creation use
+```bash
+--pass='my$secret&' 
+```
+
+##### Define WordPress administrator email
+
+To define WordPress administrator email during site creation use
 
 ```bash
 wo site create site.tld --email=wo@site.tld
 ```
 
 This will set defined email as administrator email. If not defined it will set git email as administrator email.
+
+##### Virtual host only
+
+To create WordPress site and database without installing it, you can use --vhostonly during site creation
+
+For example, you can only create vhost and database without installing WordPress using following command:
+
+```bash
+wo site create site.tld --wp --vhostonly
+```
 
 ### Additional features
 
@@ -178,11 +198,11 @@ wo site create sub.site.tld --wp --letsencrypt
 </video>
 
 
-Example with Cloudflare DNS :
+Example with Cloudflare DNS:
 
 ```bash
-export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
-export CF_Email="xxxx@sss.com"
+export CF_Key="d7eab56a903f25dd4xxxxxxxxxxxxxxxxxxxx"
+export CF_Email="email@domain.com"
 ```
 
 !!! info
@@ -214,7 +234,7 @@ For example, you can create WordPress site running on PHP 7.3 using following co
 wo site create site.tld --wp --php73
 ```
 
-To create simple php site running with PHP 7.3 with no database, you can use this command :
+To create simple php site running with PHP 7.3 with no database, you can use this command:
 
 ```bash
 wo site create site.tld --php73
@@ -228,16 +248,16 @@ Update site configuration
 
 `wo site update` command follows following procedure while updating current site.
 
-Before Updating any site :
+Before Updating any site:
 
 * Creates nginx configuration backup for site.
-* Moves htdocs to backup while updating html/php/mysql site.
+* Moves htdocs to backup while updating HTML/PHP/MySQL site.
 * Creates database dump in backup.
-* While updating current mysql site WordOps uses same database for installing wordpress tables.
+* While updating current MySQL site WordOps uses same database for installing WordPress tables.
 * All these backup are stored outside htdocs, in backup directory.
 
 ### WordOps possible Update Options
-</site_name>
+
 <style type="text/css">.ritz .waffle a{color:inherit}.ritz .waffle .s2{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#666;text-align:center;color:#fff;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s10{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#f3f3f3;text-align:center;color:#6aa84f;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s11{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#fff;text-align:center;color:#cc4125;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s9{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#f3f3f3;text-align:center;color:#cc4125;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s3{border-right:none;border-bottom:1px SOLID #000;background-color:#666;text-align:center;color:#fff;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s1{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#fff;text-align:left;color:#000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s4{border-left:none;border-right:none;border-bottom:1px SOLID #000;background-color:#666;text-align:center;color:#fff;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s6{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#fff;text-align:center;color:#000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s5{border-left:none;border-bottom:1px SOLID #000;background-color:#666;text-align:center;color:#fff;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s8{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#f3f3f3;text-align:center;color:#000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s0{border-bottom:1px SOLID #000;background-color:#fff;text-align:center;font-weight:bold;color:#20124d;font-family:'Arial';font-size:12pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}.ritz .waffle .s7{border-bottom:1px SOLID #000;border-right:1px SOLID #000;background-color:#fff;text-align:center;color:#6aa84f;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px}</style>
 <div class="ritz grid-container" dir="ltr" style="overflow: auto;"><table class="waffle" cellspacing="0" cellpadding="0"><thead><tr><th class="row-header freezebar-origin-ltr header-shim row-header-shim"></th><th id="0C0" style="width:131px" class="header-shim"></th><th id="0C1" style="width:32px" class="header-shim"></th><th id="0C2" style="width:29px" class="header-shim"></th><th id="0C3" style="width:41px" class="header-shim"></th><th id="0C4" style="width:24px" class="header-shim"></th><th id="0C5" style="width:34px" class="header-shim"></th><th id="0C6" style="width:37px" class="header-shim"></th><th id="0C7" style="width:52px" class="header-shim"></th><th id="0C8" style="width:70px" class="header-shim"></th><th id="0C9" style="width:119px" class="header-shim"></th><th id="0C10" style="width:114px" class="header-shim"></th><th id="0C11" style="width:59px" class="header-shim"></th><th id="0C12" style="width:101px" class="header-shim"></th><th id="0C13" style="width:103px" class="header-shim"></th><th id="0C14" style="width:103px" class="header-shim"></th></tr></thead><tbody><tr style="height:20px;"><th id="0R0" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s0" dir="ltr" colspan="14">WordOps Possible  Site Update Options</td><td class="s0"></td></tr><tr style="height:20px;"><th id="0R1" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s1"></td><td class="s2">html</td><td class="s2">php</td><td class="s2">mysql</td><td class="s2">wp</td><td class="s2">wpfc</td><td class="s2">wpsc</td><td class="s2">wpredis</td><td class="s3">wpsubdom</td><td class="s4 softmerge"><div class="softmerge-inner" style="width: 118px; left: -3px;">wpsubdom  +  wpfc</div></td><td class="s5 softmerge"><div class="softmerge-inner" style="width: 113px; left: -3px;">wpsubdom + wpsc</div></td><td class="s3 softmerge">wpsubdir</td><td class="s4 softmerge"><div class="softmerge-inner" style="width: 100px; left: -3px;">wpsubdir + wpfc</div></td><td class="s4 softmerge"><div class="softmerge-inner" style="width: 102px; left: -3px;">wpsubdir + wpsc</div></td><td class="s4 softmerge"><div class="softmerge-inner" style="width: 203px; left: -3px;">wpsubdir + wpsc</div></td></tr><tr style="height:20px;"><th id="0R2" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">html</td><td class="s6">-</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td></tr><tr style="height:20px;"><th id="0R3" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8">php</td><td class="s9">✘</td><td class="s8">-</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td></tr><tr style="height:20px;"><th id="0R4" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">mysql</td><td class="s11">✘</td><td class="s11">✘</td><td class="s6">-</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td></tr><tr style="height:20px;"><th id="0R5" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8"></td><td class="s9"></td><td class="s9"></td><td class="s9"></td><td class="s8"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style="height:20px;"><th id="0R6" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">wp</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s6">-</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td></tr><tr style="height:20px;"><th id="0R7" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8">wpfc</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s10">✔</td><td class="s8">-</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td></tr><tr style="height:20px;"><th id="0R8" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">wpsc</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s7">✔</td><td class="s7">✔</td><td class="s6">-</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td></tr><tr style="height:20px;"><th id="0R9" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8">wpredis</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s8">-</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td></tr><tr style="height:20px;"><th id="0R10" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s6"></td><td class="s6"></td><td class="s7"></td><td class="s7"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s6"></td></tr><tr style="height:20px;"><th id="0R11" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8">wpsubdom</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s8">-</td><td class="s10">✔</td><td class="s10">✔</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td></tr><tr style="height:20px;"><th id="0R12" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">wpsubdom+wpfc</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s7">✔</td><td class="s11">-</td><td class="s7">✔</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td></tr><tr style="height:20px;"><th id="0R13" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8">wpsubdom+wpsc</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td></tr><tr style="height:20px;"><th id="0R14" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">wpsubdom+wpredis</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s7">✔</td><td class="s7">✔</td><td class="s6">        -</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td></tr><tr style="height:20px;"><th id="0R15" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8"></td><td class="s9"></td><td class="s9"></td><td class="s9"></td><td class="s9"></td><td class="s9"></td><td class="s9"></td><td class="s9"></td><td class="s9"></td><td class="s8"></td><td class="s9"></td><td class="s9"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style="height:20px;"><th id="0R16" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">wpsubdir</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">-</td><td class="s7">✔</td><td class="s7">✔</td><td class="s7">✔</td></tr><tr style="height:20px;"><th id="0R17" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8">wpsubdir+wpfc</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s10">✔</td><td class="s8">-</td><td class="s10">✔</td><td class="s10">✔</td></tr><tr style="height:20px;"><th id="0R18" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s6">wpsubdir+wpsc</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s11">✘</td><td class="s7">✔</td><td class="s7">✔</td><td class="s6">-</td><td class="s7">✔</td></tr><tr style="height:20px;"><th id="0R19" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;"></div></th><td class="s8">wpsubdir+wpredis</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s9">✘</td><td class="s10">✔</td><td class="s10">✔</td><td class="s10">✔</td><td class="s8">-</td></tr></tbody></table></div>
 <script type='text/javascript' nonce='Xz18Z26bXmR7taAlfzModg'>
@@ -280,13 +300,13 @@ Before Updating any site :
 
 
 
-Example : updating site from basic wp to wp + fastcgi_cache :
+Example: updating site from basic wp to wp + fastcgi_cache:
 
 <video align="center" src="/images/wo-site-update.webm" width="720" autoplay loop></video>
 
 ### Usage
 
-Usage :
+Usage:
 
 ```bash
 wo site update  [<site_name>] [options]
@@ -311,7 +331,7 @@ wo site update  [<site_name>] [options]
 | `--letsencrypt`,`-le`               | secure site with Let's Encrypt SSL certificate                          |
 | `--letsencrypt=wildcard`            | secure site/multisite with a wildcard SSL certificates                  |
 | `--letsencrypt=off`                 | disable Let's Encrypt SSL certificate                                   |
-| `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default : `dns_cf` |
+| `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default: `dns_cf` |
 | `--hsts`                            | Enable HSTS on site secured with Let's Encrypt                          |
 | `--hsts=off`                        | Disable HSTS                                                            |
 
@@ -329,7 +349,7 @@ Update a WordPress site running with PHP 7.2 to PHP 7.3
 wo site update site.tld --php73
 ```
 
-Disable PHP 7.3 and use PHP 7.2 :
+Disable PHP 7.3 and use PHP 7.2:
 
 ```bash
 wo site update site.tld --php73=off
@@ -345,7 +365,7 @@ wo site update site.tld --wpredis
 
 Get site information including cache backend, PHP version or user database credentials
 
-Usage :
+Usage:
 
 ```bash
 wo site info [<site_name>]
@@ -353,9 +373,9 @@ wo site info [<site_name>]
 
 ## site delete
 
-Delete site including webroot and database :
+Delete site including webroot and database:
 
-Usage :
+Usage:
 
 ```bash
 wo site delete  [<site_name>] [options]
@@ -371,7 +391,7 @@ wo site delete  [<site_name>] [options]
 
 Edit site Nginx configuration
 
-Usage :
+Usage:
 
 ```bash
 wo site edit [<site_name>]
@@ -383,7 +403,7 @@ You will be prompted to choose the text editor you prefer. Nano is highly recomm
 
 Move into a site webroot directory
 
-Usage :
+Usage:
 
 ```bash
 wo site cd  [<site_name>]
@@ -393,7 +413,7 @@ wo site cd  [<site_name>]
 
 List all sites managed with WordOps
 
-Usage :
+Usage:
 
 ```bash
 wo site list
@@ -403,7 +423,7 @@ wo site list
 
 Display site Nginx configuration
 
-Usage :
+Usage:
 
 ```bash
 wo site show  [<site_name>]
@@ -413,7 +433,7 @@ wo site show  [<site_name>]
 
 Disable site Nginx vhost
 
-Usage :
+Usage:
 
 ```bash
 wo site disable  [<site_name>]
@@ -423,7 +443,7 @@ wo site disable  [<site_name>]
 
 Enable site Nginx vhost
 
-Usage :
+Usage:
 
 ```bash
 wo site enable  [<site_name>]

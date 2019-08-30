@@ -1,6 +1,6 @@
 # WordOps commands
 
-The WordOps commands structure :
+The WordOps commands structure:
 
 ```bash
 wo (command) [options]

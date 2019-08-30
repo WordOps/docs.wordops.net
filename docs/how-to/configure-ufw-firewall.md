@@ -41,7 +41,7 @@ sudo ufw allow 21
 sudo ufw allow 49000:50000/tcp
 ```
 
-You can check what ports are currently used on your server with the following command :
+You can check what ports are currently used on your server with the following command:
 
 ```bash
 sudo netstat -tulpn

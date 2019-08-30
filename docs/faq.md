@@ -25,7 +25,7 @@ WordOps support PHP 7.2 (default) and PHP 7.3.
 
 There is no "best solution", because there are benefits/disadvantage for each caching solution and it depend on your usage.
 
-Here some informations :
+Here some informations:
 
 | Cache backend  | command argument | description                                                                                                                                                  |
 | -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -57,7 +57,7 @@ WordOps Let's Encrypt stack is fully compatible with Cloudflare CDN, and you can
 
 ### How to uninstall WordOps ?
 
-If you need/want to uninstall WordOps, you can use the following commands :
+If you need/want to uninstall WordOps, you can use the following commands:
 
 !!! warning
     Make a backup of your databases before purging wordops packages

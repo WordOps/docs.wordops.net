@@ -13,7 +13,7 @@ DOMAIN_NAME=site.ltd
 sudo grep "ssl_" /var/www/${DOMAIN_NAME}/conf/nginx/ssl.conf > /var/www/22222/conf/nginx/ssl.conf
 ```
 
-Then reload Nginx :
+Then reload Nginx:
 
 ```bash
 wo stack restart --nginx
@@ -23,9 +23,9 @@ You should now be able to access to WordOps backend on `https://site.tld:22222`
 
 ### Issue a new certificate to secure WordOps backend
 
-If you prefer to issue manually a new Let's Encrypt SSL certificate, here the steps to follow :
+If you prefer to issue manually a new Let's Encrypt SSL certificate, here the steps to follow:
 
-Set your domain or subdomain as a variable :
+Set your domain or subdomain as a variable:
 
 ```bash
 DOMAIN_NAME=backend.site.ltd

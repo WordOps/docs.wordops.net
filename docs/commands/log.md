@@ -2,7 +2,7 @@
 
 Perform operations on Nginx, PHP and MySQL log files
 
-Usage :
+Usage:
 
 ```bash
 wo log [<site_name>] [options]
@@ -19,15 +19,15 @@ subcommand      | description
 
 Show Nginx, PHP, MySQL log file
 
-Usage :
+Usage:
 
 ```bash
 wo log show [<site_name>] [options]</site_name>
 ```
 
-optional arguments | description
------------------- | --------------------------------------
---nginx            | Show Nginx Error logs file             |
---php              | Show PHP Error logs file               |
---mysql            | Show MySQL logs file                   |
---wp               | Show Site specific WordPress logs file |
+optional arguments   | description
+-------------------- | --------------------------------------
+`--nginx`            | Show Nginx Error logs file             |
+`--php`              | Show PHP Error logs file               |
+`--mysql`            | Show MySQL logs file                   |
+`--wp`               | Show Site specific WordPress logs file |

@@ -4,7 +4,7 @@ These are the first steps **after** you install WordOps. If you haven't installe
 
 ## Enable bash_completion
 
-To enable WordOps commands auto-completion, run the following command after WordOps installation :
+To enable WordOps commands auto-completion, run the following command after WordOps installation:
 
 ```bash
 source /etc/bash_completion.d/wo_auto.rc
@@ -20,11 +20,12 @@ wo stack install
 
 <video align="center" src="/images/wo-stack.webm" width="760" autoplay loop></video>
 
-Here the list of WordOps components installed with the above command
+Here the list of WordOps components installed with the above command:
 
 | Packages          | type        | Description                            |
 | ----------------- | ----------- | -------------------------------------- |
 | Nginx             | APT package | WordOps web server                     |
+| PHP 7.3           | APT package | PHP7.3-FPM                             |
 | PHP 7.2           | APT package | PHP7.2-FPM                             |
 | MariaDB 10.3      | APT package | Open-source version of MySQL           |
 | WP-CLI            | Binary      | The WordPress command-line tool        |
@@ -42,6 +43,6 @@ Here the list of WordOps components installed with the above command
 
 ### Packages types
 
-- APT package are debian packages installed from APT repositories
+- APT package are Debian packages installed from APT repositories
 - Binaries are simple executables
-- Web App are php based applications
+- Web App are PHP based applications
