@@ -111,14 +111,14 @@ wo site create site.tld --wpce
 
 #### Cheatsheet
 
-| Cache                     | single site | multisite w/ subdir   | multisite w/ subdom      |
-| ------------------------- | ----------- | --------------------- | ------------------------ |
-| **NO Cache**              | --wp        | --wpsubdir            | --wpsubdomain            |
-| **WP Super Cache plugin** | --wpsc      | --wpsubdir --wpsc     | --wpsubdomain --wpsc     |
-| **Nginx fastcgi_cache**   | --wpfc      | --wpsubdir --wpfc     | --wpsubdomain --wpfc     |
-| **Redis cache**           | --wpredis   | --wpsubdir --wpredis  | --wpsubdomain --wpredis  |
-| **WP-Rocket plugin**      | --wprocket  | --wpsubdir --wprocket | --wpsubdomain --wprocket |
-| **Cache-Enabler plugin**  | --wpce      | --wpsubdir --wpce     | --wpsubdomain --wpce     |
+| Cache                     | single site   | multisite w/ subdir     | multisite w/ subdom        |
+| ------------------------- | ------------- | ----------------------- | -------------------------- |
+| **NO Cache**              | `--wp`        | `--wpsubdir`            | `--wpsubdomain`            |
+| **WP Super Cache plugin** | `--wpsc`      | `--wpsubdir --wpsc`     | `--wpsubdomain --wpsc`     |
+| **Nginx fastcgi_cache**   | `--wpfc`      | `--wpsubdir --wpfc`     | `--wpsubdomain --wpfc`     |
+| **Redis cache**           | `--wpredis`   | `--wpsubdir --wpredis`  | `--wpsubdomain --wpredis`  |
+| **WP-Rocket plugin**      | `--wprocket`  | `--wpsubdir --wprocket` | `--wpsubdomain --wprocket` |
+| **Cache-Enabler plugin**  | `--wpce`      | `--wpsubdir --wpce`     | `--wpsubdomain --wpce`     |
 
 #### Extra settings
 
