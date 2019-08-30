@@ -15,9 +15,9 @@ Options:
 
 argument | description
 ------------------ | -----------
---auth             | Set backend user credentials (user and)
---port             | Set backend port (default: 22222)
---ip               | Set the list of IP(s) allowed to access without authentification
+`--auth`             | Set backend user credentials (user and)
+`--port`             | Set backend port (default: 22222)
+`--ip`               | Set the list of IP(s) allowed to access without authentification
 
 WordOps uses [Basic Auth](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) to protect the backend from unauthorize people. To change the authorization method, backend's port,... You can use `wo secure` command.
 

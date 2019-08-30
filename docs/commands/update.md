@@ -12,6 +12,6 @@ wo update [options]
 
 Without argument, the command `wo update` will update WordOps only if a newer version is available.
 
-| optional arguments | description                                         |
-| ------------------ | --------------------------------------------------- |
-| --force            | Force WordOps update to the last release            |
+| optional arguments   | description                                         |
+| -------------------- | --------------------------------------------------- |
+| `--force`            | Force WordOps update to the last release            |

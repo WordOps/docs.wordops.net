@@ -102,23 +102,23 @@ Usage:
 wo stack upgrade [options]
 ```
 
-| options      | description                               |
-| ------------ | ----------------------------------------- |
-| --all        | Upgrade all stack                         |
-| --web        | Upgrade web stack                         |
-| --admin      | Upgrade admin tools stack                 |
-| --nginx      | Upgrade Nginx stack                       |
-| --php        | Upgrade PHP 7.2 stack                     |
-| --php73      | Upgrade PHP 7.3 stack                     |
-| --mysql      | Upgrade MySQL stack                       |
-| --wpcli      | Upgrade WPCLI                             |
-| --redis      | Upgrade Redis                             |
-| --netdata    | Upgrade Netdata                           |
-| --dashboard  | Upgrade WordOps Dashboard                 |
-| --composer   | Upgrade Composer                          |
-| --phpmyadmin | Upgrade phpMyAdmin                        |
-| --no-prompt  | Upgrade Packages without any prompt       |
-| --force      | Force Packages upgrade without any prompt |
+| options        | description                               |
+| -------------- | ----------------------------------------- |
+| `--all`        | Upgrade all stack                         |
+| `--web`        | Upgrade web stack                         |
+| `--admin`      | Upgrade admin tools stack                 |
+| `--nginx`      | Upgrade Nginx stack                       |
+| `--php`        | Upgrade PHP 7.2 stack                     |
+| `--php73`      | Upgrade PHP 7.3 stack                     |
+| `--mysql`      | Upgrade MySQL stack                       |
+| `--wpcli`      | Upgrade WPCLI                             |
+| `--redis`      | Upgrade Redis                             |
+| `--netdata`    | Upgrade Netdata                           |
+| `--dashboard`  | Upgrade WordOps Dashboard                 |
+| `--composer`   | Upgrade Composer                          |
+| `--phpmyadmin` | Upgrade phpMyAdmin                        |
+| `--no-prompt`  | Upgrade Packages without any prompt       |
+| `--force`      | Force Packages upgrade without any prompt |
 
 `wo stack upgrade` make sure packages repositories are properly added, then it upgrade packages and for main stacks (Nginx, PHP-FPM & MySQL, Redis), it also update configurations from the templates included in the current WordOps release and apply optimizations (especially for MySQL & Redis)
 
@@ -134,10 +134,10 @@ Usage:
 wo stack remove <stack> [options]
 ```
 
-| options         | description                                 |
-| --------------- | ------------------------------------------- |
-| --all           | Remove all stacks at once                   |
-| --force         | Force install/remove/purge without prompt   |
+| options           | description                                 |
+| ----------------- | ------------------------------------------- |
+| `--all`           | Remove all stacks at once                   |
+| `--force`         | Force install/remove/purge without prompt   |
 
 For APT packages, `wo stack remove` will just uninstall package without deleting their configurations or data. For binaries or web app, it will do the same than `wo stack purge`
 

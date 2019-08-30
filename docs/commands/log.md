@@ -25,9 +25,9 @@ Usage:
 wo log show [<site_name>] [options]</site_name>
 ```
 
-optional arguments | description
------------------- | --------------------------------------
---nginx            | Show Nginx Error logs file             |
---php              | Show PHP Error logs file               |
---mysql            | Show MySQL logs file                   |
---wp               | Show Site specific WordPress logs file |
+optional arguments   | description
+-------------------- | --------------------------------------
+`--nginx`            | Show Nginx Error logs file             |
+`--php`              | Show PHP Error logs file               |
+`--mysql`            | Show MySQL logs file                   |
+`--wp`               | Show Site specific WordPress logs file |
