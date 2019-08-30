@@ -2,7 +2,7 @@
 
 ## Running WordOps install script
 
-The first step to migrate from EasyEngine to WordOps is to run WordOps install script with the command :
+The first step to migrate from EasyEngine to WordOps is to run WordOps install script with the command:
 
 ```bash
 wget -qO wo wops.cc && sudo bash wo
@@ -22,7 +22,7 @@ After installing WordOps, if all your sites are still working properly, you can 
 
 ### Updating site configuration
 
-You have the choice between two method to update your site configuration :
+You have the choice between two method to update your site configuration:
 
 - With the command `wo site update` (recommended)
 
@@ -30,7 +30,7 @@ You have the choice between two method to update your site configuration :
 
 #### Using the command `wo site update`
 
-The easiest way to update your site with the new WordOps configurations is to use the command :
+The easiest way to update your site with the new WordOps configurations is to use the command:
 
 ```bash
 wo site update site.tld <options>
@@ -39,7 +39,7 @@ wo site update site.tld <options>
 To update your sites configuration, you can enable PHP 7.3 on your site with the argument `--php73` and then disable it with the argument `--php73=off` to use PHP 7.2.
 This will regenerate your site Nginx vhost and apply the new configuration.
 
-**Example** :
+**Example**:
 
 ```bash
 # enable PHP 7.3 to regenerate site configuration
@@ -50,7 +50,7 @@ wo site update site.tld --php73=off
 
 #### Manually editing site configuration
 
-You can edit sites configuration with the command :
+You can edit sites configuration with the command:
 
 ```bash
 wo site edit site.tld
@@ -70,7 +70,7 @@ To use new WordOps configuration, you just have to replace the path of the confi
 
 For all WordPress related configuration files like `wpsc.conf` or `wpfc-php7.conf`, new configurations files are just named `wpsc-php72.conf` or `wpfc-php72.conf`.
 
-There are some exceptions, list here :
+There are some exceptions, list here:
 
 | **Previous configuration** | **New configuration**    |
 | -------------------------- | ------------------------ |
@@ -81,7 +81,7 @@ There are some exceptions, list here :
 
 ### Removing previous PHP version
 
-If you do not need php5.6 and php7.0 anymore, you can safely remove them with the following commands :
+If you do not need php5.6 and php7.0 anymore, you can safely remove them with the following commands:
 
 ```bash
 # php5.6
@@ -98,14 +98,14 @@ apt-get -y autoremove php7.0-fpm php7.0-common --purge
 
 #### Backup your databases
 
-You can backup your MySQL databases with this simple bash script :
+You can backup your MySQL databases with this simple bash script:
 
 ```bash
 wget https://raw.githubusercontent.com/VirtuBox/bash-scripts/master/backup/mysqldump/mysqldump.sh -O mysqldump.sh
 chmod +x mysqldump.sh
 ```
 
-Then perform a full backup :
+Then perform a full backup:
 
 ```bash
 ./mysqldump.sh --full
@@ -113,7 +113,7 @@ Then perform a full backup :
 
 This will backup the whole MySQL server and store the gzipped dump in /var/www/mysqldump
 
-Additionally you can make a copy of the `/var/lib/mysql` directory :
+Additionally you can make a copy of the `/var/lib/mysql` directory:
 
 ```bash
 sudo service mysql stop
@@ -123,13 +123,13 @@ sudo service mysql start
 
 #### Upgrading MariaDB
 
-At first, you need to remove the current MariaDB-server installed. To do so, use the command :
+At first, you need to remove the current MariaDB-server installed. To do so, use the command:
 
 ```bash
 sudo apt-get autoremove mariadb-server -y
 ```
 
-Then you can reinstall the latest MariaDB-server version with WordOps :
+Then you can reinstall the latest MariaDB-server version with WordOps:
 
 ```bash
 wo stack install --mysql

@@ -4,7 +4,7 @@ Update WordOps to the latest release available
 
 <img id="intro" align="center" src="/images/wo-update.gif">
 
-Usage :
+Usage:
 
 ```bash
 wo update [options]

@@ -15,34 +15,34 @@ In this example, we will configure Cloudflare DNS API, but configuration will be
 !!! info
     DNS providers list and configurations are available in [acme.sh wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
 
-### Step 1 : get your API credentials
+### Step 1: get your API credentials
 
-Requirements :
+Requirements:
 
 - your Cloudflare account email address
 - your Global API Key available in your [Cloudflare profile](https://dash.cloudflare.com/profile)
 
-### Step 2 : set your credentials with acme.sh variables
+### Step 2: set your credentials with acme.sh variables
 
-Before issuing your first SSL certificate with DNS API, you have to define your API credentials with the command `export`  :
+Before issuing your first SSL certificate with DNS API, you have to define your API credentials with the command `export` :
 
-Example for Cloudflare :
+Example for Cloudflare:
 
 ```bash
 export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
 export CF_Email="xxxx@sss.com"
 ```
 
-- CF_Key : Cloudflare Global API key available in your [Cloudflare profile](https://dash.cloudflare.com/profile)
-- CF_Email : Your Cloudflare account email address
+- CF_Key: Cloudflare Global API key available in your [Cloudflare profile](https://dash.cloudflare.com/profile)
+- CF_Email: Your Cloudflare account email address
 
-Example with DigitalOcean :
+Example with DigitalOcean:
 
 ```bash
 export DO_API_KEY="75310dc4ca779ac39a19f6355db573b49ce92ae126553ebd61ac3a3ae34834cc"
 ```
 
-Example with GoDaddy :
+Example with GoDaddy:
 
 ```bash
 export GD_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
@@ -52,7 +52,7 @@ export GD_Secret="asdfsdafdsfdsfdsfdsfdsafd"
 !!! info
     DNS providers list and configurations are available in [Acme.sh Wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
 
-### Step 3 : issue your certificate
+### Step 3: issue your certificate
 
 For a new site secured with a wildcard SSL certificates with Cloudflare DNS API
 
@@ -60,8 +60,8 @@ For a new site secured with a wildcard SSL certificates with Cloudflare DNS API
 wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 ```
 
-- `--letsencrypt=wildcard` : issue a wildcard certificate `domain.tld` + `*.domain.tld`
-- `--dns=dns_cf` : enable DNS API mode with Cloudflare.
+- `--letsencrypt=wildcard`: issue a wildcard certificate `domain.tld` + `*.domain.tld`
+- `--dns=dns_cf`: enable DNS API mode with Cloudflare.
 
 For an existant secured with a simple SSL certificate (site + www.site.tld) with DigitalOcean DNS API
 
@@ -69,8 +69,8 @@ For an existant secured with a simple SSL certificate (site + www.site.tld) with
 wo site update site.tld -le --dns=dns_do
 ```
 
-- `-le` : issue a certificate for `domain.tld` + `www.domain.tld`
-- `--dns=dns_do` : enable DNS API mode with DigitalOcean
+- `-le`: issue a certificate for `domain.tld` + `www.domain.tld`
+- `--dns=dns_do`: enable DNS API mode with DigitalOcean
 
 ## Informations
 

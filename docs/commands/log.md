@@ -2,7 +2,7 @@
 
 Perform operations on Nginx, PHP and MySQL log files
 
-Usage :
+Usage:
 
 ```bash
 wo log [<site_name>] [options]
@@ -19,7 +19,7 @@ subcommand      | description
 
 Show Nginx, PHP, MySQL log file
 
-Usage :
+Usage:
 
 ```bash
 wo log show [<site_name>] [options]</site_name>

@@ -5,13 +5,13 @@ Update apt-cache and upgrade packages.
 <video align="center" src="/images/wo-maintenance.webm" width="720" autoplay loop>
 </video>
 
-Usage :
+Usage:
 
 ```bash
 wo maintenance
 ```
 
-This command is equivalent to :
+This command is equivalent to:
 
 ```bash
 apt update

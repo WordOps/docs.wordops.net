@@ -5,13 +5,13 @@
 
 You can create site with WordOps by using the command `wo site create`.
 
-WordOps will always :
+WordOps will always:
 
 - install required stack if needed
 - configure Nginx vhost
 - create site directory
 
-WordOps can also :
+WordOps can also:
 
 - create the site database
 - install WordPress (with or without caching)

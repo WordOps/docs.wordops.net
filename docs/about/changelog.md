@@ -4,7 +4,7 @@
 
 ### Added
 
-- cht.sh stack : linux online cheatsheet. Usage : `cheat <command>`. Example for tar : `cheat tar`
+- cht.sh stack: linux online cheatsheet. Usage: `cheat <command>`. Example for tar: `cheat tar`
 - ClamAV anti-virus with weekly cronjob to update signatures database
 - Internal function to add daily cronjobs
 - Additional comment to detect previous configuration tuning (MariaDB & Redis)
@@ -24,7 +24,7 @@
 
 ### Fixed
 
-- typo error in `wo site update` : [PR #126](https://github.com/WordOps/WordOps/pull/126)
+- typo error in `wo site update`: [PR #126](https://github.com/WordOps/WordOps/pull/126)
 
 ## v3.9.8.3 - 2019-08-22
 
@@ -48,7 +48,7 @@
 - Additional settings to support mobile with WP-Rocket
 - Add the ability to block nginx configuration overwriting by adding a file .custom. Example with /etc/nginx/conf.d/webp.conf -> `touch /etc/nginx/conf.d/webp.conf.custom`
 - If there is a custom file, WordOps will write the configuration in a file named fileconf.conf.orig to let users implement possible changes
-- UFW minimal configuration during install. Can be disabled with the flag `-w`, `--wufw` or `--without-ufw`. Example : `wget -qO wo wops.cc && sudo bash wo -w`
+- UFW minimal configuration during install. Can be disabled with the flag `-w`, `--wufw` or `--without-ufw`. Example: `wget -qO wo wops.cc && sudo bash wo -w`
 
 ### Fixed
 
@@ -256,7 +256,7 @@
 - WP_CACHE_KEY_SALT set twice with wpredis
 - WordOps version check when using `wo update`
 - robots.txt file download if not created
-- PHP-FPM socket path in stub_status.conf : PR [#82](https://github.com/WordOps/WordOps/pull/82)
+- PHP-FPM socket path in stub_status.conf: PR [#82](https://github.com/WordOps/WordOps/pull/82)
 
 ## v3.9.5.1 - 2019-05-10
 
@@ -281,9 +281,9 @@
 - WordOps configuration backup before upgrade
 - Previous acme.sh certs migration
 - "wo maintenance" command to perform server package update & cleanup
-- Support for Netdata on backend : https://server.hostname:22222/netdata/
-- New Stacks : composer and netdata
-- additional argument for letsencrypt : --hsts
+- Support for Netdata on backend: https://server.hostname:22222/netdata/
+- New Stacks: composer and netdata
+- additional argument for letsencrypt: --hsts
 - Clean Theme for adminer
 - Credits for tools shipped with WordOps
 - Cache exception for Easy Digital Download

@@ -2,7 +2,7 @@
 
 Clean NGINX FastCGI cache, Opcache, Redis Cache
 
-Usage :
+Usage:
 
 ```bash
 wo clean [options]

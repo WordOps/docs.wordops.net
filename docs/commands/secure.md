@@ -5,18 +5,18 @@ Secure command secure WordOps backend auth, ip and port
 <video align="center" src="/images/wo-secure.webm" width="720" autoplay loop>
 </video>
 
-Usage :
+Usage:
 
 ```bash
 wo secure [options]
 ```
 
-Options :
+Options:
 
 argument | description
 ------------------ | -----------
 --auth             | Set backend user credentials (user and)
---port             | Set backend port (default : 22222)
+--port             | Set backend port (default: 22222)
 --ip               | Set the list of IP(s) allowed to access without authentification
 
 WordOps uses [Basic Auth](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) to protect the backend from unauthorize people. To change the authorization method, backend's port,... You can use `wo secure` command.
@@ -27,8 +27,8 @@ The user name and password of WordOps backend is showed when you create a first 
 
 ```bash
 wo secure --auth
-Provide HTTP authentication user name [admin] :master
-Provide HTTP authentication password [5zVFELjHjShPPFr7qkoMzavP] :
+Provide HTTP authentication user name [admin]:master
+Provide HTTP authentication password [5zVFELjHjShPPFr7qkoMzavP]:
 ```
 
 Short hand:
@@ -44,7 +44,7 @@ In case you want to change WordOps backend port from `22222`, use this command:
 ```bash
 wo secure --port
 WordOps admin port [22222]:23456
-Reload : nginx     [OK]
+Reload: nginx     [OK]
 Successfully port changed 23456
 ```
 

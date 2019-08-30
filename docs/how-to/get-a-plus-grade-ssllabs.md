@@ -55,7 +55,7 @@ Congratulations, you can now check your grade on https://www.ssllabs.com/ssltest
 
 ### Switching HSTS off
 
-It's not recommended to disable HSTS because web browser will store the HSTS directive for a long time (6 months) and will not allow access over HTTP even after disabling HSTS on the server. However, if you absolutely need to disable HSTS, you can use the following command :
+It's not recommended to disable HSTS because web browser will store the HSTS directive for a long time (6 months) and will not allow access over HTTP even after disabling HSTS on the server. However, if you absolutely need to disable HSTS, you can use the following command:
 
 ```bash
 wo site update site.tld --hsts=off

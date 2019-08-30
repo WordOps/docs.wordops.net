@@ -2,7 +2,7 @@
 
 Performs website specific operations
 
-Usage :
+Usage:
 
 ```bash
 wo site (command) [options]
@@ -67,7 +67,7 @@ To create site with Proxy configuration you can use --proxy during site creation
 wo site create site.tld --proxy=127.0.0.1:3000
 ```
 
-This will create proxy site site.tld with proxy destination as 127.0.0.1:3000. Port is optional. Default port : 80.
+This will create proxy site site.tld with proxy destination as 127.0.0.1:3000. Port is optional. Default port: 80.
 
 ### WordPress
 
@@ -140,7 +140,7 @@ To define WordPress administrator password during site creation use
 wo site create site.tld --pass=password
 ```
 
-This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this :
+This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this:
 
 ```bash
 --pass='my$secret&' 
@@ -198,7 +198,7 @@ wo site create sub.site.tld --wp --letsencrypt
 </video>
 
 
-Example with Cloudflare DNS :
+Example with Cloudflare DNS:
 
 ```bash
 export CF_Key="d7eab56a903f25dd4xxxxxxxxxxxxxxxxxxxx"
@@ -234,7 +234,7 @@ For example, you can create WordPress site running on PHP 7.3 using following co
 wo site create site.tld --wp --php73
 ```
 
-To create simple php site running with PHP 7.3 with no database, you can use this command :
+To create simple php site running with PHP 7.3 with no database, you can use this command:
 
 ```bash
 wo site create site.tld --php73
@@ -248,7 +248,7 @@ Update site configuration
 
 `wo site update` command follows following procedure while updating current site.
 
-Before Updating any site :
+Before Updating any site:
 
 * Creates nginx configuration backup for site.
 * Moves htdocs to backup while updating html/php/mysql site.
@@ -300,13 +300,13 @@ Before Updating any site :
 
 
 
-Example : updating site from basic wp to wp + fastcgi_cache :
+Example: updating site from basic wp to wp + fastcgi_cache:
 
 <video align="center" src="/images/wo-site-update.webm" width="720" autoplay loop></video>
 
 ### Usage
 
-Usage :
+Usage:
 
 ```bash
 wo site update  [<site_name>] [options]
@@ -331,7 +331,7 @@ wo site update  [<site_name>] [options]
 | `--letsencrypt`,`-le`               | secure site with Let's Encrypt SSL certificate                          |
 | `--letsencrypt=wildcard`            | secure site/multisite with a wildcard SSL certificates                  |
 | `--letsencrypt=off`                 | disable Let's Encrypt SSL certificate                                   |
-| `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default : `dns_cf` |
+| `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default: `dns_cf` |
 | `--hsts`                            | Enable HSTS on site secured with Let's Encrypt                          |
 | `--hsts=off`                        | Disable HSTS                                                            |
 
@@ -349,7 +349,7 @@ Update a WordPress site running with PHP 7.2 to PHP 7.3
 wo site update site.tld --php73
 ```
 
-Disable PHP 7.3 and use PHP 7.2 :
+Disable PHP 7.3 and use PHP 7.2:
 
 ```bash
 wo site update site.tld --php73=off
@@ -365,7 +365,7 @@ wo site update site.tld --wpredis
 
 Get site information including cache backend, PHP version or user database credentials
 
-Usage :
+Usage:
 
 ```bash
 wo site info [<site_name>]
@@ -373,9 +373,9 @@ wo site info [<site_name>]
 
 ## site delete
 
-Delete site including webroot and database :
+Delete site including webroot and database:
 
-Usage :
+Usage:
 
 ```bash
 wo site delete  [<site_name>] [options]
@@ -391,7 +391,7 @@ wo site delete  [<site_name>] [options]
 
 Edit site Nginx configuration
 
-Usage :
+Usage:
 
 ```bash
 wo site edit [<site_name>]
@@ -403,7 +403,7 @@ You will be prompted to choose the text editor you prefer. Nano is highly recomm
 
 Move into a site webroot directory
 
-Usage :
+Usage:
 
 ```bash
 wo site cd  [<site_name>]
@@ -413,7 +413,7 @@ wo site cd  [<site_name>]
 
 List all sites managed with WordOps
 
-Usage :
+Usage:
 
 ```bash
 wo site list
@@ -423,7 +423,7 @@ wo site list
 
 Display site Nginx configuration
 
-Usage :
+Usage:
 
 ```bash
 wo site show  [<site_name>]
@@ -433,7 +433,7 @@ wo site show  [<site_name>]
 
 Disable site Nginx vhost
 
-Usage :
+Usage:
 
 ```bash
 wo site disable  [<site_name>]
@@ -443,7 +443,7 @@ wo site disable  [<site_name>]
 
 Enable site Nginx vhost
 
-Usage :
+Usage:
 
 ```bash
 wo site enable  [<site_name>]

@@ -2,7 +2,7 @@
 
 Used for server level debugging
 
-Usage :
+Usage:
 
 ```bash
 wo debug [options]

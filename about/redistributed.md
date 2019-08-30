@@ -1,5 +1,5 @@
 # Redistributed Software
 
-WordOps redistribute the following third-party software :
+WordOps redistribute the following third-party software:
 
 -

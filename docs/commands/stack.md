@@ -2,7 +2,7 @@
 
 Manage server stack operations
 
-Usage :
+Usage:
 
 ```bash
 wo stack (command) [options]
@@ -23,7 +23,7 @@ subcommand                | description
 !!! info
     Options are the same for `wo stack install`, `wo stack remove` and `wo stack purge`
 
-Stack available are :
+Stack available are:
 
 | options           | type        | description                                             |
 | ----------------- | ----------- | ------------------------------------------------------- |
@@ -54,7 +54,7 @@ Stack available are :
 
 ## stack install
 
-Usage :
+Usage:
 
 ```bash
 wo stack install [options]
@@ -96,7 +96,7 @@ After installing the Admin stack, WordOps dashboard will be available on https:/
 
 Upgrade stack safely and apply new configurations and optimizations
 
-Usage :
+Usage:
 
 ```bash
 wo stack upgrade [options]
@@ -128,7 +128,7 @@ Currently `wo stack upgrade --mysql` will only update the package from the curre
 
 Remove stacks (without removing configurations or data for APT packages)
 
-Usage :
+Usage:
 
 ```bash
 wo stack remove <stack> [options]
@@ -148,7 +148,7 @@ Remove and purge stacks (including configurations and data)
 !!! Warning
     Please be careful when using `wo stack purge` because it will remove APT packages but also purge all configurations or data, including MySQL databases, Redis databases or Nginx vhosts.
 
-Usage :
+Usage:
 
 ```bash
 wo stack purge <stack> [options]
@@ -163,7 +163,7 @@ wo stack purge <stack> [options]
 
 Restart Stack service
 
-Usage :
+Usage:
 
 ```bash
 wo stack restart [options]
@@ -173,7 +173,7 @@ wo stack restart [options]
 
 Reload Stack service
 
-Usage :
+Usage:
 
 ```bash
 wo stack reload [options]
@@ -183,7 +183,7 @@ wo stack reload [options]
 
 Start Stack service
 
-Usage :
+Usage:
 
 ```bash
 wo stack start [options]
@@ -193,7 +193,7 @@ wo stack start [options]
 
 Stop Stack service
 
-Usage :
+Usage:
 
 ```bash
 wo stack stop [options]
@@ -203,7 +203,7 @@ wo stack stop [options]
 
 Display Stack service status
 
-Usage :
+Usage:
 
 ```bash
 wo stack status [options]

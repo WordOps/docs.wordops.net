@@ -4,15 +4,15 @@
 
 ![wordops-install](https://netdata.wordops.eu/netdata/api/v1/badge.svg?chart=web_log_wops.cc.requests_per_url&options=unaligned&dimensions=download&group=sum&after=-86400&label=today&units=installations&precision=0)
 
-We provide an installer script which install the required dependencies, before setting-up WordOps. It can be installed with the following command :
+We provide an installer script which install the required dependencies, before setting-up WordOps. It can be installed with the following command:
 
 ```bash
 wget -qO wo wops.cc && sudo bash wo
 ```
 
-Options :
+Options:
 
-- `-w` | `--wufw` | `--without-ufw` : do not configure UFW during setup
+- `-w` | `--wufw` | `--without-ufw`: do not configure UFW during setup
 
 ??? Info "What are the tasks performed by the install script ?"
     - Installing WordOps dependencies
@@ -27,7 +27,7 @@ Options :
     - Adding systemd service to apply kernel settings on boot (for Netdata & Redis)
     - Configuring UFW with minimal rules for WordOps
 
-### Alternative : Clone Github repository and run
+### Alternative: Clone Github repository and run
 
 ```bash
 git clone https://github.com/WordOps/WordOps.git

@@ -4,7 +4,7 @@ These are the first steps **after** you install WordOps. If you haven't installe
 
 ## Enable bash_completion
 
-To enable WordOps commands auto-completion, run the following command after WordOps installation :
+To enable WordOps commands auto-completion, run the following command after WordOps installation:
 
 ```bash
 source /etc/bash_completion.d/wo_auto.rc
@@ -44,4 +44,4 @@ Here the list of WordOps components installed with the above command
 
 - APT package are debian packages installed from APT repositories
 - Binaries are simple executables
-- Web App are php based applications
+- Web App are PHP based applications
