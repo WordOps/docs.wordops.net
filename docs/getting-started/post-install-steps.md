@@ -25,7 +25,6 @@ Here the list of WordOps components installed with the above command:
 | Packages          | type        | Description                            |
 | ----------------- | ----------- | -------------------------------------- |
 | Nginx             | APT package | WordOps web server                     |
-| PHP 7.3           | APT package | PHP7.3-FPM                             |
 | PHP 7.2           | APT package | PHP7.2-FPM                             |
 | MariaDB 10.3      | APT package | Open-source version of MySQL           |
 | WP-CLI            | Binary      | The WordPress command-line tool        |

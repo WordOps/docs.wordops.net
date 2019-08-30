@@ -8,16 +8,16 @@ Usage:
 wo stack (command) [options]
 ```
 
-subcommand                | description
---------------------------|---------------------------
-[install](#stack-install) | Install WordOps stacks
-[upgrade](#stack-upgrade) | Upgrade WordOps stack
-[remove](#stack-remove)   | Uninstall packages
-[purge](#stack-purge)     | Uninstall & purge packages
-[reload](#stack-reload)   | Reload WordOps stack
-[restart](#stack-restart) | Restart WordOps stack
-[stop](#stack-stop)       | Stop WordOps stack
-[start](#stack-start)     | Start WordOps stack
+| subcommand                | description                |
+| ------------------------- | -------------------------- |
+| [install](#stack-install) | Install WordOps stacks     |
+| [upgrade](#stack-upgrade) | Upgrade WordOps stack      |
+| [remove](#stack-remove)   | Uninstall packages         |
+| [purge](#stack-purge)     | Uninstall & purge packages |
+| [reload](#stack-reload)   | Reload WordOps stack       |
+| [restart](#stack-restart) | Restart WordOps stack      |
+| [stop](#stack-stop)       | Stop WordOps stack         |
+| [start](#stack-start)     | Start WordOps stack        |
 
 
 !!! info

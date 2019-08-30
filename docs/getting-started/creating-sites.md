@@ -21,12 +21,12 @@ You can see all the options available to create site in the command list [site c
 
 ## Additional informations
 
-Component              | Path
----------------------- | ---------------------------------
-Site files             | `/var/www/site.tld/htdocs`        |
-wp-config.php          | `/var/www/site.tld/wp-config.php` |
-Additional Nginx conf  | `/var/www/site.tld/conf/nginx/`   |
-Site access/error logs | `/var/www/site.tld/logs`          |
+| Component              | Path                              |
+| ---------------------- | --------------------------------- |
+| Site files             | `/var/www/site.tld/htdocs`        |
+| wp-config.php          | `/var/www/site.tld/wp-config.php` |
+| Additional Nginx conf  | `/var/www/site.tld/conf/nginx/`   |
+| Site access/error logs | `/var/www/site.tld/logs`          |
 
 ## Examples
 

@@ -1,5 +1,41 @@
 # Changelog
 
+## v3.9.8.6 - 2019-08-30
+
+### Added
+
+- Subdomains are automatically secured with an existant Wildcard LetsEncrypt SSL certificate.
+(If a wildcard certificate exist, WordOps will use this certificate for subdomains instead of issuing new certificates)
+- MySQL & Redis stack to `wo stack remove/purge`
+- Dump MySQL databases before purging MySQL Stack
+
+### Changed
+
+- Date format in backup name : /backup/30Aug2019035932 -> /backup/30Aug2019-03-59-32
+- Cleanup and update bash_completion
+
+### Fixed
+
+- cache-enabler plugin not installed and configured with `wo site update site.tld --wpce`
+- possible issue with domain variable in `--letsencrypt=wildcard`
+- python3-mysqldb not available on Debian 8 (Jessie)
+- Fix mysql variable skip-name-resolved
+
+## v3.9.8.5 - 2019-08-30
+
+### Changed
+
+- updated OpCache Control Panel to v0.2.0
+
+### Fixed
+
+- Fix Netdata install on Raspbian 9/10
+- `wo stack remove/purge` confirmation
+- Nginx error after removing a SSL certificate used to secure WordOps backend
+- `wo stack install --all`
+- ProFTPd fail2ban rules set twice if removed and reinstalled
+- `wo site update`
+
 ## v3.9.8.4 - 2019-08-28
 
 ### Added
