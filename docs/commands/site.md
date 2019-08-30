@@ -251,9 +251,9 @@ Update site configuration
 Before Updating any site:
 
 * Creates nginx configuration backup for site.
-* Moves htdocs to backup while updating html/php/mysql site.
+* Moves htdocs to backup while updating HTML/PHP/MySQL site.
 * Creates database dump in backup.
-* While updating current mysql site WordOps uses same database for installing WordPress tables.
+* While updating current MySQL site WordOps uses same database for installing WordPress tables.
 * All these backup are stored outside htdocs, in backup directory.
 
 ### WordOps possible Update Options
