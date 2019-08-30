@@ -20,7 +20,7 @@ wo stack install
 
 <video align="center" src="/images/wo-stack.webm" width="760" autoplay loop></video>
 
-Here the list of WordOps components installed with the above command
+Here the list of WordOps components installed with the above command:
 
 | Packages          | type        | Description                            |
 | ----------------- | ----------- | -------------------------------------- |
@@ -43,6 +43,6 @@ Here the list of WordOps components installed with the above command
 
 ### Packages types
 
-- APT package are debian packages installed from APT repositories
+- APT package are Debian packages installed from APT repositories
 - Binaries are simple executables
 - Web App are PHP based applications
