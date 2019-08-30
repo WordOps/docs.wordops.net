@@ -201,8 +201,8 @@ wo site create sub.site.tld --wp --letsencrypt
 Example with Cloudflare DNS :
 
 ```bash
-export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
-export CF_Email="xxxx@sss.com"
+export CF_Key="d7eab56a903f25dd4xxxxxxxxxxxxxxxxxxxx"
+export CF_Email="email@domain.com"
 ```
 
 !!! info
