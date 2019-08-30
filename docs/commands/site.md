@@ -124,17 +124,17 @@ wo site create site.tld --wpce
 
 ##### Define WordPress administrator user
 
-To define wordpress administrator user during site creation use
+To define WordPress administrator user during site creation use
 
 ```bash
 wo site create site.tld --user=admin
 ```
 
-This will create admin as administrator user in wordpress during installation. If not defined it will take git user name.
+This will create admin as administrator user in WordPress during installation. If not defined it will take git user name.
 
 ##### Define WordPress administrator password
 
-To define wordpress administrator password during site creation use
+To define WordPress administrator password during site creation use
 
 ```bash
 wo site create site.tld --pass=password
@@ -148,7 +148,7 @@ This will set defined password as administrator password. If not defined it will
 
 ##### Define WordPress administrator email
 
-To define wordpress administrator email during site creation use
+To define WordPress administrator email during site creation use
 
 ```bash
 wo site create site.tld --email=wo@site.tld
@@ -253,7 +253,7 @@ Before Updating any site :
 * Creates nginx configuration backup for site.
 * Moves htdocs to backup while updating html/php/mysql site.
 * Creates database dump in backup.
-* While updating current mysql site WordOps uses same database for installing wordpress tables.
+* While updating current mysql site WordOps uses same database for installing WordPress tables.
 * All these backup are stored outside htdocs, in backup directory.
 
 ### WordOps possible Update Options
