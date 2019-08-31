@@ -45,3 +45,13 @@ Here the list of WordOps components installed with the above command:
 - APT package are Debian packages installed from APT repositories
 - Binaries are simple executables
 - Web App are PHP based applications
+
+## Securing WordOps backend
+
+To secure WordOps backend with a valid SSL certificate, you just have to create a basic site with the domain/subdomain of your choice. WordOps will automatically use the first SSL certificate issued to secure the backend.
+
+```bash
+wo site create server.domain.tld -le
+```
+
+Then you will be able to access to the backend with : `https://server.domain.tld:22222`

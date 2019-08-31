@@ -16,7 +16,8 @@
 
 <p align="center">
 <a href="https://wordops.net" target="_blank" rel="noopener"> WordOps site</a> -
-<a href="https://community.wordops.net" target="_blank" rel="noopener">Community forum</a>
+<a href="https://community.wordops.net" target="_blank" rel="noopener">Community forum</a> -
+<a href="https://wordops.net/f-a-q/" target="_blank" rel="noopener"> F.A.Q</a>
 </p>
 
 ---
