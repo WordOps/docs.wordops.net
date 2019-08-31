@@ -77,6 +77,7 @@ nav:
   - Secure WordOps backend: 'how-to/secure-22222.md'
   - Configure LetsEncrypt DNS API : 'how-to/configure-letsencrypt-dns-api-validation.md'
   - Get A+ grade on ssllabs: 'how-to/get-a-plus-grade-ssllabs.md'
+  - Add FTP users: 'how-to/add-ftp-users.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'

@@ -7,6 +7,7 @@
 - [How to renew Let's Encrypt Certificates ?](#renew-a-lets-encrypt-ssl-certificates-with-wordops)
 - [How to configure Let's Encrypt DNS API validation](/how-to/configure-letsencrypt-dns-api-validation/)
 - [How to get an A+ grade on ssllabs with Wordops ?](how-to/get-a-plus-grade-ssllabs.md)
+- [How to add FTP users](how-to/add-ftp-users.md)
 
 ## Other questions
 
