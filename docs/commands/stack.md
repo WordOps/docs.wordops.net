@@ -199,7 +199,7 @@ Usage:
 wo stack stop [options]
 ```
 
-## stop status
+## stack status
 
 Display Stack service status
 
