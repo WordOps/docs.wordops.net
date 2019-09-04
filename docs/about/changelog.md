@@ -1,5 +1,74 @@
 # Changelog
 
+## v3.9.8.10 - 2019-09-04
+
+### Changed
+
+- Improve Let's Encrypt certificate issuance logging informations
+- MariaDB configuration & optimization is now rendered from a template (can be protected against overwriting with .custom)
+
+### Fixed
+
+- Fix cheat.sh install [PR #139](https://github.com/WordOps/WordOps/pull/139)
+- sslutils error when trying to display SSL certificate expiration
+- Fix cheat.sh symbolic link check before creation
+- subdomain detection with complex suffixes like com.br
+- Fix mariadb install/upgrade when running mariadb-10.1
+- Fix mariadb install/upgrade on raspbian and debian 8
+- Fix mariadb tuning wrong pool_instance calculation
+
+## v3.9.8.9 - 2019-09-03
+
+### Added
+
+- Rate limiter on wp-cron.php and xmlrpc.php
+- mime.types template to handle missing extension ttf
+- try_files directive for favicon
+- additional settings for fail2ban
+- asynchronous installer to decrease install/update duration
+
+### Fixed
+
+- Several typo or syntax errors
+- `wo  site` errors due to broken symlinks for access.log or error.log
+- `wo clean` error due to unused memcached flag
+- MySQL database and user variables overwrited in `wo site`
+
+## v3.9.8.8 - 2019-09-02
+
+### Added
+
+- Sendmail stack to send WordPress welcome email properly
+- Backup all MySQL databases before removing/purging MySQL stack
+
+### Changed
+
+- do not terminate stack install process on errors
+- WordOps internal log rotation limit increased to 1MB
+
+### Fixed
+
+- ufw rules for proftpd not applied
+- phpredisadmin install
+- netdata configuration
+- extplorer installation
+- add LANG='en_US.UTF-8' in install script
+- Read public_suffix list with utf8 encoding. Issue [#128](https://github.com/WordOps/WordOps/issues/128)
+- Netdata uninstall script path. PR [#135](https://github.com/WordOps/WordOps/pull/135)
+- SSL Certificates expiration for subdomains
+
+## v3.9.8.7 - 2019-08-31
+
+### Changed
+
+- WordPress default permalinks structure from `/%year%/%monthnum%/%day%/%postname%/` -> `/%postname%/`
+
+### Fixed
+
+- Error with `wo stack upgrade --nginx`
+- Install/update script version check
+- clamAV stack install
+
 ## v3.9.8.6 - 2019-08-30
 
 ### Added
