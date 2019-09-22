@@ -7,7 +7,7 @@ The site you want to migrate was created with the flag `--wpredis`
 
 In our example :
 
-- new server name is WO-SRV with IP 10.0.0.1
+- new server name is NEW-SRV with IP 10.0.0.1
 - the previous server is OLD-SRV with IP 192.168.0.1
 - site domain is mydomain.tld
 
@@ -22,7 +22,7 @@ cd /var/www/mydomain.tld/htdocs
 wp db export --allow-root
 ```
 
-## On the new server (WO-SRV)
+## On the new server (NEW-SRV)
 
 ### Initial server update
 
