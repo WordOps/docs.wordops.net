@@ -11,7 +11,7 @@
 
 ## Other questions
 
-#### Get a list of WordOps commands
+### Get a list of WordOps commands
 
 To get the list of WordOps commands, you can use the command:
 
@@ -27,11 +27,11 @@ wo site --help
 
 ---
 
-#### Get the MySQL root password
+### Get the MySQL root password
 
 MySQL root password is stored in the file `/etc/mysql/conf.d/my.cnf`
 
-#### Display MySQL user and password of a site
+### Display MySQL user and password of a site
 
 You can use the command:
 
@@ -41,7 +41,7 @@ wo site info site.tld
 
 ---
 
-#### Access WordOps backend
+### Access WordOps backend
 
 WordOps backend is available on port 22222, you can access it with the server IP, hostname or with a domain pointed to the server IP:
 
@@ -56,7 +56,7 @@ https://server.site.tld:22222
 https://site.tld:22222
 ```
 
-#### Change WordOps backend username and password
+### Change WordOps backend username and password
 
 You can use the command:
 
@@ -66,7 +66,7 @@ wo secure --auth
 
 ---
 
-#### Renew a Let's Encrypt SSL Certificates with WordOps
+### Renew a Let's Encrypt SSL Certificates with WordOps
 
 Previously with EasyEngine v3, Let's Encrypt certificates were renewed by running the command `ee site update --le=renew --all` with a cronjob.
 

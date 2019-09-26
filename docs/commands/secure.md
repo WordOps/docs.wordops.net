@@ -13,11 +13,15 @@ wo secure [options]
 
 Options:
 
-| argument | description                                                      |
-| -------- | ---------------------------------------------------------------- |
-| `--auth` | Set backend user credentials (user and)                          |
-| `--port` | Set backend port (default: 22222)                                |
-| `--ip`   | Set the list of IP(s) allowed to access without authentification |
+| argument          | description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `--auth`          | Set backend user credentials (user and)                            |
+| `--port`          | Set backend port (default: 22222)                                  |
+| `--ip`            | Set the list of IP(s) allowed to access without authentification   |
+| `--ssh`           | Harden SSH security                                                |
+| `--sshport`       | Set custom ssh port (default: 22)                                  |
+| `--allowpassword` | Allow password authentification when hardening SSH security        |
+| `--force`         | Force hardening SSH security without being prompt for confirmation |
 
 WordOps uses [Basic Auth](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/) to protect the backend from unauthorize people. To change the authorization method, backend's port,... You can use `wo secure` command.
 
@@ -59,3 +63,38 @@ Successfully added IP address in acl.conf file
 ```
 
 You can also edit directly the file `/etc/nginx/common/acl.conf`
+
+## Harden SSH security
+
+!!! warning
+    To harden SSH security, WordOps render the configuration sshd_config from a template. In this template, root authentification with password is forbidden and by default password authentification is disabled. You can use the flag `--allowpassword` with `--ssh` to allow password authentification, but before running this command please make sure you will not be locked out of your server. Using password-less authentification with SSH keys is highly recommended.
+
+To harden SSH security you can use the command :
+
+```bash
+wo secure --ssh
+```
+
+Additionally, if you want to allow password authentification (not recommended), you can use :
+
+```bash
+wo secure --ssh --allowpassword
+```
+
+## Change SSH port
+
+To avoid bruteforce on SSH, it's recommended to use another port than the default port (22).
+
+Usage :
+
+```bash
+wo secure --sshport <port>
+```
+
+Exemple :
+
+```bash
+wo secure --sshport 2022
+```
+
+WordOps will automatically allow the new SSH port if UFW is enabled.
