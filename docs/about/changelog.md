@@ -1,5 +1,84 @@
 # Changelog
 
+## v3.9.9.1 - 2019-09-26
+
+### Added
+
+- [SECURE] Allow new ssh port with UFW when running `wo secure --sshport`
+- [STACK] Additional Nginx directives to prevent access to log files or backup from web browser
+- [CORE] apt-mirror-updater to select the fastest debian/ubuntu mirror with automatic switching between mirrors if the current mirror is being updated
+- [SITE] add `--force` to force Let's Encrypt certificate issuance even if DNS check fail
+- [STACK] check if another mta is installed before installing sendmail
+- [SECURE] `--allowpassword` to allow password when using `--ssh` with `wo secure`
+
+### Changed
+
+- [SECURE] Improved sshd_config template according to Mozilla Infosec guidelines
+- [STACK] Always add stack configuration into Git before making changes to make rollback easier
+- [STACK] Render php-fpm pools configuration from template
+- [STACK] Adminer updated to v4.7.3
+
+### Fixed
+
+- [STACK] UFW setup after removing all stacks with `wo stack purge --all`
+- [CONFIG] Invalid CORS header
+- [STACK] PHP-FPM stack upgrade failure due to pool configuration
+
+## v3.9.9 - 2019-09-24
+
+### Added
+
+- [STACK]  UFW now available as a stack with flag `--ufw`
+- [SECURE] `wo secure --ssh` to harden ssh security
+- [SECURE] `wo secure --sshport` to change ssh port
+- [SITE] check domain DNS records before issuing a new certificate without DNS API
+- [STACK] Acme challenge with DNS Alias mode `--dnsalias=aliasdomain.tld` [acme.sh wiki](https://github.com/Neilpang/acme.sh/wiki/DNS-alias-mode)
+
+### Changed
+
+- [APP] WordOps dashboard updated to v1.2, shipped as a html file, it can be used without PHP stack
+- [STACK] Refactor Let's Encrypt with acme.sh
+- [STACK] Log error improved with acme.sh depending on the acme challenge (DNS API or Webroot)
+- [INSTALL] Removed UFW setup from install script
+- [APP] phpMyAdmin updated to v4.9.1
+- [STACK] Commit possible Nginx configuration changes into Git before and after performing tasks (in `wo secure` for example)
+- [CORE] Update deprecated handlers and hooks registration
+
+### Fixed
+
+- [STACK] `wo stack purge --all` failure if mysql isn't installed
+- [INSTALL] Fix EEv3 files cleanup
+- [SECURE] Incorrect variable usage in `wo secure --port`
+- [INSTALL] Fix backup_ee function in install script
+
+## v3.9.8.12 - 2019-09-20
+
+### Changed
+
+- [APP] WP-CLI updated to v2.3.0
+- [CORE] Improved SSL certificates management from previous letsencrypt or certbot install
+- [CORE] Use a separate python file for gitconfig during installation to redirect setup.py output into logs
+- [CORE] updated cement to v2.8.2
+- [CORE] removed old `--experimental flag`
+- [CORE] Improve and simplify install script
+
+### Fixed
+
+- htpasswd protection when migrating from EasyEngine v3 [Issue #152](https://github.com/WordOps/WordOps/issues/152)
+- acme.sh install when migration from EasyEngine v3 [Issue #153](https://github.com/WordOps/WordOps/issues/153)
+
+## v3.9.8.11 - 2019-09-06
+
+### Changed
+
+- Improved general logs display
+- UFW configuration is only applied during initial installation if UFW is disabled
+
+### Fixed
+
+- Redis-server configuration and start
+- Nginx upgrade with `wo stack upgrade`
+
 ## v3.9.8.10 - 2019-09-04
 
 ### Changed
