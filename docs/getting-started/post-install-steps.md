@@ -39,6 +39,7 @@ Here the list of WordOps components installed with the above command:
 | WordOps dashboard | Web App     | Bootstrap template for WordOps backend |
 | eXtplorer         | Web App     | Web File manager                       |
 | Cheat.sh          | Binary      | Command-line Linux cheatsheet          |
+| Sendmail          | APT package | Sendmail MTA                           |
 
 ### Packages types
 
@@ -55,3 +56,11 @@ wo site create server.domain.tld -le
 ```
 
 Then you will be able to access to the backend with : `https://server.domain.tld:22222`
+
+## Enabling UFW Firewall
+
+If you haven't already configured a firewall on your server, you can use WordOps to automatically configure UFW with a minimal rules set for WordOps.
+
+```bash
+wo stack install --ufw
+```

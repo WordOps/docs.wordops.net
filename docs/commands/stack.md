@@ -19,7 +19,6 @@ wo stack (command) [options]
 | [stop](#stack-stop)       | Stop WordOps stack         |
 | [start](#stack-start)     | Start WordOps stack        |
 
-
 !!! info
     Options are the same for `wo stack install`, `wo stack remove` and `wo stack purge`
 
@@ -35,16 +34,19 @@ Stack available are:
 | `--php73`         | APT package | PHP7.3-FPM stack                                        |
 | `--mysql`         | APT package | MariaDB stack                                           |
 | `--redis`         | APT package | Redis stack                                             |
-| `--wpcli`         | Binary      | WP-CLI                                                  |
-| `--phpmyadmin`    | Web App     | phpMyAdmin                                              |
-| `--composer`      | Binary      | Composer                                                |
-| `--netdata`       | Binary      | Netdata                                                 |
+| `--wpcli`         | Binary      | WP-CLI : WordPress CLI                                  |
+| `--phpmyadmin`    | Web App     | phpMyAdmin : Web interface for MySQL                    |
+| `--composer`      | Binary      | Composer : PHP dependencies manager                     |
+| `--netdata`       | Binary      | Netdata : Real-time monitoring suite                    |
 | `--dashboard`     | Web App     | WordOps dashboard                                       |
-| `--adminer`       | Web App     | adminer                                                 |
-| `--fail2ban`      | APT package | fail2ban                                                |
-| `--phpredisadmin` | Webp App    | phpredisadmin                                           |
-| `--proftpd`       | APT package | proftpd stack                                           |
-| `--mysqltuner`    | Binary      | MySQLTuner stack                                        |
+| `--extplorer`     | Web App     | eXtplorer Filemanager                                   |
+| `--adminer`       | Web App     | adminer (phpmyadmin alternative)                        |
+| `--fail2ban`      | APT package | Fail2ban : Bruteforce protection                        |
+| `--phpredisadmin` | Web App     | phpredisadmin : Web interface for Redis                 |
+| `--proftpd`       | APT package | proftpd stack : FTP server                              |
+| `--mysqltuner`    | Binary      | MySQLTuner stack : MySQL tuning tool                    |
+| `--ufw`           | APT package | UFW : Firewall                                          |
+| `--sendmail`      | APT package | Sendmail MTA                                            |
 
 ### Packages types
 

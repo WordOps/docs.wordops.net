@@ -12,8 +12,6 @@ wget -qO wo wops.cc && sudo bash wo
 
 Options:
 
-- `-w` | `--wufw` | `--without-ufw`: do not configure UFW during setup
-
 ??? Info "What are the tasks performed by the install script ?"
     - Installing WordOps dependencies
     - Enabling automated security updates with unattended-upgrades
@@ -25,7 +23,6 @@ Options:
     - Installing Wordops
     - Applying Linux Kernel tweaks
     - Adding systemd service to apply kernel settings on boot (for Netdata & Redis)
-    - Configuring UFW with minimal rules for WordOps
 
 ### Alternative: Clone Github repository and run
 
