@@ -67,7 +67,7 @@ wo site create site.tld --wp -le --dns=dns_cf
 To secure an existant site with DigitalOcean DNS API:
 
 ```bash
-wo site update sub.site.tld -le --dns=dns_do
+wo site update sub.site.tld -le --dns=dns_dgon
 ```
 
 #### wildcard
@@ -81,5 +81,5 @@ wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 To secure an existant site with DigitalOcean DNS API:
 
 ```bash
-wo site update site.tld -le=wildcard --dns=dns_do
+wo site update site.tld -le=wildcard --dns=dns_dgon
 ```

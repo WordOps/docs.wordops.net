@@ -91,7 +91,9 @@
 body,
 input {
     color: black;
-    font-family: Roboto;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
 }
 
 .codehilite>pre {
@@ -104,8 +106,7 @@ input {
 }
 
 .md-typeset {
-    font-size: .75rem;
-    line-height: 1.4;
+    font-size: .70rem;
 }
 
 .md-typeset__table td code {
@@ -237,4 +238,34 @@ video {
     .md-nav--primary .md-nav__title {
         display: none;
     }
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    overflow: visible;
+    word-break: break-all;
+    word-wrap: break-word;
+    border-radius: 4px;
+}
+
+pre,
+pre tt {
+    padding: 0;
+    border: none;
+    white-space: pre-wrap;
+    font-size: inherit;
+}
+
+pre,
+tt {
+    padding: 1px 3px;
+    border-radius: 2px;
+    white-space: pre-wrap;
+}
+
+pre {
+    padding: 0 2px 2px;
+    border-radius: 3px;
 }

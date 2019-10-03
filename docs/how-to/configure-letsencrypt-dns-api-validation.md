@@ -66,14 +66,14 @@ wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 For an existant secured with a simple SSL certificate (site + www.site.tld) with DigitalOcean DNS API
 
 ```bash
-wo site update site.tld -le --dns=dns_do
+wo site update site.tld -le --dns=dns_dgon
 ```
 
 - `-le`: issue a certificate for `domain.tld` + `www.domain.tld`
-- `--dns=dns_do`: enable DNS API mode with DigitalOcean
+- `--dns=dns_dgon`: enable DNS API mode with DigitalOcean
 
 ## Informations
 
 - You can also use DNS API to issue domain and subdomain certificates.
-- `--dns=dns_cf` define the DNS provider to use. With DigitalOcean, it would be `--dns=dns_do`
+- `--dns=dns_cf` define the DNS provider to use. With DigitalOcean, it would be `--dns=dns_dgon`
 - After issuing a first certificate using DNS API, your API credentials will be saved in `/etc/letsencrypt/config/account.conf`. You do not need to define them anymore.

@@ -101,7 +101,7 @@ apt-get -y autoremove php7.0-fpm php7.0-common --purge
 You can backup your MySQL databases with this simple bash script:
 
 ```bash
-wget https://raw.githubusercontent.com/VirtuBox/bash-scripts/master/backup/mysqldump/mysqldump.sh -O mysqldump.sh
+wget https://git.io/JeGSb -O mysqldump.sh
 chmod +x mysqldump.sh
 ```
 

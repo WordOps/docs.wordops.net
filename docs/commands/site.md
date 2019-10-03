@@ -143,7 +143,7 @@ wo site create site.tld --pass=password
 This will set defined password as administrator password. If not defined it will generate random pasword for administrator. If you have special characters, you can quote them using single quotes like this:
 
 ```bash
---pass='my$secret&' 
+--pass='my$secret&'
 ```
 
 ##### Define WordPress administrator email
@@ -214,7 +214,7 @@ After you define those variables with the command `export`, you can issue your c
 wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 ```
 
-* `--dns=dns_cf` can be replaced with another DNS provider supported by acme.sh. For DigitalOcean, it would be `--dns=dns_do`
+* `--dns=dns_cf` can be replaced with another DNS provider supported by acme.sh. For DigitalOcean, it would be `--dns=dns_dgon`
 
 #### HSTS
 
