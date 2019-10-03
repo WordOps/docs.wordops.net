@@ -6,6 +6,7 @@ But there are several live kernel patching solutions available and in this short
 ## Requirements
 
 Canonical Livepatch service is available on Ubuntu 14.04 LTS, 16.04 LTS, and 18.04 LTS.
+
 This service is free for up to 3 machines (server, desktop or cloud).
 
 ## Setup

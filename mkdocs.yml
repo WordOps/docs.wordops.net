@@ -80,6 +80,7 @@ nav:
   - Configure LetsEncrypt DNS API : 'how-to/configure-letsencrypt-dns-api-validation.md'
   - Get A+ grade on ssllabs: 'how-to/get-a-plus-grade-ssllabs.md'
   - Add FTP users: 'how-to/add-ftp-users.md'
+  - Install HWE stacks on Ubuntu: 'how-to/ubuntu-lts-hwe-stacks.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'

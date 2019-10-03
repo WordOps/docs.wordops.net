@@ -8,6 +8,7 @@
 - [How to configure Let's Encrypt DNS API validation](/how-to/configure-letsencrypt-dns-api-validation/)
 - [How to get an A+ grade on ssllabs with Wordops ?](how-to/get-a-plus-grade-ssllabs.md)
 - [How to add FTP users](how-to/add-ftp-users.md)
+- [How to install HWE stacks on Ubuntu](how-to/ubuntu-lts-hwe-stacks.md)
 
 ## Other questions
 
