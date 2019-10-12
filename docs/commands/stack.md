@@ -47,6 +47,7 @@ Stack available are:
 | `--mysqltuner`    | Binary      | MySQLTuner stack : MySQL tuning tool                    |
 | `--ufw`           | APT package | UFW : Firewall                                          |
 | `--sendmail`      | APT package | Sendmail MTA                                            |
+| `--ngxblocker`    | Binary      | Ultimate Nginx bad bots blocker                         |
 
 ### Packages types
 
@@ -124,7 +125,7 @@ wo stack upgrade [options]
 
 `wo stack upgrade` make sure packages repositories are properly added, then it upgrade packages and for main stacks (Nginx, PHP-FPM & MySQL, Redis), it also update configurations from the templates included in the current WordOps release and apply optimizations (especially for MySQL & Redis)
 
-Currently `wo stack upgrade --mysql` will only update the package from the current MariaDB repository, but will not perform upgrades between major releases (10.1 -> 10.3), mostly because there is a risk of failures when upgrading MariaDB, and we will have to run more tests to make sure our upgrading process is stable and will not impact your sites availability.
+Currently `wo stack upgrade --mysql` will only update the package from the current MariaDB repository, but will not perform upgrades between major releases (10.1 -> 10.3), mostly because there is a risk of failure when upgrading MariaDB, and we will have to run more tests to make sure our upgrading process is stable and will not impact your sites availability.
 
 ## stack remove
 

@@ -14,10 +14,20 @@ wget -qO wo wops.cc && sudo bash wo
 
 ## WordOps failed to issue SSL certificate
 
-At first, make sure your domain is pointed to your server IP:
+If you are using DNS API validation :
 
-- www.site.tld + site.tld if you use the flag `-le` or `--letsencrypt`
-- sub.site.tld if you use the flag `-le=subdomain` or `--letsencrypt=subdomain`
+- Make sure your API credentials has been properly saved by acme.sh in `/etc/letsencrypt/config/account.conf`
+- Check acme.sh documentation about DNS API to see if there are changes with your DNS API Provider : https://github.com/Neilpang/acme.sh/wiki/dnsapi
+
+If you are using the default webroot validation :
+
+Make sure your domain is pointing to your server IP as well as `www` alias if it's not a subodmain
+
+If you are behind a load-balancer or a proxy, and need to force WO to issue a certificate even if the domain doesn't resolve your server IP, you can use the flag `--force`
+
+```bash
+wo site update site.tld -le --force
+```
 
 Then if you need to cleanup the previous SSL certificate, you can use the following command to remove existant certificates and keys, as well as other Nginx configurations for your domain:
 
