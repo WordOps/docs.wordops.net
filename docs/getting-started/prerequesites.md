@@ -2,7 +2,7 @@
 
 ## Hardware requirements
 
-### Ressources
+### Resources
 
 #### Minimum
 
