@@ -2,7 +2,7 @@
 <p align="center">
 <img src="images/logo.png" width="400" alt="WordOps" /><br><br>
 
-<img id="intro" align="center" src="/images/wordops-short-intro.gif">
+<asciinema-player src="https://wordops.net/wp-content/uploads/2019/10/wordops.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 <br><br>
 
 <a href="https://travis-ci.org/WordOps/WordOps" target="_blank"><img src="https://travis-ci.org/WordOps/WordOps.svg?branch=master" alt="build"></a>

@@ -1,7 +1,6 @@
 # Creating site
 
-<video align="center" src="/images/wo-site.webm" width="720" autoplay="" loop="">
-</video>
+<asciinema-player src="/images/wositecreate.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 You can create site with WordOps by using the command `wo site create`.
 

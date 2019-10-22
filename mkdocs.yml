@@ -46,14 +46,18 @@ markdown_extensions:
 
 extra_css:
   - css/extra.css
+  - css/asciinema-player.min.css
+
+extra_javascript:
+  - 'js/asciinema-player.js'
 
 
 nav:
 - Home: 'README.md'
 - About:
+  - Give WordOps a Github star: 'about/give-wordops-github-star.md'
   - From EasyEngine to WordOps: 'about/from-easyengine-to-wordops.md'
   - Changelog: 'about/changelog.md'
-  - Give WordOps a Github star: 'about/give-wordops-github-star.md'
   - Contributing: 'about/contributing.md'
   - Code of conduct: 'about/code-of-conduct.md'
   - Contributors: 'https://github.com/WordOps/WordOps/graphs/contributors'
@@ -62,6 +66,7 @@ nav:
   - Installation: 'getting-started/installation-guide.md'
   - Post-install steps: 'getting-started/post-install-steps.md'
   - Creating sites: 'getting-started/creating-sites.md'
+  - WordOps structure: 'getting-started/wordops-structure.md'
 - Commands:
   - Overview: 'commands.md'
   - site: 'commands/site.md'

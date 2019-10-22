@@ -18,7 +18,7 @@ Before creating your first site with WordOps, you can install WordOps main stack
 wo stack install
 ```
 
-<video align="center" src="/images/wo-stack.webm" width="760" autoplay loop></video>
+<asciinema-player src="/images/stackinstall.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Here the list of WordOps components installed with the above command:
 

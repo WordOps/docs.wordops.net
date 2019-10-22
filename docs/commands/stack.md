@@ -71,7 +71,7 @@ Without options, the stack `--web`, `--admin`, `--utils` will be installed
 wo stack install
 ```
 
-<video align="center" src="/images/wo-stack.webm" width="720" autoplay loop></video>
+<asciinema-player src="/images/stackinstall.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 This will install the `--web` stack and `--admin` stack.
 

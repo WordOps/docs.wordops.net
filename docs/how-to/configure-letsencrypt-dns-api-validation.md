@@ -1,8 +1,5 @@
 # Let's Encrypt DNS API configuration
 
-!!! warning
-    This feature is available with WordOps v3.9.6 and onward
-
 WordOps use acme.sh to handle SSL certificates, which supports domain validation using DNS API.
 This feature is optional to issue domain and subdomain certificates, but is required to issue wildcard certificates.
 
@@ -55,6 +52,10 @@ export GD_Secret="asdfsdafdsfdsfdsfdsfdsafd"
 ### Step 3: issue your certificate
 
 For a new site secured with a wildcard SSL certificates with Cloudflare DNS API
+
+!!! warning
+    If you are using `sudo` to run wo commands, you need to use `sudo -E` to keep DNS API crendentials variables available for acme.sh
+    So just put `sudo -E` before the following commands instead of just `sudo`.
 
 ```bash
 wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf

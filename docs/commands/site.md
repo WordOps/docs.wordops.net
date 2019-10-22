@@ -22,8 +22,7 @@ wo site (command) [options]
 
 ## site create
 
-<video align="center" src="/images/wo-site.webm" width="720" autoplay loop>
-</video>
+<asciinema-player src="/images/wositecreate.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 ### Usage
 
@@ -107,6 +106,12 @@ WordPress site + Cache enabler
 
 ```bash
 wo site create site.tld --wpce
+```
+
+Enable Ultimate Nginx bad blocker on new site
+
+```bash
+wo site create site.tld --ngxblocker
 ```
 
 #### Cheatsheet
@@ -302,7 +307,7 @@ Before Updating any site:
 
 Example: updating site from basic wp to wp + fastcgi_cache:
 
-<video align="center" src="/images/wo-site-update.webm" width="720" autoplay loop></video>
+<asciinema-player src="/images/wositeupdate.cast" autoplay loop cols="120" rows="30"></asciinema-player>
 
 ### Usage
 
@@ -312,28 +317,28 @@ Usage:
 wo site update  [<site_name>] [options]
 ```
 
-| options                             | description                                                             |
-| ----------------------------------- | ----------------------------------------------------------------------- |
-| `--html`                            | update to html site                                                     |
-| `--php`                             | update to php site                                                      |
-| `--mysql`                           | update to MySQL + PHP site                                              |
-| `--php73`                           | update site to PHP 7.3                                                  |
-| `--php73=off`                       | disable PHP 7.3                                                         |
-| `--wp`                              | update site to WordPress without cache                                  |
-| `--wpfc`                            | update site to WordPress with fastcgi_cache                             |
-| `--wpsc`                            | update site to WordPress with wp-super-cache plugin                     |
-| `--wpredis`                         | update site to WordPress with redis-cache                               |
-| `--wprocket`                        | update site to WordPress with WP-Rocket plugin                          |
-| `--wpce`                            | update site to WordPress with Cache-Enabler plugin                      |
-| `--wpsubdir`                        | update site to WordPress multisite on subdirectories                    |
-| `--wpsubdomain`                     | update site to WordPress multisite on subdomains                        |
-| `--password`                        | update admin password for a WordPress site                              |
-| `--letsencrypt`,`-le`               | secure site with Let's Encrypt SSL certificate                          |
-| `--letsencrypt=wildcard`            | secure site/multisite with a wildcard SSL certificates                  |
-| `--letsencrypt=off`                 | disable Let's Encrypt SSL certificate                                   |
+| options                             | description                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------- |
+| `--html`                            | update to html site                                                    |
+| `--php`                             | update to php site                                                     |
+| `--mysql`                           | update to MySQL + PHP site                                             |
+| `--php73`                           | update site to PHP 7.3                                                 |
+| `--php73=off`                       | disable PHP 7.3                                                        |
+| `--wp`                              | update site to WordPress without cache                                 |
+| `--wpfc`                            | update site to WordPress with fastcgi_cache                            |
+| `--wpsc`                            | update site to WordPress with wp-super-cache plugin                    |
+| `--wpredis`                         | update site to WordPress with redis-cache                              |
+| `--wprocket`                        | update site to WordPress with WP-Rocket plugin                         |
+| `--wpce`                            | update site to WordPress with Cache-Enabler plugin                     |
+| `--wpsubdir`                        | update site to WordPress multisite on subdirectories                   |
+| `--wpsubdomain`                     | update site to WordPress multisite on subdomains                       |
+| `--password`                        | update admin password for a WordPress site                             |
+| `--letsencrypt`,`-le`               | secure site with Let's Encrypt SSL certificate                         |
+| `--letsencrypt=wildcard`            | secure site/multisite with a wildcard SSL certificates                 |
+| `--letsencrypt=off`                 | disable Let's Encrypt SSL certificate                                  |
 | `--dns`, `--dns=<dns api provider>` | issue Let's Encrypt certificate with DNS validation. default: `dns_cf` |
-| `--hsts`                            | Enable HSTS on site secured with Let's Encrypt                          |
-| `--hsts=off`                        | Disable HSTS                                                            |
+| `--hsts`, `--hsts=off`              | Enable or disable HSTS on site secured with Let's Encrypt              |
+| `--ngxblocker`, `--ngxblocker=off`  | Enable or disable Ultimate Nginx bad blocker                           |
 
 ### Examples
 
