@@ -19,8 +19,6 @@ wget -qO wo wops.cc && sudo bash wo
     - Installing WP-CLI
     - Installing Acme.sh
     - Installing Wordops
-    - Applying Linux Kernel tweaks
-    - Adding systemd service to apply kernel settings on boot (for Netdata & Redis)
 
 ### Alternative: Clone Github repository and run
 

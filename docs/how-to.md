@@ -9,6 +9,7 @@
 - [How to get an A+ grade on ssllabs with Wordops ?](how-to/get-a-plus-grade-ssllabs.md)
 - [How to add FTP users](how-to/add-ftp-users.md)
 - [How to install HWE stacks on Ubuntu](how-to/ubuntu-lts-hwe-stacks.md)
+- [How to use a Remote MySQL server with WordOps](how-to/remote-mysql-server.md)
 
 ## Other questions
 
