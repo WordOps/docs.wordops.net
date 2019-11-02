@@ -2,8 +2,7 @@
 
 Secure command secure WordOps backend auth, ip and port
 
-<video align="center" src="/images/wo-secure.webm" width="720" autoplay loop>
-</video>
+<asciinema-player src="/images/wosecure.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Usage:
 

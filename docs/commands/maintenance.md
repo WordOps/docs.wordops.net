@@ -2,8 +2,7 @@
 
 Update apt-cache and upgrade packages.
 
-<video align="center" src="/images/wo-maintenance.webm" width="720" autoplay loop>
-</video>
+<asciinema-player src="/images/womaintenance.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Usage:
 
