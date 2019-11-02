@@ -40,42 +40,50 @@ If you prefer to perform yourself the same steps than our installer script, here
 ### Install WordOps dependencies
 
 ```bash
+# update packages list
+apt-get update
+
 # On Ubuntu
-apt-get install build-essential bash-completion curl gzip python3 \
-python3-apt python3-setuptools python3-dev sqlite3 git tar \
-software-properties-common pigz gnupg2 cron ccze rsync -y
+apt-get -option=Dpkg::options::=--force-confmiss --option=Dpkg::options::=--force-confold --assume-yes install \
+build-essential curl gzip python3-pip python3-wheel python3-apt python3-setuptools python3-dev sqlite3 git tar software-properties-common pigz \
+gnupg2 cron ccze rsync apt-transport-https tree haveged ufw unattended-upgrades tzdata ntp
 
 # On Debian
-apt-get install build-essential bash-completion curl gzip dirmngr \
-sudo python3 python3-apt python3-setuptools python3-dev  \
-ca-certificates sqlite3 git tar software-properties-common \
-pigz apt-transport-https gnupg2 cron ccze rsync -y
+apt-get -option=Dpkg::options::=--force-confmiss --option=Dpkg::options::=--force-confold --assume-yes install \
+build-essential curl gzip dirmngr sudo python3-pip python3-wheel python3-apt python3-setuptools python3-dev ca-certificates sqlite3 git tar \
+software-properties-common pigz apt-transport-https gnupg2 cron ccze rsync tree haveged ufw unattended-upgrades tzdata ntp
 ```
 
-### Clone the github repository
+### create WordOps directories
 
 ```bash
-git clone https://github.com/WordOps/WordOps.git
+mkdir -p /var/log/wo /var/lib/wo/tmp /var/lib/wo-backup
 ```
 
-create log directory
+### Update PIP
 
 ```bash
-mkdir -p /var/log/wo
+python3 -m pip install -U pip
+python3 -m pip install -U setuptools wheel
 ```
 
 ### Install WordOps
 
 ```bash
-cd WordOps/
-python3 setup.py install
+# install wordops from PyPi
+python3 -m pip install -U wordops
+
+# copy configuration
+cp -rf /usr/local/lib/python3.*/dist-packages/usr/* /usr/
+cp -rn /usr/local/lib/python3.*/dist-packages/etc/* /etc/
+cp -f /usr/local/lib/python3.*/dist-packages/etc/bash_completion.d/wo_auto.rc /etc/bash_completion.d/wo_auto.rc
 ```
 
 ### Install acme.sh
 
 ```bash
 # clone the repository
-git clone <https://github.com/Neilpang/acme.sh.git> /opt/acme.sh -q
+git clone https://github.com/Neilpang/acme.sh.git /opt/acme.sh -q
 
 # create conf directory
 mkdir -p /etc/letsencrypt/{config,live,renewal}
@@ -86,6 +94,9 @@ cd /opt/acme.sh
             --home /etc/letsencrypt \
             --config-home /etc/letsencrypt/config \
             --cert-home /etc/letsencrypt/renewal
+
+# enable auto-upgrade
+/etc/letsencrypt/acme.sh --config-home '/etc/letsencrypt/config' --upgrade --auto-upgrade
 
 # create .well-known directory
 mkdir -p /var/www/html/.well-known/acme-challenge
