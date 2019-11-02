@@ -1,5 +1,100 @@
 # Changelog
 
+## v3.10.1 - 2019-10-30
+
+### Fixed
+
+- WordOps install/upgrade from PyPi
+
+## v3.10.0 - 2019-10-30
+
+### Added
+
+- WordOps is now installed inside a wheel with pip (easier, cleaner and safer) from PyPi
+- Redis 5.0.6 package backported to Debian 8/9/10
+- Custom motd to display a message if a new WordOps release is available
+- Run `mysql_upgrade` during MySQL upgrade with `wo stack upgrade` to perform migration if needed
+- `wo stack upgrade --ngxblocker` to update ngxblocker blocklist
+
+### Changed
+
+- Sysctl tweaks are applied during stack install and removed from install script
+- Nginx & MariaDB systemd tweaks are removed from install script and applied during stacks install/upgrade
+- Initial creation of .gitconfig is displayed the first time you run the command `wo`
+- Added `/var/lib/php/sessions/` to open_basedir to allow php sessions storage
+- WordOps now check if a repository already exist before trying to adding it again.
+- Improved SSL certificate error messages by displaying domain IP and server IP
+- Version check before updating WordOps with `wo update` is now directly handled by `wo`
+- Refactored WordOps download function with python3-requests
+- MySQL backup path changed to `/var/lib/wo-backup/mysql`
+- Do not check anymore if stack are installed with apt in `wo service` but only if there is a systemd service
+- Refactored `--letsencrypt=renew`. Require the flag `--force` if certificate expiration is more than 45 days
+- Improve netdata stack upgrade with install from source detection and updater fallback
+
+### Fixed
+
+- Incorrect PHP-FPM log path is `wo log`
+- force-ssl.conf not removed after removing a site
+- `wo clean --opcache` not working with invalid SSL certificate
+- `wo stack install --cheat` wasn't working properly previously
+- `wo info` failure depending on php-fpm pool name. ConfigParser will now detect the section name.
+
+
+## v3.9.9.4 -  2019-10-18
+
+### Changed
+
+- [STACK] New Nginx package built with libbrotli-dev for all linux distro supported by WordOps
+
+### Fixed
+
+- GPG keys error with previous EasyEngine Nginx repository
+- Issue with `--ngxblocker` stack removal/purge
+- Install/Update issues with python3 setup.py
+- WordOps deploying SSL certificate even if acme.sh failed
+
+## v3.9.9.3 -  2019-10-15
+
+### Added
+
+- [STACK] Add Nginx TLS 1.3 0-RTT configuration
+
+### Changed
+
+- [STACK] New Nginx package built with OpenSSL_1.1.1d and the latest ngx_brotli module
+
+### Fixed
+
+- `wo stack upgrade` when using nginx-ee
+- `wo secure --auth`
+- `wo secure --sshport` not working with default ssh config
+- Issues after APT repositories informations changed
+- `www` was added to WordPress site url with subdomains [Issue #178](https://github.com/WordOps/WordOps/issues/178)
+- Issuing certificate with acme.sh for sub.sub-domains not working
+
+## v3.9.9.2 - 2019-10-04
+
+### Added
+
+- [STACK] Nginx server_names_hash_bucket_size automated fix
+- [STACK] Nginx configuration rollback in case of failure after `wo stack upgrade --nginx`
+- [STACK] Nginx ultimate bad bots blocker with `wo stack install --ngxblocker`
+- [STACK] Added support for custom Nginx compiled from source
+- [STACK] Rollback configuration with Git in case of failure during service reload/restart
+- [SITE] Enable or disable Nginx ultimate bad bots blocker with `wo site update site.tld --ngxblocker/--ngxblocker=off`
+
+### Changed
+
+- [CORE] Query acme.sh database directly to check if a certificate exist
+- [SITE] `--letsencrypt=renew` is deprecated because not it's not required with acme.sh
+
+### Fixed
+
+- [SITE] Issues with root_domain variable with `wo site update`
+- [SECURE] Wrong sftp-server path in sshd_config
+- [SITE] Git error when using flag `--vhostonly`
+- [SITE] Wrong plugin name displayed when installing Cache-Enabler
+
 ## v3.9.9.1 - 2019-09-26
 
 ### Added
