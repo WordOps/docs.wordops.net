@@ -2,7 +2,7 @@
 
 ## One-Step Automated Install
 
-![wordops-install](https://netdata.wordops.eu/netdata/api/v1/badge.svg?chart=web_log_wops.cc.requests_per_url&options=unaligned&dimensions=download&group=sum&after=-86400&label=today&units=installations&precision=0)
+![PyPI - Downloads](https://img.shields.io/pypi/dw/wordops.svg?cacheSeconds=86400)
 
 We provide an installer script which install the required dependencies, before setting-up WordOps. It can be installed with the following command:
 
