@@ -32,6 +32,7 @@ Stack available are:
 | `--nginx`         | APT package | nginx stack                                             |
 | `--php`           | APT package | PHP7.2-FPM stack                                        |
 | `--php73`         | APT package | PHP7.3-FPM stack                                        |
+| `--php74`         | APT package | PHP7.3-FPM stack                                        |
 | `--mysql`         | APT package | MariaDB stack                                           |
 | `--redis`         | APT package | Redis stack                                             |
 | `--wpcli`         | Binary      | WP-CLI : WordPress CLI                                  |
@@ -48,6 +49,7 @@ Stack available are:
 | `--ufw`           | APT package | UFW : Firewall                                          |
 | `--sendmail`      | APT package | Sendmail MTA                                            |
 | `--ngxblocker`    | Binary      | Ultimate Nginx bad bots blocker                         |
+| `--nanorc`        | Binary      | Nano editor syntax highlighting                         |
 
 ### Packages types
 
@@ -113,6 +115,7 @@ wo stack upgrade [options]
 | `--nginx`      | Upgrade Nginx stack                       |
 | `--php`        | Upgrade PHP 7.2 stack                     |
 | `--php73`      | Upgrade PHP 7.3 stack                     |
+| `--php74`      | Upgrade PHP 7.4 stack                     |
 | `--mysql`      | Upgrade MySQL stack                       |
 | `--wpcli`      | Upgrade WPCLI                             |
 | `--redis`      | Upgrade Redis                             |
@@ -120,6 +123,7 @@ wo stack upgrade [options]
 | `--dashboard`  | Upgrade WordOps Dashboard                 |
 | `--composer`   | Upgrade Composer                          |
 | `--phpmyadmin` | Upgrade phpMyAdmin                        |
+| `--adminer`    | Upgrade Adminer                           |
 | `--no-prompt`  | Upgrade Packages without any prompt       |
 | `--force`      | Force Packages upgrade without any prompt |
 
@@ -205,6 +209,8 @@ wo stack stop [options]
 ## stack status
 
 Display Stack service status
+
+<asciinema-player src="/images/wostackstatus.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Usage:
 

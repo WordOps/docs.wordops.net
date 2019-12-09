@@ -2,7 +2,7 @@
 
 Update WordOps to the latest release available
 
-<img id="intro" align="center" src="/images/wo-update.gif">
+<asciinema-player src="/images/woupdate.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Usage:
 

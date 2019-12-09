@@ -1,5 +1,72 @@
 # Changelog
 
+## v3.11.0 - 2019-12-03
+
+### Added
+
+- PHP 7.4 support
+- Improved Webp images support with Cloudflare (Issue [#95](https://github.com/WordOps/WordOps/issues/95)). Nginx will not serve webp images alternative with Cloudflare IP ranges.
+- Stack upgrade for adminer
+- Check acme.sh installation and setup acme.sh if needed before issuing certificate
+- Add `--ufw` to `wo stack status`
+- Add Nginx directive `gzip_static on;` to serve precompressed assets with Cache-Enabler or WP-Rocket. (Issue [#207](https://github.com/WordOps/WordOps/issues/207))
+
+### Changed
+
+- Previous `--php73` & `--php73=off` flags are replaced by `--php72`, `--php73`, `--php74` to switch site's php version
+- phpMyAdmin updated to v4.9.2
+- Adminer updated to v4.7.5
+- Replace dot and dashes by underscores in database names (Issue [#206](https://github.com/WordOps/WordOps/issues/206))
+- Increased database name length to 32 characters from domain name + 8 random characters
+
+### Fixed
+
+- typo error in motd-news script (Issue [#204](https://github.com/WordOps/WordOps/issues/204))
+- Install Nginx before ngxblocker
+- WordOps install/update script text color
+- Issue with MySQL stack on Raspbian 9/10
+- Typo error  (PR [#205](https://github.com/WordOps/WordOps/pull/205))
+- php version in `wo debug` (PR [#209](https://github.com/WordOps/WordOps/pull/209))
+- SSL certificates expiration display with shared wildcard certificates
+
+## v3.10.3 - 2019-11-11
+
+### Added
+
+- [ACME] Display warning about sudo usage when issuing certificate with DNS API validation (require `sudo -E`)
+
+### Changed
+
+- [ACME] Resolve domain IP over HTTPS with Cloudflare DNS Resolver
+- [CORE] Cement Framework updated to v2.10.2
+- [SITE] database name = 0 to 16 characters from the site name + 4 randomly generated character
+- [SITE] database user = 0 to 12 characters from the site name + 4 randomy generated character
+- [STACK] Improve sysctl tweak deployment
+
+### Fixed
+
+- [SITE] https redirection missing on subdomains sites
+- Issues with digitalocean mariadb repository
+- Cement Framework output handler issues
+- [CLEAN] check if Nginx is installed before purging fastcgi or opcache
+
+## v3.10.2 - 2019-11-06
+
+### Added
+
+- [STACK] nanorc syntax highlighting for nano editor : `--nanorc`
+
+### Changed
+
+- `wo stack remove/purge` without argument print help instead of removing main stacks
+
+### Fixed
+
+- Import rtCamp:EasyEngine GPG key to avoid issues with previous nginx repository
+- Unable to issue certificate for a domain if a subdomain certificate exist
+- Incorrect WP-CLI path site_url_https function
+- `wo stack upgrade --ngxblocker` not working properly
+
 ## v3.10.1 - 2019-10-30
 
 ### Fixed

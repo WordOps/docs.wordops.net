@@ -199,9 +199,7 @@ wo site create sub.site.tld --wp --letsencrypt
 
 **Since the release v3.9.6**, WordOps supports Let's Encrypt Wildcard SSL certificates with DNS API validation. Before issuing a wildcard certificate, it require to define the DNS API crendentials for acme.sh.
 
-<video align="center" src="/images/wo-wildcard.webm" width="720" autoplay loop>
-</video>
-
+<asciinema-player src="/images/wositecreatewildcard.cast" autoplay loop cols="120" rows="30"></asciinema-player>
 
 Example with Cloudflare DNS:
 
@@ -229,7 +227,7 @@ Additionally you can enable HSTS on your site by adding the flag `--hsts` with `
 wo site create site.tld --wp --letsencrypt --hsts
 ```
 
-#### PHP 7.3
+#### PHP 7.3 & PHP 7.4
 
 To create site with PHP 7.3 you can use --php73 during site creation
 
@@ -239,10 +237,22 @@ For example, you can create WordPress site running on PHP 7.3 using following co
 wo site create site.tld --wp --php73
 ```
 
+For a WordPress site running on PHP 7.4:
+
+```bash
+wo site create site.tld --wp --php74
+```
+
 To create simple php site running with PHP 7.3 with no database, you can use this command:
 
 ```bash
 wo site create site.tld --php73
+```
+
+This is the same with PHP 7.4:
+
+```bash
+wo site create site.tld --php74
 ```
 
 ## site update
@@ -322,8 +332,9 @@ wo site update  [<site_name>] [options]
 | `--html`                            | update to html site                                                    |
 | `--php`                             | update to php site                                                     |
 | `--mysql`                           | update to MySQL + PHP site                                             |
+| `--php72`                           | update site to PHP 7.2                                                 |
 | `--php73`                           | update site to PHP 7.3                                                 |
-| `--php73=off`                       | disable PHP 7.3                                                        |
+| `--php74`                           | update site to PHP 7.4                                                 |
 | `--wp`                              | update site to WordPress without cache                                 |
 | `--wpfc`                            | update site to WordPress with fastcgi_cache                            |
 | `--wpsc`                            | update site to WordPress with wp-super-cache plugin                    |
@@ -354,10 +365,16 @@ Update a WordPress site running with PHP 7.2 to PHP 7.3
 wo site update site.tld --php73
 ```
 
-Disable PHP 7.3 and use PHP 7.2:
+Update a site running with PHP 7.3 to PHP 7.2
 
 ```bash
-wo site update site.tld --php73=off
+wo site update site.tld --php72
+```
+
+Update a site running with PHP 7.2 or PHP 7.3 to PHP 7.4
+
+```bash
+wo site update site.tld --php74
 ```
 
 Update a WordPress site wiht Nginx fastcgi_cache to WordPress with redis-cache
@@ -369,6 +386,8 @@ wo site update site.tld --wpredis
 ## site info
 
 Get site information including cache backend, PHP version or user database credentials
+
+<asciinema-player src="/images/wositeinfo.cast" autoplay loop cols="120" rows="30"></asciinema-player>
 
 Usage:
 
@@ -396,6 +415,8 @@ wo site delete  [<site_name>] [options]
 
 Edit site Nginx configuration
 
+<asciinema-player src="/images/wositeedit.cast" autoplay loop cols="125" rows="30"></asciinema-player>
+
 Usage:
 
 ```bash
@@ -408,6 +429,8 @@ You will be prompted to choose the text editor you prefer. Nano is highly recomm
 
 Move into a site webroot directory
 
+<asciinema-player src="/images/wositecd.cast" autoplay loop cols="125" rows="30"></asciinema-player>
+
 Usage:
 
 ```bash
@@ -418,6 +441,8 @@ wo site cd  [<site_name>]
 
 List all sites managed with WordOps
 
+<asciinema-player src="/images/wositelist.cast" autoplay loop cols="125" rows="30"></asciinema-player>
+
 Usage:
 
 ```bash
@@ -427,6 +452,8 @@ wo site list
 ## site show
 
 Display site Nginx configuration
+
+<asciinema-player src="/images/wositeshow.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Usage:
 

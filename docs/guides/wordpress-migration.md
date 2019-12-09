@@ -22,6 +22,14 @@ cd /var/www/mydomain.tld/htdocs
 wp db export --allow-root
 ```
 
+!!! info
+    If WP-CLI isn't installed on your server, you can get it by running the following commands :
+    ```bash
+    curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+    chmod +x wp-cli.phar
+    sudo mv wp-cli.phar /usr/local/bin/wp
+    ```
+
 ## On the new server (NEW-SRV)
 
 ### Initial server update

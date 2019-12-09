@@ -12,7 +12,9 @@ source /etc/bash_completion.d/wo_auto.rc
 
 ## Installing WordOps stacks (optional)
 
-Before creating your first site with WordOps, you can install WordOps main stacks with the command
+You can install WordOps main stacks with the following command before creating your first site, or create directly a site and WordOps will install required stacks.
+
+Installing WordOps main stacks
 
 ```bash
 wo stack install
@@ -38,18 +40,33 @@ Here the list of WordOps components installed with the above command:
 | Anemometer        | Web App     | MySQL Slow Query Monitor               |
 | WordOps dashboard | Web App     | Bootstrap template for WordOps backend |
 | eXtplorer         | Web App     | Web File manager                       |
-| Cheat.sh          | Binary      | Command-line Linux cheatsheet          |
+| cheat.sh          | Binary      | Command-line Linux cheatsheet          |
 | Sendmail          | APT package | Sendmail MTA                           |
 
 ### Packages types
 
 - APT package are Debian packages installed from APT repositories
-- Binaries are simple executables
+- Binaries are simple executables (do not use any server resources when you are not running them)
 - Web App are PHP based applications
+
+## WordOps backend
+
+After installing Nginx, WordOps will display your login credentials to access to WordOps backend.
+You haven't saved them ? Don't worry, you can change them at anytime with the command :
+
+```bash
+wo secure --auth
+```
+
+You will be prompted for a username and a password. If empty, WordOps will use the default username set during the installation and will generate a random password.
+
+You should now be able to access WordOps backend on `https://YOUR.SERVER.IP:22222` or `https://yourserver.hostname.tld:22222`. You will probably be warned about the SSL certificate, but you can learn how to secure WordOps backend with a valid SSL certificate in the next part.
 
 ## Securing WordOps backend
 
 To secure WordOps backend with a valid SSL certificate, you just have to create a basic site with the domain/subdomain of your choice. WordOps will automatically use the first SSL certificate issued to secure the backend.
+
+Example :
 
 ```bash
 wo site create server.domain.tld -le
@@ -64,3 +81,15 @@ If you haven't already configured a firewall on your server, you can use WordOps
 ```bash
 wo stack install --ufw
 ```
+
+## Creating an alias for sudo wo
+
+If you want to be able to use directly the command `wo` as non-root user, you can add a bash alias to automatically add `sudo` in front of the command `wo`.
+
+Use the following command to add the alias :
+
+```bash
+echo -e "alias wo='sudo -E wo'" >> $HOME/.bashrc
+```
+
+Then apply it with `source $HOME/.bashrc`

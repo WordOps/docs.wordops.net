@@ -15,6 +15,7 @@ Here the list of guides about WordOps available in this documentation:
 ### English
 
 - [Install fast WordPress site on Ubuntu using WordOps - MARKO NTECH](https://markontech.com/wordpress/install-wordpress-on-ubuntu-using-wordops/)
+- [High traffic WordPress architecture using AWS Lightsail - David Vekslermkd](https://davidveksler.com/2019/10/20/high-traffic-wordpress-architecture-using-aws-lightsail/)
 
 ### French
 
