@@ -20,6 +20,10 @@ Here the list of guides about WordOps available in this documentation:
 
 - [WordOps - Déployer WordPress avec Nginx simplement - Jesuisadmin](https://jesuisadmin.fr/wordops-deployer-wordpress-nginx-simplement/)
 
+### Indonesian
+
+- [Cara Mudah Install WordPress di Ubuntu - Musa Amin](https://musaamin.web.id/cara-mudah-install-wordpress-di-ubuntu/)
+
 ## Add your own blog post about WordOps
 
 You wrote an article about WordOps ? Feel free to use the edit button at the right top and to open a pull request to add the link of your article.
