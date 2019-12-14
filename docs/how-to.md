@@ -10,6 +10,7 @@
 - [How to add FTP users](how-to/add-ftp-users.md)
 - [How to install HWE stacks on Ubuntu](how-to/ubuntu-lts-hwe-stacks.md)
 - [How to use a Remote MySQL server with WordOps](how-to/remote-mysql-server.md)
+- [How to automate WordPress post-install tasks](how-to/post-install-wp.md)
 
 ## Other questions
 

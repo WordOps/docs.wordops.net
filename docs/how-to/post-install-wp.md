@@ -1,3 +1,5 @@
+# WordPress post-install automation
+
 There are multiple, viable approaches to automate post-installation of a WordPress blog using WordOps, without the need of adding new commands or increasing overall complexity.
 
 For this tutorial, we're going to show how to automatically install plugins and themes from official WordPress repository, as well as how to install custom plugins and themes, not available at wordpress.org.
@@ -59,6 +61,7 @@ cd -
 
 exit 0
 ```
+
 ### Example of how to use the script
 
 ```bash
