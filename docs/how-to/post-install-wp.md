@@ -39,7 +39,7 @@ if [ ! -e "/var/www/${DOM}/wp-config.php" ] ; then
     exit 1
 fi
 
-cd "/var/www/${DOM}/htdocs"
+cd "/var/www/${DOM}/htdocs" || exit 1
 
 ### Install plugins from official repository
 wp plugin install wordpress-seo --allow-root --activate

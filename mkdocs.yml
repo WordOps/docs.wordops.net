@@ -87,6 +87,8 @@ nav:
   - Add FTP users: 'how-to/add-ftp-users.md'
   - Remote MySQL server with WordOps: 'how-to/remote-mysql-server.md'
   - Install HWE stacks on Ubuntu: 'how-to/ubuntu-lts-hwe-stacks.md'
+  - Automate WordPress post-install: 'how-to/post-install-wp.md'
+  - How to allow zip & gzip files download: 'how-to/allow-zip-gzip-files-download.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'

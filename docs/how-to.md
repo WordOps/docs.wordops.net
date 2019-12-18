@@ -11,6 +11,7 @@
 - [How to install HWE stacks on Ubuntu](how-to/ubuntu-lts-hwe-stacks.md)
 - [How to use a Remote MySQL server with WordOps](how-to/remote-mysql-server.md)
 - [How to automate WordPress post-install tasks](how-to/post-install-wp.md)
+- [How to allow zip & gzip files download](how-to/allow-zip-gzip-files-download.md)
 
 ## Other questions
 
