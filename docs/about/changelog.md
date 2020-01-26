@@ -1,5 +1,59 @@
 # Changelog
 
+## v3.11.4 - 2020-01-17
+
+### Fixed
+
+- `wo secure --port` variable error
+- `--letsencrypt` variable error
+
+## v3.11.3 - 2020-01-16
+
+### Added
+
+- Backported Nano editor package for Debian/Ubuntu/Raspbian (which support syntax highlighting with `--nanorc`)
+- Protect Easy Digital Download files from being accessed directly (PR [#222](https://github.com/WordOps/WordOps/pull/222))
+
+### Changed
+
+- Improved WordOps performance by removing useless imports in `wo site` code
+- Improved opcache cleaning with `wo clean --opcache`
+- Force php imagick extension to be enabled after php-fpm install
+- Netdata upgrade is now performed with fresh install script downloaded from github
+- Update phpmyadmin to v5.0.1
+
+### Fixed
+
+- Domain IP validation when using CNAME before issuing SSL certificate
+- Netdata stack purge/remove not working properly
+- Do not backup all databases when purging `--mysql` stack with remote MySQL server
+- Netdata upgrade failure due to missing arguments
+
+## v3.11.2 - 2019-12-07
+
+### Changed
+
+- Proxy virtualhost now include proxy_params with X-Forwarded-Proto header
+- Acme.sh upgrade
+
+### Fixed
+
+- Issue with Nginx variables_hash_bucket_size & variables_hash_max_size
+- Netdata MySQL user error when purging/reinstalling Netdata stack
+- Fix `wo site cd`
+
+## v3.11.1 - 2019-12-04
+
+### Added
+
+- `--fail2ban` in wo stack upgrade
+
+### Fixed
+
+- error with `wo maintenance`
+- php-igbinary missing for php74 (run `wo stack upgrade` to install it)
+- opcache reset with `wo clean`
+
 ## v3.11.0 - 2019-12-03
 
 ### Added
