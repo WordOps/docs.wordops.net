@@ -14,7 +14,7 @@ It also include several features missing in EEv3 but we want to keep WordOps as 
 - Memcached stack has been removed
 - Let's Encrypt stack isn't based on letsencrypt-auto anymore, we use acme.sh to handle SSL certificates
 
-If you are going to migrate from EasyEngine v3, here some important informations:
+If you are going to migrate from EasyEngine v3, here is some important information:
 
 - Previous PHP upstreams in Nginx will not be overwritted
 - PHP 5.6 and PHP 7.0 will not be removed or uninstalled
