@@ -44,7 +44,6 @@ The following operating systems are supported:
 | ------------ | ------------------ | ------------ |
 | **Ubuntu**   | 18.04 LTS (bionic) | x86_64       |
 |              | 16.04 LTS (xenial) | x86_64       |
-|              | 19.04 (disco)      | x86_64       |
 | **Debian**   | 9 (stretch)        | x86_64       |
 |              | 10 (buster)        | x86_64       |
 | **Raspbian** | 9 (stretch)        | armv7l       |
