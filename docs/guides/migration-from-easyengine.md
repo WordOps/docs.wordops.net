@@ -134,3 +134,9 @@ Then you can reinstall the latest MariaDB-server version with WordOps:
 ```bash
 wo stack install --mysql
 ```
+
+And finally make sure any database table structure upgrades are applied:
+
+```bash
+wo stack upgrade --mysql
+```
