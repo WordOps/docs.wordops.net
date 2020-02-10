@@ -15,14 +15,14 @@ It will also create all new Nginx configurations before syncing the old nginx di
 
 ## Post installation steps
 
-After installing WordOps, if all your sites are still working properly, you can start using WordOps the same way than EasyEngine. For sites previously created with EasyEngine, you will have to changes some settings in their configuration to use WordOps new configurations. This can be done with the command `wo site update` or by editing manually their configuration with the command `wo site edit`.
+After installing WordOps, if all your sites are still working properly, you can start using WordOps the same way as EasyEngine. For sites previously created with EasyEngine, you will have to change some settings in their configuration to use WordOps new configurations. This can be done with the command `wo site update` or by editing manually their configuration with the command `wo site edit`.
 
 !!! warning
     If some sites are still using php5.6 or php7.0 and are not compatible with newer PHP versions, do not change their vhost configuration. WordOps minimum and default PHP version is PHP 7.2. Additionally, sites previously created with `--w3tc`  will have to use another cache option as we deprecated this stack.
 
 ### Updating site configuration
 
-You have the choice between two method to update your site configuration:
+You have the choice between two methods to update your site configuration:
 
 - With the command `wo site update` (recommended)
 
@@ -36,7 +36,7 @@ The easiest way to update your site with the new WordOps configurations is to us
 wo site update site.tld <options>
 ```
 
-To update your sites configuration, you can enable PHP 7.3 on your site with the argument `--php73` and then disable it with the argument `--php73=off` to use PHP 7.2.
+To update your sites configuration, you can enable PHP 7.3 on your site with the argument `--php73` and then disable it with the argument `--php72` to use PHP 7.2.
 This will regenerate your site Nginx vhost and apply the new configuration.
 
 **Example**:
@@ -45,7 +45,7 @@ This will regenerate your site Nginx vhost and apply the new configuration.
 # enable PHP 7.3 to regenerate site configuration
 wo site update site.tld --php73
 # disable PHP 7.3 to use PHP 7.2 (optional)
-wo site update site.tld --php73=off
+wo site update site.tld --php72
 ```
 
 #### Manually editing site configuration
@@ -58,11 +58,11 @@ wo site edit site.tld
 
 !!! info
 
-    You will be prompt to choose a text editor, if you are new to linux, we recommend you to choose nano.
+    You will be prompted to choose a text editor, if you are new to linux, we recommend you to choose nano.
 
 In Nginx vhost configuration, you will find several lines beginning with `include`.
 
-To use new WordOps configuration, you just have to replace the path of the configuration set after `include`.  For example `include common/locations.conf;` have to be replaced by `include common/locations-wo.conf;`.
+To use the new WordOps configuration, you just have to replace the path of the configuration set after `include`.  For example `include common/locations.conf;` has to be replaced by `include common/locations-wo.conf;`.
 
 !!! warning
 
