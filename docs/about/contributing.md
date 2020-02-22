@@ -104,7 +104,7 @@ Here the list of plugins with the related command or a short description
 │   └── update.py # wo update
 ```
 
-### Developement Environnment
+### Development Environnment
 
 ### Contributions Ground Rules
 
