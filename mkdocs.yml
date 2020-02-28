@@ -89,6 +89,7 @@ nav:
   - Install HWE stacks on Ubuntu: 'how-to/ubuntu-lts-hwe-stacks.md'
   - Automate WordPress post-install: 'how-to/post-install-wp.md'
   - How to allow zip & gzip files download: 'how-to/allow-zip-gzip-files-download.md'
+  - Setup basic auth on site: 'how-to/setup-basic-auth.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
