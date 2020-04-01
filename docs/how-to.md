@@ -13,7 +13,7 @@
 - [How to automate WordPress post-install tasks](how-to/post-install-wp.md)
 - [How to allow zip & gzip files download](how-to/allow-zip-gzip-files-download.md)
 - [How to setup basic http-auth on site](how-to/setup-basic-auth.md)
-- [How to automated WordOps installation](how-to/automate-wordops-install.md)
+- [How to automate WordOps installation](how-to/automate-wordops-install.md)
 
 ## Other questions
 
