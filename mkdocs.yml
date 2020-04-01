@@ -90,6 +90,7 @@ nav:
   - Automate WordPress post-install: 'how-to/post-install-wp.md'
   - How to allow zip & gzip files download: 'how-to/allow-zip-gzip-files-download.md'
   - Setup basic auth on site: 'how-to/setup-basic-auth.md'
+  - Automate WordOps installation : 'how-to/automate-wordops-install.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
