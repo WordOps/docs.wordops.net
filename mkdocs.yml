@@ -91,6 +91,7 @@ nav:
   - How to allow zip & gzip files download: 'how-to/allow-zip-gzip-files-download.md'
   - Setup basic auth on site: 'how-to/setup-basic-auth.md'
   - Automate WordOps installation : 'how-to/automate-wordops-install.md'
+  - Microcaching with Nginx: 'how-to/microcaching-with-nginx.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
