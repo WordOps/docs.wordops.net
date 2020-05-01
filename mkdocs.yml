@@ -8,15 +8,17 @@ remote_branch: gh-pages
 theme:
   name: 'material'
   favicon: 'images/favicon.png'
-  logo: 'images/logo-icon.png'
   language: 'en'
   font: false
   highlightjs: true
   palette:
     primary: 'light-blue'
     accent: 'indigo'
-  feature:
-    tabs: true
+  features:
+    - tabs
+    - instant
+  icon:
+    logo: material/cloud
 
 
 markdown_extensions:
@@ -112,14 +114,14 @@ nav:
 
 extra:
   social:
-    - type: globe
+    - icon: fontawesome/solid/globe
       link: https://wordops.net
-    - type: github-alt
+    - icon: fontawesome/brands/github-alt
       link: https://github.com/WordOps
-    - type: twitter
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/WordOps_
-    - type: slack
+    - icon: fontawesome/brands/slack
       link: https://community.wordops.io/slack
-    - type: comments
+    - icon: fontawesome/solid/comments
       link: https://community.wordops.net
   manifest: 'manifest.webmanifest'
