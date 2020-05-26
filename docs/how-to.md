@@ -14,6 +14,7 @@
 - [How to allow zip & gzip files download](how-to/allow-zip-gzip-files-download.md)
 - [How to setup basic http-auth on site](how-to/setup-basic-auth.md)
 - [How to automate WordOps installation](how-to/automate-wordops-install.md)
+- [How to use micro-caching with Nginx](how-to/microcaching-with-nginx.md)
 
 ## Other questions
 
