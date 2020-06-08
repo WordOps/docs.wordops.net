@@ -94,6 +94,7 @@ nav:
   - Setup basic auth on site: 'how-to/setup-basic-auth.md'
   - Automate WordOps installation : 'how-to/automate-wordops-install.md'
   - Microcaching with Nginx: 'how-to/microcaching-with-nginx.md'
+  - Bypass fastcgi_cache on specific URLs: 'how-to/bypass-fastcgi-cache-on-specific-urls.md'
 - Guides:
   - Overview: 'guides.md'
   - EasyEngine Migration: 'guides/migration-from-easyengine.md'
