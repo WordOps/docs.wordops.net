@@ -1,6 +1,6 @@
 # How to bypass fastcgi_cache cache on specific URLs
 
-Here are a couple of ways to bypass fastcgi_cache (sites created with `--wpfc`) on specific URLs.
+Here is a couple of ways to bypass fastcgi_cache (sites created with `--wpfc`) on specific URLs.
 
 ## 1. Via custom nginx config
 
