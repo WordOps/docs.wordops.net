@@ -1,0 +1,72 @@
+# Setup Sendmail with Sendgrid
+
+How to setup Sendmail MTA (Mail Transport Agent) on server to use Sendgrid SMTP.
+
+## Prerequisites
+
+Install required packages.
+
+```
+wo stack install --sendmail
+apt install libsasl2-modules
+```
+
+
+## 1. Sendgrid API key
+
+[Create a new Sendgrid API key](https://app.sendgrid.com/settings/api_keys) (if not already created).
+
+## 2. Create Auth File
+
+```
+mkdir /etc/mail/authinfo
+chmod 700 /etc/mail/authinfo
+```
+
+Create `/etc/mail/authinfo/smtp-auth` and add the following content:
+
+```
+AuthInfo: "U:root" "I:apikey" "P:API_KEY"
+```
+
+Create a hash map file of above created auth file.
+
+```
+makemap hash /etc/mail/authinfo/smtp-auth < /etc/mail/authinfo/smtp-auth
+```
+
+## 3. Configure Sendmail with SMART_HOST
+
+Add the following configuration lines into `/etc/mail/sendmail.mc` after `MAILER_DEFINITIONS` and before ``MAILER(`local')dnl`` at the bottom.
+
+```
+define(`SMART_HOST',`[smtp.sendgrid.com]')dnl
+define(`RELAY_MAILER_ARGS', `TCP $h 587')dnl
+define(`ESMTP_MAILER_ARGS', `TCP $h 587')dnl
+define(`confAUTH_OPTIONS', `A p')dnl
+TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+FEATURE(`authinfo',`hash -o /etc/mail/authinfo/smtp-auth.db')dnl
+```
+
+Re-build sendmail's configuration:
+
+```
+make -C /etc/mail
+```
+
+## 4. Verify setup
+
+```
+service sendmail reload
+```
+
+Send test email to name@domain.tld:
+
+```
+sendmail name@domain.tld
+Subject: Test
+This is the body of the test email.
+```
+
+Press `control + d` to send.

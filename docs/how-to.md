@@ -16,6 +16,7 @@
 - [How to automate WordOps installation](how-to/automate-wordops-install.md)
 - [How to use micro-caching with Nginx](how-to/microcaching-with-nginx.md)
 - [How to bypass fastcgi_cache on specific URLs](how-to/bypass-fastcgi-cache-on-specific-urls.md)
+- [How to setup Sendmail with Sendgrid](how-to/setup-sendmail-with-sendgrid.md)
 
 ## Other questions
 
