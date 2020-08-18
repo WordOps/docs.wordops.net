@@ -3,7 +3,7 @@
 You are facing an issue with WordOps ? Please ask you the following questions before opening an issue on Github or creating a post on the forum :
 
 - Are you using the latest release of WordOps ? -> if not, update WordOps first and try again to see if your issue still exist.
-- Is it a known issue ? -> use the search feature in the documentation, in the forum and in Github issues to check if it's a known issue
+- Is it a known issue ? -> use the search feature in the documentation, check the page [common issues](common-issues.md), and take a look in the forum posts and in Github issues to check if it's a known issue
 - Have you checked the logs ? -> always check the content of `/var/log/wo/wordops.log` to check what is exactly the task which failed
 - Is the issue directly related to WordOps ? -> for questions or support, please use the community forum.
 

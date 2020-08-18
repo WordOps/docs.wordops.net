@@ -20,6 +20,11 @@ theme:
   icon:
     logo: material/cloud
 
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
 
 markdown_extensions:
   # Code highlighting in ``` ``` blocks

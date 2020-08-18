@@ -78,5 +78,11 @@ pkg_resources.DistributionNotFound: The 'wo==3.9.8.2' distribution was not found
 Just remove the executable `/usr/local/bin/wo` and reinstall WordOps:
 
 ```bash
-sudo rm /usr/local/bin/wo && wget -qO wo wops.cc && sudo bash wo
+sudo rm -f /usr/local/bin/wo && wget -qO wo wops.cc && sudo bash wo
+```
+
+If the issue still persist, you can try to reinstall WordOps with pip :
+
+```bash
+sudo python3 -m pip install -I wordops
 ```

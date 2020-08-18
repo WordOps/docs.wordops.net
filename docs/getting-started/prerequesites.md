@@ -42,7 +42,8 @@ The following operating systems are supported:
 
 | Distribution | Release            | Architecture |
 | ------------ | ------------------ | ------------ |
-| **Ubuntu**   | 18.04 LTS (bionic) | x86_64       |
+| **Ubuntu**   | 20.04 LTS (focal)  | x86_64       |
+|              | 18.04 LTS (bionic) | x86_64       |
 |              | 16.04 LTS (xenial) | x86_64       |
 | **Debian**   | 9 (stretch)        | x86_64       |
 |              | 10 (buster)        | x86_64       |

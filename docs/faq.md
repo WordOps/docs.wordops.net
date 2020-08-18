@@ -49,7 +49,7 @@ At the moment, WordOps backend is secured with a self-signed SSL certificate, wh
 
 ### Does Nginx-wo support TLSv1.3 ?
 
-Yes, since the release v3.9.5.4, our Nginx package for Ubuntu 16.04/18.04/19.04 and for Debian 10 (buster) is compiled with OpenSSL 1.1.1c and support TLSv1.3.
+Yes, since the release v3.9.5.4, our Nginx package for Ubuntu 16.04/18.04/19.04 and for Debian 10 (buster) is compiled with OpenSSL 1.1.1g and support TLSv1.3.
 
 ### Is WordOps Let's Encrypt stack compatible with Cloudflare CDN ?
 
