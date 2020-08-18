@@ -10,6 +10,19 @@ To enable WordOps commands auto-completion, run the following command after Word
 source /etc/bash_completion.d/wo_auto.rc
 ```
 
+## Creating an alias for sudo wo
+
+If you want to be able to use directly the command `wo` as non-root user, you can add a bash alias to automatically add `sudo` in front of the command `wo`.
+
+Use the following command to add the alias :
+
+```bash
+echo -e "alias wo='sudo -E wo'" >> $HOME/.bashrc
+```
+
+Then apply it with `source $HOME/.bashrc`
+
+
 ## Installing WordOps stacks (optional)
 
 You can install WordOps main stacks with the following command before creating your first site, or create directly a site and WordOps will install required stacks.
@@ -81,15 +94,3 @@ If you haven't already configured a firewall on your server, you can use WordOps
 ```bash
 wo stack install --ufw
 ```
-
-## Creating an alias for sudo wo
-
-If you want to be able to use directly the command `wo` as non-root user, you can add a bash alias to automatically add `sudo` in front of the command `wo`.
-
-Use the following command to add the alias :
-
-```bash
-echo -e "alias wo='sudo -E wo'" >> $HOME/.bashrc
-```
-
-Then apply it with `source $HOME/.bashrc`
