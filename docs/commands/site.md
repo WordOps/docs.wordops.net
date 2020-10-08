@@ -377,7 +377,7 @@ Update a site running with PHP 7.2 or PHP 7.3 to PHP 7.4
 wo site update site.tld --php74
 ```
 
-Update a WordPress site wiht Nginx fastcgi_cache to WordPress with redis-cache
+Update a WordPress site with Nginx fastcgi_cache to WordPress with redis-cache
 
 ```bash
 wo site update site.tld --wpredis
