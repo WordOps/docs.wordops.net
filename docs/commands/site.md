@@ -12,10 +12,11 @@ wo site (command) [options]
 |--------------------------|-----------------------------------|
 | [create](#site-create)   | Create site with WordOps          |
 | [update](#site-update)   | Update site type or configuration |
+| [info](#site-info)       | Get site information              |
 | [show](#site-show)       | Show site Nginx configuration     |
 | [edit](#site-edit)       | Edit site Nginx configuration     |
 | [delete](#site-delete)   | Delete site                       |
-| [list](#site-list)       | list all sites                    |
+| [list](#site-list)       | List all sites                    |
 | [enable](#site-enable)   | Enable site in Nginx              |
 | [disable](#site-disable) | Disable site in Nginx             |
 | [cd](#site-cd)           | Move into site webroot directory  |
