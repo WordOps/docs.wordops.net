@@ -6,13 +6,13 @@ Here is a couple of ways to bypass fastcgi_cache (sites created with `--wpfc`) o
 
 The cache rules for fastcgi_cache are defined in `/etc/nginx/conf.d/map-wp-fastcgi-cache.conf`. First, create an empty `map-wp-fastcgi-cache.conf.custom` so that your custom rules does not get overwritten in future WordOps updates:
 
-```
+```bash
 touch /etc/nginx/conf.d/map-wp-fastcgi-cache.conf.custom
 ```
 
 Then edit `map-wp-fastcgi-cache.conf` with your custom page slugs in the `map $request_uri $uri_no_cache` block:
 
-```
+```nginx
 map $request_uri $uri_no_cache {
 ....
     "~*/resetpass/" 1;
@@ -22,7 +22,7 @@ map $request_uri $uri_no_cache {
 
 Reload nginx:
 
-```
+```bash
 nginx -t && systemctl reload nginx
 ```
 
@@ -32,7 +32,7 @@ A possible easier way is to set a custom cookie. As defined in `/etc/nginx/conf.
 
 To take advantage of this, consider the following snippet placed in a plugin or in your theme's `functions.php`:
 
-```
+```php
 function set_bypass_cache_cookie() {
     setcookie('wordpress_no_cache', '1', 0, '/my-page-slug/');
 }
