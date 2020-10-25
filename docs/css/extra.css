@@ -122,7 +122,6 @@ pre {
 
 .md-typeset__table tr:nth-child(1) {
     word-wrap: break-word;
-    max-width: 30em
 }
 
 h1 {
@@ -159,10 +158,6 @@ strong {
 
 .md-nav__link {
     white-space: nowrap;
-}
-
-.md-typeset__table {
-    min-width: 75%;
 }
 
 .md-nav__title {

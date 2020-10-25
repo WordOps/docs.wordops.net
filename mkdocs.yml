@@ -15,8 +15,8 @@ theme:
     primary: 'light-blue'
     accent: 'indigo'
   features:
-    - tabs
-    - instant
+    - navigation.tabs
+    - navigation.instant
   icon:
     logo: material/cloud
 
@@ -60,7 +60,15 @@ extra_javascript:
 
 
 nav:
-- Home: 'README.md'
+- Documentation:
+  - Home: 'README.md'
+  - F.A.Q: 'https://wordops.net/f-a-q/'
+  - WordOps.net: https://wordops.net
+  - Blog: https://wordops.net/blog/
+  - Forum: https://community.wordops.net
+  - Chat: https://chat.wordops.net
+  - Twitter: https://twitter.com/WordOps_
+  - Mastodon: https://mastodon.top/@WordOps
 - About:
   - Give WordOps a Github star: 'about/give-wordops-github-star.md'
   - From EasyEngine to WordOps: 'about/from-easyengine-to-wordops.md'
@@ -108,13 +116,6 @@ nav:
   - WordPress sites migration: 'guides/wordpress-migration.md'
   - WordOps With DigitalOcean volumes: 'guides/wordops-with-digitalocean-volume.md'
   - Enable live kernel patching on Ubuntu: 'guides/enable-live-kernel-patching.md'
-- F.A.Q: 'https://wordops.net/f-a-q/'
-- WordOps.net: https://wordops.net
-- Blog: https://wordops.net/blog/
-- Forum: https://community.wordops.net
-- Chat: https://chat.wordops.net
-- Twitter: https://twitter.com/WordOps_
-- Mastodon: https://mastodon.top/@WordOps
 - Troubleshooting:
   - Bug reporting guidelines: 'troubleshooting/bug-reporting.md'
   - Common issues: 'troubleshooting/common-issues.md'

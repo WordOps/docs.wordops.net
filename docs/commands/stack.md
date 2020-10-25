@@ -9,9 +9,10 @@ wo stack (command) [options]
 ```
 
 | subcommand                | description                |
-| ------------------------- | -------------------------- |
+| :-----------------------: | :------------------------: |
 | [install](#stack-install) | Install WordOps stacks     |
 | [upgrade](#stack-upgrade) | Upgrade WordOps stack      |
+| [migrate](#stack-migrate) | Upgrade MariaDB stack      |
 | [remove](#stack-remove)   | Uninstall packages         |
 | [purge](#stack-purge)     | Uninstall & purge packages |
 | [reload](#stack-reload)   | Reload WordOps stack       |
@@ -129,7 +130,22 @@ wo stack upgrade [options]
 
 `wo stack upgrade` make sure packages repositories are properly added, then it upgrade packages and for main stacks (Nginx, PHP-FPM & MySQL, Redis), it also update configurations from the templates included in the current WordOps release and apply optimizations (especially for MySQL & Redis)
 
-Currently `wo stack upgrade --mysql` will only update the package from the current MariaDB repository, but will not perform upgrades between major releases (10.1 -> 10.3), mostly because there is a risk of failure when upgrading MariaDB, and we will have to run more tests to make sure our upgrading process is stable and will not impact your sites availability.
+Currently `wo stack upgrade --mysql` will only update the package from the current MariaDB repository, but will not perform upgrades between major releases (10.1 -> 10.3). For upgrade MariaDB, use `wo stack migrate --mariadb`.
+
+## stack migrate
+
+Upgrade MariaDB to the latest stable release (10.5)
+
+Usage :
+
+```bash
+wo stack migrate --mariadb [options]
+```
+
+Options :
+`--force` : perform MariaDB upgrade without prompting for confirmation
+
+<asciinema-player src="/images/wostackmigrate.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 ## stack remove
 
