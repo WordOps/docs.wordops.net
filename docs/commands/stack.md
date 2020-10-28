@@ -33,7 +33,7 @@ Stack available are:
 | `--nginx`         | APT package | nginx stack                                             |
 | `--php`           | APT package | PHP7.2-FPM stack                                        |
 | `--php73`         | APT package | PHP7.3-FPM stack                                        |
-| `--php74`         | APT package | PHP7.3-FPM stack                                        |
+| `--php74`         | APT package | PHP7.4-FPM stack                                        |
 | `--mysql`         | APT package | MariaDB stack                                           |
 | `--redis`         | APT package | Redis stack                                             |
 | `--wpcli`         | Binary      | WP-CLI : WordPress CLI                                  |
