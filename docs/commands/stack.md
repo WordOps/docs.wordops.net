@@ -78,7 +78,7 @@ wo stack install
 
 This will install the `--web` stack and `--admin` stack.
 
-Nginx, PHP 7.2, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
+Nginx, PHP 7.4, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
 
 ### Web
 
@@ -86,7 +86,7 @@ Nginx, PHP 7.2, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Admin
 wo stack install --web
 ```
 
-This will install Nginx, PHP 7.2, MariaDB
+This will install Nginx, PHP 7.4, MariaDB
 
 ### Admin tools
 

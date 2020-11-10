@@ -40,8 +40,8 @@ Here the list of WordOps components installed with the above command:
 | Packages          | type        | Description                            |
 | ----------------- | ----------- | -------------------------------------- |
 | Nginx             | APT package | WordOps web server                     |
-| PHP 7.2           | APT package | PHP7.2-FPM                             |
-| MariaDB 10.3      | APT package | Open-source version of MySQL           |
+| PHP 7.2           | APT package | PHP7.4-FPM                             |
+| MariaDB 10.5      | APT package | Open-source version of MySQL           |
 | WP-CLI            | Binary      | The WordPress command-line tool        |
 | Composer          | Binary      | PHP packages manager                   |
 | MySQLTuner        | Binary      | Command-line tool to tune MySQL        |
