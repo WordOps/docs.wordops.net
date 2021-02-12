@@ -18,6 +18,7 @@ Here the list of guides about WordOps available in this documentation:
 - [High traffic WordPress architecture using AWS Lightsail - David Vekslermkd](https://davidveksler.com/2019/10/20/high-traffic-wordpress-architecture-using-aws-lightsail/)
 - [Why You Should Avoid Shared Hosting and Try Nginx with WordOps - Matt](https://www.codecoffee.com/avoid-shared-hosting-try-nginx-wordops/)
 - [Build a Super Optimized WordPress site with WordOps - Varma](https://tutorialforest.com/build-performance-optimized-wordpress-wordops)
+- [Host an incredibly fast WordPress website using WordOps on AWS Lightsail CDN](https://www.ryansmithphotography.com/blog/2021/02/11/host-an-incredibly-fast-wordpress-website-using-wordops-on-aws-lightsail-cdn/)
 
 ### French
 
