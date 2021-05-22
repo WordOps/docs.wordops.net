@@ -28,3 +28,12 @@ There is another step to allow our new user to upload/edit files :
 ```bash
 chmod -R g+rw /var/www/wordops.net/htdocs
 ```
+
+## Firewall configuration
+
+If you are using UFW, you must allow the FTP port and some passive ports:
+
+```
+sudo ufw allow 21
+sudo ufw allow 49000:50000/tcp
+```
