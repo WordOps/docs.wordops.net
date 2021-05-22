@@ -34,6 +34,6 @@ chmod -R g+rw /var/www/wordops.net/htdocs
 If you are using UFW, you must allow the FTP port and some passive ports:
 
 ```
-sudo ufw allow 21
-sudo ufw allow 49000:50000/tcp
+ufw allow 21
+ufw allow 49000:50000/tcp
 ```
