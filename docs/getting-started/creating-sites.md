@@ -18,7 +18,7 @@ WordOps can also:
 
 You can see all the options available to create site in the command list [site create](/commands/site/#site-create)
 
-## Additional informations
+## Additional information
 
 | Component              | Path                              |
 | ---------------------- | --------------------------------- |
@@ -114,7 +114,7 @@ wo site create site.tld --wp --php73 -le
 Create WordPress subdomain multisite secured with a Let's Encrypt Wildcard SSL certificate
 
 !!! info
-    More informations about wildcard SSL certificates our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation/)
+    More information about wildcard SSL certificates our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation/)
 
 ```bash
 wo site create site.tld --wpsubdomain --letsencrypt=wildcard --dns=dns_cf
