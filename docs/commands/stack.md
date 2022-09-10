@@ -34,6 +34,8 @@ Stack available are:
 | `--php`           | APT package | PHP7.2-FPM stack                                        |
 | `--php73`         | APT package | PHP7.3-FPM stack                                        |
 | `--php74`         | APT package | PHP7.4-FPM stack                                        |
+| `--php80`         | APT package | PHP8.0-FPM stack                                        |
+| `--php81`         | APT package | PHP8.1-FPM stack                                        |
 | `--mysql`         | APT package | MariaDB stack                                           |
 | `--redis`         | APT package | Redis stack                                             |
 | `--wpcli`         | Binary      | WP-CLI : WordPress CLI                                  |
@@ -78,7 +80,7 @@ wo stack install
 
 This will install the `--web` stack and `--admin` stack.
 
-Nginx, PHP 7.4, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
+Nginx, PHP 8.0, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
 
 ### Web
 
@@ -86,7 +88,7 @@ Nginx, PHP 7.4, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Admin
 wo stack install --web
 ```
 
-This will install Nginx, PHP 7.4, MariaDB
+This will install Nginx, PHP 8.0, MariaDB
 
 ### Admin tools
 
@@ -117,6 +119,8 @@ wo stack upgrade [options]
 | `--php`        | Upgrade PHP 7.2 stack                     |
 | `--php73`      | Upgrade PHP 7.3 stack                     |
 | `--php74`      | Upgrade PHP 7.4 stack                     |
+| `--php80`      | Upgrade PHP 8.0 stack                     |
+| `--php81`      | Upgrade PHP 8.1 stack                     |
 | `--mysql`      | Upgrade MySQL stack                       |
 | `--wpcli`      | Upgrade WPCLI                             |
 | `--redis`      | Upgrade Redis                             |
@@ -134,7 +138,7 @@ Currently `wo stack upgrade --mysql` will only update the package from the curre
 
 ## stack migrate
 
-Upgrade MariaDB to the latest stable release (10.5)
+Upgrade MariaDB to the latest stable release (10.6)
 
 Usage :
 
