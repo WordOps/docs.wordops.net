@@ -12,14 +12,14 @@ WordOps not only installs and configures the packages needed to deploy a site (N
 
 ### Which operating systems are supported by WordOps ?
 
-WordOps can be installed on Ubuntu LTS (Long Term Service) releases (16.04 & 18.04) as well as on Ubuntu 19.04, Debian 9 (stretch), Debian 10 (buster) and Raspbian 9 (stretch).
+WordOps can be installed on Ubuntu LTS (Long Term Service) releases (18.04, 20.04 & 22.04). We do not officialy support Debian distribution (Debian 10/11 & Raspbian 10/11) because we are not able to run our continuous integration on it.
 Support for other linux distribution isn't planned.
 
 ## Technical
 
 ### Which version of PHP does WordOps support ?
 
-WordOps support PHP 7.2 (default) and PHP 7.3.
+WordOps support PHP 8.0 (default) 7.2, 7.3, 7.4 & 8.1.
 
 ### What is the best caching solution for WordPress ?
 
@@ -49,7 +49,7 @@ At the moment, WordOps backend is secured with a self-signed SSL certificate, wh
 
 ### Does Nginx-wo support TLSv1.3 ?
 
-Yes, since the release v3.9.5.4, our Nginx package for Ubuntu 16.04/18.04/19.04 and for Debian 10 (buster) is compiled with OpenSSL 1.1.1g and support TLSv1.3.
+Yes, since the release v3.9.5.4, our Nginx package support TLSv1.3.
 
 ### Is WordOps Let's Encrypt stack compatible with Cloudflare CDN ?
 

@@ -17,6 +17,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.instant
+    - navigation.top
   icon:
     logo: material/cloud
 
@@ -69,6 +70,7 @@ nav:
   - Chat: https://chat.wordops.net
   - Twitter: https://twitter.com/WordOps_
   - Mastodon: https://mastodon.top/@WordOps
+  - Donate: https://ko-fi.com/wordops
 - About:
   - Give WordOps a Github star: 'about/give-wordops-github-star.md'
   - From EasyEngine to WordOps: 'about/from-easyengine-to-wordops.md'
