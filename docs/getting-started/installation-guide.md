@@ -2,7 +2,7 @@
 
 ## One-Step Automated Install
 
-![PyPI - Downloads](https://img.shields.io/pypi/dw/wordops.svg?cacheSeconds=86400)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/wordops.svg?cacheSeconds=86400)
 
 We provide an installer script which install the required dependencies, before setting-up WordOps. It can be installed with the following command:
 
