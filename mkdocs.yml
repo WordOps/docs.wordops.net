@@ -130,8 +130,6 @@ extra:
       link: https://github.com/WordOps
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/WordOps_
-    - icon: fontawesome/brands/slack
-      link: https://community.wordops.io/slack
     - icon: fontawesome/solid/comments
       link: https://community.wordops.net
   manifest: 'manifest.webmanifest'
