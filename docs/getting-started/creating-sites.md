@@ -69,24 +69,24 @@ WordPress site with Redis cache
 wo site create site.tld --wpredis
 ```
 
-### PHP 7.3
+### PHP 8.1
 
-Simple PHP 7.3 + MySQL site
+Simple PHP 8.1 + MySQL site
 
 ```bash
-wo site create site.tld --mysql --php73
+wo site create site.tld --mysql --php81
 ```
 
-Simple PHP 7.3 site
+Simple PHP 8.1 site
 
 ```bash
-wo site create site.tld --php73
+wo site create site.tld --php81
 ```
 
-Simple WordPress site with PHP 7.3
+Simple WordPress site with PHP 8.1
 
 ```bash
-wo site create site.tld --wp --php73
+wo site create site.tld --wp --php81
 ```
 
 ### Let's Encrypt
@@ -105,10 +105,10 @@ wo site create sub.site.tld --wp -le
 
 **Since the release v3.9.8.4**, WordOps will automatically detect if the site is a domain or a subdomain, and will not issue a certificate for www alias with subdomains
 
-WordPress site with PHP 7.3 and secured by Let's Encrypt
+WordPress site with PHP 8.1 and secured by Let's Encrypt
 
 ```bash
-wo site create site.tld --wp --php73 -le
+wo site create site.tld --wp --php81 -le
 ```
 
 Create WordPress subdomain multisite secured with a Let's Encrypt Wildcard SSL certificate

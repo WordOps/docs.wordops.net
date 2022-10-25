@@ -37,6 +37,11 @@ sudo bash install
 
 If you prefer to perform yourself the same steps than our installer script, here how to install WordOps manually.
 
+!!! danger "deprecated"
+
+    Manual installation instructions are outdated and should not be used to install WordOps. We are now using Python virtualenv to avoid conflicts with other Python packages installed on your server.
+
+
 ### Install WordOps dependencies
 
 ```bash

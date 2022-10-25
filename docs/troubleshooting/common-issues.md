@@ -3,8 +3,7 @@
 
 ## The command `wo update` failed
 
-This is a known issue with WordOps v3.9.6 which has been fixed with the maintenance release v3.9.6.1.
-As a workaround you can either use the command `wo update --beta` or run again the install command:
+If you have any issue when you want to update WordOps, do not hesitate to use the initial install command :
 
 ```bash
 wget -qO wo wops.cc && sudo bash wo
@@ -81,8 +80,4 @@ Just remove the executable `/usr/local/bin/wo` and reinstall WordOps:
 sudo rm -f /usr/local/bin/wo && wget -qO wo wops.cc && sudo bash wo
 ```
 
-If the issue still persist, you can try to reinstall WordOps with pip :
-
-```bash
-sudo python3 -m pip install -I wordops
-```
+If the issue still persist, open an issue on the GitHub repository.
