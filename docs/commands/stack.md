@@ -31,7 +31,7 @@ Stack available are:
 | `--admin`         | Group       | phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ... |
 | `--utils`         | Group       | OpcacheGUI, Webgrind, Anemometer                        |
 | `--nginx`         | APT package | nginx stack                                             |
-| `--php`           | APT package | PHP7.2-FPM stack                                        |
+| `--php`           | APT package | PHP8.0-FPM stack                                        |
 | `--php73`         | APT package | PHP7.3-FPM stack                                        |
 | `--php74`         | APT package | PHP7.4-FPM stack                                        |
 | `--php80`         | APT package | PHP8.0-FPM stack                                        |
