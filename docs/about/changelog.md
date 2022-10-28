@@ -1,5 +1,166 @@
 # Changelog
 
+## v3.15.4 - 2022-10-25
+
+### Fixed
+
+- Nginx prefetch-proxy configuration
+- Linux distribution variable not set properly
+
+## v3.15.3 - 2022-10-24
+
+### Added
+
+- Support for Debian 10/11
+
+### Changed
+
+- Install redis from official repository
+- Redis version bump to 7.0.5
+- WP-CLI version bump to 2.7.1
+- Remove outdated Nginx directives
+- Updated repository GPG Key
+- UFW stack detect proftpd during install
+
+### Fixed
+
+- Netdata upgrade failure on old servers
+- MariaDB service disabled after upgrade with `wo stack migrate --mariadb`
+- Proftpd install on Ubuntu 22.04 and Debian 11
+
+## v3.15.2 - 2022-09-23
+
+### Added
+
+- Add support for Chrome Privacy Preserving Prefetch Proxy [Issue 440](https://github.com/WordOps/WordOps/issues/440)
+
+### Changed
+
+- Cloudflare IP script for Nginx now fetch Cloudflare IPs using the API
+
+### Fixed
+
+- wo secure --auth on Ubuntu 22.04
+
+## v3.15.1 - 2022-09-09
+
+### Fixed
+
+- Hotfix outdated python distro package cause issues on some servers
+
+## v3.15.0 - 2022-09-09
+
+### Added
+
+- Ubuntu 22.04 LTS Support
+
+### Changed
+
+- New Nginx package based on latest Nginx stable release 1.22.2
+- Better Referrer-Policy ([PR #434](https://github.com/WordOps/WordOps/pull/434))
+- MariaDB default version is now 10.6
+
+### Fixed
+
+- `wo log reset --all` ([PR #438](https://github.com/WordOps/WordOps/pull/438))
+- Outdated Nginx directives
+- Netdata stack upgrade([PR #439](https://github.com/WordOps/WordOps/pull/439))
+
+## v3.14.2 - 2022-04-29
+
+### Fixed
+
+- Git unsafe directories issue
+- WP_DEBUG variable in wp-config.php
+
+## v3.14.1 - 2022-02-16
+
+### Fixed
+
+- Cloudflare IP range script ([PR #422](https://github.com/WordOps/WordOps/pull/422))
+- Netdata stack installation
+- Missing php upstream in WordOps backend
+
+## v3.14.0 - 2022-01-26
+
+### Added
+
+- PHP 8.0 and 8.1 support ([PR #413](https://github.com/WordOps/WordOps/pull/413))
+- Support arm64 architecture ([PR #392](https://github.com/WordOps/WordOps/pull/392))
+
+### Changed
+
+- Update WP-CLI to v2.6.0 with PHP 8.0/8.1 support
+- Update adminer to v4.8.1
+- Update Redis repository ([PR #377](https://github.com/WordOps/WordOps/pull/377))
+- Set PHP 8.0 as default PHP version. Can be changed in `/etc/wo/wo.conf`
+
+### Fixed
+
+- WordOps install script issues
+- acme.sh issues with zero-ssl CA
+
+## v3.13.2 - 2020-10-27
+
+### Fixed
+
+- WordOps install issues on some servers
+- MariaDB systemd service not fully enabled after upgrade
+
+## v3.13.1 - 2020-10-26
+
+### Fixed
+
+- Python virtualenv configuration
+- Removing ssl certificate when deleting a site
+
+## v3.13.0 - 2020-10-25
+
+### Added
+
+- MariaDB 10.5 support (installed by default)
+- Upgrade to MariaDB 10.5 with `wo stack migrate --mariadb`
+
+### Changed
+
+- Improved Nginx caching rules to cache requests with query strings related to analytics (utm_, fbclid)
+- WordOps is installed inside a Python virtual environment in /opt/wo to isolate it from the system's Python libraries
+
+### Fixed
+
+- Useless php-cli version removal
+- Redis 6.0.6 not installed on Ubuntu 20.04 LTS
+
+## v3.12.4 - 2020-10-14
+
+### Changed
+
+- Redis 6.0.6 available on Ubuntu LTS
+
+### Fixed
+
+- Avif (AV1 Image Format) & WebP Nginx conditional support([PR #322](https://github.com/WordOps/WordOps/pull/322))
+- Sendmail initial configuration with sendmailconfig
+- SSL certificates export encoding with utf-8
+- Nanorc install on Ubuntu 16.04 LTS
+
+## v3.12.3 - 2020-10-13
+
+### Added
+
+- Add avif (AV1 Image Format) support into Nginx ([PR #314](https://github.com/WordOps/WordOps/pull/314))
+
+### Changed
+
+- Use zstd instead of pigz for archive compression
+- Exclude Nginx_vts status page from traffic calculation ([PR #294](https://github.com/WordOps/WordOps/pull/294))
+
+### Fixed
+
+- fail2ban install without Nginx
+- Grant MySQL permissions on all MySQL/MariaDB variant ([PR #285](https://github.com/WordOps/WordOps/pull/285))
+- PHP PECL extensions and PHP 8.0 issues
+
 ## v3.12.2 - 2020-05-15
 
 ### Fixed
