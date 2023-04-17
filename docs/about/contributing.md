@@ -28,7 +28,7 @@ As the project grows, an increasing share of our time is spent on supporting thi
 
 ### Improve documentation
 
-All of our documentation is in markdown (.md) files inside the WordOps GitHub project. All of our [HTML documentation](https://docs.wordops.net) is generated from these files. At the top right of each documentation page you will see a pencil, that leads you directly to the markdown file that was used to generated it. Don't be afraid to click it and edit any of these documents and submit a GitHub Pull Request with your corrections/additions.
+All of our documentation is in markdown (.md) files inside the WordOps Documentation GitHub [project](https://github.com/WordOps/docs.wordops.net). All of our [HTML documentation](https://docs.wordops.net) is generated from these files. At the top right of each documentation page you will see a pencil, that leads you directly to the markdown file that was used to generated it. Don't be afraid to click it and edit any of these documents and submit a GitHub Pull Request with your corrections/additions.
 
 ## Developers
 
