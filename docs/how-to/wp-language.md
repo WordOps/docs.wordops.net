@@ -24,4 +24,7 @@ In order to avoid such inconsistence, perhaps it's wiser to install WP in `en_US
 ```bash
 cd /var/www/example.com/htdocs
 wp language core install pt_BR --activate --allow-root
+cd wp-content
+chown www-data:www-data languages -R
+# the languages folder is created with owner / group root by the wp language call, this allows update of translations from the dashboard updates page
 ```
