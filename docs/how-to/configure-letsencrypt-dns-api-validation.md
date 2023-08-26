@@ -1,11 +1,11 @@
 # Let's Encrypt DNS API configuration
 
-WordOps use acme.sh to handle SSL certificates, which supports domain validation using DNS API.
+WordOps uses [acme.sh](https://github.com/Neilpang/acme.sh) to handle SSL certificates, which supports domain validation using DNS API.
 This feature is optional to issue domain and subdomain certificates, but is required to issue wildcard certificates.
 
 ## DNS API configuration
 
-WordOps use the Acme client [acme.sh](https://github.com/Neilpang/acme.sh) to handle Let's Encrypt SSL certificates. It support DNS API with the most part of popular DNS providers, including Cloudflare, DigitalOcean, OVH, Amazon Route53, Linode, Gandi and many others.
+WordOps use the Acme client, [acme.sh](https://github.com/Neilpang/acme.sh), to handle Let's Encrypt SSL certificates. It support DNS API with the most part of popular DNS providers, including Cloudflare, DigitalOcean, OVH, Amazon Route53, Linode, Gandi and many others.
 
 In this example, we will configure Cloudflare DNS API, but configuration will be pretty similar with other DNS providers.
 
@@ -47,7 +47,7 @@ export GD_Secret="asdfsdafdsfdsfdsfdsfdsafd"
 ```
 
 !!! info
-    DNS providers list and configurations are available in [Acme.sh Wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
+    DNS providers list and configurations are available in the [Acme.sh Wiki](https://github.com/Neilpang/acme.sh/wiki/dnsapi)
 
 ### Step 3: issue your certificate
 
