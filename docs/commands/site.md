@@ -69,6 +69,17 @@ wo site create site.tld --proxy=127.0.0.1:3000
 
 This will create proxy site site.tld with proxy destination as 127.0.0.1:3000. Port is optional. Default port: 80.
 
+#### Alias site
+
+To create an alias site you can use --alias during site creation
+
+```bash
+wo site create site.tld --alias sitetoredirect.tld
+```
+
+It will create a nginx vhost for site.tld which redirect to sitetoredirect.tld.
+
+
 ### WordPress
 
 Following are the WordPress website types you can create website based on Cache Mechanism

@@ -80,6 +80,9 @@ wo stack install
 
 This will install the `--web` stack and `--admin` stack.
 
+!!! info
+    You can define MariaDB and PHP version to install by default in `/etc/wo/wo.conf`
+
 Nginx, PHP 8.0, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
 
 ### Web
@@ -138,7 +141,7 @@ Currently `wo stack upgrade --mysql` will only update the package from the curre
 
 ## stack migrate
 
-Upgrade MariaDB to the latest stable release (10.6)
+Upgrade MariaDB to the MariaDB release defined in `/etc/wo/wo.conf`
 
 Usage :
 

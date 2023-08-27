@@ -22,7 +22,6 @@ echo -e "alias wo='sudo -E wo'" >> $HOME/.bashrc
 
 Then apply it with `source $HOME/.bashrc`
 
-
 ## Installing WordOps stacks (optional)
 
 You can install WordOps main stacks with the following command before creating your first site, or create directly a site and WordOps will install required stacks.
@@ -33,6 +32,9 @@ Installing WordOps main stacks
 wo stack install
 ```
 
+!!! info
+    You can define MariaDB and PHP version to install by default in `/etc/wo/wo.conf`
+
 <asciinema-player src="/images/stackinstall.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Here the list of WordOps components installed with the above command:
@@ -40,8 +42,8 @@ Here the list of WordOps components installed with the above command:
 | Packages          | type        | Description                            |
 | ----------------- | ----------- | -------------------------------------- |
 | Nginx             | APT package | WordOps web server                     |
-| PHP 8.0           | APT package | PHP8.0-FPM                             |
-| MariaDB 10.6      | APT package | Open-source version of MySQL           |
+| PHP               | APT package | [Current supported PHP release](https://endoflife.date/php)         |
+| MariaDB 10.11     | APT package | Latest LTS MariaDB release           |
 | WP-CLI            | Binary      | The WordPress command-line tool        |
 | Composer          | Binary      | PHP packages manager                   |
 | MySQLTuner        | Binary      | Command-line tool to tune MySQL        |

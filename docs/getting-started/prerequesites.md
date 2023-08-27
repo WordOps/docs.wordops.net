@@ -44,9 +44,9 @@ The following operating systems are supported:
 | ------------ | ------------------ | ------------ |
 | **Ubuntu**   | 22.04 LTS (focal)  | x86_64       |
 |              | 20.04 LTS (bionic) | x86_64       |
-|              | 18.04 LTS (xenial) | x86_64       |
 | **Debian**   | 10 (buster)        | x86_64       |
 |              | 11 (bullseye)      | x86_64       |
+|              | 12 (bookworm)      | x86_64       |
 | **Raspbian** | 10 (buster)        | armv7l       |
 |              | 11 (bullseye)      | armv7l       |
 

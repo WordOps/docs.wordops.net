@@ -6,130 +6,129 @@ edit_uri: "https://github.com/WordOps/docs.wordops.net/edit/master/docs/"
 remote_branch: gh-pages
 
 theme:
-  name: 'material'
-  favicon: 'images/favicon.png'
-  language: 'en'
-  font: false
-  highlightjs: true
-  palette:
-    primary: 'light-blue'
-    accent: 'indigo'
-  features:
-    - navigation.tabs
-    - navigation.instant
-    - navigation.top
-  icon:
-    logo: material/cloud
+    name: "material"
+    favicon: "images/favicon.png"
+    language: "en"
+    font: false
+    highlightjs: true
+    palette:
+        primary: "light-blue"
+        accent: "indigo"
+    features:
+        - navigation.tabs
+        - navigation.instant
+        - navigation.top
+        - content.action.edit
+        - content.code.copy
+    icon:
+        logo: material/cloud
 
 plugins:
-  - search
-  - minify:
-      minify_html: true
-
+    - search
+    - minify:
+          minify_html: true
 
 markdown_extensions:
-  # Code highlighting in ``` ``` blocks
-  - codehilite:
-      guess_lang: true
-# Table of Contents
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-# block div
-  - admonition
-  - meta
+    # Code highlighting in ``` ``` blocks
+    - codehilite:
+          guess_lang: true
+    # Table of Contents
+    - toc:
+          permalink: true
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+    # block div
+    - admonition
+    - meta
 
 extra_css:
-  - css/extra.css
-  - css/asciinema-player.min.css
+    - css/extra.css
+    - css/asciinema-player.min.css
 
 extra_javascript:
-  - 'js/asciinema-player.js'
-
+    - "js/asciinema-player.js"
 
 nav:
-- Documentation:
-  - Home: 'README.md'
-  - F.A.Q: 'https://wordops.net/f-a-q/'
-  - WordOps.net: https://wordops.net
-  - Blog: https://wordops.net/blog/
-  - Forum: https://community.wordops.net
-  - Chat: https://chat.wordops.net
-  - Twitter: https://twitter.com/WordOps_
-  - Mastodon: https://mastodon.top/@WordOps
-  - Donate: https://ko-fi.com/wordops
-- About:
-  - Give WordOps a Github star: 'about/give-wordops-github-star.md'
-  - From EasyEngine to WordOps: 'about/from-easyengine-to-wordops.md'
-  - Changelog: 'about/changelog.md'
-  - Contributing: 'about/contributing.md'
-  - Code of conduct: 'about/code-of-conduct.md'
-  - Contributors: 'https://github.com/WordOps/WordOps/graphs/contributors'
-- Getting Started:
-  - Prerequisites: 'getting-started/prerequesites.md'
-  - Installation: 'getting-started/installation-guide.md'
-  - Post-install steps: 'getting-started/post-install-steps.md'
-  - Creating sites: 'getting-started/creating-sites.md'
-  - WordOps structure: 'getting-started/wordops-structure.md'
-- Commands:
-  - Overview: 'commands.md'
-  - site: 'commands/site.md'
-  - stack: 'commands/stack.md'
-  - debug: 'commands/debug.md'
-  - clean: 'commands/clean.md'
-  - info: 'commands/info.md'
-  - log: 'commands/log.md'
-  - secure: 'commands/secure.md'
-  - maintenance: 'commands/maintenance.md'
-  - update: 'commands/update.md'
-- How to :
-  - Overview: 'how-to.md'
-  - Set WordPress language: 'how-to/wp-language.md'
-  - Secure WordOps backend: 'how-to/secure-22222.md'
-  - Configure LetsEncrypt DNS API : 'how-to/configure-letsencrypt-dns-api-validation.md'
-  - Get A+ grade on ssllabs: 'how-to/get-a-plus-grade-ssllabs.md'
-  - Add FTP users: 'how-to/add-ftp-users.md'
-  - Remote MySQL server with WordOps: 'how-to/remote-mysql-server.md'
-  - Install HWE stacks on Ubuntu: 'how-to/ubuntu-lts-hwe-stacks.md'
-  - Automate WordPress post-install: 'how-to/post-install-wp.md'
-  - How to allow zip & gzip files download: 'how-to/allow-zip-gzip-files-download.md'
-  - Setup basic auth on site: 'how-to/setup-basic-auth.md'
-  - Automate WordOps installation : 'how-to/automate-wordops-install.md'
-  - Microcaching with Nginx: 'how-to/microcaching-with-nginx.md'
-  - Bypass fastcgi_cache on specific URLs: 'how-to/bypass-fastcgi-cache-on-specific-urls.md'
-  - Setup Sendmail with Sendgrid: 'how-to/setup-sendmail-with-sendgrid.md'
-- Guides:
-  - Overview: 'guides.md'
-  - EasyEngine Migration: 'guides/migration-from-easyengine.md'
-  - LetsEncrypt SSL certificates: 'guides/manage-ssl-certificates.md'
-  - WordPress sites migration: 'guides/wordpress-migration.md'
-  - WordOps With DigitalOcean volumes: 'guides/wordops-with-digitalocean-volume.md'
-  - Enable live kernel patching on Ubuntu: 'guides/enable-live-kernel-patching.md'
-- Troubleshooting:
-  - Bug reporting guidelines: 'troubleshooting/bug-reporting.md'
-  - Common issues: 'troubleshooting/common-issues.md'
+    - Documentation:
+          - Home: "README.md"
+          - F.A.Q: "https://wordops.net/f-a-q/"
+          - WordOps.net: https://wordops.net
+          - Blog: https://wordops.net/blog/
+          - Forum: https://community.wordops.net
+          - Twitter: https://twitter.com/WordOps_
+          - Mastodon: https://mastodon.top/@WordOps
+          - Donate: https://ko-fi.com/wordops
+    - About:
+          - Give WordOps a Github star: "about/give-wordops-github-star.md"
+          - From EasyEngine to WordOps: "about/from-easyengine-to-wordops.md"
+          - Changelog: "about/changelog.md"
+          - Contributing: "about/contributing.md"
+          - Code of conduct: "about/code-of-conduct.md"
+          - Contributors: "https://github.com/WordOps/WordOps/graphs/contributors"
+    - Getting Started:
+          - Prerequisites: "getting-started/prerequesites.md"
+          - Installation: "getting-started/installation-guide.md"
+          - Post-install steps: "getting-started/post-install-steps.md"
+          - Creating sites: "getting-started/creating-sites.md"
+          - WordOps structure: "getting-started/wordops-structure.md"
+    - Commands:
+          - Overview: "commands.md"
+          - site: "commands/site.md"
+          - stack: "commands/stack.md"
+          - debug: "commands/debug.md"
+          - clean: "commands/clean.md"
+          - info: "commands/info.md"
+          - log: "commands/log.md"
+          - secure: "commands/secure.md"
+          - maintenance: "commands/maintenance.md"
+          - update: "commands/update.md"
+    - How to:
+          - Overview: "how-to.md"
+          - Set WordPress language: "how-to/wp-language.md"
+          - Secure WordOps backend: "how-to/secure-22222.md"
+          - Configure LetsEncrypt DNS API: "how-to/configure-letsencrypt-dns-api-validation.md"
+          - Get A+ grade on ssllabs: "how-to/get-a-plus-grade-ssllabs.md"
+          - Add FTP users: "how-to/add-ftp-users.md"
+          - Remote MySQL server with WordOps: "how-to/remote-mysql-server.md"
+          - Install HWE stacks on Ubuntu: "how-to/ubuntu-lts-hwe-stacks.md"
+          - Automate WordPress post-install: "how-to/post-install-wp.md"
+          - How to allow zip & gzip files download: "how-to/allow-zip-gzip-files-download.md"
+          - Setup basic auth on site: "how-to/setup-basic-auth.md"
+          - Automate WordOps installation: "how-to/automate-wordops-install.md"
+          - Microcaching with Nginx: "how-to/microcaching-with-nginx.md"
+          - Bypass fastcgi_cache on specific URLs: "how-to/bypass-fastcgi-cache-on-specific-urls.md"
+          - Setup Sendmail with Sendgrid: "how-to/setup-sendmail-with-sendgrid.md"
+    - Guides:
+          - Overview: "guides.md"
+          - EasyEngine Migration: "guides/migration-from-easyengine.md"
+          - LetsEncrypt SSL certificates: "guides/manage-ssl-certificates.md"
+          - WordPress sites migration: "guides/wordpress-migration.md"
+          - WordOps With DigitalOcean volumes: "guides/wordops-with-digitalocean-volume.md"
+          - Enable live kernel patching on Ubuntu: "guides/enable-live-kernel-patching.md"
+    - Troubleshooting:
+          - Bug reporting guidelines: "troubleshooting/bug-reporting.md"
+          - Common issues: "troubleshooting/common-issues.md"
 
 extra:
-  social:
-    - icon: fontawesome/solid/globe
-      link: https://wordops.net
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/WordOps
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/WordOps_
-    - icon: fontawesome/solid/comments
-      link: https://community.wordops.net
-  manifest: 'manifest.webmanifest'
+    social:
+        - icon: fontawesome/solid/globe
+          link: https://wordops.net
+        - icon: fontawesome/brands/github-alt
+          link: https://github.com/WordOps
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/WordOps_
+        - icon: fontawesome/solid/comments
+          link: https://community.wordops.net
+    manifest: "manifest.webmanifest"
