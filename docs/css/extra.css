@@ -9,7 +9,6 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 /* roboto-regular - latin */
 
 @font-face {
@@ -21,7 +20,6 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 /* roboto-regular - latin */
 
 @font-face {
@@ -32,7 +30,6 @@
     url('/css/fonts/roboto-v20-latin-regular.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 
 /* roboto-500 - latin */
 
@@ -45,7 +42,6 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 /* roboto-italic - latin */
 
 @font-face {
@@ -57,7 +53,6 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 /* roboto-700 - latin */
 
 @font-face {
@@ -68,7 +63,6 @@
     url('/css/fonts/roboto-v20-latin-700.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 
 /* roboto-mono-regular - latin */
 
@@ -156,10 +150,6 @@ strong {
     font-size: 18px;
 }
 
-.md-nav__link {
-    white-space: nowrap;
-}
-
 .md-nav__title {
     display: none;
 }
@@ -223,7 +213,6 @@ video {
     border: 2px solid #000;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 /* Hide the label at the top of the navigation menu. Does nothing.
    Well, it does do something on mobile, and this media query makes

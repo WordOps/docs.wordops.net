@@ -110,6 +110,7 @@ nav:
           - Microcaching with Nginx: "how-to/microcaching-with-nginx.md"
           - Bypass fastcgi_cache on specific URLs: "how-to/bypass-fastcgi-cache-on-specific-urls.md"
           - Setup Sendmail with Sendgrid: "how-to/setup-sendmail-with-sendgrid.md"
+          - Define MariaDB and Default PHP version: "how-to/define-mariadb-and-default-php-version.md"
     - Guides:
           - Overview: "guides.md"
           - EasyEngine Migration: "guides/migration-from-easyengine.md"
