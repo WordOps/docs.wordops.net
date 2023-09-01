@@ -73,7 +73,7 @@ nav:
     - About:
           - Give WordOps a Github star: "about/give-wordops-github-star.md"
           - From EasyEngine to WordOps: "about/from-easyengine-to-wordops.md"
-          - Changelog: "about/changelog.md"
+          - Changelog: "https://github.com/WordOps/WordOps/blob/master/CHANGELOG.md"
           - Contributing: "about/contributing.md"
           - Code of conduct: "about/code-of-conduct.md"
           - Contributors: "https://github.com/WordOps/WordOps/graphs/contributors"
