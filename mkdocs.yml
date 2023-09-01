@@ -27,6 +27,7 @@ plugins:
     - search
     - minify:
           minify_html: true
+    - social
 
 markdown_extensions:
     # Code highlighting in ``` ``` blocks
