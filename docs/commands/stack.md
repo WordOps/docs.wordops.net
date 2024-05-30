@@ -36,6 +36,8 @@ Stack available are:
 | `--php74`         | APT package | PHP7.4-FPM stack                                        |
 | `--php80`         | APT package | PHP8.0-FPM stack                                        |
 | `--php81`         | APT package | PHP8.1-FPM stack                                        |
+| `--php82`         | APT package | PHP8.2-FPM stack                                        |
+| `--php83`         | APT package | PHP8.3-FPM stack                                        |
 | `--mysql`         | APT package | MariaDB stack                                           |
 | `--redis`         | APT package | Redis stack                                             |
 | `--wpcli`         | Binary      | WP-CLI : WordPress CLI                                  |
@@ -124,6 +126,8 @@ wo stack upgrade [options]
 | `--php74`      | Upgrade PHP 7.4 stack                     |
 | `--php80`      | Upgrade PHP 8.0 stack                     |
 | `--php81`      | Upgrade PHP 8.1 stack                     |
+| `--php82`      | Upgrade PHP 8.2 stack                     |
+| `--php83`      | Upgrade PHP 8.3 stack                     |
 | `--mysql`      | Upgrade MySQL stack                       |
 | `--wpcli`      | Upgrade WPCLI                             |
 | `--redis`      | Upgrade Redis                             |
