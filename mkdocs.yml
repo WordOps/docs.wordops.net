@@ -4,7 +4,7 @@ copyright: 'Copyright &copy; 2022 WordOps - <a rel="license" href="http://creati
 repo_url: https://github.com/WordOps/WordOps/
 edit_uri: "https://github.com/WordOps/docs.wordops.net/edit/master/docs/"
 remote_branch: gh-pages
-
+site_url: https://docs.wordops.net
 theme:
     name: "material"
     favicon: "images/favicon.png"
