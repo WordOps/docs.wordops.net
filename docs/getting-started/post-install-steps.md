@@ -52,7 +52,6 @@ Here the list of WordOps components installed with the above command:
 | Adminer           | Web App     | lightweight phpMyAdmin alternative     |
 | OpcacheGUI        | Web App     | web interface for Opcache monitoring   |
 | Netdata           | Binary      | Monitoring suite                       |
-| Anemometer        | Web App     | MySQL Slow Query Monitor               |
 | WordOps dashboard | Web App     | Bootstrap template for WordOps backend |
 | eXtplorer         | Web App     | Web File manager                       |
 | cheat.sh          | Binary      | Command-line Linux cheatsheet          |
