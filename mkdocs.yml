@@ -25,7 +25,9 @@ theme:
 
 plugins:
     - search
-    - social
+    - social:
+      cards_layout_options:
+          font_family: Roboto
 
 markdown_extensions:
     # Code highlighting in ``` ``` blocks
