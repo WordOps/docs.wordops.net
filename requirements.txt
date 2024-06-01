@@ -1,4 +1,4 @@
 mkdocs
 mkdocs-material
-mkdocs-minify-plugin
+mkdocs-material[imaging]
 pymdown-extensions
