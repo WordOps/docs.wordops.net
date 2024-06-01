@@ -24,7 +24,6 @@ theme:
 
 plugins:
     - search
-    - social
 
 markdown_extensions:
     # Code highlighting in ``` ``` blocks
