@@ -9,7 +9,6 @@ theme:
     name: "material"
     favicon: "images/favicon.png"
     language: "en"
-    font: false
     highlightjs: true
     palette:
         primary: "light-blue"
