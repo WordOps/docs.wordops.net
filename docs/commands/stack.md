@@ -8,59 +8,63 @@ Usage:
 wo stack (command) [options]
 ```
 
-| subcommand                | description                |
+|        subcommand         |        description         |
 | :-----------------------: | :------------------------: |
-| [install](#stack-install) | Install WordOps stacks     |
-| [upgrade](#stack-upgrade) | Upgrade WordOps stack      |
-| [migrate](#stack-migrate) | Upgrade MariaDB stack      |
-| [remove](#stack-remove)   | Uninstall packages         |
-| [purge](#stack-purge)     | Uninstall & purge packages |
-| [reload](#stack-reload)   | Reload WordOps stack       |
-| [restart](#stack-restart) | Restart WordOps stack      |
-| [stop](#stack-stop)       | Stop WordOps stack         |
-| [start](#stack-start)     | Start WordOps stack        |
+| [install](#stack-install) |   Install WordOps stacks   |
+| [upgrade](#stack-upgrade) |   Upgrade WordOps stack    |
+| [migrate](#stack-migrate) |   Upgrade MariaDB stack    |
+|  [remove](#stack-remove)  |     Uninstall packages     |
+|   [purge](#stack-purge)   | Uninstall & purge packages |
+|  [reload](#stack-reload)  |    Reload WordOps stack    |
+| [restart](#stack-restart) |   Restart WordOps stack    |
+|    [stop](#stack-stop)    |     Stop WordOps stack     |
+|   [start](#stack-start)   |    Start WordOps stack     |
 
 !!! info
+
+<!-- prettier-ignore     -->
     Options are the same for `wo stack install`, `wo stack remove` and `wo stack purge`
+
+<!-- prettier-ignore-end -->
 
 Stack available are:
 
-| options           | type        | description                                             |
-| ----------------- | ----------- | ------------------------------------------------------- |
-| `--web`           | Group       | Nginx, PHP, MySQL, WP-CLI                               |
-| `--admin`         | Group       | phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ... |
-| `--utils`         | Group       | OpcacheGUI, Webgrind, Anemometer                        |
-| `--nginx`         | APT package | nginx stack                                             |
-| `--php`           | APT package | PHP8.0-FPM stack                                        |
-| `--php73`         | APT package | PHP7.3-FPM stack                                        |
-| `--php74`         | APT package | PHP7.4-FPM stack                                        |
-| `--php80`         | APT package | PHP8.0-FPM stack                                        |
-| `--php81`         | APT package | PHP8.1-FPM stack                                        |
-| `--php82`         | APT package | PHP8.2-FPM stack                                        |
-| `--php83`         | APT package | PHP8.3-FPM stack                                        |
-| `--mysql`         | APT package | MariaDB stack                                           |
-| `--redis`         | APT package | Redis stack                                             |
-| `--wpcli`         | Binary      | WP-CLI : WordPress CLI                                  |
-| `--phpmyadmin`    | Web App     | phpMyAdmin : Web interface for MySQL                    |
-| `--composer`      | Binary      | Composer : PHP dependencies manager                     |
-| `--netdata`       | Binary      | Netdata : Real-time monitoring suite                    |
-| `--dashboard`     | Web App     | WordOps dashboard                                       |
-| `--extplorer`     | Web App     | eXtplorer Filemanager                                   |
-| `--adminer`       | Web App     | adminer (phpmyadmin alternative)                        |
-| `--fail2ban`      | APT package | Fail2ban : Bruteforce protection                        |
-| `--phpredisadmin` | Web App     | phpredisadmin : Web interface for Redis                 |
-| `--proftpd`       | APT package | proftpd stack : FTP server                              |
-| `--mysqltuner`    | Binary      | MySQLTuner stack : MySQL tuning tool                    |
-| `--ufw`           | APT package | UFW : Firewall                                          |
-| `--sendmail`      | APT package | Sendmail MTA                                            |
-| `--ngxblocker`    | Binary      | Ultimate Nginx bad bots blocker                         |
-| `--nanorc`        | Binary      | Nano editor syntax highlighting                         |
+| options           | type          | description                                             |
+| ----------------- | ------------- | ------------------------------------------------------- |
+| `--web`           | Group         | Nginx, PHP, MySQL, WP-CLI                               |
+| `--admin`         | Group         | phpMyAdmin, Adminer, Dashboard, Netdata, MySQLTuner ... |
+| `--utils`         | Group         | OpcacheGUI, Webgrind, Anemometer                        |
+| `--nginx`         | APT package   | nginx stack                                             |
+| `--php`           | APT package   | Current supported PHP-FPM stack                         |
+| `--php74`         | APT package   | PHP7.4-FPM stack                                        |
+| `--php80`         | APT package   | PHP8.0-FPM stack                                        |
+| `--php81`         | APT package   | PHP8.1-FPM stack                                        |
+| `--php82`         | APT package   | PHP8.2-FPM stack                                        |
+| `--php83`         | APT package   | PHP8.3-FPM stack                                        |
+| `--mysql`         | APT package   | MariaDB stack                                           |
+| `--redis`         | APT package   | Redis stack                                             |
+| `--wpcli`         | Binary        | WP-CLI : WordPress CLI                                  |
+| `--phpmyadmin`    | Web App       | phpMyAdmin : Web interface for MySQL                    |
+| `--composer`      | Binary        | Composer : PHP dependencies manager                     |
+| `--netdata`       | Binary        | Netdata : Real-time monitoring suite                    |
+| `--dashboard`     | Web App       | WordOps dashboard                                       |
+| `--extplorer`     | Web App       | eXtplorer Filemanager                                   |
+| `--adminer`       | Web App       | adminer (phpmyadmin alternative)                        |
+| `--fail2ban`      | APT package   | Fail2ban : Bruteforce protection                        |
+| `--phpredisadmin` | Web App       | phpredisadmin : Web interface for Redis                 |
+| `--proftpd`       | APT package   | proftpd stack : FTP server                              |
+| `--mysqltuner`    | Binary        | MySQLTuner stack : MySQL tuning tool                    |
+| `--ufw`           | APT package   | UFW : Firewall                                          |
+| `--sendmail`      | APT package   | Sendmail MTA                                            |
+| `--ngxblocker`    | Binary        | Ultimate Nginx bad bots blocker                         |
+| `--nanorc`        | Binary        | Nano editor syntax highlighting                         |
+| `--brotli`        | Configuration | Enable/Disable Brotli compression if Nginx is installed |
 
 ### Packages types
 
-- APT package are debian packages installed from APT repositories
-- Binaries are simple executables
-- Web App are php based applications
+-   APT package are debian packages installed from APT repositories
+-   Binaries are simple executables
+-   Web App are php based applications
 
 ## stack install
 
@@ -83,9 +87,13 @@ wo stack install
 This will install the `--web` stack and `--admin` stack.
 
 !!! info
+
+<!-- prettier-ignore -->
     You can define MariaDB and PHP version to install by default in `/etc/wo/wo.conf`
 
-Nginx, PHP 8.0, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
+<!-- prettier-ignore-end -->
+
+Nginx, Current supported PHP version, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Adminer, MySQLtuner, OpcacheGUI
 
 ### Web
 
@@ -93,7 +101,7 @@ Nginx, PHP 8.0, MariaDB, Netdata, Fail2Ban, WordOps dashboard, phpMyAdmin, Admin
 wo stack install --web
 ```
 
-This will install Nginx, PHP 8.0, MariaDB
+This will install Nginx, Current supported PHP version, MariaDB
 
 ### Admin tools
 
@@ -121,8 +129,6 @@ wo stack upgrade [options]
 | `--web`        | Upgrade web stack                         |
 | `--admin`      | Upgrade admin tools stack                 |
 | `--nginx`      | Upgrade Nginx stack                       |
-| `--php`        | Upgrade PHP 7.2 stack                     |
-| `--php73`      | Upgrade PHP 7.3 stack                     |
 | `--php74`      | Upgrade PHP 7.4 stack                     |
 | `--php80`      | Upgrade PHP 8.0 stack                     |
 | `--php81`      | Upgrade PHP 8.1 stack                     |
@@ -168,10 +174,10 @@ Usage:
 wo stack remove <stack> [options]
 ```
 
-| options           | description                                 |
-| ----------------- | ------------------------------------------- |
-| `--all`           | Remove all stacks at once                   |
-| `--force`         | Force install/remove/purge without prompt   |
+| options   | description                               |
+| --------- | ----------------------------------------- |
+| `--all`   | Remove all stacks at once                 |
+| `--force` | Force install/remove/purge without prompt |
 
 For APT packages, `wo stack remove` will just uninstall package without deleting their configurations or data. For binaries or web app, it will do the same than `wo stack purge`
 
@@ -180,7 +186,11 @@ For APT packages, `wo stack remove` will just uninstall package without deleting
 Remove and purge stacks (including configurations and data)
 
 !!! Warning
+
+<!-- prettier-ignore -->
     Please be careful when using `wo stack purge` because it will remove APT packages but also purge all configurations or data, including MySQL databases, Redis databases or Nginx vhosts.
+
+<!-- prettier-ignore-end -->
 
 Usage:
 
@@ -188,10 +198,10 @@ Usage:
 wo stack purge <stack> [options]
 ```
 
-| options         | description                                 |
-| --------------- | ------------------------------------------- |
-| --all           | Remove all stacks at once                   |
-| --force         | Force install/remove/purge without prompt   |
+| options | description                               |
+| ------- | ----------------------------------------- |
+| --all   | Remove all stacks at once                 |
+| --force | Force install/remove/purge without prompt |
 
 ## stack restart
 

@@ -33,35 +33,39 @@ wo stack install
 ```
 
 !!! info
+
+<!-- prettier-ignore -->
     You can define MariaDB and PHP version to install by default in `/etc/wo/wo.conf`
+
+<!-- prettier-ignore-end -->
 
 <asciinema-player src="/images/stackinstall.cast" autoplay loop cols="125" rows="30"></asciinema-player>
 
 Here the list of WordOps components installed with the above command:
 
-| Packages          | type        | Description                            |
-| ----------------- | ----------- | -------------------------------------- |
-| Nginx             | APT package | WordOps web server                     |
-| PHP               | APT package | [Current supported PHP release](https://endoflife.date/php)         |
-| MariaDB 10.11     | APT package | Latest LTS MariaDB release           |
-| WP-CLI            | Binary      | The WordPress command-line tool        |
-| Composer          | Binary      | PHP packages manager                   |
-| MySQLTuner        | Binary      | Command-line tool to tune MySQL        |
-| Fail2ban          | APT package | Authentication bruteforce protection   |
-| phpMyAdmin        | Web App     | MySQL server web interface             |
-| Adminer           | Web App     | lightweight phpMyAdmin alternative     |
-| OpcacheGUI        | Web App     | web interface for Opcache monitoring   |
-| Netdata           | Binary      | Monitoring suite                       |
-| WordOps dashboard | Web App     | Bootstrap template for WordOps backend |
-| eXtplorer         | Web App     | Web File manager                       |
-| cheat.sh          | Binary      | Command-line Linux cheatsheet          |
-| Sendmail          | APT package | Sendmail MTA                           |
+| Packages          | type        | Description                                                 |
+| ----------------- | ----------- | ----------------------------------------------------------- |
+| Nginx             | APT package | WordOps web server                                          |
+| PHP               | APT package | [Current supported PHP release](https://endoflife.date/php) |
+| MariaDB 11.4      | APT package | Latest LTS MariaDB release                                  |
+| WP-CLI            | Binary      | The WordPress command-line tool                             |
+| Composer          | Binary      | PHP packages manager                                        |
+| MySQLTuner        | Binary      | Command-line tool to tune MySQL                             |
+| Fail2ban          | APT package | Authentication bruteforce protection                        |
+| phpMyAdmin        | Web App     | MySQL server web interface                                  |
+| Adminer           | Web App     | lightweight phpMyAdmin alternative                          |
+| OpcacheGUI        | Web App     | web interface for Opcache monitoring                        |
+| Netdata           | Binary      | Monitoring suite                                            |
+| WordOps dashboard | Web App     | Bootstrap template for WordOps backend                      |
+| eXtplorer         | Web App     | Web File manager                                            |
+| cheat.sh          | Binary      | Command-line Linux cheatsheet                               |
+| Sendmail          | APT package | Sendmail MTA                                                |
 
 ### Packages types
 
-- APT package are Debian packages installed from APT repositories
-- Binaries are simple executables (do not use any server resources when you are not running them)
-- Web App are PHP based applications
+-   APT package are Debian packages installed from APT repositories
+-   Binaries are simple executables (do not use any server resources when you are not running them)
+-   Web App are PHP based applications
 
 ## WordOps backend
 

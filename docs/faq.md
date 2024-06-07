@@ -19,7 +19,7 @@ Support for other linux distribution isn't planned.
 
 ### Which version of PHP does WordOps support ?
 
-WordOps support PHP 8.0 (default) 7.2, 7.3, 7.4 & 8.1.
+WordOps support PHP 8.2 (default) 7.4, 8.1 & 8.3
 
 ### What is the best caching solution for WordPress ?
 
@@ -60,7 +60,11 @@ WordOps Let's Encrypt stack is fully compatible with Cloudflare CDN, and you can
 If you need/want to uninstall WordOps, you can use the following commands:
 
 !!! warning
+
+<!-- prettier-ignore -->
     Make a backup of your databases before purging wordops packages
+
+<!-- prettier-ignore-end -->
 
 ```bash
 # purge wordops packages (nginx, mysql, php etc..)

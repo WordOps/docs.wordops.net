@@ -6,15 +6,15 @@ You can create site with WordOps by using the command `wo site create`.
 
 WordOps will always:
 
-- install required stack if needed
-- configure Nginx vhost
-- create site directory
+-   install required stack if needed
+-   configure Nginx vhost
+-   create site directory
 
 WordOps can also:
 
-- create the site database
-- install WordPress (with or without caching)
-- secure site with Let's Encrypt SSL certificate
+-   create the site database
+-   install WordPress (with or without caching)
+-   secure site with Let's Encrypt SSL certificate
 
 You can see all the options available to create site in the command list [site create](/commands/site/#site-create)
 
@@ -114,7 +114,11 @@ wo site create site.tld --wp --php81 -le
 Create WordPress subdomain multisite secured with a Let's Encrypt Wildcard SSL certificate
 
 !!! info
+
+<!-- prettier-ignore -->
     More information about wildcard SSL certificates our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation/)
+
+<!-- prettier-ignore-end -->
 
 ```bash
 wo site create site.tld --wpsubdomain --letsencrypt=wildcard --dns=dns_cf

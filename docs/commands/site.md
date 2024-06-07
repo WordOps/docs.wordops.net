@@ -9,7 +9,7 @@ wo site (command) [options]
 ```
 
 | subcommand               | description                       |
-|--------------------------|-----------------------------------|
+| ------------------------ | --------------------------------- |
 | [create](#site-create)   | Create site with WordOps          |
 | [update](#site-update)   | Update site type or configuration |
 | [info](#site-info)       | Get site information              |
@@ -79,7 +79,6 @@ wo site create site.tld --alias sitetoredirect.tld
 
 It will create a nginx vhost for site.tld which redirect to sitetoredirect.tld.
 
-
 ### WordPress
 
 Following are the WordPress website types you can create website based on Cache Mechanism
@@ -128,14 +127,14 @@ wo site create site.tld --ngxblocker
 
 #### Cheatsheet
 
-| Cache                     | single site   | multisite w/ subdir     | multisite w/ subdom        |
-| ------------------------- | ------------- | ----------------------- | -------------------------- |
-| **NO Cache**              | `--wp`        | `--wpsubdir`            | `--wpsubdomain`            |
-| **WP Super Cache plugin** | `--wpsc`      | `--wpsubdir --wpsc`     | `--wpsubdomain --wpsc`     |
-| **Nginx fastcgi_cache**   | `--wpfc`      | `--wpsubdir --wpfc`     | `--wpsubdomain --wpfc`     |
-| **Redis cache**           | `--wpredis`   | `--wpsubdir --wpredis`  | `--wpsubdomain --wpredis`  |
-| **WP-Rocket plugin**      | `--wprocket`  | `--wpsubdir --wprocket` | `--wpsubdomain --wprocket` |
-| **Cache-Enabler plugin**  | `--wpce`      | `--wpsubdir --wpce`     | `--wpsubdomain --wpce`     |
+| Cache                     | single site  | multisite w/ subdir     | multisite w/ subdom        |
+| ------------------------- | ------------ | ----------------------- | -------------------------- |
+| **NO Cache**              | `--wp`       | `--wpsubdir`            | `--wpsubdomain`            |
+| **WP Super Cache plugin** | `--wpsc`     | `--wpsubdir --wpsc`     | `--wpsubdomain --wpsc`     |
+| **Nginx fastcgi_cache**   | `--wpfc`     | `--wpsubdir --wpfc`     | `--wpsubdomain --wpfc`     |
+| **Redis cache**           | `--wpredis`  | `--wpsubdir --wpredis`  | `--wpsubdomain --wpredis`  |
+| **WP-Rocket plugin**      | `--wprocket` | `--wpsubdir --wprocket` | `--wpsubdomain --wprocket` |
+| **Cache-Enabler plugin**  | `--wpce`     | `--wpsubdir --wpce`     | `--wpsubdomain --wpce`     |
 
 #### Extra settings
 
@@ -221,7 +220,11 @@ export CF_Email="email@domain.com"
 ```
 
 !!! info
+
+<!-- prettier-ignore -->
     More example in our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation)
+
+<!-- prettier-ignore-end -->
 
 After you define those variables with the command `export`, you can issue your certificate with
 
@@ -229,7 +232,7 @@ After you define those variables with the command `export`, you can issue your c
 wo site create site.tld --wp --letsencrypt=wildcard --dns=dns_cf
 ```
 
-* `--dns=dns_cf` can be replaced with another DNS provider supported by acme.sh. For DigitalOcean, it would be `--dns=dns_dgon`
+-   `--dns=dns_cf` can be replaced with another DNS provider supported by acme.sh. For DigitalOcean, it would be `--dns=dns_dgon`
 
 #### HSTS
 
@@ -239,32 +242,32 @@ Additionally you can enable HSTS on your site by adding the flag `--hsts` with `
 wo site create site.tld --wp --letsencrypt --hsts
 ```
 
-#### PHP 7.3 & PHP 7.4
+#### PHP 8.2 & PHP 8.2
 
-To create site with PHP 7.3 you can use --php73 during site creation
+To create site with PHP 8.2 you can use --php82 during site creation
 
-For example, you can create WordPress site running on PHP 7.3 using following command:
+For example, you can create WordPress site running on PHP 8.2 using following command:
 
 ```bash
-wo site create site.tld --wp --php73
+wo site create site.tld --wp --php82
 ```
 
-For a WordPress site running on PHP 7.4:
+For a WordPress site running on PHP 8.3:
 
 ```bash
-wo site create site.tld --wp --php74
+wo site create site.tld --wp --php83
 ```
 
-To create simple php site running with PHP 7.3 with no database, you can use this command:
+To create simple php site running with PHP 8.3 with no database, you can use this command:
 
 ```bash
-wo site create site.tld --php73
+wo site create site.tld --php83
 ```
 
-This is the same with PHP 7.4:
+This is the same with PHP 8.2:
 
 ```bash
-wo site create site.tld --php74
+wo site create site.tld --php82
 ```
 
 ## site update
@@ -277,11 +280,11 @@ Update site configuration
 
 Before Updating any site:
 
-* Creates nginx configuration backup for site.
-* Moves htdocs to backup while updating HTML/PHP/MySQL site.
-* Creates database dump in backup.
-* While updating current MySQL site WordOps uses same database for installing WordPress tables.
-* All these backup are stored outside htdocs, in backup directory.
+-   Creates nginx configuration backup for site.
+-   Moves htdocs to backup while updating HTML/PHP/MySQL site.
+-   Creates database dump in backup.
+-   While updating current MySQL site WordOps uses same database for installing WordPress tables.
+-   All these backup are stored outside htdocs, in backup directory.
 
 ### WordOps possible Update Options
 
@@ -325,8 +328,6 @@ Before Updating any site:
     };
     posObjs();</script>
 
-
-
 Example: updating site from basic wp to wp + fastcgi_cache:
 
 <asciinema-player src="/images/wositeupdate.cast" autoplay loop cols="120" rows="30"></asciinema-player>
@@ -344,12 +345,11 @@ wo site update  [<site_name>] [options]
 | `--html`                            | update to html site                                                    |
 | `--php`                             | update to php site                                                     |
 | `--mysql`                           | update to MySQL + PHP site                                             |
-| `--php72`                           | update site to PHP 7.2                                                 |
-| `--php73`                           | update site to PHP 7.3                                                 |
 | `--php74`                           | update site to PHP 7.4                                                 |
 | `--php80`                           | update site to PHP 8.0                                                 |
 | `--php81`                           | update site to PHP 8.1                                                 |
 | `--php82`                           | update site to PHP 8.2                                                 |
+| `--php82`                           | update site to PHP 8.3                                                 |
 | `--wp`                              | update site to WordPress without cache                                 |
 | `--wpfc`                            | update site to WordPress with fastcgi_cache                            |
 | `--wpsc`                            | update site to WordPress with wp-super-cache plugin                    |
@@ -374,22 +374,22 @@ Update a WordPress site without cache (`--wp`), to WordPress with Nginx fastcgi_
 wo site update site.tld --wpfc
 ```
 
-Update a WordPress site running with PHP 7.2 to PHP 7.3
+Update a WordPress site running with PHP 8.2 to PHP 8.3
 
 ```bash
-wo site update site.tld --php73
+wo site update site.tld --php83
 ```
 
-Update a site running with PHP 7.3 to PHP 7.2
+Update a site running with PHP 8.3 to PHP 8.1
 
 ```bash
-wo site update site.tld --php72
+wo site update site.tld --php81
 ```
 
-Update a site running with PHP 7.2 or PHP 7.3 to PHP 7.4
+Update a site running with PHP 8.1 or PHP 8.2 to PHP 8.3
 
 ```bash
-wo site update site.tld --php74
+wo site update site.tld --php83
 ```
 
 Update a WordPress site with Nginx fastcgi_cache to WordPress with redis-cache
@@ -421,7 +421,7 @@ wo site delete  [<site_name>] [options]
 ```
 
 | options       | description                                |
-|---------------|--------------------------------------------|
+| ------------- | ------------------------------------------ |
 | `--no-prompt` | delete website without confirmation prompt |
 | `--files`     | delete only website files                  |
 | `--db`        | delete only database                       |
