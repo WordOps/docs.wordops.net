@@ -53,9 +53,9 @@ wo site update sub.site.tld -le
 
 ### DNS API mode
 
+<!-- prettier-ignore -->
 !!! warning
 
-<!-- prettier-ignore -->
     Read first our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation/)
 
 <!-- prettier-ignore-end -->

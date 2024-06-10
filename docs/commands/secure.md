@@ -65,9 +65,9 @@ You can also edit directly the file `/etc/nginx/common/acl.conf`
 
 ## Harden SSH security
 
+<!-- prettier-ignore -->
 !!! warning
 
-<!-- prettier-ignore -->
     To harden SSH security, WordOps render the configuration sshd_config from a template. In this template, root authentification with password is forbidden and by default password authentification is disabled. You can use the flag `--allowpassword` with `--ssh` to allow password authentification, but before running this command please make sure you will not be locked out of your server. Using password-less authentification with SSH keys is highly recommended.
 
 <!-- prettier-ignore-end -->

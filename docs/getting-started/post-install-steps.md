@@ -32,9 +32,9 @@ Installing WordOps main stacks
 wo stack install
 ```
 
+<!-- prettier-ignore -->
 !!! info
 
-<!-- prettier-ignore -->
     You can define MariaDB and PHP version to install by default in `/etc/wo/wo.conf`
 
 <!-- prettier-ignore-end -->

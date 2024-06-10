@@ -219,9 +219,9 @@ export CF_Key="d7eab56a903f25dd4xxxxxxxxxxxxxxxxxxxx"
 export CF_Email="email@domain.com"
 ```
 
+<!-- prettier-ignore -->
 !!! info
 
-<!-- prettier-ignore -->
     More example in our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation)
 
 <!-- prettier-ignore-end -->

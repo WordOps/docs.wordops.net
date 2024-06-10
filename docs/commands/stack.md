@@ -20,9 +20,9 @@ wo stack (command) [options]
 |    [stop](#stack-stop)    |     Stop WordOps stack     |
 |   [start](#stack-start)   |    Start WordOps stack     |
 
+<!-- prettier-ignore     -->
 !!! info
 
-<!-- prettier-ignore     -->
     Options are the same for `wo stack install`, `wo stack remove` and `wo stack purge`
 
 <!-- prettier-ignore-end -->
@@ -86,9 +86,9 @@ wo stack install
 
 This will install the `--web` stack and `--admin` stack.
 
+<!-- prettier-ignore -->
 !!! info
 
-<!-- prettier-ignore -->
     You can define MariaDB and PHP version to install by default in `/etc/wo/wo.conf`
 
 <!-- prettier-ignore-end -->
@@ -185,9 +185,9 @@ For APT packages, `wo stack remove` will just uninstall package without deleting
 
 Remove and purge stacks (including configurations and data)
 
+<!-- prettier-ignore -->
 !!! Warning
 
-<!-- prettier-ignore -->
     Please be careful when using `wo stack purge` because it will remove APT packages but also purge all configurations or data, including MySQL databases, Redis databases or Nginx vhosts.
 
 <!-- prettier-ignore-end -->
