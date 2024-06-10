@@ -4,13 +4,13 @@ In this guide, we will explain how to issue a Let's Encrypt SSL certificate to s
 
 To issue a SSL certificate with WordOps, you can use the following arguments with the commands:
 
-- `wo site create`
-- `wo site update`
+-   `wo site create`
+-   `wo site update`
 
 | options                     | description                                                                       |
 | --------------------------- | --------------------------------------------------------------------------------- |
 | `--letsencrypt` / `-le`     | issue a SSL certificate for domain or subdomain                                   |
-| `--letsencrypt=wildcard`    | issue a wildcard SSL certificate: **domain.tld + \*.domain.tld**                 |
+| `--letsencrypt=wildcard`    | issue a wildcard SSL certificate: **domain.tld + \*.domain.tld**                  |
 | `--dns` / `--dns=<dns_api>` | use DNS API validation for Acme challenge. **required for wildcard certificates** |
 
 `-le` is an alias for `--letsencrypt`. You can use this alias with all letsencrypt commands.
@@ -54,7 +54,11 @@ wo site update sub.site.tld -le
 ### DNS API mode
 
 !!! warning
+
+<!-- prettier-ignore -->
     Read first our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation/)
+
+<!-- prettier-ignore-end -->
 
 #### domain or subdomain
 

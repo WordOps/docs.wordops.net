@@ -10,6 +10,7 @@ We provide an installer script which install the required dependencies, before s
 wget -qO wo wops.cc && sudo bash wo
 ```
 
+<!-- prettier-ignore -->
 ??? Info "What are the tasks performed by the install script ?"
     - Installing WordOps dependencies
     - Enabling automated security updates with unattended-upgrades
@@ -20,6 +21,8 @@ wget -qO wo wops.cc && sudo bash wo
     - Installing Acme.sh
     - Installing Wordops
 
+<!-- prettier-ignore-end -->
+
 ### Alternative: Clone Github repository and run
 
 ```bash
@@ -29,7 +32,11 @@ sudo bash install
 ```
 
 !!! info
+
+<!-- prettier-ignore -->
     During the installation, you will be prompt for an username and an email address. WordOps need those informations to configure Git version control and to use it for saving server configurations. Your informations will **only be stored** in the file .gitconfig.
+
+<!-- prettier-ignore-end -->
 
 ---
 
@@ -39,8 +46,10 @@ If you prefer to perform yourself the same steps than our installer script, here
 
 !!! danger "deprecated"
 
+<!-- prettier-ignore -->
     Manual installation instructions are outdated and should not be used to install WordOps. We are now using Python virtualenv to avoid conflicts with other Python packages installed on your server.
 
+<!-- prettier-ignore-end -->
 
 ### Install WordOps dependencies
 
