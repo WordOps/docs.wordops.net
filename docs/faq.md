@@ -59,9 +59,9 @@ WordOps Let's Encrypt stack is fully compatible with Cloudflare CDN, and you can
 
 If you need/want to uninstall WordOps, you can use the following commands:
 
+<!-- prettier-ignore -->
 !!! warning
 
-<!-- prettier-ignore -->
     Make a backup of your databases before purging wordops packages
 
 <!-- prettier-ignore-end -->

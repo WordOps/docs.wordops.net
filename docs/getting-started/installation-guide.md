@@ -12,6 +12,7 @@ wget -qO wo wops.cc && sudo bash wo
 
 <!-- prettier-ignore -->
 ??? Info "What are the tasks performed by the install script ?"
+
     - Installing WordOps dependencies
     - Enabling automated security updates with unattended-upgrades
     - Enabling NTP World Time Synchronization
@@ -31,9 +32,9 @@ cd WordOps/
 sudo bash install
 ```
 
+<!-- prettier-ignore -->
 !!! info
 
-<!-- prettier-ignore -->
     During the installation, you will be prompt for an username and an email address. WordOps need those informations to configure Git version control and to use it for saving server configurations. Your informations will **only be stored** in the file .gitconfig.
 
 <!-- prettier-ignore-end -->
@@ -44,9 +45,9 @@ sudo bash install
 
 If you prefer to perform yourself the same steps than our installer script, here how to install WordOps manually.
 
+<!-- prettier-ignore -->
 !!! danger "deprecated"
 
-<!-- prettier-ignore -->
     Manual installation instructions are outdated and should not be used to install WordOps. We are now using Python virtualenv to avoid conflicts with other Python packages installed on your server.
 
 <!-- prettier-ignore-end -->

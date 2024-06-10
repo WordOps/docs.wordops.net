@@ -113,9 +113,9 @@ wo site create site.tld --wp --php81 -le
 
 Create WordPress subdomain multisite secured with a Let's Encrypt Wildcard SSL certificate
 
+<!-- prettier-ignore -->
 !!! info
 
-<!-- prettier-ignore -->
     More information about wildcard SSL certificates our guide about [DNS API configuration](/how-to/configure-letsencrypt-dns-api-validation/)
 
 <!-- prettier-ignore-end -->
