@@ -42,13 +42,15 @@ The following operating systems are supported:
 
 | Distribution | Release            | Architecture |
 | ------------ | ------------------ | ------------ |
-| **Ubuntu**   | 22.04 LTS (focal)  | x86_64       |
-|              | 20.04 LTS (bionic) | x86_64       |
+| **Ubuntu**   | 24.04 LTS (noble)  | x86_64       |
+|              | 22.04 LTS (jammy)  | x86_64       |
+|              | 20.04 LTS (focal)  | x86_64       |
 | **Debian**   | 10 (buster)        | x86_64       |
 |              | 11 (bullseye)      | x86_64       |
 |              | 12 (bookworm)      | x86_64       |
 | **Raspbian** | 10 (buster)        | armv7l       |
 |              | 11 (bullseye)      | armv7l       |
+|              | 12 (bookworm)      | x86_64       |
 
 ### Ports
 
