@@ -50,7 +50,7 @@ The following operating systems are supported:
 |              | 12 (bookworm)      | x86_64       |
 | **Raspbian** | 10 (buster)        | armv7l       |
 |              | 11 (bullseye)      | armv7l       |
-|              | 12 (bookworm)      | x86_64       |
+|              | 12 (bookworm)      | armv7l       |
 
 ### Ports
 
