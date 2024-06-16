@@ -2,21 +2,22 @@
 
 ## Questions overview
 
-- [How to set default language for WordPress install ?](/how-to/wp-language/)
-- [How to secure WordOps backend with Let's Encrypt SSL certificate ?](/how-to/secure-22222/)
-- [How to renew Let's Encrypt Certificates ?](#renew-a-lets-encrypt-ssl-certificates-with-wordops)
-- [How to configure Let's Encrypt DNS API validation](/how-to/configure-letsencrypt-dns-api-validation/)
-- [How to get an A+ grade on ssllabs with Wordops ?](how-to/get-a-plus-grade-ssllabs.md)
-- [How to add FTP users](how-to/add-ftp-users.md)
-- [How to install HWE stacks on Ubuntu](how-to/ubuntu-lts-hwe-stacks.md)
-- [How to use a Remote MySQL server with WordOps](how-to/remote-mysql-server.md)
-- [How to automate WordPress post-install tasks](how-to/post-install-wp.md)
-- [How to allow zip & gzip files download](how-to/allow-zip-gzip-files-download.md)
-- [How to setup basic http-auth on site](how-to/setup-basic-auth.md)
-- [How to automate WordOps installation](how-to/automate-wordops-install.md)
-- [How to use micro-caching with Nginx](how-to/microcaching-with-nginx.md)
-- [How to bypass fastcgi_cache on specific URLs](how-to/bypass-fastcgi-cache-on-specific-urls.md)
-- [How to setup Sendmail with Sendgrid](how-to/setup-sendmail-with-sendgrid.md)
+-   [How to set default language for WordPress install ?](/how-to/wp-language/)
+-   [How to secure WordOps backend with Let's Encrypt SSL certificate ?](/how-to/secure-22222/)
+-   [How to renew Let's Encrypt Certificates ?](#renew-a-lets-encrypt-ssl-certificates-with-wordops)
+-   [How to configure Let's Encrypt DNS API validation](/how-to/configure-letsencrypt-dns-api-validation/)
+-   [How to get an A+ grade on ssllabs with Wordops ?](how-to/get-a-plus-grade-ssllabs.md)
+-   [How to add FTP users](how-to/add-ftp-users.md)
+-   [How to install HWE stacks on Ubuntu](how-to/ubuntu-lts-hwe-stacks.md)
+-   [How to use a Remote MySQL server with WordOps](how-to/remote-mysql-server.md)
+-   [How to automate WordPress post-install tasks](how-to/post-install-wp.md)
+-   [How to allow zip & gzip files download](how-to/allow-zip-gzip-files-download.md)
+-   [How to setup basic http-auth on site](how-to/setup-basic-auth.md)
+-   [How to automate WordOps installation](how-to/automate-wordops-install.md)
+-   [How to use micro-caching with Nginx](how-to/microcaching-with-nginx.md)
+-   [How to bypass fastcgi_cache on specific URLs](how-to/bypass-fastcgi-cache-on-specific-urls.md)
+-   [How to setup Sendmail with Sendgrid](how-to/setup-sendmail-with-sendgrid.md)
+-   [How to enable/disable Brotli compression with Nginx](how-to/enable-brotli-compression-with-nginx.md)
 
 ## Other questions
 
