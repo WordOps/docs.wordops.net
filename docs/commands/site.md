@@ -349,7 +349,7 @@ wo site update  [<site_name>] [options]
 | `--php80`                           | update site to PHP 8.0                                                 |
 | `--php81`                           | update site to PHP 8.1                                                 |
 | `--php82`                           | update site to PHP 8.2                                                 |
-| `--php82`                           | update site to PHP 8.3                                                 |
+| `--php83`                           | update site to PHP 8.3                                                 |
 | `--wp`                              | update site to WordPress without cache                                 |
 | `--wpfc`                            | update site to WordPress with fastcgi_cache                            |
 | `--wpsc`                            | update site to WordPress with wp-super-cache plugin                    |
