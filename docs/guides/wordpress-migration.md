@@ -7,9 +7,9 @@ The site you want to migrate was created with the flag `--wpredis`
 
 In our example :
 
-- new server name is NEW-SRV with IP 10.0.0.1
-- the previous server is OLD-SRV with IP 192.168.0.1
-- site domain is mydomain.tld
+-   new server name is NEW-SRV with IP 10.0.0.1
+-   the previous server is OLD-SRV with IP 192.168.0.1
+-   site domain is mydomain.tld
 
 ## On the previous server (OLD-SRV)
 
@@ -45,17 +45,10 @@ wget -qO wo wops.cc && sudo bash wo
 wo stack install
 ```
 
-### Create wordpress site with same domain
+### Create an empty wordpress site with same domain
 
 ```bash
-wo site create mydomain.tld --wpredis
-```
-
-### Cleanup default WP database and remove files
-
-```bash
-sudo -u www-data -H wp db clean --yes --path=/var/www/mydomain.tld/htdocs
-rm -rf /var/www/mydomain.tld/htdocs/*
+wo site create mydomain.tld --wpredis --vhostonly
 ```
 
 ### Setup a password-less ssh access between your servers
