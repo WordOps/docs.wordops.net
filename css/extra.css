@@ -1,0 +1,255 @@
+/* roboto-300 - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url('/css/fonts/roboto-v20-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-regular - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('/css/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-regular - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('/css/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('/css/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-italic - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Roboto Italic'), local('Roboto-Italic'), url('/css/fonts/roboto-v20-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-italic.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('/css/fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-v20-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-mono-regular - latin */
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Mono'), local('RobotoMono-Regular'), url('/css/fonts/roboto-mono-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('/css/fonts/roboto-mono-v7-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.md-logo img {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px
+}
+
+body,
+input {
+    color: black;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.codehilite>pre {
+    color: #5e72e4;
+}
+
+.md-nav {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.md-typeset {
+    font-size: .70rem;
+}
+
+.md-typeset__table td code {
+    word-break: unset;
+    font-family: 'Roboto Mono';
+}
+
+code,
+kbd,
+pre {
+    font-family: 'Roboto Mono';
+}
+
+.md-typeset__table tr:nth-child(1) {
+    word-wrap: break-word;
+}
+
+h1 {
+    line-height: 1.7em;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.md-main__inner {
+    padding-top: 0;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.md-typeset h2 {
+    font-weight: 500;
+    font-size: 26px;
+    margin-top: 1em;
+}
+
+.md-typeset h3 {
+    line-height: 1.5em;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.md-typeset h4 {
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.md-nav__title {
+    display: none;
+}
+
+.codehilite .c1 {
+    color: #222
+}
+
+#intro {
+    max-width: 100%;
+}
+
+video {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .md-typeset {
+        font-size: .80rem;
+        line-height: 1.;
+    }
+}
+
+.homepage-nav {
+    display: flex;
+    margin-top: 1.4rem;
+}
+
+.homepage-nav div {
+    flex: 1;
+}
+
+.homepage-nav .nav-install {
+    margin-right: 1rem;
+}
+
+.homepage-nav .nav-configuration {
+    margin-left: 1rem;
+}
+
+.button {
+    background-color: blue;
+    /* Green */
+    border: none;
+    color: black;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0.6rem 0;
+    border-radius: 4px;
+}
+
+.nav-button {
+    background-color: white;
+    border: 2px solid #000;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Hide the label at the top of the navigation menu. Does nothing.
+   Well, it does do something on mobile, and this media query makes
+   sure it's hidden only on screens wide enough to not use the mobile sidebar. */
+
+@media only screen and (min-width:76.25em) {
+    .md-nav--primary .md-nav__title {
+        display: none;
+    }
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    overflow: visible;
+    word-break: break-all;
+    word-wrap: break-word;
+    border-radius: 4px;
+}
+
+pre,
+pre tt {
+    padding: 0;
+    border: none;
+    white-space: pre-wrap;
+    font-size: inherit;
+}
+
+pre,
+tt {
+    padding: 1px 3px;
+    border-radius: 2px;
+    white-space: pre-wrap;
+}
+
+pre {
+    padding: 0 2px 2px;
+    border-radius: 3px;
+}
